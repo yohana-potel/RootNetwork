@@ -3,52 +3,76 @@
     padding: 0;
 }
 body{
-    background-color: #21251f;
-    
+    background-color: #d6e0d0;
+
 }
-.formulario{
-    border: 1px solid black;
+.section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 3px solid black;
     width: 500px;
+    gap: 10px;
     padding: 30px;
     margin: auto;
     margin-top: 100px;
     border-radius: 4px;
     font-family: 'Times New Roman', Times, serif;
-    background-color: #356d1a;
-    
+    background-color: #cbe6be;
 }
-.formulario h3{
+
+
+.caja{
+    display: grid;
+    width: 250px;
+    border: 2px solid rgb(33, 94, 20);
+}
+
+.caja h3{
     font-size: 20px;
     margin: 20px;
     text-align: center;
-
-
+    
 }
 .controls{
-    width: 100%;
+    width: 90%;
     background: #e4ece3;
     padding: 5px;
     border-radius: 6px;
-    margin-bottom: 16px;
+    margin-left: 16px;
     border: 1px solid #728b63;
     font-family: 'calibri';
     font-size: 15px;
+    margin-left: 5px;
     
 }
+
 .button{
-    width: 100%;
+    width: 80%;
     background: #1e9224;
     border: none;
     padding: 12px;
     color: black;
-    margin: 16px 0;
+    margin-left: 16px;
     font-size: 16px;
-    border-radius: 4px;
+    border-radius: 6px;
 }
+
 .terms{
     padding: 10px;
     margin-bottom: 16px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 15px;
     
+}
+
+.imagen{
+    border: 1 px solid black;
+    margin-bottom: 5px;
+
+}
+img{
+    width: 235px;
+    height: auto;
+    border-radius: 600px;
+    margin-left: 8px;
 }
