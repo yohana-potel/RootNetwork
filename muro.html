@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/muro.css">
+    <title></title>
+</head>
+<body>
+    <section class="perfil">
+        <img src="./img/logo.jpeg" alt="logo " class="logotipo">
+            <div class="miperfil">
+                <h4>Mi Perfil</h4>
+                <img src="./img/foto.jpg" alt="foto_rostro" class="rostro">
+                <button name="editar">Edición perfil</button> 
+                <button name="cerrar">Cerrar sesión</button>
+            </div>
+               
+
+    </section>
+    <section class="muro">
+        <div class="controles">
+            <form id="buscar">
+                <input type="text" id="busqueda" name="busqueda" placeholder="Busca consejos para tu jardín" oninput="buscarEnBD(this.value)">
+            </form>
+    
+            <form id="myForm" onsubmit="return false;">
+                <input type="text" id="comparte" placeholder="¿Listo para compartir tus secretos de jardinería? Cuéntanos qué estás cultivando " onkeydown="submitOnEnter(event)">
+            </form>
+    
+            <button>Crear Publicación</button>
+        </div>
+        <div class="publicaciones">
+            <h4>publicaciones</h4>
+
+        </div>
+
+    </section>
+    <section class="publicidad">
+        <img src="./img/publicidad.jpeg" alt="publi" class="propaganda">
+
+    </section>
+
+
+</body>
+</html>

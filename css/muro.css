@@ -1,0 +1,118 @@
+body{
+    background-color: #cbe6be;
+
+}
+button{
+    background-color: #16765a; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    max-width: 500px
+}
+.miperfil {
+    border: 2px solid #16765a; 
+    padding: 20px; 
+    border-radius: 10px; 
+    float: left;
+    height: 600px;
+}
+.perfil button {
+    display: block; 
+    width: auto;
+    margin-bottom: 10px; 
+    font-size: 14px; 
+    padding: 10px 20px; 
+    border-radius: 20px;
+
+}
+.logotipo{
+    width: 55px;
+    height: auto;
+    border-radius: 600px;
+    margin-left: 8px;
+    top: 0%;
+    left: 0%;
+}
+.rostro{
+    width: 105px;
+    height: 100px;
+    border-radius: 800px;
+    margin-left: 8px;
+    top: 15%;
+    left: 15%;
+
+}
+.controles {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-start;
+    margin-left: 40px;
+    align-items: center;
+    
+}
+#busqueda {
+    width: 250px;
+    height: 5px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: white; 
+    background-image: url('icono_busqueda.png'); 
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 10px; /* Espacio para el icono */
+    top: 0%;
+}
+#comparte {
+    width: 600px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: white; 
+    resize: none; 
+    margin-top: 10px;
+    
+}
+.muro button {
+    width: 250px; 
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 20px; 
+}
+.publicaciones{
+    align-items: center; 
+    border: 2px solid #16765a;
+    padding: 0px;
+    border-radius: 10px; 
+    height: 200px;
+    margin-left: 200px;
+    margin-right: 100px;
+    max-width: 700px;
+    height: 390px;
+    
+
+}
+.publicidad {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 2px solid #16765a;
+    padding: 20px;
+    border-radius: 10px;
+    height: 600px;
+}
+.propaganda{
+    width: 100px;
+    height: 100px;
+
+}
