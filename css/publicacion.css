@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #000e00;
+}
+
+.container{
+    border: solid 1px black;
+    width: 700px;
+    height: 500px;
+    margin: 100px 300px 0;
+    background-color: #0a6027;
+   
+    
+}
+ .infoPerfil{
+    width: 700px;
+ }
+
+ .infoPerfil h3{
+    text-align: center;
+    font-size: 15px;
+ }
+
+ .infoPerfil .foto{
+    width: 100px;
+    height: auto;
+    padding: 10px;
+    border-radius: 60px;
+
+ }
+
+ .caja-texto{
+    width: 650px;
+    height: 150px;
+    
+ }
+
+ .caja-texto .texto {
+    border: 3px solid green;
+    border-radius: 50px;
+    box-sizing: 250px;
+    padding: 15px;
+    margin-left: 20px;
+    background-color: aliceblue;
+ }
+
+ .botones{
+    width: auto;
+    height: 150px;
+ }
+
+ .boton1{
+    width: 30%;
+    font-size: 15px;
+    background-color: #00b34c;
+ }
+
+ .boton2{
+    width: 25%;
+    font-size: 15px;
+    background-color: darkgreen;
+    border-radius: 6px;
+    
+ }
