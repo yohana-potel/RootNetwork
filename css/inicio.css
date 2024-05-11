@@ -1,9 +1,11 @@
 body{
     display: grid;
-    place-items: end center;
+
+
+    
 }
 h1{
-    color: rgb(27, 143, 85);
+    color: #16765a;
 
 }
 p{
@@ -18,12 +20,14 @@ p{
     margin-top: 50px;
     width: 200px;
     height: 40px;
+    border-radius:8px ;
 }
 .contraseña{
     column-gap: 30px;
     margin-top: 30px;
     width: 200px;
     height: 40px;
+    border-radius:8px ;
 }
 .iniciar{
     column-gap: 50px;
@@ -33,12 +37,13 @@ p{
     color: rgb(0, 0, 0);
     border: none;
     cursor: pointer;
-    background-color: rgb(27, 143, 85);
+    background-color: #16765a;
+    border-radius:10px ;
 }
 .olvidar{
     border: none;
     cursor: pointer;
-    background-color: aliceblue;
+    background-color: #ffffff; 
 }
 
 
@@ -46,26 +51,46 @@ p{
     column-gap: 30px;
     margin-top: 30px;
     
+    
 
 }
 .logeo{
-    border: 1px solid rgb(27,143,85);
+    border: 2px solid #16765a;
     width: 300px;
     padding: 20px;
+    border-radius:10px ;
+    margin-left: 45%;
+    
 }
 
 .crear{
-    border: 1px solid rgb(27,143,85);
+    border: 2px solid #16765a;
     width: 300px;
     padding: 20px;
     column-gap: 30px;
     margin-top: 30px;
+    border-radius:10px ;
+    margin-left: 45%;
 }
 
-img{
-    width: 100px;
-    height: 100px;
-    padding: 10px;
-    float: left;
+.logo{
+    width: 70px;
+    margin-right: 90%;
+    border-radius: 100%;
 
+}
+.fondo{
+    position: absolute; /* Posiciona absolutamente la imagen dentro del contenedor padre */
+    left: 180px; /* Ajusta la posición de la imagen hacia la izquierda */
+    top: 250px; /* Ajusta la posición de la imagen verticalmente */
+    width: 100px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: 100px;
+
+}
+
+h3{
+    position: absolute;
+    left: 120px; 
+    top: 150px;
+    color: #0f701c;
 }
