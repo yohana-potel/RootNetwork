@@ -7,13 +7,14 @@ body{
    background-color: #cbe6be;
 }
 
-.container{
-    border: solid 1px black;
+.card{
+    
     width: 700px;
-    height: 500px;
+    height: 600px;
     margin: 100px 300px 0;
-    background-color: #0a6027;
-   
+    background-color: #8aad79;  
+    border: 1px solid #728b63; 
+    padding: 5px;
     
 }
  .infoPerfil{
@@ -24,21 +25,21 @@ body{
 
  .infoPerfil h3{
     text-align: center;
-    font-size: 15px;
-    border: 2px solid black;
+    font-size: 30px;
+    padding: 100px;
+    
  }
 
  .infoPerfil .foto{
-    width: 100px;
-    height: auto;
+    width: 150px;
     padding: 10px;
-    border-radius: 100px;
-
+    border-radius: 100px; 
+    
  }
 
  .caja-texto{
     width: 650px;
-    height: 150px;
+    height: 250px;
     display: flex;
     justify-content: center;
     
@@ -59,25 +60,27 @@ body{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 30px;
-    display: flex;
-    margin: 100px 0 0;
-    border: 2px solid black;
+    height: 10%;
+    margin: 50px 0 0;
+
+    
  }
 
  .boton1{
     width: 30%;
     font-size: 15px;
-    background-color: #16765a;
-    border-radius: 20px;
-    margin-left: 5px;
+    background: #16765a;
+    border-radius: 15px;
+    margin-left: 50px;
+    cursor: pointer;
  }
 
  .boton2{
     width: 25%;
     font-size: 15px;
     background-color: #16765a;
-    border-radius: 20px;
-    margin-right: 5px;
+    border-radius: 15px;
+    margin-right: 50px;
+    cursor: pointer;
     
  }
