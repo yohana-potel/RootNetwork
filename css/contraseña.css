@@ -1,0 +1,40 @@
+body{
+    display: grid;
+    
+}
+.recuperar{
+    padding: 20px;
+    border-radius:10px ;
+
+    
+}
+h1{
+    color: #16765a;
+}
+img{
+    border-radius: 100%;
+    width: 70px;
+}
+.introducir{
+    column-gap: 50px;
+    margin-top: 50px;
+    width: 300px;
+    height: 70px;
+}
+.siguiente{
+    column-gap: 50px;
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    background-color: #16765a;
+    border-radius:10px ;
+}
+p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}

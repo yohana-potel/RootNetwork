@@ -1,0 +1,96 @@
+body{
+    display: grid;
+
+
+    
+}
+h1{
+    color: #16765a;
+
+}
+p{
+    color: rgb(0, 0, 0);
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+.correo{
+    column-gap: 50px;
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    border-radius:8px ;
+}
+.contraseña{
+    column-gap: 30px;
+    margin-top: 30px;
+    width: 200px;
+    height: 40px;
+    border-radius:8px ;
+}
+.iniciar{
+    column-gap: 50px;
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    background-color: #16765a;
+    border-radius:10px ;
+}
+.olvidar{
+    border: none;
+    cursor: pointer;
+    background-color: #ffffff; 
+}
+
+
+.registrar{
+    column-gap: 30px;
+    margin-top: 30px;
+    
+    
+
+}
+.logeo{
+    border: 2px solid #16765a;
+    width: 300px;
+    padding: 20px;
+    border-radius:10px ;
+    margin-left: 45%;
+    
+}
+
+.crear{
+    border: 2px solid #16765a;
+    width: 300px;
+    padding: 20px;
+    column-gap: 30px;
+    margin-top: 30px;
+    border-radius:10px ;
+    margin-left: 45%;
+}
+
+.logo{
+    width: 70px;
+    margin-right: 90%;
+    border-radius: 100%;
+
+}
+.fondo{
+    position: absolute; /* Posiciona absolutamente la imagen dentro del contenedor padre */
+    left: 180px; /* Ajusta la posición de la imagen hacia la izquierda */
+    top: 250px; /* Ajusta la posición de la imagen verticalmente */
+    width: 100px; /* Ajusta el ancho de la imagen según sea necesario */
+    height: 100px;
+
+}
+
+h3{
+    position: absolute;
+    left: 120px; 
+    top: 150px;
+    color: #0f701c;
+}
