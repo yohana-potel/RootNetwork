@@ -1,0 +1,161 @@
+body {
+    background-color: #cbe6be;
+}
+
+.pantalla {
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    height: 100vh;
+}
+
+button {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 4px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.miperfil {
+    border: 2px solid rgb(22, 118, 90); 
+    padding: 40px; 
+    border-radius: 10px; 
+    float: left;
+    height: 600px;
+}
+
+.perfil button {
+    background-color: transparent;
+    display: block; 
+    width: auto;
+    color: grey;
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    font-size: 14px; 
+    border-radius: 20px;
+}
+.perfil button:hover{
+    color: #16765a;
+}
+.logotipo {
+    width: 55px;
+    height: auto;
+    border-radius: 600px;
+    margin-left: 8px;
+    top: 0%;
+    left: 0%;
+}
+
+.rostro {
+    width: 105px;
+    height: 100px;
+    border-radius: 800px;
+    margin-left: 8px;
+    top: 15%;
+    left: 15%;
+}
+
+#busqueda {
+    width: 250px;
+    height: 5px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: white; 
+    font-family: 'Times New Roman', Times, serif;
+    top: 0%;
+}
+
+#comparte {
+    width: 600px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white; 
+    resize: none; 
+    margin-top: 10px;
+}
+
+.muro button {
+    background-color: #16765a;
+    color: white; 
+    width: 250px; 
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 20px; 
+}
+.muro button:hover{
+    background-color: grey
+
+}
+.publicaciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    margin-top: 50px;
+    margin-right: 60px;
+    border: 2px solid rgb(22, 118, 90); 
+}
+.autor-info {
+    left: 15%;
+    margin:5px;
+}
+.publicacion button{
+    width: 30px; 
+    height: 30px; 
+    margin-right: 5px; 
+    background-color: transparent;
+}
+.publicacion button:hover{
+    background-color: grey
+
+}
+.foto-autor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+#comenta {
+    width:  150px;
+    padding: 5px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+}
+
+.comentario button {
+    width: 90px;
+    padding: 5px;
+    background-color: #16765a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.comentario button:hover{
+    background-color: grey
+
+}
+
+.nombre-autor {
+    font-weight: bold;
+    float: left;
+}
+.publicidad {
+    top: 0;
+    right: 0;
+    border: 2px solid #16765a;
+    padding: 10%;
+    border-radius: 10px;
+    height: 600px;
+}
+.propaganda {
+    width: 100px;
+    height: 100px;
+}
