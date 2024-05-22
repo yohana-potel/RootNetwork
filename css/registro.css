@@ -2,7 +2,7 @@
     border: 0;
     padding: 0;
 }
-body{
+.body-registro{
     background-color: #cbe6be;
 
 }
@@ -24,7 +24,6 @@ body{
     flex-direction: column;
     align-items: center;
     width: 100%;
-    
 }
 
 .caja1 h3{

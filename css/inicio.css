@@ -1,5 +1,10 @@
+*{
+    border: 0;
+    padding: 0;
+}
+
 body{
-    display: grid;
+   
     background-color: #cbe6be;
 
     
@@ -97,3 +102,109 @@ h3{
     top: 150px;
     color: #0f701c;
 }
+
+
+/*ESTILO REGISTRO*/
+
+
+.body-registro{
+    background-color: #8f2739; 
+
+}
+
+.section{
+    
+    border: 2px solid #d1741e;
+    width: 400px;
+    height: 700px;
+    gap: 10px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #8aad79;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+
+.caja1{
+    align-items: center;
+    width: 100%;
+    height: 700px;
+    border: 3px,solid,black;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.tituloForm{
+    font-size: 30px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    
+}
+
+
+.ImaGen{
+    border-radius: 600px;
+    width: 100px;
+    height: 100px;
+
+}
+
+.caja{
+    width: 100%;
+    border: 3px,solid,black;
+    
+}
+.controls{
+    width: 90%;
+    background: #fff;
+    padding: 10px;
+    border-radius: 20px;
+    margin-left: 16px;
+    border: 1px solid #728b63;
+    font-family: 'calibri';
+    font-size: 15px;
+    margin-left: 5px;
+    
+    
+}
+
+.button{
+    width: 80%;
+    background: #16765a;
+    padding: 18px;
+    color: white;
+    margin-left: 40px;
+    font-size: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+
+.terms{
+    padding: 10px;
+    margin-bottom: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+
+.titulo {
+    font-size: 20px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+ 
