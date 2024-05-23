@@ -7,7 +7,7 @@ body {
     grid-template-columns: 20% 70% 10%;
     height: 100vh;
 }
-
+/*Botones */
 button {
     border: none;
     text-align: center;
@@ -16,13 +16,41 @@ button {
     margin: 4px;
     font-family: 'Times New Roman', Times, serif;
 }
+/*Botones Muro.html*/
+.muro button {
+    background-color: #16765a;
+    color: white; 
+    width: 250px; 
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 20px; 
+}
+.muro button:hover{
+    background-color: grey;
+}
 
-.miperfil {
-    border: 2px solid rgb(22, 118, 90); 
-    padding: 40px; 
-    border-radius: 10px; 
-    float: left;
-    height: 600px;
+.publicacion button{
+    width: 30px; 
+    height: 30px; 
+    margin-right: 5px; 
+    background-color: transparent;
+}
+.publicacion button:hover{
+    background-color: grey;
+}
+
+.comentario button {
+    background-color: #16765a;
+    color: white; 
+    width: 100px; 
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 20px; 
+}
+.comentario button:hover{
+    background-color: grey;
 }
 
 .perfil button {
@@ -38,6 +66,15 @@ button {
 .perfil button:hover{
     color: #16765a;
 }
+
+.miperfil {
+    border: 2px solid rgb(22, 118, 90); 
+    padding: 40px; 
+    border-radius: 10px; 
+    float: left;
+    height: 600px;
+}
+
 .logotipo {
     width: 55px;
     height: auto;
@@ -59,7 +96,7 @@ button {
 #busqueda {
     width: 250px;
     height: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #16765a;
     border-radius: 20px;
     padding: 10px;
     font-size: 16px;
@@ -68,10 +105,10 @@ button {
     top: 0%;
 }
 
-#comparte {
+#TextoPubli{
     width: 600px;
     height: 40px;
-    border: 1px solid #ddd;
+    border: 1px solid #16765a;
     border-radius: 20px;
     padding: 10px;
     font-size: 16px;
@@ -81,18 +118,11 @@ button {
     margin-top: 10px;
 }
 
-.muro button {
-    background-color: #16765a;
-    color: white; 
-    width: 250px; 
-    height: 40px;
+#TextoComentario {
+    width:  150px;
+    padding: 5px;
     border-radius: 20px;
-    margin-top: 10px;
-    margin-right: 20px; 
-}
-.muro button:hover{
-    background-color: grey
-
+    border: 1px solid #16765a;
 }
 .publicaciones {
     display: grid;
@@ -103,46 +133,16 @@ button {
     margin-right: 60px;
     border: 2px solid rgb(22, 118, 90); 
 }
+
 .autor-info {
     left: 15%;
     margin:5px;
-}
-.publicacion button{
-    width: 30px; 
-    height: 30px; 
-    margin-right: 5px; 
-    background-color: transparent;
-}
-.publicacion button:hover{
-    background-color: grey
-
 }
 .foto-autor {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
-#comenta {
-    width:  150px;
-    padding: 5px;
-    border-radius: 20px;
-    border: 1px solid #ddd;
-}
-
-.comentario button {
-    width: 90px;
-    padding: 5px;
-    background-color: #16765a;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-.comentario button:hover{
-    background-color: grey
-
-}
-
 .nombre-autor {
     font-weight: bold;
     float: left;
@@ -159,3 +159,83 @@ button {
     width: 100px;
     height: 100px;
 }
+
+
+/*Publicacion.html*/
+.card{
+    width: 700px;
+    height: 600px;
+    margin: 100px 300px 0;
+    background-color: #8aad79;  
+    border: 1px solid #16765a; 
+    padding: 5px;
+     
+}
+/*Botones publicacion.html*/
+.botones{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+    margin: 50px 0 0;    
+}
+.botones button {
+    width: 30%;
+    font-size: 15px;
+    background: #16765a;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-right: 50px;
+    margin-left: 50px;
+    color: white;
+}
+.botones button:hover{
+    background-color: grey;
+}
+.infoPerfil{
+    width: 500px;
+    height: 200px;
+    display: flex;
+ 
+}
+ 
+.infoPerfil h3{
+    text-align: center;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+     
+}
+ 
+.foto{
+    width: 100px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 100px; 
+     
+}
+ 
+.box-text{
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+     
+}
+ 
+#PubliText{
+    width: 600px;
+    height: 200px;
+    border: 2px solid #16765a;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: white; 
+    margin-top: 10px; 
+}
+ 
+
+ 
