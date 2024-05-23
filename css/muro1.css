@@ -223,7 +223,7 @@ button {
     flex-direction: row;
     justify-content: center;
     font-family: "Montserrat", sans-serif;
-     
+    
 }
  
 #PubliText{
@@ -235,6 +235,8 @@ button {
     font-family: 'Times New Roman', Times, serif;
     background-color: white; 
     margin-top: 10px; 
+    margin-left: 40px;
+   
 }
  
 

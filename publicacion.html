@@ -19,11 +19,13 @@
                     <h3>Nombre del usuario</h3>                       
                 </div>
                 <div class="caja-texto">
-                    <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero harum praesentium animi explicabo laudantium magnam doloremque atque quas ut mollitia, tempora modi! Ut, quo explicabo animi impedit eius praesentium adipisci!</p>
+                    <form id="publi" onsubmit="return false;">
+                        <input type="text" id="PubliText" placeholder="¿Listo para compartir tus secretos de jardinería? Cuéntanos qué estás cultivando " onkeydown="submitOnEnter(event)">
+                    </form>                
                 </div>
                 <div class="botones">
-                    <input class="boton1" type="submit" value="Añadir Imagen " >
-                    <input class="boton2" type="submit" value="Compartir ">
+                    <button>Añadir Imagen</button>
+                    <button>Compartir </button>
                 </div>
             </div>
         </div>
