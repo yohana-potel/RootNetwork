@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-Tou3qNj7D8CmFjxMWBkS5qATdPnpU2wPODHDCh+phO9wQ3PqNj70yJDt9FvPrYxy" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/muro1.css">
-    <title></title>
+    <link rel="shortcut icon " href="./img/logo.jpeg">
+    <title>Root Network</title>
 </head>
 <body>
     <div class="pantalla">
@@ -24,14 +25,11 @@
         <div class="controles">
             <form id="buscar">
                 <input type="text" id="busqueda" name="busqueda" placeholder="Busca consejos para tu jardín" oninput="buscarEnBD(this.value)">
-                <div class="icono-lupa"></div> 
             </form>
     
             <form id="myForm" onsubmit="return false;">
-                <input type="text" id="comparte" placeholder="¿Listo para compartir tus secretos de jardinería? Cuéntanos qué estás cultivando " onkeydown="submitOnEnter(event)">
+                <input type="text" id="TextoPubli" placeholder="¿Listo para compartir tus secretos de jardinería? Cuéntanos qué estás cultivando " onkeydown="submitOnEnter(event)">
             </form>
-    
-            <button>Crear Publicación</button>
         </div>
         <div class="publicaciones">
             <div class="publicacion">
@@ -52,7 +50,7 @@
                     </svg>
                 </button>
                 <div class="comentario">
-                    <input type="text" id="comenta" placeholder="Escribe un comentario...">
+                    <input type="text" id="TextoComentario" placeholder="Escribe un comentario...">
                     <button>Comentar</button>
                 </div>
             
