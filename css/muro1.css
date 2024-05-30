@@ -1,5 +1,6 @@
 body {
     background-color: #cbe6be;
+    font-family: "Roboto", sans-serif;
 }
 
 .pantalla {
@@ -123,6 +124,7 @@ button {
     padding: 5px;
     border-radius: 20px;
     border: 1px solid #16765a;
+    font-family: "Roboto", sans-serif;
 }
 .publicaciones {
     display: grid;
@@ -239,5 +241,51 @@ button {
    
 }
  
-
+/*Estilos para Contraseña.html*/
  
+.recuperar{
+    padding: 20px;
+    border-radius:10px ;
+
+    
+}
+/*Botones Contraseña.html*/
+h1{
+    color: #16765a;
+}
+img{
+    border-radius: 100%;
+    width: 70px;
+}
+.introducir{
+    column-gap: 50px;
+    margin-top: 50px;
+    width: 300px;
+    height: 70px;
+    font-family: "Roboto", sans-serif;
+    background-color: white; 
+    border-radius: 20px;
+    border: 1px solid #16765a;
+}
+.siguiente{
+    column-gap: 50px;
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    background: #16765a;
+    border-color: transparent;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: white;
+}
+.siguiente:hover{
+    background-color: grey;
+}
+p{
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}

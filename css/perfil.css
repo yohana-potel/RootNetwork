@@ -1,5 +1,6 @@
 body{
     background-color: #cbe6be;
+    font-family: "Roboto", sans-serif;
  
 }
 .logotipo {
@@ -120,6 +121,6 @@ body{
     margin-top: 5px;
     font-size: 16px;
     background-color: white; 
-    font-family: 'Times New Roman', Times, serif;
+    font-family: "Roboto", sans-serif;
     top: 0%;
 }
