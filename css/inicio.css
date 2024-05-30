@@ -190,3 +190,44 @@ h1{
 }
 
  
+/*ESTILO PREFIL*/
+
+.pantalla {
+    display: flex;
+}
+
+.menu1{
+    width: 150px;
+    height: auto;
+    border: 2px solid rgb(22, 118, 90); 
+    padding: 20px;
+    border-radius: 10px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(145, 11, 11);
+}
+.linkP{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 20px;
+    color: #0f701c;
+   
+}
+
+.perfil{
+    display: flex;
+    
+
+}
+
+.editarperfil,
+.datos {
+    display: grid;
+    place-items: center; /* Centrar vertical y horizontalmente */
+    border: 2px solid rgb(22, 118, 90);
+    border-radius: 10px;
+    padding: 20px;
+}
+
