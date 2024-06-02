@@ -2,13 +2,19 @@
     border: 0;
     padding: 0;
 }
-
 body{
-   
     background-color: #cbe6be;
     font-family: "Roboto", sans-serif;
 }
-
+/*Configuracion para etiqueta de tipo button*/
+button {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 4px;
+    font-family: "Roboto", sans-serif;
+}
 .contenedor{
     border: 2px solid #16765a;
     width: 700px;
@@ -28,21 +34,11 @@ body{
 
 }
 
-
 h3{
     color: #0f701c;
     font-size: 30px;
     text-align: center;
 }
-
-img{
-    width: 300px; /* Ajusta el ancho de la imagen según sea necesario */
-    height: 300px;
-    border-radius: 600px;
-    padding-left: 25px;
-
-}
-
 
 .logeo{
     border: 2px solid #16765a;
@@ -53,7 +49,9 @@ img{
     justify-content: space-around;
 
 }
-
+.olvidar{
+    text-align: center;
+}
 .crear{
    text-align: center;
 }
@@ -62,19 +60,21 @@ h1{
     color: #0f701c;
     text-align: center;
 }
+
 .datos{
     width: 90%;
     background: #fff;
     padding: 10px;
     border-radius: 20px;
     margin-left: 16px;
-    border: 1px solid #728b63;
-    font-family: 'calibri';
+    border: 2px solid #16765a;
+    font-family: "Roboto", sans-serif;
     font-size: 15px;
     margin-left: 5px;
+
 }
 
-.botonl{
+.boton1{
     width: 80%;
     background: #16765a;
     padding: 18px;
@@ -85,12 +85,23 @@ h1{
     cursor: pointer;
     margin-bottom: 50px;
 }
+.boton1:hover{
+    background-color: grey;
+}
+.Logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+.logo_inicio {
+    width: 200px;
+    height: 200px;
+    border-radius: 600px;
+}
 
 /*ESTILO REGISTRO*/
-
-.section{
-    
+.Form{
     border: 2px solid #16765a;
     width: 400px;
     gap: 10px;
@@ -101,10 +112,7 @@ h1{
     background-color: #8aad79;
     display: flex;
     flex-direction: column;
-    
-    
 }
-
 
 .caja1{
     align-items: center;
@@ -124,11 +132,10 @@ h1{
     
 }
 
-
 .ImaGen{
-    border-radius: 700px;
     width: 100px;
     height: 100px;
+    border-radius: 600px;
 
 }
 
@@ -137,19 +144,19 @@ h1{
     height: 500px;
     
 }
+
 .controls{
     width: 90%;
     background: #fff;
     padding: 10px;
     border-radius: 20px;
     margin-left: 16px;
-    border: 1px solid #728b63;
+    border: 2px solid #16765a;
     font-family: "Roboto", sans-serif;
     font-size: 12px;
     margin-left: 5px;
-
+    margin-top: 2px;
     justify-content: space-between;
-
     
 }
 
@@ -160,26 +167,26 @@ h1{
     color: white;
     margin-left: 40px;
     font-size: 20px;
-    border-radius: 15px;
+    border-radius: 20px;
     cursor: pointer;
     margin-bottom: 50px;
 }
 
+.button:hover{
+    background-color: grey;
+}
 
 .terms{
     padding: 10px;
     font-size: 18px;
-    text-align: center;
-    
+    text-align: center; 
 }
-
 
 .termino{
     font-size: 18px;
     text-align: center;
     margin-bottom: 100px;
 }
-
 
 .titulo {
     font-size: 20px;
@@ -189,45 +196,290 @@ h1{
     font-style: normal;
 }
 
- 
-/*ESTILO PREFIL*/
-
-.pantalla {
-    display: flex;
+ /*Estilos para Publicacion.html*/
+.card{
+    width: 700px;
+    height: 600px;
+    margin: 100px 300px 0;
+    background-color: #8aad79;  
+    border: 1px solid #16765a; 
+    padding: 5px;
 }
 
-.menu1{
-    width: 150px;
-    height: auto;
-    border: 2px solid rgb(22, 118, 90); 
-    padding: 20px;
-    border-radius: 10px; 
+/*Botones publicacion.html*/
+.botones{
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    background-color: rgb(145, 11, 11);
+    width: 100%;
+    height: 10%;
+    margin: 50px 0 0;    
 }
-.linkP{
-    display: flex;
-    flex-direction: column;
+
+.botones button {
+    width: 30%;
+    font-size: 15px;
+    background: #16765a;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    margin-right: 50px;
+    margin-left: 50px;
+    color: white;
+}
+
+.botones button:hover{
+    background-color: grey;
+}
+
+.infoPerfil{
+    width: 500px;
+    height: 200px;
+    display: flex; 
+}
+ 
+.infoPerfil h3{
     text-align: center;
-    font-size: 20px;
-    color: #0f701c;
-   
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-style: normal;  
 }
-
-.perfil{
+ 
+.foto{
+    width: 100px;
+    height: 150px;
+    padding: 10px;
+    border-radius: 100px; 
+}
+ 
+.box-text{
+    height: 200px;
     display: flex;
-    
-
+    flex-direction: row;
+    justify-content: center;
+    font-family: "Roboto", sans-serif;   
+}
+ 
+#PubliText{
+    width: 600px;
+    height: 200px;
+    border: 2px solid #16765a;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    background-color: white; 
+    margin-top: 10px; 
+    margin-left: 40px;
 }
 
-.editarperfil,
-.datos {
-    display: grid;
-    place-items: center; /* Centrar vertical y horizontalmente */
-    border: 2px solid rgb(22, 118, 90);
-    border-radius: 10px;
+/*Estilos para Contraseña.html*/
+ 
+.recuperar{
     padding: 20px;
+    border-radius:10px ;
+
+    
+}
+/*Botones Contraseña.html*/
+h1{
+    color: #16765a;
+    text-align: left ;
 }
 
+img{
+    border-radius: 100%;
+    width: 70px;
+}
+.introducir{
+    column-gap: 50px;
+    margin-top: 50px;
+    width: 300px;
+    height: 70px;
+    font-family: "Roboto", sans-serif;
+    background-color: white; 
+    border-radius: 20px;
+    border: 2px solid #16765a;
+}
+.siguiente{
+    column-gap: 50px;
+    margin-top: 50px;
+    width: 200px;
+    height: 40px;
+    background: #16765a;
+    border-color: transparent;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    color: white;
+}
+.siguiente:hover{
+    background-color: grey;
+}
+p{
+    color: rgb(0, 0, 0);
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+/*Estilos para muro.html*/
+.pantalla {
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+    height: 100vh;
+}
+/*Botones */
+button {
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 4px;
+    font-family: "Roboto", sans-serif;
+}
+/*Botones Muro.html*/
+.muro button {
+    background-color: #16765a;
+    color: white; 
+    width: 250px; 
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 20px; 
+}
+.muro button:hover{
+    background-color: grey;
+}
+
+.publicacion button{
+    width: 30px; 
+    height: 30px; 
+    margin-right: 5px; 
+    background-color: transparent;
+}
+.publicacion button:hover{
+    background-color: grey;
+}
+
+.comentario button {
+    background-color: #16765a;
+    color: white; 
+    width: 100px; 
+    height: 40px;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-right: 20px; 
+}
+.comentario button:hover{
+    background-color: grey;
+}
+
+.perfil button {
+    background-color: transparent;
+    display: block; 
+    width: auto;
+    color: grey;
+    font-weight: bold; 
+    margin-bottom: 10px; 
+    font-size: 14px; 
+    border-radius: 20px;
+}
+.perfil button:hover{
+    color: #16765a;
+}
+
+.miperfil {
+    border: 2px solid rgb(22, 118, 90); 
+    padding: 40px; 
+    border-radius: 10px; 
+    float: left;
+    height: 600px;
+}
+
+.logotipo {
+    width: 55px;
+    height: auto;
+    border-radius: 600px;
+    margin-left: 8px;
+    top: 0%;
+    left: 0%;
+}
+
+.rostro {
+    width: 105px;
+    height: 100px;
+    border-radius: 800px;
+    margin-left: 8px;
+    top: 15%;
+    left: 15%;
+}
+
+#busqueda {
+    width: 250px;
+    height: 5px;
+    border: 1px solid #16765a;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: white; 
+    font-family: "Roboto", sans-serif;
+    top: 0%;
+}
+
+#TextoPubli{
+    width: 600px;
+    height: 40px;
+    border: 1px solid #16765a;
+    border-radius: 20px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    background-color: white; 
+    resize: none; 
+    margin-top: 10px;
+}
+
+#TextoComentario {
+    width:  200px;
+    padding: 5px;
+    border-radius: 20px;
+    border: 2px solid #16765a;
+    font-family: "Roboto", sans-serif;
+    margin-left: 10px;
+}
+.publicaciones {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+    align-items: center;
+    margin-top: 50px;
+    margin-right: 100px;
+    border: 2px solid rgb(22, 118, 90); 
+}
+
+.autor-info {
+    left: 15%;
+    margin:5px;
+}
+.foto-autor {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.nombre-autor {
+    font-weight: bold;
+    float: left;
+}
+.publicidad {
+    top: 0;
+    right: 0;
+    border: 2px solid #16765a;
+    padding: 10%;
+    border-radius: 10px;
+    height: 600px;
+}
+.propaganda {
+    width: 100px;
+    height: 100px;
+}
