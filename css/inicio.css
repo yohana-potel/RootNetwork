@@ -487,8 +487,10 @@ button {
 /*ESTILOS PARA PERFIL.HTML*/
 .pantallap{
     display: grid;
-    grid-template-columns: 20% 70% 10%;
-    
+    grid-template-columns: 10% 80% ;
+    width: 100%;
+    height: 750px;
+   
 }
 
 .img-p{
@@ -500,28 +502,55 @@ button {
 
 .datos_y_perfil{
     display: grid; 
-    grid-template-columns: 1fr 1fr; /* Dos columnas */
-    grid-gap: 20px; /* Espacio entre las columnas */
+    grid-template-columns: 1fr 2fr; /* Dos columnas */
+    grid-gap: 10px; /* Espacio entre las columnas */
     border-radius: 10px; 
     height: 250px;
-    width: 800px; /* Ancho total de las dos columnas */
+    width: 100%; /* Ancho total de las dos columnas */
     padding: 20px;
     align-items: center;
 }
 
-.datos {
+.daTos, .editarperfil {
     display: grid;
     place-items: center; /* Centrar vertical y horizontalmente */
     border: 2px solid rgb(22, 118, 90);
     border-radius: 10px;
     padding: 20px;
+    width: 400px;
+    height: 250px;
+    margin: auto;
 }
 
+.imagen_perfil{
+    width: 250px;
+    height: 150px;
+    padding: 5px;
+}
 
+.peRfil{
+    display: grid;
+    grid-template-rows: 1fr; 
+    grid-gap: 20px;
+    width: 100%;
+    height: 500px;
+}
 
+.botonP{
+    background-color: #16765a;
+    color: white; 
+    width: 100px; 
+    height: 20px;
+    border: transparent;
+    border-radius: 20px;
+    margin: 5px;
 
+}
 
-
+.descripcionP{
+    width: 100%;
+    height: 30px;
+}
 
 
 
