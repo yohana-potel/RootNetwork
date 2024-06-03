@@ -9,40 +9,38 @@
 </head>
 <body>
     <div class="pantalla">
-    <section class="menu1">
-        <img src="./img/logo.jpeg" alt="logo " class="logotipo">
-        <div class="menu">
-            <h1>Menú</h1>
-            <button name="inicio">Inicio</button> 
-            <button name="publicar">Publicar</button> 
-            <button name="cerrar">Cerrar sesión</button>
-        </div>   
-    </section>
-    <section class="perfil">
-        <div class="editarportada">
-            <h2>Foto Portada</h2>
-            <img src="./img/arbolpotada.jpg" alt="foto_portada" class="imagen_portada">
-            <button name="editar">Editar portada</button> 
-            
-        </div>
-        <div class="datos_y_perfil">
-            <div class="datos">
-                <h1>Editar datos</h1>
-                <input class="controles" type="text" name="nombre" placeholder="Nombres "> 
-                <input class="controles" type="text" name="apellido"  placeholder="Apellidos "> 
-                <input class="controles" type="email" name="correo"  placeholder="Email"> 
-                <input class="controles" type="password" name="password"  placeholder="Contraseña">
-                <button name="editar">Editar datos </button> 
+        <section class="menu1">
+            <img src="./img/logo.jpeg" alt="logo " class="logotipo">
+            <div class="menu">
+                <h1>Menú</h1>
+                <button name="inicio">Inicio</button> 
+                <button name="publicar">Publicar</button> 
+                <button name="cerrar">Cerrar sesión</button>
             </div>   
-            <div class="editarperfil">
-                <h2>Foto Perfil</h2>
-                <img src="./img/fotoperfil.jpg" alt="foto_perfil" class="imagen_perfil">
-                <button name="editar">Editar perfil</button> 
-            
-            </div>           
-            
-        </div>  
-    </section>
+        </section>
+        <section class="perfil">
+            <div class="editarportada">
+                <h2>Foto Portada</h2>
+                <img src="./img/arbolpotada.jpg" alt="foto_portada" class="imagen_portada">
+                <button name="editar">Editar portada</button> 
+                
+            </div>
+            <div class="datos_y_perfil">
+                <div class="datos">
+                    <h1 class="tituloP">Presentation </h1>
+                    <input type="text" id="Sobremi" placeholder="Te cuento mas sobre mi: trabajo en Viviero Siempre Verde y.. " onkeydown="submitOnEnter(event)">
+                    <p class="textoP">Seguime en <a href="https://www.instagram.com//" target="_blank">Instagram</a>.</p>
+                    <button name="editar">Editar datos </button> 
+                </div>   
+                <div class="editarperfil">
+                    <h2>Foto Perfil</h2>
+                    <img src="./img/fotoperfil.jpg" alt="foto_perfil" class="imagen_perfil">
+                    <button name="editar">Editar perfil</button> 
+                
+                </div>           
+                
+            </div>  
+        </section>
 
 </div>
 </body>
