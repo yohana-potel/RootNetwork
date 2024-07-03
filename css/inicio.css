@@ -409,7 +409,7 @@ button {
     width: 150px;
     height: auto;
     border-radius: 600px;
-    margin-left: 30px;
+    margin-left: 10px;
     padding: 10px;
     
 }
@@ -584,7 +584,8 @@ button {
         margin: 10px 10px 10px 35px;
     }
     .perfil{
-        width: 110px;
+        width: 100%;
+        
     }
     .miperfil{
         width: 50px;
@@ -596,7 +597,9 @@ button {
         font-size: 13px;
     }
     .logotipo{
-        width: 80%;
+        width: 100px;
+        background-color: red;
+
     }
     .rostro{
         width: auto;
