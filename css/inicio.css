@@ -403,8 +403,7 @@ button {
     padding: 40px; 
     border-radius: 10px; 
     float: left;
-    height: 600px;
-    
+    height: 600px;   
 }
 
 .logotipo {
@@ -413,7 +412,6 @@ button {
     border-radius: 600px;
     margin-left: 10px;
     padding: 10px;
-    
 }
 
 .rostro {
