@@ -646,4 +646,8 @@ button {
 
 @media  (min-width:601px) and (max-width:800px){
     body{background-color: violet;}
+    .pantalla{
+        width: 90%;
+        border: 3px solid black;
+    }
 }
