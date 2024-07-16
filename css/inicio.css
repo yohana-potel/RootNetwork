@@ -577,15 +577,14 @@ button {
 
 
 
-@media  (max-width:600px) {
+@media  (min-width:500px) and (max-width:600px) {
     .pantalla{
-
-        grid-template-columns: repeat(2, 1fr);
-        width: 60vh;
-        margin: 10px 10px 10px 35px;
+        width: 100%;
+        border: 3px solid black;
     }
     .perfil{
         width: 100%;
+        grid-template-rows: max-content;
         
     }
     .miperfil{
@@ -607,9 +606,13 @@ button {
         border-radius: 80px;
     }
 
-    #myForm{
+    #myForm {
         width: 80%;
-     }
+        height: 50px;
+        margin: 20px;
+        
+        
+    }
     
     .controles{
         width: 100%;
@@ -621,20 +624,8 @@ button {
         margin: 20px;
     }
 
-    #myForm{
-        width: 450px;
-        height: 50px;
-        border: 1px solid #16765a;
-        border-radius: 20px;
-        padding: 10px;
-        font-size: 20px;
-        background-color: white; 
-        resize: none; 
-    }
-
     #TextoPubli{
-        width: 430px;
-        height: 5px;
+        width: auto;
         font-size: 12px;
         text-align: center;
         padding: 8px;
@@ -651,4 +642,8 @@ button {
     }
      
 
+}
+
+@media  (min-width:601px) and (max-width:800px){
+    body{background-color: violet;}
 }
