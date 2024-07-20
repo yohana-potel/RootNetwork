@@ -577,11 +577,29 @@ button {
 
 
 
-@media  (min-width:500px) and (max-width:600px) {
+@media  (min-width:300px) and (max-width:600px) {
     .pantalla{
         width: 100%;
-       
+        grid-template-columns: 1fr;
     }
+    .logotipo{
+        width: 90px;
+
+    }
+    .rostro{
+        display: none;
+        
+    }
+
+    .miperfil{
+        width: 50px;
+        height: 100px;
+        padding-left: 2px;
+        text-align: center;
+        font-size: 13px;
+    }
+    
+    /*
     .perfil{
         width: 100%;
         grid-template-rows: max-content;
@@ -641,6 +659,7 @@ button {
         display: none;
     }
      
+    */
 
 }
 
@@ -651,4 +670,74 @@ button {
         width: 100%;
         height: 100%;
     }
+    .perfil{
+        width: 100%;
+        grid-template-rows: max-content;
+        
+    }
+    .miperfil{
+        width: 50px;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr); 
+        height: 40vh;
+        padding-left: 2px;
+        text-align: center;
+        font-size: 13px;
+    }
+    .miperfil{
+        width: 50px;
+        display: grid;
+        grid-template-rows: repeat(4, 1fr); 
+        height: 40vh;
+        padding-left: 2px;
+        text-align: center;
+        font-size: 13px;
+    }
+    .logotipo{
+        width: 100px;
+
+    }
+
+    .rostro{
+        width: auto;
+        border-radius: 80px;
+    }
+
+    #myForm {
+        width: 80%;
+        height: 50px;
+        margin: 20px;
+        
+        
+    }
+    
+    .controles{
+        width: 100%;
+        height: 100px;
+        font-size: 15px;    
+    }
+
+    #buscar{
+        margin: 20px;
+    }
+
+    #TextoPubli{
+        width: auto;
+        font-size: 12px;
+        text-align: center;
+        padding: 8px;
+        
+        
+    }
+
+    .publicaciones{
+        width: 100%;
+    }
+
+    .publicidad{
+        display: none;
+    }
+     
+
+
 }
