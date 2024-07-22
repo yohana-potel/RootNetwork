@@ -579,85 +579,77 @@ button {
 @media  (min-width:300px) and (max-width:600px) {
     .pantalla{
         width: 100%;
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: wrap;
     }
     .logotipo{
-        width: 90px;
+        width: 80%;
 
     }
-    .rostro{
-        display: none;
-        
-    }
-
-    .miperfil{
-       
-        width: 100%;
-        height: 100px;
-        text-align: center;
-        font-size: 13px;
-         
-        
-    }
-
+    
     .perfil{
-        display: inline-grid;
+        display: grid;
         grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
         width: 100%;
         
+        
               
     }
+
+    .miperfil{
+        width: 50vw;
+        height: 20%;
+        text-align: center;
+        font-size: 13px;
+        display: flex;
+        justify-content: space-between;
+        
+        
+    } 
+
+    .rostro{
+        width: 80px;
+        border-radius: 60%;
+        
+    }
+
+    
     #myForm {
-        width: 100%;
-        height: 30px;
+        width: auto;
+        height: 40px;
         margin: 20px;
         
         
     }
+
+    #TextoPubli{
+        
+        text-align: center;
+       
+    }
+
+    .publicaciones{
+        width: 80%;
+        margin: 0;
+    }
+
     .publicacion{
         width: 100%;
+        background-color: brown;
         
-    
-        background-color: blueviolet;
-
     }
+
+    .autor-info{
+        border: 3px solid black;
+        border-radius: 40px;
+        padding: 3px;
+    }
+    
     .publicidad{
         display: none;
     }
     
     /*
-    .perfil{
-        width: 100%;
-        grid-template-rows: max-content;
-        
-    }
-    .miperfil{
-        width: 50px;
-        display: grid;
-        grid-template-rows: repeat(4, 1fr); 
-        height: 40vh;
-        padding-left: 2px;
-        text-align: center;
-        font-size: 13px;
-    }
-    .logotipo{
-        width: 100px;
-
-    }
-
-    .rostro{
-        width: auto;
-        border-radius: 80px;
-    }
-
-    #myForm {
-        width: 80%;
-        height: 50px;
-        margin: 20px;
-        
-        
-    }
-    
     .controles{
         width: 100%;
         height: 100px;
