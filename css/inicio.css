@@ -359,20 +359,33 @@ button {
     height: 30px; 
     margin-right: 5px; 
     background-color: transparent;
+    
 }
 .publicacion button:hover{
     background-color: grey;
 }
 
-.comentario button {
-    background-color: #16765a;
+.comentario button{
+    background-color: #762416;
     color: white; 
-    width: 100px; 
+    width: 150px; 
     height: 40px;
-    border-radius: 20px;
+    border-radius: 50px;
     margin-top: 10px;
     margin-right: 20px; 
 }
+
+.publicon_foto button{
+    width: 30px; 
+    height: 30px; 
+    margin-right: 5px; 
+    background-color: transparent;
+
+
+
+}
+
+
 .comentario button:hover{
     background-color: grey;
 }
@@ -482,23 +495,36 @@ button {
 }
 
 .publicacion{
-    background-color: tomato;
+    background-color: cadetblue;
+   
 }
 
 
-.autor-info {
+.autor-info, .left{
     width: 100%;
-    height: 200px;
-    border: 3px solid black;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    align-items: center;
+    border: 2px solid rgb(22, 118, 90);
 }
+
+
 .foto-autor {
-    width: 40px;
-    height: 40px;
+
+    border-radius: 30%;
+    grid-row: 1 / 3; 
+    width: 80px; 
+    height: 80px; 
     border-radius: 50%;
 }
+
 .nombre-autor {
     font-weight: bold;
     float: left;
+    padding: 10px;
+    
 }
 .publicidad {
     top: 0;
@@ -514,9 +540,55 @@ button {
 }
 
 .publicon_foto{
-    background-color: blue;
+    background-color: cadetblue;
     
 
+}
+.comentarioP{
+    background-color: rgb(180, 173, 67);
+    width: 75%;
+    margin: 10px 0 10px 90px;
+    border-radius: 50px;
+    padding: 10px;
+    border: 2px solid ;
+}
+.barraComentario{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Espacio entre elementos */
+}
+
+
+.botonComentario{
+    width: 100px;
+    background-color: aqua;
+}
+
+.comentario {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+#TextoComentario {
+    width: 200px; 
+    padding: 20px;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Opcional: centra el contenido horizontalmente */
+    justify-content: center; /* Opcional: centra el contenido verticalmente */
+    max-width: 100%; /* Asegura que el contenedor no sea más ancho que su contenedor padre */
+}
+
+.fotoPublicacion {
+    width: 100%; 
+    height: auto;
+    border-radius: 0%;
+    margin: 20px;
 }
 
 
