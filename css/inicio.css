@@ -358,30 +358,22 @@ button {
     background-color: grey;
 }
 
-.publicacion button{
-    width: 30px; 
-    height: 30px; 
-    margin-right: 5px; 
-    background-color: transparent;
-    
-}
-.publicacion button:hover{
-    background-color: grey;
+/*bt especial me gusta y compartir. */
+.boton-publicacion{
+    width: 50%;
+    height: 5px;
+    background-color:  red;
 }
 
-.comentario button, .publicon_foto button{
+.comentario button, .barraComentario button{
     background-color: #16765a;
     color: white; 
-    width: 150px; 
+    width: 30%; 
     height: 40px;
     border-radius: 50px;
     margin-top: 10px;
     margin-right: 20px; 
    
-}
-
-.comentario button:hover{
-    background-color: grey;
 }
 
 /*
@@ -393,23 +385,7 @@ button {
    
 
 }
-*/
-/*
-.perfil button {
-    background-color: transparent;
-    display: block; 
-    width: auto;
-    color: grey;
-    font-weight: bold; 
-    margin-bottom: 10px; 
-    font-size: 14px; 
-    border-radius: 20px;
-}
 
-
-.perfil button:hover{
-    color: #16765a;
-}
 */
 /*---------------*/
 .perfil{
@@ -419,26 +395,20 @@ button {
     justify-items: center; 
     align-items: start; 
     gap: 5px; 
-    padding: 20px;
   
 }
 
 .miperfil {
-    border: 2px solid rgb(22, 118, 90); 
-     
-    border-radius: 10px; 
-    height: 500px;  
+    border: 2px solid rgb(22, 118, 90);
     display: flex;
     flex-direction: column;
     align-items: center; /* Centra el contenido horizontalmente dentro de .miperfil */
     width: 100%; 
-    justify-content: space-around;
-    
+    justify-content: space-between;
 }
 
 .logotipo {
-    width: 150px;
-    height: auto;
+    width: 70%;
     border-radius: 600px;
     margin-left: 10px;
     padding: 10px;
@@ -446,15 +416,15 @@ button {
 }
 
 .rostro {
-    width: 105px;
-    height: 100px;
-    border-radius: 800px;
+    width: 200px;
+    border-radius: 900px;
     margin: 10px 0;
 }
 
 .editarPer a, .cerrarSec a {
     text-decoration: none;
-    color: #070707; /* Color del texto del enlace, ajusta según tus necesidades */
+    color: #070707; 
+    font-size: 20px;
 }
 
 #busqueda {
@@ -521,7 +491,6 @@ button {
    
 }
 
-
 .autor-info, .left{
     width: 100%;
     display: grid;
@@ -531,7 +500,6 @@ button {
     align-items: center;
     border: 2px solid rgb(22, 118, 90);
 }
-
 
 .foto-autor {
 
