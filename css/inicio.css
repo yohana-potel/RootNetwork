@@ -359,13 +359,12 @@ button {
 }
 
 /*bt especial me gusta y compartir. */
-.boton-publicacion{
-    width: 50%;
-    height: 5px;
-    background-color:  red;
+.barraComentario button{
+    width: 8%;
+    background-color: cadetblue;
 }
 
-.comentario button, .barraComentario button{
+.comentario button{
     background-color: #16765a;
     color: white; 
     width: 30%; 
@@ -402,7 +401,7 @@ button {
     border: 2px solid rgb(22, 118, 90);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centra el contenido horizontalmente dentro de .miperfil */
+    align-items: center; 
     width: 100%; 
     justify-content: space-between;
 }
@@ -443,13 +442,7 @@ button {
     width: 100%;
     height: 150px;
 }
-#TextoComentario {
-    padding: 5px;
-    border-radius: 20px;
-    border: 2px solid #16765a;
-    font-family: "Roboto", sans-serif;
-    
-}
+
 
 #myForm{
     width: 80%;
@@ -561,8 +554,12 @@ button {
 
 #TextoComentario {
     width: 200px; 
-    padding: 20px;
+    padding: 15px;
+    border-radius: 20px;
+    border: 2px solid #16765a;
+    font-family: "Roboto", sans-serif;
 }
+
 
 .right {
     display: flex;
@@ -725,12 +722,13 @@ button {
         flex-direction: column;
         align-items: center;
         width: 100%;
+        
     }
 
     #TextoPubli{
         
         text-align: center;
-        width: 100%;
+        width: 90%;
         box-sizing: border-box; 
         font-size: 12px;
         white-space: normal;
@@ -769,14 +767,19 @@ button {
         align-items: center;
         gap: 10px;
         font-size: 10px;
+        margin-left: 30px;
     }
 
     .barraComentario {
-        width: 60%;
+        width: 90%;
         display: flex;
         flex-direction: row;
         align-items: center;
-        background-color: transparent
+        background-color: transparent;
+        
+    }
+    .botonComentario{
+        width: 50vw;
     }
     
     .boton-emoticon{
@@ -788,6 +791,16 @@ button {
 
     .publicidad{
         display: none;
+    }
+    #TextoComentario {
+        width: 30vw; 
+        padding: 5px;
+        border-radius: 20px;
+        border: 2px solid #16765a;
+        font-family: "Roboto", sans-serif;
+    }
+    #busqueda{
+        margin: 15px;
     }
 
 
