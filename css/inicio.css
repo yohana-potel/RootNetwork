@@ -752,7 +752,7 @@ h4 {
         margin: 15px;
     }
     /*ESTILOS PARA PERFIL.HTML*/
-    /* MEDIA PARA PERFIL*/
+    /* MEDIA Telefono PARA PERFIL*/
     .pantallap{
         grid-template-columns: 1fr;
         height: auto; 
@@ -771,7 +771,7 @@ h4 {
         place-items: center;
         padding: 5%;
         margin: auto;
-        border-radius: 0%;
+        border-radius: 3px;
     }
     
     .datos_y_perfil {
@@ -782,19 +782,23 @@ h4 {
     }
     
     .daTos, .editarperfil {
+        display: grid;
         width: 100%;
         height: auto; 
         padding: 10px; 
         font-size: 20px;  
-        border: 2px solid rgb(22, 118, 90);
+        border: 2px solid rgb(0, 0, 0);
+        background-color: #B2B1A5;
         border-radius: 10px;
         margin-top: 10px;
+        place-items: center;
     }
     
     .imagen_perfil {
-        width: 100%;
-        height: auto; 
+        width: 200px;
+        height: 150px; 
         padding: 5px;
+        border-radius: 50%;
     }
     
     .peRfil {
@@ -802,16 +806,32 @@ h4 {
         grid-gap: 15px;     
     }
     
+    .botonPortada{
+        width: 150px; 
+        height: 30px; 
+        margin-left: 50px;
+        font-size: 20px; 
+        color: #ae7739;
+        background-color: #070707;
+        border: 2px solid #000000;
+        border-radius: 10px;
+        
+    }
     .botonP {
         width: 150px; 
-        height: 25px; 
-        margin: 10px auto; 
+        height: 30px; 
         font-size: 20px; 
+        color: #ae7739;
+        background-color: #070707;
+        border: 2px solid #ae7739;
+        border-radius: 10px;
     }
     
     .descripcionP {
+        width: 300px;
         height: auto; 
-        font-size: 12px; 
+        font-size: 15px; 
+        border-radius: 20px;
     }  
 }
 
@@ -832,155 +852,188 @@ h4 {
     }
 }
 
- /*ESTILOS PARA PERFIL.HTML*/
-    /* MEDIDA PARA TABLET PERFIL*/
+/*ESTILOS PARA PERFIL.HTML*/
+ /* MEDIDA PARA TABLET PERFIL*/
 @media (min-width: 601px) and (max-width: 1023px) {
-.pantallap{
-    display: grid;
-    grid-template-columns: 13% 87% ;
-    width: 100%;
-    height: 750px;
-}
-
-.img-p{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 3px;
-}
-
-.datos_y_perfil{
-    display: grid; 
-    grid-template-columns: 1fr 2fr; /* Dos columnas */
-    grid-gap: 10px; /* Espacio entre las columnas */
-    border-radius: 10px; 
-    height: 250px;
-    width: 80%; /* Ancho total de las dos columnas */
-    align-items: center;
-}
-
-.daTos {
-    display: grid;
-    place-items: center; /* Centrar vertical y horizontalmente */
-    border: 2px solid rgb(22, 118, 90);
-    border-radius: 10px;
-    padding: 20px;
-    width: 250px;
-    height: 250px;
-}   
-
-.editarperfil {
-    display: grid;
-    place-items: center; /* Centrar vertical y horizontalmente */
-    border: 2px solid rgb(22, 118, 90);
-    border-radius: 10px;
-    padding: 20px;
-    width: 100%;
-    height: 250px;  
-    margin-right: 10px
-}
-
-.imagen_perfil{
-    width: 250px;
-    height: 150px;
-    padding: 5px;
-}
-
-.peRfil{
-    display: grid;
-    grid-template-rows: 1fr; 
-    grid-gap: 20px;
-    width: 100%;
-    height: 500px;
-}
-
-.botonP{
-    background-color: #16765a;
-    color: white; 
-    width: 100px; 
-    height: 20px;
-    border: transparent;
-    border-radius: 20px;
-    margin: 5px;
-
-}
-
-.descripcionP{
-    width: 100%;
-    height: 30px;
-}
-}
+    .pantallap{
+        display: grid;
+        grid-template-columns: 13% 87% ;
+        width: 100%;
+        height: 750px;
+    }
+    .logo-p {
+        margin: 10px;
+        }
+    
+    .img-p{
+        width: 100%;
+        height: 200px;
+        margin-left: 10px;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+    
+    .datos_y_perfil{
+        display: grid; 
+        grid-template-columns: 1fr 2fr; /* Dos columnas */
+        grid-gap: 10px; /* Espacio entre las columnas */
+        border-radius: 10px; 
+        height: 250px;
+        width: 80%; /* Ancho total de las dos columnas */
+        align-items: center;
+    }
+    
+    .daTos {
+        display: grid;
+        place-items: center; /* Centrar vertical y horizontalmente */
+        border: 2px solid rgb(22, 118, 90);
+        border-radius: 10px;
+        padding: 20px;
+        background-color: #E07A5F;
+        width: 250px;
+        height: 250px;
+    }   
+    
+    .editarperfil {
+        display: grid;
+        place-items: center; /* Centrar vertical y horizontalmente */
+        border: 2px solid rgb(22, 118, 90);
+        border-radius: 10px;
+        background-color: #B2B1A5;
+        padding: 20px;
+        width: 95%;
+        height: 250px;
+        margin-left: 20px;
+        margin-right: 10px
+    
+    }
+    
+    .imagen_perfil{
+        width: 150px;
+        height: 100px;
+        padding: 5px;
+        border-radius: 50%;
+    }
+    
+    .peRfil{
+        display: grid;
+        grid-template-rows: 1fr; 
+        grid-gap: 20px;
+        width: 100%;
+        height: 500px;
+    }
+    
+    .botonPortada{
+        width: 150px; 
+        height: 30px; 
+        margin-left: 10px;
+        font-size: 20px; 
+        color: #e23e07;
+        background-color: #070707;
+        border: 2px solid #e23e07;
+        border-radius: 10px;    
+    }
+    .botonP{
+        width: 150px; 
+        height: 30px; 
+        font-size: 20px; 
+        color: #e23e07;
+        background-color: #070707;
+        border: 2px solid #e23e07;
+        border-radius: 10px;
+    }
+    
+    .descripcionP{
+        width: 100%;
+        height: 30px;
+        border-radius: 20px;
+    }
+    }
 
  /*ESTILOS PARA PERFIL.HTML*/
-    /* MEDIA PARA ESCRITORIO*/
+/* MEDIA PARA ESCRITORIO*/
 @media (min-width: 1024px) {
-.pantallap{
-    display: grid;
-    grid-template-columns: 10% 80% ;
-    width: 100%;
-    height: 750px;
-}
-
-.img-p{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 3px;
-}
-
-.datos_y_perfil{
-    display: grid; 
-    grid-template-columns: 1fr 2fr; /* Dos columnas */
-    grid-gap: 10px; /* Espacio entre las columnas */
-    border-radius: 10px; 
-    height: 250px;
-    width: 100%; /* Ancho total de las dos columnas */
-    padding: 20px;
-    align-items: center;
-}
-
-.daTos, .editarperfil {
-    display: grid;
-    place-items: center; /* Centrar vertical y horizontalmente */
-    border: 2px solid rgb(22, 118, 90);
-    border-radius: 10px;
-    padding: 20px;
-    width: 400px;
-    height: 250px;
-    margin: auto;
-}
-
-.imagen_perfil{
-    width: 250px;
-    height: 150px;
-    padding: 5px;
-}
-
-.peRfil{
-    display: grid;
-    grid-template-rows: 1fr; 
-    grid-gap: 20px;
-    width: 100%;
-    height: 500px;
-}
-
-.botonP{
-    background-color: #16765a;
-    color: white; 
-    width: 100px; 
-    height: 20px;
-    border: transparent;
-    border-radius: 20px;
-    margin: 5px;
-
-}
-
-.descripcionP{
-    width: 100%;
-    height: 30px;
-}
-}
-
+    .pantallap{
+        display: grid;
+        grid-template-columns: 10% 80% ;
+        width: 100%;
+        height: 750px;
+    }
+    .logo-p {
+        margin: 10px;
+        }
+    
+    .img-p{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 3px;
+    }
+    
+    .datos_y_perfil{
+        display: grid; 
+        grid-template-columns: 1fr 2fr; /* Dos columnas */
+        grid-gap: 10px; /* Espacio entre las columnas */
+        border-radius: 10px; 
+        height: 250px;
+        width: 100%; /* Ancho total de las dos columnas */
+        padding: 20px;
+        align-items: center;
+    }
+    
+    .daTos, .editarperfil {
+        display: grid;
+        place-items: center; /* Centrar vertical y horizontalmente */
+        border: 2px solid rgb(22, 118, 90);
+        border-radius: 10px;
+        padding: 20px;
+        width: 400px;
+        height: 250px;
+        margin: auto;
+    }
+    
+    .imagen_perfil{
+        width: 250px;
+        height: 150px;
+        padding: 5px;
+    }
+    
+    .peRfil{
+        display: grid;
+        grid-template-rows: 1fr; 
+        grid-gap: 20px;
+        width: 100%;
+        height: 500px;
+    }
+    
+    .botonPortada{
+        width: 150px; 
+        height: 30px; 
+        margin-left: 50px;
+        font-size: 20px; 
+        color: #e23e07;
+        background-color: #070707;
+        border: 2px solid #e23e07;
+        border-radius: 10px;
+        
+    }
+    .botonP {
+        width: 150px; 
+        height: 30px; 
+        font-size: 20px; 
+        color: #e23e07;
+        background-color: #070707;
+        border: 2px solid #e23e07;
+        border-radius: 10px;
+    }
+    
+    .descripcionP{
+        width: 100%;
+        height: 30px;
+        border-radius: 20px;
+        
+    }
+    }
 
 /*
 .miperfil{
