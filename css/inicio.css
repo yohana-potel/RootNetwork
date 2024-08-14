@@ -578,78 +578,6 @@ button {
 
 
 
-
-/*ESTILOS PARA PERFIL.HTML*/
-.pantallap{
-    display: grid;
-    grid-template-columns: 10% 80% ;
-    width: 100%;
-    height: 750px;
-   
-}
-
-.img-p{
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 3px;
-}
-
-.datos_y_perfil{
-    display: grid; 
-    grid-template-columns: 1fr 2fr; /* Dos columnas */
-    grid-gap: 10px; /* Espacio entre las columnas */
-    border-radius: 10px; 
-    height: 250px;
-    width: 100%; /* Ancho total de las dos columnas */
-    padding: 20px;
-    align-items: center;
-}
-
-.daTos, .editarperfil {
-    display: grid;
-    place-items: center; /* Centrar vertical y horizontalmente */
-    border: 2px solid rgb(22, 118, 90);
-    border-radius: 10px;
-    padding: 20px;
-    width: 400px;
-    height: 250px;
-    margin: auto;
-}
-
-.imagen_perfil{
-    width: 250px;
-    height: 150px;
-    padding: 5px;
-}
-
-.peRfil{
-    display: grid;
-    grid-template-rows: 1fr; 
-    grid-gap: 20px;
-    width: 100%;
-    height: 500px;
-}
-
-.botonP{
-    background-color: #16765a;
-    color: white; 
-    width: 100px; 
-    height: 20px;
-    border: transparent;
-    border-radius: 20px;
-    margin: 5px;
-
-}
-
-.descripcionP{
-    width: 100%;
-    height: 30px;
-    border-radius: 15px;
-}
-
-
-
 @media  (min-width:300px) and (max-width:600px) {
 
     body {
@@ -802,15 +730,72 @@ button {
     #busqueda{
         margin: 15px;
     }
+    /*ESTILOS PARA PERFIL.HTML*/
+    /* MEDIA PARA PERFIL*/
+    .pantallap{
+        grid-template-columns: 1fr;
+        height: auto; 
+        font-size: 30px;
+        place-items: center;
+    }
 
+    .logo-p {
+       margin: 10px;
+    }
 
+    .img-p {
+        display: grid;
+        width: 90%;
+        height: 300px;
+        place-items: center;
+        padding: 5%;
+        margin: auto;
+        border-radius: 0%;
+    }
     
+    .datos_y_perfil {
+        grid-template-columns: 1fr; 
+        grid-gap: 10px;
+        height: auto; 
+        padding: 10px;
+    }
+    
+    .daTos, .editarperfil {
+        width: 100%;
+        height: auto; 
+        padding: 10px; 
+        font-size: 20px;  
+        border: 2px solid rgb(22, 118, 90);
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+    
+    .imagen_perfil {
+        width: 100%;
+        height: auto; 
+        padding: 5px;
+    }
+    
+    .peRfil {
+        height: auto; 
+        grid-gap: 15px;     
+    }
+    
+    .botonP {
+        width: 150px; 
+        height: 25px; 
+        margin: 10px auto; 
+        font-size: 20px; 
+    }
+    
+    .descripcionP {
+        height: auto; 
+        font-size: 12px; 
+    }  
 }
-
 
 @media  (min-width:601px) and (max-width:800px){
    
-
     .pantalla{
         width: 100%;
         display: grid;
@@ -824,11 +809,156 @@ button {
         height: 40px;
         border-radius: 50px;
     }
+}
 
+ /*ESTILOS PARA PERFIL.HTML*/
+    /* MEDIDA PARA TABLET PERFIL*/
+@media (min-width: 601px) and (max-width: 1023px) {
+.pantallap{
+    display: grid;
+    grid-template-columns: 13% 87% ;
+    width: 100%;
+    height: 750px;
+}
+
+.img-p{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.datos_y_perfil{
+    display: grid; 
+    grid-template-columns: 1fr 2fr; /* Dos columnas */
+    grid-gap: 10px; /* Espacio entre las columnas */
+    border-radius: 10px; 
+    height: 250px;
+    width: 80%; /* Ancho total de las dos columnas */
+    align-items: center;
+}
+
+.daTos {
+    display: grid;
+    place-items: center; /* Centrar vertical y horizontalmente */
+    border: 2px solid rgb(22, 118, 90);
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+}   
+
+.editarperfil {
+    display: grid;
+    place-items: center; /* Centrar vertical y horizontalmente */
+    border: 2px solid rgb(22, 118, 90);
+    border-radius: 10px;
+    padding: 20px;
+    width: 100%;
+    height: 250px;  
+    margin-right: 10px
+}
+
+.imagen_perfil{
+    width: 250px;
+    height: 150px;
+    padding: 5px;
+}
+
+.peRfil{
+    display: grid;
+    grid-template-rows: 1fr; 
+    grid-gap: 20px;
+    width: 100%;
+    height: 500px;
+}
+
+.botonP{
+    background-color: #16765a;
+    color: white; 
+    width: 100px; 
+    height: 20px;
+    border: transparent;
+    border-radius: 20px;
+    margin: 5px;
 
 }
 
+.descripcionP{
+    width: 100%;
+    height: 30px;
+}
+}
 
+ /*ESTILOS PARA PERFIL.HTML*/
+    /* MEDIA PARA ESCRITORIO*/
+@media (min-width: 1024px) {
+.pantallap{
+    display: grid;
+    grid-template-columns: 10% 80% ;
+    width: 100%;
+    height: 750px;
+}
+
+.img-p{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 3px;
+}
+
+.datos_y_perfil{
+    display: grid; 
+    grid-template-columns: 1fr 2fr; /* Dos columnas */
+    grid-gap: 10px; /* Espacio entre las columnas */
+    border-radius: 10px; 
+    height: 250px;
+    width: 100%; /* Ancho total de las dos columnas */
+    padding: 20px;
+    align-items: center;
+}
+
+.daTos, .editarperfil {
+    display: grid;
+    place-items: center; /* Centrar vertical y horizontalmente */
+    border: 2px solid rgb(22, 118, 90);
+    border-radius: 10px;
+    padding: 20px;
+    width: 400px;
+    height: 250px;
+    margin: auto;
+}
+
+.imagen_perfil{
+    width: 250px;
+    height: 150px;
+    padding: 5px;
+}
+
+.peRfil{
+    display: grid;
+    grid-template-rows: 1fr; 
+    grid-gap: 20px;
+    width: 100%;
+    height: 500px;
+}
+
+.botonP{
+    background-color: #16765a;
+    color: white; 
+    width: 100px; 
+    height: 20px;
+    border: transparent;
+    border-radius: 20px;
+    margin: 5px;
+
+}
+
+.descripcionP{
+    width: 100%;
+    height: 30px;
+}
+}
 
 
 /*
