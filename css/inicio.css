@@ -337,14 +337,14 @@ img{
     font-family: "Roboto", sans-serif;
     background-color: white; 
     border-radius: 20px;
-    border: 2px solid #16765a;
+    border: 2px solid #9c4251;
 }
 .siguiente{
     column-gap: 50px;
     margin-top: 50px;
     width: 200px;
     height: 40px;
-    background: #16765a;
+    background:  #9c4251;
     border-color: transparent;
     border-radius: 20px;
     margin-bottom: 20px;
@@ -355,7 +355,7 @@ img{
     background-color: grey;
 }
 p{
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -1007,16 +1007,17 @@ h4 {
         border: 2px solid #9c4251;
         background-color: #F2C7C5;
         border-radius: 10px;
-        padding: 20px;
+        
         width: 400px;
         height: 250px;
         margin: auto;
     }
     
     .imagen_perfil{
-        width: 200px;
-        height: 150px;
+        width: 150px;
+        height: 100px;
         padding: 5px;
+        border-radius: 50%;
     }
     
     .peRfil{
@@ -1054,7 +1055,7 @@ h4 {
         background-color: grey;
     }
     .descripcionP{
-        width: 100%;
+        width: 90%;
         height: 30px;
         border-radius: 20px;
         
