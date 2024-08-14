@@ -139,7 +139,7 @@ footer{
 .Form{
     border: 4px solid #16765a;
     width: 400px;
-    height: auto;
+    height: 700px;
     gap: 10px;
     padding: 10px;
     margin: 30px auto 30px;
@@ -199,7 +199,7 @@ footer{
 
 .button{
     width: 80%;
-    background: #71429c;
+    background: #9c4251;
     padding: 18px ;
     color: white;
     margin: 0 30px 10px;
@@ -251,12 +251,13 @@ footer{
     width: 100%;
     height: 10%;
     margin: 50px 0 0;    
+    
 }
 
 .botones button {
     width: 30%;
     font-size: 15px;
-    background: #16765a;
+    background: #9c4251;
     border-radius: 20px;
     margin-bottom: 20px;
     cursor: pointer;
@@ -301,7 +302,7 @@ footer{
 #PubliText{
     width: 600px;
     height: 200px;
-    border: 2px solid #16765a;
+    border: 2px solid #9c4251;
     border-radius: 20px;
     font-size: 16px;
     font-family: "Roboto", sans-serif;
@@ -358,6 +359,7 @@ p{
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
+    padding: 30px;
 }
 
 /*Estilos para muro.html*/
@@ -375,6 +377,7 @@ button {
     cursor: pointer;
     margin: 4px;
     font-family: "Roboto", sans-serif;
+    color: #9c4251;
 }
 /*Botones Muro.html*/
 /*
@@ -399,7 +402,7 @@ button {
 }
 
 .comentario button{
-    background-color: #16765a;
+    background-color: #9c4251;
     color: white; 
     width: 30%; 
     height: 40px;
@@ -596,7 +599,9 @@ h4 {
     border-radius: 0%;
     margin: 20px;
 }
-
+.boton-emoticon{
+    color: #9c4251;
+}
 
 
 @media  (min-width:300px) and (max-width:600px) {
