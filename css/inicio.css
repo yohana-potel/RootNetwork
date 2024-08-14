@@ -479,8 +479,8 @@ button {
     
 }
 
-.publicacion{
-    background-color: cadetblue;
+.publicacion, .publicon_foto{
+    background-color: #40ceb6ef;
    
 }
 
@@ -524,11 +524,6 @@ button {
     border-radius: 0%;
 }
 
-.publicon_foto{
-    background-color: cadetblue;
-    
-
-}
 .comentarioP{
     background-color: rgb(180, 173, 67);
     width: 75%;
