@@ -15,7 +15,7 @@ button {
     margin: 4px;
     font-family: "Roboto", sans-serif;
 }
-.boton-icono svg path {
+.boton-publicacion svg path {
     fill: #9c4251;
 }
 .contenedorImg{
@@ -142,13 +142,6 @@ footer>p {
     color: #D97D54;
     text-align: center;
 }
-
-
-
-
-
-
-
 
 /*ESTILO REGISTRO*/
 .Form{
