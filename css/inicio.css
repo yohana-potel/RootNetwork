@@ -143,7 +143,7 @@ footer{
     gap: 10px;
     padding: 10px;
     margin: 30px auto 30px;
-    background-color: #8aad79;
+    background-color: #F2C7C5;
     display: flex;
     flex-direction: column;
     border-radius:10px ;
@@ -162,7 +162,7 @@ footer{
     text-align: center;
     font-weight: 700;
     font-style: normal;
-    color: #0f701c;
+    color: #D97D54;
     
 }
 
@@ -199,7 +199,7 @@ footer{
 
 .button{
     width: 80%;
-    background: #16765a;
+    background: #71429c;
     padding: 18px ;
     color: white;
     margin: 0 30px 10px;
