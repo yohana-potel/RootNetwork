@@ -19,7 +19,7 @@ button {
 .contenedorImg{
 
     width: 500px;
-    border: 2px solid #9c4251;
+    border: 2px solid #16765a;
 
 }
 
@@ -35,6 +35,7 @@ button {
 }
 
 .contenedor{
+   
     width: 100px;
     height: 10px;
     display: flex;
@@ -45,7 +46,7 @@ button {
 
 .boton1{
     width: 80%;
-    background: #9c4251;
+    background: #0f701c;
     padding: 18px;
     color: white;
     margin-left: 40px;
@@ -63,8 +64,7 @@ h3{
 }
 
 .logeo{
-    border: 2px solid #9c4251;
-    background-color: #F2C7C5;
+    border: 2px solid #0f701c;
     width: 400px;
     height: 300px;
     padding: 20px;
@@ -85,37 +85,32 @@ h1{
     width: 180px;
     padding: 10px;
     border-radius: 10px;
-    margin-left: 20px;
-    border: 2px solid #9c4251;
+    margin-left: 16px;
+    border: 2px solid #0f701c;
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     margin-left: 70px;
-    margin-bottom: 10px;
 
 }
 .boton{
     width: 190px;
-    background-color: #9c4251;
-    padding: 10px;
+    background-color: #0f701c;
+    padding: 18px;
     color: #ffffff;
     margin: 15px 15px 15px 75px;
     font-size: 20px;
     border-radius: 15px;
     cursor: pointer;
-    
+    margin-bottom: 50px;
 }
 
 .olvidar{
-    margin-left: 60px;
+    margin-left: 70px;
 }
-.registrar{
-    color: #D97D54;
-    margin-top: 0%;
 
-}
 .crear{
     text-align: center;
-    border: 2px solid #9c4251;
+    border: 2px solid #0f701c;
     width: 400px;
     height: 50px;
     padding: 20px;
@@ -125,12 +120,11 @@ h1{
     margin-left: 40%;
     border-radius: 20px;
     margin-top: 20px;
-    background-color: #F2C7C5;
  
  }
 
-footer>p {
-    color: #D97D54;
+footer{
+    color: grey;
     text-align: center;
 }
 
@@ -143,7 +137,7 @@ footer>p {
 
 /*ESTILO REGISTRO*/
 .Form{
-    border: 4px solid #9c4251;
+    border: 4px solid #16765a;
     width: 400px;
     height: 700px;
     gap: 10px;
@@ -197,7 +191,7 @@ footer>p {
     padding: 10px;
     border-radius: 20px;
     margin: 5px 15px ;
-    border: 2px solid #9c4251;
+    border: 2px solid #16765a;
     font-size: 12px;
     justify-content: space-between;
     
@@ -244,8 +238,8 @@ footer>p {
     width: 700px;
     height: 600px;
     margin: 100px 300px 0;
-    background-color: #F2C7C5;  
-    border: 4px solid #9c4251; 
+    background-color: #8aad79;  
+    border: 4px solid #16765a; 
     border-radius: 10px;
     padding: 5px;
 }
@@ -290,7 +284,7 @@ footer>p {
     font-style: normal;  
 }
  
-.fotopubli{
+.foto{
     width: 100px;
     height: 150px;
     padding: 10px;
@@ -302,9 +296,8 @@ footer>p {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    font-family: "Roboto", sans-serif;  
+    font-family: "Roboto", sans-serif;   
 }
-
  
 #PubliText{
     width: 600px;
@@ -343,14 +336,14 @@ img{
     font-family: "Roboto", sans-serif;
     background-color: white; 
     border-radius: 20px;
-    border: 2px solid #9c4251;
+    border: 2px solid #16765a;
 }
 .siguiente{
     column-gap: 50px;
     margin-top: 50px;
     width: 200px;
     height: 40px;
-    background:  #9c4251;
+    background: #16765a;
     border-color: transparent;
     border-radius: 20px;
     margin-bottom: 20px;
@@ -361,7 +354,7 @@ img{
     background-color: grey;
 }
 p{
-    color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
@@ -1013,17 +1006,16 @@ h4 {
         border: 2px solid #9c4251;
         background-color: #F2C7C5;
         border-radius: 10px;
-        
+        padding: 20px;
         width: 400px;
         height: 250px;
         margin: auto;
     }
     
     .imagen_perfil{
-        width: 150px;
-        height: 100px;
+        width: 200px;
+        height: 150px;
         padding: 5px;
-        border-radius: 50%;
     }
     
     .peRfil{
@@ -1061,7 +1053,7 @@ h4 {
         background-color: grey;
     }
     .descripcionP{
-        width: 90%;
+        width: 100%;
         height: 30px;
         border-radius: 20px;
         
