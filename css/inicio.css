@@ -15,17 +15,6 @@ button {
     margin: 4px;
     font-family: "Roboto", sans-serif;
 }
-.contenedor{
-    border: 2px solid #16765a;
-    width: 700px;
-    height: 500px;
-    display: flex;
-    flex-direction: row;
-    border-radius:10px ;
-    background-color: #8aad79;
-    margin: auto;
-    margin-top: 100px;
-}
 
 .contenedorImg{
 
@@ -34,71 +23,117 @@ button {
 
 }
 
-h3{
-    color: #0f701c;
-    font-size: 30px;
-    text-align: center;
-}
-
-.logeo{
-    border: 2px solid #16765a;
-    width: 400px;
-    padding: 20px;
+.logo{
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    border-radius: 50px;
+}
+.logo_inicio{
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
 
 }
-.olvidar{
-    text-align: center;
-}
-.crear{
-   text-align: center;
-}
 
-.titulo_loguin{
-    color: #0f701c;
-    text-align: center;
-}
-
-.datos{
-    width: 90%;
-    background: #fff;
-    padding: 10px;
-    border-radius: 20px;
-    margin-left: 16px;
-    border: 2px solid #16765a;
-    font-family: "Roboto", sans-serif;
-    font-size: 15px;
-    margin-left: 5px;
-
+.contenedor{
+   
+    width: 100px;
+    height: 10px;
+    display: flex;
+    flex-direction: row;
+    border-radius:10px ;
+    margin-top: 100px;
 }
 
 .boton1{
     width: 80%;
-    background: #16765a;
+    background: #0f701c;
     padding: 18px;
     color: white;
     margin-left: 40px;
     font-size: 20px;
     border-radius: 15px;
     cursor: pointer;
-    margin-bottom: 50px;
-}
-.boton1:hover{
-    background-color: grey;
-}
-.Logo{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: 30px;
 }
 
-.logo_inicio {
-    width: 200px;
-    height: 200px;
-    border-radius: 600px;
+h3{
+    color: #D97D54;
+    margin-top: 5%;
+    font-size: 40px;
+
 }
+
+.logeo{
+    border: 2px solid #0f701c;
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 40%;
+    border-radius: 20px;
+
+}
+
+h1{
+    color: #D97D54;
+    text-align: center;
+}
+
+.datos{
+    width: 180px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 16px;
+    border: 2px solid #0f701c;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    margin-left: 70px;
+
+}
+.boton{
+    width: 190px;
+    background-color: #0f701c;
+    padding: 18px;
+    color: #ffffff;
+    margin: 15px 15px 15px 75px;
+    font-size: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.olvidar{
+    margin-left: 70px;
+}
+
+.crear{
+    text-align: center;
+    border: 2px solid #0f701c;
+    width: 400px;
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 40%;
+    border-radius: 20px;
+    margin-top: 20px;
+ 
+ }
+
+footer{
+    color: grey;
+    text-align: center;
+}
+
+
+
+
+
+
+
 
 /*ESTILO REGISTRO*/
 .Form{
@@ -285,7 +320,6 @@ h3{
 }
 /*Botones Contraseña.html*/
 h1{
-    color: #16765a;
     text-align: left ;
 }
 
