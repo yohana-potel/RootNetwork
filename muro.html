@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Root Network es una red social donde los entusiastas de la jardinería pueden compartir sus secretos, consejos y experiencias. ¡Únete a nuestra comunidad y cultiva tu pasión por la naturaleza!">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-Tou3qNj7D8CmFjxMWBkS5qATdPnpU2wPODHDCh+phO9wQ3PqNj70yJDt9FvPrYxy" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/inicio.css">
     <link rel="shortcut icon " href="./img/logo-sin-fondo.png-Photoroom.png">
@@ -10,112 +11,113 @@
 </head>
 <body>
     <div class="pantalla">
-    <section class="perfil">
-        <img src="./img/logo.jpeg" alt="logo " class="logotipo">
-            <div class="miperfil">
-                <h4>Loan Yomi</h4>
-                <img src="./img/foto.jpg" alt="foto_rostro" class="rostro">
+        <section class="perfil">
+            <img src="./img/logo.jpeg" alt="Fot del logo en el muro. " class="logotipo">
+                <div class="miperfil">
+                    <h4>Loan Yomi</h4>
+                    <img src="./img/foto.jpg" alt="Foto del rostro" class="rostro">
+                    
+                    <p class="editarPer"><a href="Perfil.html"> Editar Perfil </a> </p>
+                    <p class="cerrarSec"><a href="index.html"> Cerrar Sesión </a></p>
+                </div>
                 
-                <p class="editarPer"><a href="Perfil.html"> Editar Perfil </a> </p>
-                <p class="cerrarSec"><a href="index.html"> Cerrar Sesión </a></p>
+
+        </section>
+        <section class="muro">
+            <div class="controles">
+                <form id="buscar">
+                    <input type="text" id="busqueda" name="busqueda" placeholder="Busca consejos para tu jardín" oninput="buscarEnBD(this.value)">
+                </form>
+        
+                <form id="myForm" onsubmit="return false;">
+                    <input type="text" id="TextoPubli" placeholder="¿Listo para compartir tus secretos de jardinería? Cuéntanos qué estás cultivando " onkeydown="submitOnEnter(event)">
+                </form>
             </div>
-               
-
-    </section>
-    <section class="muro">
-        <div class="controles">
-            <form id="buscar">
-                <input type="text" id="busqueda" name="busqueda" placeholder="Busca consejos para tu jardín" oninput="buscarEnBD(this.value)">
-            </form>
-    
-            <form id="myForm" onsubmit="return false;">
-                <input type="text" id="TextoPubli" placeholder="¿Listo para compartir tus secretos de jardinería? Cuéntanos qué estás cultivando " onkeydown="submitOnEnter(event)">
-            </form>
-        </div>
-        <div class="publicaciones">
-            <div class="publicacion">
-                <div class="autor-info">
-                    <img src="./img/foto.jpg" alt="Foto del autor" class="foto-autor">
-                    <h4 class="nombre-autor">Loan Yomi</h4>
-                    <p>Recuerda regar tus plantas por la mañana temprano o al atardecer para evitar la evaporación rápida del agua y asegurar una absorción óptima.</cionp>
-                </div>
-
-                <div class="comentarioP">
-                    <img src="./img/leyla.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut pariatur quaerat cum? Error facere ea dolorum consectetur nesciunt, quibusdam fugiat nihil quis dignissimos, totam cumque fugit deleniti tempore, consequuntur magni?</p>
-                    
-                    
-                </div>
-                <div class="comentarioP">
-                    <img src="./img/fotoperfil.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut pariatur quaerat cum? Error facere ea dolorum consectetur nesciunt, quibusdam fugiat nihil quis dignissimos, totam cumque fugit deleniti tempore, consequuntur magni?</p>
-                </div>
-
-
-                <div class="barraComentario">
-                    <button name="meGusta">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path fill="#16765a" d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0h32c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64H64c123.7 0 224 100.3 224 224v32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320C100.3 320 0 219.7 0 96z"/>
-                        </svg>
-                    </button>
-
-                    <button name="compartir">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path class="boton-emoticon" fill="#16765a" d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/>
-                        </svg>
-                    </button>
-                    <div class="comentario">
-                        <input type="text" id="TextoComentario" placeholder="Escribe un comentario...">
-                        <button class="botonComentario">Comentar</button>
+            <div class="publicaciones">
+                <div class="publicacion">
+                    <div class="autor-info">
+                        <img src="./img/foto.jpg" alt="Foto del autor" class="foto-autor">
+                        <h4 class="nombre-autor">Loan Yomi</h4>
+                        <p>Recuerda regar tus plantas por la mañana temprano o al atardecer para evitar la evaporación rápida del agua y asegurar una absorción óptima.</cionp>
                     </div>
-                </div>
-                
-            </div>
-            <div class="publicon_foto">
-                <div class="left">
-                    <h4 class="nombre-autor">Loan Yomi</h4>
-                    <img src="./img/foto.jpg" alt="Foto del autor" class="foto-autor">
-                </div>
-                <div class="right">
-                    <p>Recuerda regar tus plantas por la mañana temprano o al atardecer para evitar la evaporación rápida del agua y asegurar una absorción óptima.</p>
-                    <img class="fotoPublicacion" src="./img/arbolpotada.jpeg" alt="Foto de publicacion.">
-                </div>
+
+                    <div class="comentarioP">
+                        <img src="./img/leyla.jpg" alt="Foto del comentario">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut pariatur quaerat cum? Error facere ea dolorum consectetur nesciunt, quibusdam fugiat nihil quis dignissimos, totam cumque fugit deleniti tempore, consequuntur magni?</p>
+                        
+                        
+                    </div>
+                    <div class="comentarioP">
+                        <img src="./img/fotoperfil.jpg" alt="Foto del comentario">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut pariatur quaerat cum? Error facere ea dolorum consectetur nesciunt, quibusdam fugiat nihil quis dignissimos, totam cumque fugit deleniti tempore, consequuntur magni?</p>
+                    </div>
 
 
-                <div class="comentarioP">
-                    <img src="./img/leyla.jpg" alt="">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut pariatur quaerat cum? Error facere ea dolorum consectetur nesciunt, quibusdam fugiat nihil quis dignissimos, totam cumque fugit deleniti tempore, consequuntur magni?</p>
-                    
-                    
-                </div>
-                
-                <div class="barraComentario">
-                        <button class="boton-publicacion" name="meGusta">
+                    <div class="barraComentario">
+                        <button name="meGusta">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                 <path fill="#16765a" d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0h32c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64H64c123.7 0 224 100.3 224 224v32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320C100.3 320 0 219.7 0 96z"/>
                             </svg>
                         </button>
-        
-                        <button class="boton-publicacion"  name="compartir">
+
+                        <button name="compartir">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path fill="#16765a" d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/>
+                                <path class="boton-emoticon" fill="#16765a" d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/>
                             </svg>
                         </button>
                         <div class="comentario">
                             <input type="text" id="TextoComentario" placeholder="Escribe un comentario...">
                             <button class="botonComentario">Comentar</button>
                         </div>
+                    </div>
+                    
                 </div>
+                <div class="publicon_foto">
+                    <div class="left">
+                        <h4 class="nombre-autor">Loan Yomi</h4>
+                        <img src="./img/foto.jpg" alt="Foto del autor" class="foto-autor">
+                    </div>
+                    <div class="right">
+                        <p>Recuerda regar tus plantas por la mañana temprano o al atardecer para evitar la evaporación rápida del agua y asegurar una absorción óptima.</p>
+                        <img class="fotoPublicacion" src="./img/arbolpotada.jpeg" alt="Foto de publicacion.">
+                    </div>
 
+
+                    <div class="comentarioP">
+                        <img src="./img/leyla.jpg" alt="Foto del comentario del muro">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut pariatur quaerat cum? Error facere ea dolorum consectetur nesciunt, quibusdam fugiat nihil quis dignissimos, totam cumque fugit deleniti tempore, consequuntur magni?</p>
+                        
+                        
+                    </div>
+                    
+                    <div class="barraComentario">
+                            <button class="boton-publicacion" name="meGusta">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="#16765a" d="M512 32c0 113.6-84.6 207.5-194.2 222c-7.1-53.4-30.6-101.6-65.3-139.3C290.8 46.3 364 0 448 0h32c17.7 0 32 14.3 32 32zM0 96C0 78.3 14.3 64 32 64H64c123.7 0 224 100.3 224 224v32V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V320C100.3 320 0 219.7 0 96z"/>
+                                </svg>
+                            </button>
+            
+                            <button class="boton-publicacion"  name="compartir">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                    <path fill="#16765a" d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480V396.4c0-4 1.5-7.8 4.2-10.7L331.8 202.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8 17.7 316.6C7.1 311.3 .3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/>
+                                </svg>
+                            </button>
+                            <div class="comentario">
+                                <input type="text" id="TextoComentario" placeholder="Escribe un comentario...">
+                                <button class="botonComentario">Comentar</button>
+                            </div>
+                    </div>
+
+                </div>
             </div>
-        </div>
 
-    </section>
-    <section class="publicidad">
-        <img src="./img/publicidad.jpg" alt="publi" class="propaganda">
-        
+        </section>
+        <section class="publicidad">
+            <img src="./img/publicidad.jpg" alt="Barra de publicidad" class="propaganda">
+            
 
-    </section>
-</div>
+        </section>
+    
+    </div>
 </body>
 </html>
