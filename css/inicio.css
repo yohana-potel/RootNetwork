@@ -3,7 +3,7 @@
     padding: 0;
 }
 body{
-    background-color: #5cb654;
+    background-color: #3D2C2E;
     font-family: "Roboto", sans-serif;
 }
 /*Configuracion para etiqueta de tipo button*/
@@ -361,7 +361,7 @@ button {
 /*bt especial me gusta y compartir. */
 .barraComentario button{
     width: 8%;
-    background-color: cadetblue;
+    background-color: #F2C7C5;
 }
 
 .comentario button{
@@ -375,17 +375,6 @@ button {
    
 }
 
-/*
-
-.publicon_foto button{
-    width: 30px; 
-    height: 30px; 
-    margin-right: 5px; 
-   
-
-}
-
-*/
 /*---------------*/
 .perfil{
     display: grid;
@@ -422,8 +411,11 @@ button {
 
 .editarPer a, .cerrarSec a {
     text-decoration: none;
-    color: #070707; 
+    color: #D97D54; 
     font-size: 20px;
+}
+h4 {
+    color: #D97D54;
 }
 
 #busqueda {
@@ -480,7 +472,7 @@ button {
 }
 
 .publicacion, .publicon_foto{
-    background-color: #40ceb6ef;
+    background-color: #F2C7C5;
    
 }
 
@@ -525,7 +517,7 @@ button {
 }
 
 .comentarioP{
-    background-color: rgb(180, 173, 67);
+    background-color: #B2B1A5;
     width: 75%;
     margin: 10px 0 10px 90px;
     border-radius: 50px;
