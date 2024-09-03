@@ -243,6 +243,8 @@ footer>p {
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-style: normal;
+ 
+
 }
 
  
@@ -281,17 +283,6 @@ button {
     color: #9c4251;
 }
 /*Botones Muro.html*/
-/*
-.muro button {
-    background-color: #16765a;
-    color: white; 
-    width: 250px; 
-    height: 40px;
-    border-radius: 20px;
-    margin-top: 10px;
-    margin-right: 20px; 
-}
-*/
 
 
 /*bt especial me gusta y compartir. */
@@ -301,16 +292,15 @@ button {
 .miperfil {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    width: 100%;
+   
 }
 
 .fotodelUsuario {
     width: 100px;
     height: auto;
-    justify-content: space-between;
+    justify-content: space-around;
     margin-left: auto;
+    border-radius: 300px;
 
 }
 
@@ -331,6 +321,23 @@ button {
 .boton-emoticon{
     color: #9c4251;
 }
+
+h4{
+    color: #D97D54;
+}
+
+.barraComentario{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+svg{
+    background-color: #F2C7C5;
+    width: 40px;
+}
+
 
 
 @media  (min-width:300px) and (max-width:600px) {
