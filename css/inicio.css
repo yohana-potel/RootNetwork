@@ -298,37 +298,27 @@ button {
 
 
 /*---------------*/
-.perfil{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto; 
-    justify-items: center; 
-    align-items: start; 
-    gap: 5px; 
-  
-}
-
 .miperfil {
-    border: 2px solid #9c4251;
     display: flex;
     flex-direction: column;
-    align-items: center; 
-    width: 100%; 
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.fotodelUsuario {
+    width: 100px;
+    height: auto;
     justify-content: space-between;
+    margin-left: auto;
+
 }
 
-.logotipo {
-    width: 70%;
-    border-radius: 600px;
-    margin-left: 10px;
+#TextoPubli {
+    width: 100%;
     padding: 10px;
-
+    font-size: 1rem;
 }
-
-h4 {
-    color: #D97D54;
-}
-
 
 .comentario {
     display: flex;
@@ -337,29 +327,7 @@ h4 {
     width: 50%;
 }
 
-#TextoComentario {
-    width: 200px; 
-    padding: 15px;
-    border-radius: 20px;
-    border: 2px solid #9c4251;
-    font-family: "Roboto", sans-serif;
-}
 
-
-.right {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: center; 
-    max-width: 100%; 
-}
-
-.fotoPublicacion {
-    width: 100%; 
-    height: auto;
-    border-radius: 0%;
-    margin: 20px;
-}
 .boton-emoticon{
     color: #9c4251;
 }
