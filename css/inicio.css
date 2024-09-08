@@ -6,10 +6,33 @@ body{
     background-color: #3D2C2E;
     font-family: "Roboto", sans-serif;
 }
-/*Configuracion para etiqueta de tipo button*/
+/*Configuracion del index*/
 
-.boton-publicacion svg path {
-    fill: #9c4251;
+header {
+    display: flex;
+    justify-content: space-between; /* Espacio entre logo y botón */
+    align-items: center; /* Alinea verticalmente los elementos */
+    padding: 10px; /* Espaciado dentro del header */
+   
+}
+body.dark{
+    background-color:white;
+    color: #c45663;
+}
+
+#dark_mode {
+    background-color: #4CAF50; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor cuando se pasa sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+#dark_mode:hover {
+    background-color: #45a049; /* Cambia de color al pasar el mouse */
 }
 
 .contenedorImg{
