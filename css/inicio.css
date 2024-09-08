@@ -15,25 +15,7 @@ header {
     padding: 10px; /* Espaciado dentro del header */
    
 }
-body.dark{
-    background-color:white;
-    color: #c45663;
-}
 
-#dark_mode {
-    background-color: #4CAF50; /* Color del botón */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno */
-    text-align: center; /* Centrado del texto */
-    font-size: 16px; /* Tamaño del texto */
-    cursor: pointer; /* Cambia el cursor cuando se pasa sobre el botón */
-    border-radius: 5px; /* Bordes redondeados */
-}
-
-#dark_mode:hover {
-    background-color: #45a049; /* Cambia de color al pasar el mouse */
-}
 
 .contenedorImg{
 
@@ -94,6 +76,7 @@ h3{
     border-radius: 20px;
 
 }
+
 
 h1{
     color: #D97D54;
@@ -158,6 +141,53 @@ footer>p {
     color: #D97D54;
     text-align: center;
 }
+/*MODO OSCURO INDEX*/
+
+body.dark{
+    background-color:white;
+    color: #c45663;
+}
+
+#dark_mode {
+    background-color: #ad6571; /* Color del botón */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    padding: 10px 20px; /* Espaciado interno */
+    text-align: center; /* Centrado del texto */
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor cuando se pasa sobre el botón */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+#dark_mode:hover {
+    background-color: gray /* Cambia de color al pasar el mouse */
+}
+
+body.dark .logeo {
+    background-color: #9c4251;
+    border: 2px solid black;
+}
+body.dark .crear{
+    background-color: #9c4251;
+    border: 2px solid black;
+}
+body.dark .logeo h1{
+    color: #070707;
+}
+body.dark .contenedor h3{
+    color: #070707;
+}
+body.dark footer p {
+    color: black;
+}
+body.dark .boton {
+    background-color: #333; /* Color de fondo oscuro */
+    color: #f0f0f0; /* Color del texto claro */
+}
+body.dark .boton:hover {
+    background-color: gray
+}
+
 
 /*ESTILO REGISTRO*/
 
