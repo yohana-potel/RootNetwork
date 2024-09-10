@@ -24,6 +24,7 @@ body{
 
 .custom-link:hover {
     color: #9c4251; 
+    transition: 0.5s;
 }
 
 .form-control:focus {
@@ -572,101 +573,91 @@ article{
         border-radius: 25px;
         color: white;
     }
-    .cajaperfil{
-        grid-template-columns: 1fr;
-        height: auto; 
-        font-size: 30px;
-        place-items: center;
+    .cajaperfil {
+        display: grid;
+        grid-template-rows: 50vh auto; /* Ajusta el alto de la portada en pantallas pequeñas */
+        height: 100vh;
     }
 
     .logoperfil {
         border-radius: 100%;
-        width: 60px; 
-        margin: 10px 10px; 
+        margin: 5px 0 0 5px; 
+        width: 50px; /* Reduce el tamaño del logo */
     }
 
     .img-p {
-        display: grid;
-        width: 90%;
-        height: 300px;
-        place-items: center;
-        padding: 5%;
-        margin: auto;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         border-radius: 3px;
     }
     
     .datos_y_perfil {
-        grid-template-columns: 1fr; 
-        grid-gap: 10px;
-        height: auto; 
-        padding: 10px;
+        display: grid; 
+        grid-template-columns: 1fr; /* Mantén las secciones una debajo de la otra */
+        gap: 10px; /* Ajusta el espacio entre las columnas */
+        border-radius: 10px;
+        font-size: 12px; /* Reduce el tamaño de fuente */
+        padding: 5px; /* Reduce el padding para ahorrar espacio */
+        align-items: center;
+        width: 100%;
+        height: auto;
     }
     
     .daTos, .editarperfil {
         display: grid;
-        width: 100%;
-        height: auto; 
-        padding: 10px; 
-        font-size: 20px;  
+        place-self: center;
+        place-items: center;
         border: 2px solid #9c4251;
         background-color: #F2C7C5;
         border-radius: 10px;
-        margin-top: 10px;
-        place-items: center;
+        width: 90%; /* Ajusta el ancho para pantallas pequeñas */
+        height: 180px; /* Reduce la altura */
+        margin-top: 25px;
     }
-    
+    .editarportada {
+        position: relative;
+        width: 100%;
+        height: 120px; /* Reduce aún más la altura de la portada */
+        margin-bottom: 20px; /* Ajusta el margen inferior */
+    }
     .imagen_perfil {
-        width: 200px;
-        height: 150px; 
+        width: 70px; /* Reduce el tamaño de la imagen de perfil */
+        height: 70px;
         padding: 5px;
         border-radius: 50%;
     }
     
     .cajaportada {
-        height: auto; 
-        grid-gap: 15px;     
+        display: grid;
+        width: 100%;
+        height: 120px; /* Reduce la altura de la portada */
     }
     
-    .botonPortada{
-        width: 150px; 
-        height: 30px; 
-        margin-left: 50px;
-        font-size: 20px; 
-        color: #ffffff;
-        background-color: #9c4251;
-        border: 2px solid #9c4251;
-        border-radius: 10px;
-        
-    }
-    .botonPortada:hover{
-        background-color: grey; 
-        transition: 0.5s;
-        border-color: #9c4251;
-        color: #000; 
-    }
-    .botondatos {
-        width: 150px; 
-        height: 30px; 
-        font-size: 20px; 
+    .botonPortada, .botondatos {
+        width: 100px; /* Ajusta el ancho de los botones */
+        height: 28px; /* Ajusta la altura de los botones */
+        font-size: 16px; /* Reduce el tamaño de fuente de los botones */
         color: #ffffff;
         background-color: #9c4251;
         border: 2px solid #9c4251;
         border-radius: 10px;
     }
-    .botondatos:hover{
-        background-color: grey; 
+    .botonPortada:hover, .botondatos:hover {
+        background-color: grey;
         transition: 0.5s;
         border-color: #9c4251;
-        color: #000; 
+        color: #000;
     }
     
     .descripciondatos {
-        width: 300px;
-        height: auto; 
-        font-size: 15px; 
+        width: 80%; /* Ajusta el ancho de la caja de texto */
+        height: 30px;
         border-radius: 20px;
-        border-color: #9c4251 ;
-    }  
+    } 
+    .titulodatos, .daTosperfil {
+        font-size: 18px;
+    }
 
     /*ESTILOS PARA Contrasena.HTML*/
     .recuperar{
@@ -817,114 +808,93 @@ article{
         background-color: #F2C7C5; 
         border-radius: 25px;
         color: white;
+        position:relative;
     }
-    .cajaperfil{
+    .cajaperfil {
         display: grid;
-        grid-template-columns: 13% 87% ;
-        width: 100%;
-        height: 750px;
+        grid-template-rows: 60vh auto; /* Ajusta el alto en pantallas más pequeñas */
+        height: 100vh;
     }
     .logoperfil {
         border-radius: 100%;
-        width: 70px; 
-        margin-top: 10px; 
-        margin-left: 10px; 
+        margin: 10px 0 0 10px; 
+        width: 70px; /* Reduce el tamaño del logo */
     }
     
-    .img-p{
+    .img-p {
         width: 100%;
-        height: 200px;
-        margin-left: 10px;
+        height: 100%;
         object-fit: cover;
         border-radius: 3px;
     }
     
-    .datos_y_perfil{
+    .datos_y_perfil {
         display: grid; 
-        grid-template-columns: 1fr 2fr; /* Dos columnas */
-        grid-gap: 10px; /* Espacio entre las columnas */
-        border-radius: 10px; 
-        height: 250px;
-        width: 80%; /* Ancho total de las dos columnas */
+        grid-template-columns: 1fr; /* Coloca las secciones una debajo de la otra */
+        gap: 15px; /* Ajusta el espacio entre las columnas */
+        border-radius: 10px;
+        font-size: 14px; 
+        padding: 10px;
         align-items: center;
+        width: 100%;
+        height: auto; /* Permite que la altura sea adaptable */
+    }
+    .daTos, .editarperfil {
+        display: grid;
+        place-self: center;
+        place-items: center;
+        border: 2px solid #9c4251;
+        background-color: #F2C7C5;
+        border-radius: 10px;
+        width: 80%; /* Ajusta el ancho en pantallas medianas */
+        height: 200px; /* Ajusta la altura */
+        margin-top: 10px;
     }
     
-    .daTos {
-        display: grid;
-        place-items: center; /* Centrar vertical y horizontalmente */
-        border: 2px solid #9c4251;
-        border-radius: 10px;
-        padding: 20px;
-        background-color: #F2C7C5;
-        width: 300px;
-        height: 250px;
-    }   
-    
-    .editarperfil {
-        display: grid;
-        place-items: center; /* Centrar vertical y horizontalmente */
-        border: 2px solid #9c4251;
-        border-radius: 10px;
-        background-color: #F2C7C5;
-        padding: 20px;
-        width: 95%;
-        height: 250px;
-        margin-left: 20px;
-        margin-right: 10px
-    
+    .editarportada {
+        position: relative;
+        width: 100%;
+        height: 150px; /* Reduce la altura de la portada */
+        margin-bottom: 30px; /* Ajusta el margen inferior */
     }
-    
-    .imagen_perfil{
-        width: 150px;
-        height: 100px;
+    .imagen_perfil {
+        width: 80px;
+        height: 80px;
         padding: 5px;
         border-radius: 50%;
     }
-    
-    .cajaportada{
+    .cajaportada {
         display: grid;
-        grid-template-rows: 1fr; 
-        grid-gap: 20px;
         width: 100%;
-        height: 500px;
+        height: 150px; /* Ajusta la altura de la portada */
     }
     
-    .botonPortada{
-        width: 150px; 
-        height: 30px; 
-        margin-left: 10px;
-        font-size: 20px; 
-        color: #ffffff;
-        background-color: #9c4251;
-        border: 2px solid #9c4251;
-        border-radius: 10px;    
-    }
-    .botonPortada:hover{
-        background-color: grey; 
-        transition: 0.5s;
-        border-color: #9c4251;
-        color: #000; 
-    }
-    .botondatos{
-        width: 150px; 
-        height: 30px; 
-        font-size: 20px; 
+    .botonPortada, .botondatos {
+        width: 120px; 
+        height: 30px;
+        font-size: 18px;
         color: #ffffff;
         background-color: #9c4251;
         border: 2px solid #9c4251;
         border-radius: 10px;
     }
-    .botondatos:hover{
-        background-color: grey; 
+
+    .botonPortada:hover, .botondatos:hover {
+        background-color: grey;
         transition: 0.5s;
         border-color: #9c4251;
-        color: #000; 
+        color: #000;
     }
-    .descripciondatos{
-        width: 100%;
+    .descripciondatos {
+        width: 50%;
         height: 30px;
         border-radius: 20px;
     }
+    .titulodatos,.daTosperfil{
+        font-size: 24px; 
+    }
+    
+    
      /*ESTILOS PARA CONTRASENA.HTML*/
      .recuperar {
         width: 80%; 
@@ -1068,7 +1038,6 @@ article{
     }
 }
 
-
 /*ESTILOS PARA PERFIL.HTML*/
 /* MEDIA PARA ESCRITORIO*/
 
@@ -1139,25 +1108,7 @@ article{
         padding: 5px;
         border-radius: 50%;
     }
-    
-    .botonPortada{
-        width: 150px; 
-        height: 30px; 
-        margin-left: 10px;
-        font-size: 20px; 
-        color: #ffffff;
-        background-color: #9c4251;
-        border: 2px solid #9c4251;
-        border-radius: 10px;
-        
-    }
-    .botonPortada:hover{
-        background-color: grey; 
-        transition: 0.5s;
-        border-color: #9c4251;
-        color: #000; 
-    }
-    .botondatos {
+    .botondatos, .botonPortada {
         width: 150px; 
         height: 30px; 
         font-size: 20px; 
@@ -1166,11 +1117,11 @@ article{
         border: 2px solid #9c4251;
         border-radius: 10px;
     }
-    .botondatos:hover{
-        background-color: grey; 
+    .botonPortada:hover, .botondatos:hover {
+        background-color: grey;
         transition: 0.5s;
         border-color: #9c4251;
-        color: #000; 
+        color: #000;
     }
     .descripciondatos{
         width: 90%;
