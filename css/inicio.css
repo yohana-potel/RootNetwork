@@ -332,8 +332,6 @@ body.dark .boton:hover {
 }
 
 
-
-
 /*Botones */
 
 button{
@@ -355,7 +353,6 @@ button{
 .miperfil {
     display: flex;
     flex-direction: column;
-   
 }
 
 .fotodelUsuario {
@@ -364,7 +361,6 @@ button{
     justify-content: space-around;
     margin-left: auto;
     border-radius: 300px;
-
 }
 
 #TextoPubli {
@@ -734,7 +730,23 @@ article{
         border-radius: 10px;
         margin-top: 10px;
     }
-
+    .boton-volver {
+        background: none;     /* Elimina el fondo */
+        margin-left: 20px;
+        border: none;         /* Elimina el borde */
+        padding: 0;           /* Elimina el padding */
+        cursor: pointer;      /* Cambia el cursor al pasar sobre el botón */
+    }
+    .boton-volver:hover .flecha {
+        fill: grey;        /* Cambia el color al pasar el cursor por encima (por ejemplo, a un tono rojo) */
+    }
+    .botones{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 10%;
+        margin: 40px 0 0;    
+    }
     .botones{
         display: flex;
         flex-direction: column; 
@@ -971,6 +983,23 @@ article{
         border-radius: 10px;
         margin-top: 10px;
     }
+    .boton-volver {
+        background: none;     /* Elimina el fondo */
+        margin-left: 20px;
+        border: none;         /* Elimina el borde */
+        padding: 0;           /* Elimina el padding */
+        cursor: pointer;      /* Cambia el cursor al pasar sobre el botón */
+    }
+    .boton-volver:hover .flecha {
+        fill: grey;        /* Cambia el color al pasar el cursor por encima (por ejemplo, a un tono rojo) */
+    }
+    .botones{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 10%;
+        margin: 40px 0 0;    
+    }
 
     .botones{
         display: flex;
@@ -1195,16 +1224,24 @@ article{
         border-radius: 10px;
         padding: 5px;
     }
-
+    .boton-volver {
+        background: none;     /* Elimina el fondo */
+        margin-left: 20px;
+        border: none;         /* Elimina el borde */
+        padding: 0;           /* Elimina el padding */
+        cursor: pointer;      /* Cambia el cursor al pasar sobre el botón */
+    }
+    .boton-volver:hover .flecha {
+        fill: grey;        /* Cambia el color al pasar el cursor por encima (por ejemplo, a un tono rojo) */
+    }
     .botones{
         display: flex;
         justify-content: space-between;
         width: 100%;
         height: 10%;
         margin: 40px 0 0;    
-        
     }
-
+    
     .botones button {
         width: 150px;
         height: 50px;
