@@ -556,8 +556,10 @@ article{
         place-items: center;
     }
 
-    .logo-p {
-       margin: 10px;
+    .logoperfil {
+        border-radius: 100%;
+        width: 60px; 
+        margin: 10px 10px; 
     }
 
     .img-p {
@@ -803,9 +805,12 @@ article{
         width: 100%;
         height: 750px;
     }
-    .logo-p {
-        margin: 10px;
-        }
+    .logoperfil {
+        border-radius: 100%;
+        width: 70px; 
+        margin-top: 10px; 
+        margin-left: 10px; 
+    }
     
     .img-p{
         width: 100%;
@@ -1047,8 +1052,10 @@ article{
         width: 100%;
         height: 750px;
     }
-    .logo-p {
-        margin: 10px;
+    .logoperfil {
+        border-radius: 100%;
+        margin: 15px 0 0 10px; 
+        width: 80px;
         }
     
     .img-p{
