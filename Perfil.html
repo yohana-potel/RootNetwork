@@ -4,49 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Explora y personaliza tu perfil en Root Network. Comparte tus logros en jardinería y conecta con otros entusiastas.">
-    <link rel="shortcut icon " href="./img/logo-sin-fondo.png-Photoroom.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">                                                  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./css/inicio.css">
     <title>Editar Perfil</title>
-
+  
 </head>
 <body>
-    
-    <div class="pantallap">
-        
-        <nav class="nav flex-column">
-            <img src="./img/logo1.jpeg" class="logoperfil" alt="">
-            <a class="nav-link" href="muro.html">Inicio</a>
-            <a class="nav-link" href="publicacion.html">Publicar</a>
-            <a class="nav-link" href="index.html" aria-disabled="true">Cerrar sesion </a>
-        </nav>
-
-        <section class="peRfil">
-            <div class="editarportada">
-                <img src="./img/arbolpotada.jpg" class="img-p" alt="Foto de la portada del perfil.">
-                <button class="botonPortada" name="editar"> Editar</button> 
-                
+    <header>
+        <img src="./img/logo1.jpeg" class="logoperfil" alt="Logotipo de RootNetwork">
+        <nav class="navbar navbar-expand-lg custom-navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img class="logoBarraNavegacion" src="/img/logo-sin-fondo.png-Photoroom.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="muroEtiqta.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" aria-current="page" href="publicacion.html">Publicar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="index.html">Cerrar Sesión</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Busqueda" aria-label="Search">
+                    <button class="btn custom-btn" type="submit">Buscar</button>
+                </form>
+                </div>
             </div>
+        </nav>
+    </header>
+
+    <article class="cajaperfil">  
+        <section class="cajaportada">
+            <div class="editarportada">
+                <img src="./img/arbolpotada.jpg" class="img-p" alt="Foto de portada del perfil.">
+                <button class="botonPortada" name="editar"> Editar</button>  
+            </div>
+
             <div class="datos_y_perfil">
-                <div class="daTos">
-                    <h3 class="tituloP">Presentación </h3>
-                    <input class="descripcionP" type="text" id="Sobremi" placeholder="Te cuento mas sobre mi: trabajo en Viviero Siempre Verde y.. " onkeydown="submitOnEnter(event)">
-                    <p class="textoP">Seguime en <a href="https://www.instagram.com//" target="_blank">Instagram</a>.</p>
-                    <button class="botonP" name="editar">Editar </button> 
-                </div>   
-                <div class="editarperfil">
+                <section class="daTos">
+                    <h3 class="titulodatos">Presentación </h3>
+                    <input class="descripciondatos" type="text" id="Sobremi" placeholder="Te cuento mas sobre mi: trabajo en Viviero Siempre Verde y.. " onkeydown="submitOnEnter(event)">
+                    <p class="textodatos">Seguime en <a href="https://www.instagram.com//" target="_blank">Instagram</a>.</p>
+                    <button class="botondatos" name="editar">Editar </button> 
+                </section>   
+            
+                <section class="editarperfil">
                     <h3>Mi perfil </h3>
                     <img class="imagen_perfil" src="./img/fotoperfil.jpg" alt="Foto de mi perfil">
-                    <button class="botonP" name="editar">Editar</button> 
-                
-                </div>           
+                    <button class="botondatos" name="editar">Editar</button> 
+                </section>           
                 
             </div>  
         </section>
-
-        
-        
-    </div>
+    </article>
 
 </body>
 </html>
