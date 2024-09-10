@@ -6,6 +6,32 @@ body{
     background-color: #3D2C2E;
     font-family: "Roboto", sans-serif;
 }
+
+.custom-btn {
+    background-color: #9c4251; /* Color de fondo del botón */
+    border: 1px solid #F2C7C5; /* Borde del botón, opcional */
+    color: white; 
+}
+.custom-btn:hover {
+    background-color: grey; 
+    transition: 0.5s;
+    border-color: #9c4251;
+    color: #000; 
+}
+.custom-link {
+    color: grey; 
+}
+
+.custom-link:hover {
+    color: #9c4251; 
+}
+
+.form-control:focus {
+    border-color: #FF6F6F; 
+    box-shadow: 0 0 0 0.2rem rgba(255, 111, 111, 0.25); 
+    outline: none; /* Elimina el contorno predeterminado del navegador */
+}
+
 /*Configuracion del index*/
 
 header {
@@ -13,15 +39,11 @@ header {
     justify-content: space-between; /* Espacio entre logo y botón */
     align-items: center; /* Alinea verticalmente los elementos */
     padding: 10px; /* Espaciado dentro del header */
-   
 }
 
-
 .contenedorImg{
-
     width: 500px;
     border: 2px solid #9c4251;
-
 }
 
 .logo{
@@ -32,7 +54,6 @@ header {
     border-radius: 50px;
     width: 100px;
     height: 100px;
-
 }
 
 .contenedor{
@@ -109,8 +130,10 @@ h1{
 }
 
 .boton:hover{
-    background-color: grey;
+    background-color: grey; 
     transition: 0.5s;
+    border-color: #9c4251;
+    color: #000; 
 }
 
 .olvidar{
@@ -188,7 +211,6 @@ body.dark .boton:hover {
     background-color: gray
 }
 
-
 /*ESTILO REGISTRO*/
 
 .Form{
@@ -248,8 +270,7 @@ body.dark .boton:hover {
     margin: 5px 15px ;
     border: 2px solid #9c4251;
     font-size: 12px;
-    justify-content: space-between;
-    
+    justify-content: space-between; 
 }
 
 .button{
@@ -261,12 +282,13 @@ body.dark .boton:hover {
     font-size: 20px;
     border-radius: 20px;
     cursor: pointer;
-    
 }
 
 .button:hover{
-    background-color: grey;
+    background-color: grey; 
     transition: 0.5s;
+    border-color: #9c4251;
+    color: #000; 
 }
 
 .terms{
@@ -277,9 +299,7 @@ body.dark .boton:hover {
 
 .termino{
     font-size: 20px;
-    text-align: center;
-   
-    
+    text-align: center;  
 }
 
 .titulo {
@@ -287,11 +307,9 @@ body.dark .boton:hover {
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-style: normal;
- 
-
 }
 
- 
+
 #PubliText{
     width: 600px;
     height: 200px;
@@ -548,8 +566,13 @@ article{
     }
 
     /*ESTILOS PARA PERFIL.HTML*/
-    /* MEDIA Telefono PARA PERFIL*/
-    .pantallap{
+    /* MEDIA Telefono PARA PERFIL*/ 
+    .custom-navbar {
+        background-color: #F2C7C5; 
+        border-radius: 25px;
+        color: white;
+    }
+    .cajaperfil{
         grid-template-columns: 1fr;
         height: auto; 
         font-size: 30px;
@@ -599,7 +622,7 @@ article{
         border-radius: 50%;
     }
     
-    .peRfil {
+    .cajaportada {
         height: auto; 
         grid-gap: 15px;     
     }
@@ -616,10 +639,12 @@ article{
         
     }
     .botonPortada:hover{
-        background-color: grey;
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
-    .botonP {
+    .botondatos {
         width: 150px; 
         height: 30px; 
         font-size: 20px; 
@@ -628,12 +653,14 @@ article{
         border: 2px solid #9c4251;
         border-radius: 10px;
     }
-    .botonP:hover{
-        background-color: grey;
+    .botondatos:hover{
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
     
-    .descripcionP {
+    .descripciondatos {
         width: 300px;
         height: auto; 
         font-size: 15px; 
@@ -693,8 +720,10 @@ article{
     }
 
     .siguiente:hover{
-        background-color: grey;
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
 
     p{
@@ -737,8 +766,10 @@ article{
     }
 
     .botones button:hover{
-        background-color: grey;
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
 
     .infoPerfil{
@@ -778,28 +809,16 @@ article{
         font-size: 12px;
     }
 }
-/*
-@media  (min-width:601px) and (max-width:800px){
-   
-    .pantalla{
-        width: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-       
-    }
-
-    .comentario button, .botonComentario {
-        width: 150px; 
-        height: 40px;
-        border-radius: 50px;
-    }
-}
 
 /*ESTILOS PARA PERFIL.HTML*/
 /* MEDIDA PARA TABLET PERFIL*/
 @media (min-width: 601px) and (max-width: 1023px) {
-    .pantallap{
+    .custom-navbar {
+        background-color: #F2C7C5; 
+        border-radius: 25px;
+        color: white;
+    }
+    .cajaperfil{
         display: grid;
         grid-template-columns: 13% 87% ;
         width: 100%;
@@ -862,7 +881,7 @@ article{
         border-radius: 50%;
     }
     
-    .peRfil{
+    .cajaportada{
         display: grid;
         grid-template-rows: 1fr; 
         grid-gap: 20px;
@@ -881,10 +900,12 @@ article{
         border-radius: 10px;    
     }
     .botonPortada:hover{
-        background-color: grey;
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
-    .botonP{
+    .botondatos{
         width: 150px; 
         height: 30px; 
         font-size: 20px; 
@@ -893,11 +914,13 @@ article{
         border: 2px solid #9c4251;
         border-radius: 10px;
     }
-    .botonP:hover{
-        background-color: grey;
+    .botondatos:hover{
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
-    .descripcionP{
+    .descripciondatos{
         width: 100%;
         height: 30px;
         border-radius: 20px;
@@ -955,8 +978,10 @@ article{
     }
 
     .siguiente:hover{
-        background-color: grey;
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
 
     p{
@@ -999,8 +1024,10 @@ article{
     }
 
     .botones button:hover{
-        background-color: grey;
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
 
     .infoPerfil{
@@ -1046,12 +1073,29 @@ article{
 /* MEDIA PARA ESCRITORIO*/
 
 @media (min-width: 1023px) {
-    .pantallap{
-        display: grid;
-        grid-template-columns: 10% 80% ;
-        width: 100%;
-        height: 750px;
+    .custom-navbar {
+        background-color: #F2C7C5; 
+        border-radius: 25px;
+        width: 90%;
+        color: white;
     }
+    .cajaperfil{
+        display: grid;
+        grid-template-rows: 80vh auto;
+        height: 100vh;
+    }
+    .cajaportada{
+        display: grid;
+        width: 100%;
+        height: 100px;
+    }
+    .editarportada{
+    position: relative;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 50px;
+    }
+
     .logoperfil {
         border-radius: 100%;
         margin: 15px 0 0 10px; 
@@ -1060,47 +1104,40 @@ article{
     
     .img-p{
         width: 100%;
-        height: 200px;
+        height: 100%;
         object-fit: cover;
         border-radius: 3px;
     }
     
     .datos_y_perfil{
         display: grid; 
-        grid-template-columns: 1fr 2fr; /* Dos columnas */
-        grid-gap: 10px; /* Espacio entre las columnas */
+        grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+        gap: 20px; /* Ajusta el espacio entre las columnas */
         border-radius: 10px; 
-        height: 250px;
-        width: 100%; /* Ancho total de las dos columnas */
-        padding: 20px;
+        padding: 10px;
         align-items: center;
+        width: 100%;
+        height: 50%; /* Ajusta la altura según el contenido */
+        margin: 0;
     }
     
     .daTos, .editarperfil {
         display: grid;
-        place-items: center; /* Centrar vertical y horizontalmente */
+        place-self: center;
+        place-items: center; /* Centra el contenido vertical y horizontalmente */
         border: 2px solid #9c4251;
         background-color: #F2C7C5;
         border-radius: 10px;
-        
         width: 400px;
         height: 250px;
-        margin: auto;
+        margin: 0; 
     }
     
     .imagen_perfil{
-        width: 150px;
+        width: 100px;
         height: 100px;
         padding: 5px;
         border-radius: 50%;
-    }
-    
-    .peRfil{
-        display: grid;
-        grid-template-rows: 1fr; 
-        grid-gap: 20px;
-        width: 100%;
-        height: 500px;
     }
     
     .botonPortada{
@@ -1115,10 +1152,12 @@ article{
         
     }
     .botonPortada:hover{
-        background-color: grey;
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
-    .botonP {
+    .botondatos {
         width: 150px; 
         height: 30px; 
         font-size: 20px; 
@@ -1127,11 +1166,13 @@ article{
         border: 2px solid #9c4251;
         border-radius: 10px;
     }
-    .botonP:hover{
-        background-color: grey;
+    .botondatos:hover{
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
-    .descripcionP{
+    .descripciondatos{
         width: 90%;
         height: 30px;
         border-radius: 20px;
@@ -1182,8 +1223,10 @@ article{
     }
     
     .siguiente:hover{
-        background-color: grey;
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
     
     p{
@@ -1224,8 +1267,10 @@ article{
     }
 
     .botones button:hover{
-        background-color: grey;
+        background-color: grey; 
         transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
     }
 
     .infoPerfil{
