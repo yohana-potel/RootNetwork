@@ -1,26 +1,30 @@
 const body = document.body;
+const btnDarkMode = document.getElementById("dark_mode");
+const moonPath = btnDarkMode.querySelector("path");
 
-const btnDarkMode = document.getElementById("dark_mode")
+btnDarkMode.addEventListener("click", (e) => {
+    const mode = localStorage.getItem("mode");
 
-btnDarkMode.addEventListener("click",(e)=>{
-    if(btnDarkMode.innerText =="dark") {
-        btnDarkMode.innerText = "clear";
-        body.classList.add("dark");
-        localStorage.setItem("mode", "dark");
-    } else{
-        btnDarkMode.innerText ="dark";
+    if (mode === "dark") {
+        // Cambia al modo claro
         body.classList.remove("dark");
-        localStorage.setItem("mode","clear");
-
+        moonPath.setAttribute("fill", "#16765a"); // Cambia el color de la luna al modo claro
+        localStorage.setItem("mode", "clear");
+    } else {
+        // Cambia al modo oscuro
+        body.classList.add("dark");
+        moonPath.setAttribute("fill", "#f1c40f"); // Cambia el color de la luna al modo oscuro (por ejemplo, amarillo)
+        localStorage.setItem("mode", "dark");
     }
-})
+});
 
-const mode = localStorage.getItem("mode")
+// Al cargar la página, aplica el modo guardado
+const mode = localStorage.getItem("mode");
 
-if(mode == "dark"){
-    btnDarkMode.innerText = "clear";
+if (mode === "dark") {
     body.classList.add("dark");
-}else{
-    btnDarkMode.innerText="dark";
+    moonPath.setAttribute("fill", "#f1c40f"); // Modo oscuro
+} else {
     body.classList.remove("dark");
+    moonPath.setAttribute("fill", "#16765a"); // Modo claro
 }
