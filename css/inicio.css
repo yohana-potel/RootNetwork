@@ -54,10 +54,7 @@ h1{
     margin-top: 0%;
 }
 
-footer>p {
-    color: #D97D54;
-    text-align: center;
-}
+
 /*MODO OSCURO INDEX*/
 
 body.dark{
@@ -302,7 +299,6 @@ article{
 
 
 @media  (min-width:300px) and (max-width:600px) {
-
     body {
         margin: 0;
         padding: 0;
@@ -318,12 +314,10 @@ article{
             "perfil"
             "muro";
         padding: 10px;
-        box-sizing: border-box;
-        
+        box-sizing: border-box; 
     }
 
     .perfil {
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -351,9 +345,8 @@ article{
         gap: 2px; 
         width: 100%;
         margin-left: 100px;
-        
-
     }
+
     .editarPer a, .cerrarSec a {
         text-decoration: none;
         color: #070707; 
@@ -366,25 +359,22 @@ article{
         width: 90%;
         border: 2px solid #9c4251;
         padding: 0 ;
-        
     }
+
     .controles {
         display: flex;
         flex-direction: column;
         align-items: center;
-        width: 100%;
-        
+        width: 100%;   
     }
 
     #TextoPubli{
-        
         text-align: center;
         width: 90%;
         box-sizing: border-box; 
         font-size: 12px;
         white-space: normal;
-        overflow-wrap: break-word;
-       
+        overflow-wrap: break-word; 
     }
 
     .publicaciones{
@@ -400,13 +390,11 @@ article{
         margin: 10px 0;
     }
     
-    
     .foto-autor {
         width: 60px;
         height: auto;
         border-radius: 50%;
     }
-    
 
     .fotoPublicacion {
         width: 100%;
@@ -429,6 +417,7 @@ article{
         background-color: transparent;
         
     }
+
     .botonComentario{
         width: 50vw;
     }
@@ -440,10 +429,10 @@ article{
         
     }
 
-
     .publicidad{
         display: none;
     }
+
     #TextoComentario {
         width: 30vw; 
         padding: 5px;
@@ -451,6 +440,7 @@ article{
         border: 2px solid #9c4251;
         font-family: "Roboto", sans-serif;
     }
+
     #busqueda{
         margin: 15px;
     }
@@ -462,6 +452,7 @@ article{
         border-radius: 25px;
         color: white;
     }
+
     .cajaperfil {
         display: grid;
         grid-template-rows: 50vh auto; /* Ajusta el alto de la portada en pantallas pequeñas */
@@ -504,12 +495,14 @@ article{
         height: 180px; /* Reduce la altura */
         margin-top: 25px;
     }
+
     .editarportada {
         position: relative;
         width: 100%;
         height: 120px; /* Reduce aún más la altura de la portada */
         margin-bottom: 20px; /* Ajusta el margen inferior */
     }
+
     .imagen_perfil {
         width: 70px; /* Reduce el tamaño de la imagen de perfil */
         height: 70px;
@@ -532,6 +525,7 @@ article{
         border: 2px solid #9c4251;
         border-radius: 10px;
     }
+
     .botonPortada:hover, .botondatos:hover {
         background-color: grey;
         transition: 0.5s;
@@ -544,6 +538,7 @@ article{
         height: 30px;
         border-radius: 20px;
     } 
+
     .titulodatos, .daTosperfil {
         font-size: 18px;
     }
@@ -613,6 +608,11 @@ article{
         text-align: center;
         margin: 10px 0; 
     }
+    .footercontrasena >p{
+        color: #D97D54;
+        text-align: center;
+    }
+
     /*ESTILOS PUBLICACIÓN.HTML*/
     .card{
         width: 90%;
@@ -624,15 +624,17 @@ article{
         margin-top: 10px;
     }
     .boton-volver {
-        background: none;     /* Elimina el fondo */
+        background: none;     
         margin-left: 20px;
-        border: none;         /* Elimina el borde */
-        padding: 0;           /* Elimina el padding */
-        cursor: pointer;      /* Cambia el cursor al pasar sobre el botón */
+        border: none;         
+        padding: 0;           
+        cursor: pointer;      
     }
+
     .boton-volver:hover .flecha {
-        fill: grey;        /* Cambia el color al pasar el cursor por encima (por ejemplo, a un tono rojo) */
+        fill: grey;      
     }
+
     .botones{
         display: flex;
         justify-content: space-between;
@@ -640,6 +642,7 @@ article{
         height: 10%;
         margin: 40px 0 0;    
     }
+
     .botones{
         display: flex;
         flex-direction: column; 
@@ -690,6 +693,7 @@ article{
         height: 80px;
         border-radius: 50%;
     }
+
     .caja-texto {
         height: auto; 
         flex-direction: column; 
@@ -715,11 +719,13 @@ article{
         color: white;
         position:relative;
     }
+
     .cajaperfil {
         display: grid;
         grid-template-rows: 60vh auto; /* Ajusta el alto en pantallas más pequeñas */
         height: 100vh;
     }
+
     .logoperfil {
         border-radius: 100%;
         margin: 10px 0 0 10px; 
@@ -744,6 +750,7 @@ article{
         width: 100%;
         height: auto; /* Permite que la altura sea adaptable */
     }
+
     .daTos, .editarperfil {
         display: grid;
         place-self: center;
@@ -762,12 +769,14 @@ article{
         height: 150px; /* Reduce la altura de la portada */
         margin-bottom: 30px; /* Ajusta el margen inferior */
     }
+
     .imagen_perfil {
         width: 80px;
         height: 80px;
         padding: 5px;
         border-radius: 50%;
     }
+
     .cajaportada {
         display: grid;
         width: 100%;
@@ -790,15 +799,16 @@ article{
         border-color: #9c4251;
         color: #000;
     }
+
     .descripciondatos {
         width: 50%;
         height: 30px;
         border-radius: 20px;
     }
+
     .titulodatos,.daTosperfil{
         font-size: 24px; 
     }
-    
     
      /*ESTILOS PARA CONTRASENA.HTML*/
      .recuperar {
@@ -822,6 +832,7 @@ article{
         margin-left: 10px;
         
     }
+
     .form-recuperar {
         display: flex;
         align-items: center;
@@ -866,6 +877,12 @@ article{
         text-align: center; 
         margin: 15px 0;
     }
+
+    .footercontrasena >p{
+        color: #D97D54;
+        text-align: center;
+    }
+
     /*ESTILOS PUBLICACIÓN.HTML*/
     .card{
         width: 90%;
@@ -876,16 +893,19 @@ article{
         border-radius: 10px;
         margin-top: 10px;
     }
+
     .boton-volver {
-        background: none;     /* Elimina el fondo */
+        background: none;     
         margin-left: 20px;
-        border: none;         /* Elimina el borde */
-        padding: 0;           /* Elimina el padding */
+        border: none;         
+        padding: 0;           
         cursor: pointer;      /* Cambia el cursor al pasar sobre el botón */
     }
+
     .boton-volver:hover .flecha {
-        fill: grey;        /* Cambia el color al pasar el cursor por encima (por ejemplo, a un tono rojo) */
+        fill: grey;       
     }
+
     .botones{
         display: flex;
         justify-content: space-between;
@@ -944,6 +964,7 @@ article{
         height: 100px;
         border-radius: 50%;
     }
+
     .caja-texto {
         height: auto; 
         flex-direction: column; 
@@ -958,6 +979,112 @@ article{
         margin-bottom: 10px;
         font-size: 18px;
     }
+
+    /*ESTILOS INDEX.HTML*/
+    .contenedorImg{
+        width: 90%;
+        border: 2px solid #9c4251;
+    }
+
+    .logo{
+        display: flex;
+        border-radius: 50px;
+    }
+
+    .logo_inicio{
+        border-radius: 50px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .contenedor{
+        width: 100px;
+        height: 10px;
+        display: flex;
+        flex-direction: row;
+        border-radius:10px ;
+        margin-top: 100px;
+    }
+
+    .boton1{
+        width: 85%;
+        background: #9c4251;
+        padding: 18px;
+        color: white;
+        margin: 25px auto;
+        font-size: 18px;
+        border-radius: 15px;
+        cursor: pointer;
+        padding: 15px;
+    }
+
+    .logeo{
+        border: 2px solid #9c4251;
+        background-color: #F2C7C5;
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 10%;
+        border-radius: 20px;
+    }
+
+    .datos{
+        width: 80%;
+        padding: 10px;
+        border-radius: 10px;
+        margin-left: 20px;
+        border: 2px solid #9c4251;
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        margin-left: 10%;
+        margin-bottom: 10px;
+    }
+
+    .boton{
+        width: 80%;
+        background-color: #9c4251;
+        padding: 10px;
+        color: #ffffff;
+        margin: 10px auto;
+        font-size: 18px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .boton:hover{
+        background-color: grey; 
+        transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
+    }
+
+    .olvidar{
+        margin-left: 60px;
+    }
+
+    .registrar{
+        color: #D97D54;
+        margin-top: 0%;
+
+    }
+
+    .crear{
+        text-align: center;
+        border: 2px solid #9c4251;
+        width: 80%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 10%;
+        border-radius: 20px;
+        margin-top: 15px;
+        background-color: #F2C7C5;    
+    }
 }
 
 /*ESTILOS PARA PERFIL.HTML*/
@@ -970,16 +1097,19 @@ article{
         width: 90%;
         color: white;
     }
+
     .cajaperfil{
         display: grid;
         grid-template-rows: 80vh auto;
         height: 100vh;
     }
+
     .cajaportada{
         display: grid;
         width: 100%;
         height: 100px;
     }
+
     .editarportada{
     position: relative;
     width: 100%;
@@ -991,7 +1121,7 @@ article{
         border-radius: 100%;
         margin: 15px 0 0 10px; 
         width: 80px;
-        }
+    }
     
     .img-p{
         width: 100%;
@@ -1030,6 +1160,7 @@ article{
         padding: 5px;
         border-radius: 50%;
     }
+
     .botondatos, .botonPortada {
         width: 150px; 
         height: 30px; 
@@ -1039,18 +1170,21 @@ article{
         border: 2px solid #9c4251;
         border-radius: 10px;
     }
+
     .botonPortada:hover, .botondatos:hover {
         background-color: grey;
         transition: 0.5s;
         border-color: #9c4251;
         color: #000;
     }
+
     .descripciondatos{
         width: 90%;
         height: 30px;
         border-radius: 20px;
         
     }
+
     /*ESTILOS PARA CONTRASENA.HTML*/
     .recuperar{
         border-radius: 10px;  
@@ -1107,6 +1241,12 @@ article{
         font-family: "Roboto", sans-serif;
         margin-left: 40px;    
     }
+
+    .footercontrasena >p{
+        color: #D97D54;
+        text-align: center;
+    }
+
     /*ESTILOS PUBLICACIÓN.HTML*/
     .card{
         width: 700px;
@@ -1189,15 +1329,6 @@ article{
         
     }
      /*ESTILOS INDEX.HTML*/
-    .contenedorImg{
-        width: 500px;
-        border: 2px solid #9c4251;
-    }
-    
-    .logo{
-        display: flex;
-        border-radius: 50px;
-    }
     .logo_inicio{
         border-radius: 50px;
         width: 100px;
@@ -1205,12 +1336,16 @@ article{
     }
     
     .contenedor{
-        width: 100px;
+        width: 80px;
         height: 10px;
         display: flex;
         flex-direction: row;
+        place-items: left;
         border-radius:10px ;
-        margin-top: 100px;
+        margin-left: 50px;
+    }
+    .contenedor > h3{
+        text-align: justify;
     }
     
     .boton1{
@@ -1234,30 +1369,28 @@ article{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
+        place-items: center;
         margin-left: 40%;
         border-radius: 20px;
-    
     }
     
     .datos{
         width: 180px;
-        padding: 10px;
         border-radius: 10px;
-        margin-left: 20px;
+        padding: 10px;
         border: 2px solid #9c4251;
         font-family: "Roboto", sans-serif;
         font-size: 15px;
-        margin-left: 70px;
-        margin-bottom: 10px;
-    
+    }
+    .olvidar{
+        margin-right: 50px;
     }
     .boton{
         width: 190px;
         background-color: #9c4251;
-        padding: 10px;
         color: #ffffff;
-        margin: 15px 15px 15px 75px;
         font-size: 20px;
+        padding: 10px;
         border-radius: 15px;
         cursor: pointer;
         
@@ -1269,13 +1402,12 @@ article{
         border-color: #9c4251;
         color: #000; 
     }
-    
-    .olvidar{
-        margin-left: 60px;
-    }
-    .registrar{
+
+    .registrar {
         color: #D97D54;
-        margin-top: 0%;
+        margin-top: 20px;
+        margin-right: 35px;
+        justify-self: center;
     
     }
     .crear{
@@ -1286,11 +1418,17 @@ article{
         padding: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        place-items: center;
         margin-left: 40%;
         border-radius: 20px;
         margin-top: 20px;
         background-color: #F2C7C5;
+    }
+    .footerinicio >p{
+        color: #D97D54;
+        text-align: center;
+        margin-left: 200px;
+
     }
     
 }
