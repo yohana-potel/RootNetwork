@@ -42,11 +42,7 @@ header {
     padding: 10px; /* Espaciado dentro del header */
 }
 
-h3{
-    color: #D97D54;
-    margin-top: 5%;
-    font-size: 40px;
-}
+
 
 h1{
     color: #D97D54;
@@ -225,7 +221,6 @@ body.dark .boton:hover {
 /*Botones */
 
 button{
-    border: none;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
@@ -270,6 +265,12 @@ button{
 .boton-emoticon{
     color: #9c4251;
 }
+.boton-emoticon:hover{
+    background-color: grey;
+    transition: 0.5s;
+    border-color: #9c4251;
+    color: #000;
+}
 
 h4{
     color: #D97D54;
@@ -283,10 +284,6 @@ h4{
     padding: 20px;
 }
 
-svg{
-    background-color: #F2C7C5;
-    width: 40px;
-}
 
 article{
     padding: 20px;
@@ -708,11 +705,131 @@ article{
         margin-bottom: 10px;
         font-size: 12px;
     }
+/*ESTILOS PARA INDEX.HTML*/
+    .logo_inicio{
+        border-radius: 50px;
+        width: 60px;
+        height: 60px;
+    }
+    .boton-luna {
+        background: none;     
+        margin-left: 10px; 
+        margin-right: 10px;
+        width: 50px; 
+        height: 30px;  
+        border-radius: 50%;    
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        box-shadow: none;  
+        cursor: pointer;    
+    }
+
+    .boton-luna:hover{
+        fill: grey; 
+        color: #9c4251;
+        transition: 0.5s;  
+            
+    }
+    .boton-luna path {
+        fill: none; 
+        stroke: #000000;  
+        stroke-width: 1.5;
+    }
+
+    .contenedor{
+        width: 80px;
+        height: auto;
+        display: grid;
+        border-radius:10px ;
+        margin-left: 10px;
+        place-self: center;
+        justify-items: center;
+
+    }
+
+    .contenedor > h3{
+        text-align: center;
+        color: #D97D54;
+        font-size: 20px;
+        margin-top: 2%;
+    }
+
+    .logeo{
+        border: 2px solid #9c4251;
+        background-color: #F2C7C5;
+        width: 50%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        font-size: 15px;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-left: 20%;
+        border-radius: 20px;
+    }
+    
+    .datos{
+        width: 80%;
+        padding: 10px;
+        border-radius: 10px;
+        border: 2px solid #9c4251;
+        font-family: "Roboto", sans-serif;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    .boton{
+        width: 80%;
+        background-color: #9c4251;
+        padding: 10px;
+        color: #ffffff;
+        margin-left: 20px ;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        border-radius: 15px;
+        cursor: pointer;
+    }
+
+    .boton:hover{
+        background-color: grey; 
+        transition: 0.5s;
+        border-color: #9c4251;
+        color: #000; 
+    }
+
+    .registrar{
+        color: #D97D54;
+        margin-top: 0%;
+        font-size: 14px;
+    }
+
+    .crear{
+        text-align: center;
+        border: 2px solid #9c4251;
+        width: 50%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20%;
+        border-radius: 20px;
+        margin-top: 15px;
+        background-color: #F2C7C5;    
+    }
+
+    .footerinicio >p{
+        color: #D97D54;
+        text-align: center;
+    }
 }
 
-/*ESTILOS PARA PERFIL.HTML*/
+
 /* MEDIDA PARA TABLET PERFIL*/
 @media (min-width: 601px) and (max-width: 1023px) {
+    /*ESTILOS PARA PERFIL.HTML*/
     .custom-navbar {
         background-color: #F2C7C5; 
         border-radius: 25px;
@@ -981,53 +1098,64 @@ article{
     }
 
     /*ESTILOS INDEX.HTML*/
-    .contenedorImg{
-        width: 90%;
-        border: 2px solid #9c4251;
-    }
-
-    .logo{
-        display: flex;
-        border-radius: 50px;
-    }
-
     .logo_inicio{
         border-radius: 50px;
         width: 80px;
         height: 80px;
     }
+    .boton-luna {
+        background: none;     
+        margin-left: 30px; 
+        margin-right: 10px;
+        width: 12%; 
+        height: 40px;  
+        border-radius: 50%;    
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        box-shadow: none;  
+        cursor: pointer;    
+    }
+
+    .boton-luna:hover{
+        fill: grey; 
+        color: #9c4251;
+        transition: 0.5s;  
+            
+    }
+    .boton-luna path {
+        fill: none; 
+        stroke: #000000;  
+        stroke-width: 1.9;
+    }
 
     .contenedor{
         width: 100px;
         height: 10px;
-        display: flex;
-        flex-direction: row;
+        display: grid;
         border-radius:10px ;
-        margin-top: 100px;
+        margin-left: 20px;
+        place-self: center;
+
     }
 
-    .boton1{
-        width: 85%;
-        background: #9c4251;
-        padding: 18px;
-        color: white;
-        margin: 25px auto;
-        font-size: 18px;
-        border-radius: 15px;
-        cursor: pointer;
-        padding: 15px;
+    .contenedor > h3{
+        text-align: justify;
+        color: #D97D54;
+        font-size: 30px;
+        margin-top: 5%;
     }
 
     .logeo{
         border: 2px solid #9c4251;
         background-color: #F2C7C5;
-        width: 80%;
+        width: 50%;
         height: auto;
         padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        margin-left: 10%;
+        margin-left: 35%;
         border-radius: 20px;
     }
 
@@ -1035,7 +1163,6 @@ article{
         width: 80%;
         padding: 10px;
         border-radius: 10px;
-        margin-left: 20px;
         border: 2px solid #9c4251;
         font-family: "Roboto", sans-serif;
         font-size: 16px;
@@ -1048,7 +1175,9 @@ article{
         background-color: #9c4251;
         padding: 10px;
         color: #ffffff;
-        margin: 10px auto;
+        margin-bottom: 10px ;
+        margin-top: 10px;
+        margin-left: 10%;
         font-size: 18px;
         border-radius: 15px;
         cursor: pointer;
@@ -1061,10 +1190,6 @@ article{
         color: #000; 
     }
 
-    .olvidar{
-        margin-left: 60px;
-    }
-
     .registrar{
         color: #D97D54;
         margin-top: 0%;
@@ -1074,16 +1199,22 @@ article{
     .crear{
         text-align: center;
         border: 2px solid #9c4251;
-        width: 80%;
+        width: 50%;
         height: auto;
         padding: 20px;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        margin-left: 10%;
+        margin-left: 35%;
         border-radius: 20px;
         margin-top: 15px;
         background-color: #F2C7C5;    
+    }
+
+    .footerinicio >p{
+        color: #D97D54;
+        text-align: center;
+        margin-left:170px;
+
     }
 }
 
@@ -1258,14 +1389,14 @@ article{
         padding: 5px;
     }
     .boton-volver {
-        background: none;     /* Elimina el fondo */
+        background: none;    
         margin-left: 20px;
-        border: none;         /* Elimina el borde */
-        padding: 0;           /* Elimina el padding */
-        cursor: pointer;      /* Cambia el cursor al pasar sobre el botón */
+        border-radius: 50%;         
+        padding: 0;           
+        cursor: pointer;      
     }
     .boton-volver:hover .flecha {
-        fill: grey;        /* Cambia el color al pasar el cursor por encima (por ejemplo, a un tono rojo) */
+        fill: grey;       
     }
     .botones{
         display: flex;
@@ -1334,6 +1465,32 @@ article{
         width: 100px;
         height: 100px;
     }
+
+    .boton-luna {
+        background: none;     
+        margin-left: 20px; 
+        margin-right: 10px;
+        width: 100px; 
+        height: 50px;  
+        border-radius: 50%;    
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        box-shadow: none;  
+        cursor: pointer;    
+    }
+
+    .boton-luna:hover{
+        fill: grey; 
+        color: #9c4251;
+        transition: 0.5s;  
+            
+    }
+    .boton-luna path {
+        fill: none; 
+        stroke: #000000;  
+        stroke-width: 1.9;
+    }
     
     .contenedor{
         width: 80px;
@@ -1346,18 +1503,9 @@ article{
     }
     .contenedor > h3{
         text-align: justify;
-    }
-    
-    .boton1{
-        width: 80%;
-        background: #9c4251;
-        padding: 18px;
-        color: white;
-        margin-left: 40px;
-        font-size: 20px;
-        border-radius: 15px;
-        cursor: pointer;
-        margin-bottom: 30px;
+        color: #D97D54;
+        font-size: 40px;
+        margin-top: 5%;
     }
     
     .logeo{
@@ -1428,7 +1576,6 @@ article{
         color: #D97D54;
         text-align: center;
         margin-left: 200px;
-
     }
     
 }
