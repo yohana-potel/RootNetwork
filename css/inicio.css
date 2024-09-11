@@ -507,6 +507,9 @@ article{
         border-radius: 50%;
     }
     
+    .titulodatos,.daTosperfil{
+        color: #D97D54;
+    }
     .cajaportada {
         display: grid;
         width: 100%;
@@ -768,7 +771,7 @@ article{
         margin-left: 20%;
         border-radius: 20px;
     }
-    
+
     .datos{
         width: 80%;
         padding: 10px;
@@ -879,7 +882,9 @@ article{
         height: 200px; /* Ajusta la altura */
         margin-top: 10px;
     }
-    
+    .titulodatos,.daTosperfil{
+        color: #D97D54;
+    }
     .editarportada {
         position: relative;
         width: 100%;
@@ -1283,6 +1288,9 @@ article{
         width: 400px;
         height: 250px;
         margin: 0; 
+    }
+    .titulodatos,.daTosperfil{
+        color: #D97D54;
     }
     
     .imagen_perfil{
