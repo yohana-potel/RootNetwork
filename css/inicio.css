@@ -1,4 +1,4 @@
-*{
+                                                                                *{
     border: 0;
     padding: 0;
 }
@@ -119,6 +119,7 @@ body.dark .boton:hover {
 
 
 /*Botones */
+/*Botones Muro.html*/
 
 button{
     text-align: center;
@@ -126,13 +127,27 @@ button{
     cursor: pointer;
     margin: 4px;
     font-family: "Roboto", sans-serif;
-    color: #9c4251;
+    color: white;
+    background-color: #9c4251;
+    border-radius: 30%;
+    width: 85%;
+
 }
-/*Botones Muro.html*/
 
+.boton-emoticon:hover{
+    background-color: grey;
+    transition: 0.5s;
+    border-color: #9c4251;
+    color: #000;
+}
 
-/*bt especial me gusta y compartir. */
+svg{
+    width: 35%;
+}
 
+.boton-publicacion{
+    background-color: #F2C7C5;
+}
 
 /*---------------*/
 .miperfil {
@@ -162,26 +177,16 @@ button{
 }
 
 
-.boton-emoticon{
-    color: #9c4251;
-}
-.boton-emoticon:hover{
-    background-color: grey;
-    transition: 0.5s;
-    border-color: #9c4251;
-    color: #000;
-}
-
 h4{
     color: #D97D54;
 }
 
 .barraComentario{
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: space-around;
+    padding: 30PX;
 }
 
 
@@ -192,6 +197,15 @@ article{
 .logoBarraNavegacion{
     width: 20%;
     height: 20%;
+}
+
+#Textocomnetario{
+    border: 2px solid #e01c12;
+}
+
+.row g-0{
+    gap: 10px;
+    padding: 50%;
 }
 
 
@@ -317,6 +331,7 @@ article{
 
     .botonComentario{
         width: 50vw;
+        background-color: #9c4251;  /* estoy aqui*/
     }
     
     .boton-emoticon{
@@ -552,6 +567,7 @@ article{
         margin: 20px 0 0 0 0;    
         
     }
+    
 
     .botones button {
         width: 80%;
@@ -608,6 +624,7 @@ article{
         margin-bottom: 10px;
         font-size: 12px;
     }
+    
 /*ESTILOS PARA INDEX.HTML*/
     .logo_inicio{
         border-radius: 50px;
