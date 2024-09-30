@@ -700,25 +700,26 @@ article{
         margin-bottom: 10px;
     }
 
-    .boton{
+    #btnIniciarSesion {
         width: 80%;
         background-color: #9c4251;
         padding: 10px;
         color: #ffffff;
-        margin-left: 20px ;
+        margin-left: 20px;
         margin-top: 10px;
         margin-bottom: 10px;
         font-size: 16px;
         border-radius: 15px;
         cursor: pointer;
     }
-
-    .boton:hover{
-        background-color: grey; 
+    
+    #btnIniciarSesion:hover {
+        background-color: grey;
         transition: 0.5s;
         border-color: #9c4251;
-        color: #000; 
+        color: #000;
     }
+    
 
     .registrar{
         color: #D97D54;
