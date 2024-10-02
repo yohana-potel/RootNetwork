@@ -78,6 +78,9 @@ body.dark .crear{
     background-color: #9c4251;
     border: 2px solid black;
 }
+body.dark .crear p{
+    color:#000;
+}
 body.dark .logeo h1{
     color: #070707;
 }
