@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <title>Root Network</title>
 
 </head>
@@ -30,9 +31,9 @@
         <section>
             <form class="logeo">
                 <h1>Root Network</h1>
-                <input class="datos" type="text" placeholder="Usuario o correo" aria-label="Usuario o correo">
-                <input class="datos" type="password" placeholder="Contraseña" aria-label="Contraseña">
-                <input class="boton" type="button" value="Iniciar Sesión">
+                <input class="datos" type="text" placeholder="Usuario o correo" aria-label="Usuario o correo" id="usuario">
+                <input class="datos" type="password" placeholder="Contraseña" aria-label="Contraseña" id="contrasena">
+                <input  class="boton" value="Iniciar Sesión" id="btnIniciarSesion">
                 <p class="olvidar"><a href="./contrasena.html">¿Olvidaste tu contraseña?</a></p>
             </form>
         </section>
@@ -46,5 +47,10 @@
         <p>© 2024 Root Network. Todos los derechos reservados.</p>
     </footer>
 <script src="./js/clearmode.js"></script>
+<script src="./js/alert.js"></script>
+    
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
 </body>
 </html>
