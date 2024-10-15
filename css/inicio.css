@@ -1,4 +1,4 @@
-                                                                                *{
+*{
     border: 0;
     padding: 0;
 }
@@ -96,126 +96,7 @@ body.dark .boton:hover {
 }
 
 
-
-#PubliText{
-    width: 600px;
-    height: 200px;
-    border: 2px solid #9c4251;
-    border-radius: 20px;
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    background-color: white; 
-    margin-top: 10px; 
-    margin-left: 40px;
-}
-
-/*Estilos para muro.html*/
-
-.pantalla {
-    display: grid;
-    grid-template-columns: 1fr ;
-    gap: 10px;
-}
-
-
-/*Botones */
-/*Botones Muro.html*/
-
-button{
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    margin: 4px;
-    font-family: "Roboto", sans-serif;
-    color: white;
-    background-color: #9c4251;
-    border-radius: 30%;
-    width: 85%;
-
-}
-
-.boton-emoticon:hover{
-    background-color: grey;
-    transition: 0.5s;
-    border-color: #9c4251;
-    color: #000;
-}
-
-svg{
-    width: 35%;
-}
-
-.boton-publicacion{
-    background-color: #F2C7C5;
-}
-
-/*---------------*/
-.miperfil {
-    display: flex;
-    flex-direction: column;
-}
-
-.fotodelUsuario {
-    width: 100px;
-    height: auto;
-    justify-content: space-around;
-    margin-left: auto;
-    border-radius: 300px;
-}
-
-#TextoPubli {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-}
-
-.comentario {
-    display: flex;
-    align-items: center;
-    gap: 10px; 
-    width: 50%;
-}
-
-
-h4{
-    color: #D97D54;
-}
-
-.barraComentario{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 30PX;
-}
-
-
-article{
-    padding: 20px;
-}
-
-.logoBarraNavegacion{
-    width: 20%;
-    height: 20%;
-}
-
-#Textocomnetario{
-    border: 2px solid #e01c12;
-}
-
-.row g-0{
-    gap: 10px;
-    padding: 50%;
-}
-
-
 @media  (min-width:300px) and (max-width:600px) {
-    body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden; /* Evitar desplazamiento horizontal */
-    }
-
     .pantalla{
         width: 100%;
         display: grid;
@@ -369,12 +250,6 @@ article{
         display: grid;
         grid-template-rows: 50vh auto; /* Ajusta el alto de la portada en pantallas pequeñas */
         height: 100vh;
-    }
-
-    .logoperfil {
-        border-radius: 100%;
-        margin: 5px 0 0 5px; 
-        width: 50px; /* Reduce el tamaño del logo */
     }
 
     .img-p {
@@ -1366,13 +1241,7 @@ article{
     height: 200px;
     margin-bottom: 50px;
     }
-
-    .logoperfil {
-        border-radius: 100%;
-        margin: 15px 0 0 10px; 
-        width: 80px;
-    }
-    
+   
     .img-p{
         width: 100%;
         height: 100%;
@@ -1801,6 +1670,115 @@ article{
         text-align: center;
         font-family: "Roboto", sans-serif;
         font-style: normal;
+    }
+
+        /*Estilos para muro.html*/
+
+    .pantalla {
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 10px;
+    }
+    #PubliText{
+        width: 600px;
+        height: 200px;
+        border: 2px solid #9c4251;
+        border-radius: 20px;
+        font-size: 16px;
+        font-family: "Roboto", sans-serif;
+        background-color: white; 
+        margin-top: 10px; 
+        margin-left: 40px;
+    }
+
+    /*Botones */
+    /*Botones Muro.html*/
+
+    button{
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        margin: 4px;
+        font-family: "Roboto", sans-serif;
+        color: white;
+        background-color: #9c4251;
+        border-radius: 30%;
+        width: 85%;
+
+    }
+
+    .boton-emoticon:hover{
+        background-color: grey;
+        transition: 0.5s;
+        border-color: #9c4251;
+        color: #000;
+    }
+
+    svg{
+        width: 35%;
+    }
+
+    .boton-publicacion{
+        background-color: #F2C7C5;
+    }
+
+    /*---------------*/
+    .miperfil {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .fotodelUsuario {
+        width: 100px;
+        height: auto;
+        justify-content: space-around;
+        margin-left: auto;
+        border-radius: 300px;
+    }
+
+    #TextoPubli {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .comentario {
+        display: flex;
+        align-items: center;
+        gap: 10px; 
+        width: 50%;
+    }
+
+
+    h4{
+        color: #D97D54;
+    }
+
+    .barraComentario{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 30PX;
+    }
+
+
+    article{
+        padding: 20px;
+    }
+
+    .logoBarraNavegacion{
+        width: 20%;
+        height: 20%;
+    }
+
+    #Textocomnetario{
+        border: 2px solid #e01c12;
+    }
+
+    .row g-0{
+        gap: 10px;
+        padding: 50%;
     }
 }
 
