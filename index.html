@@ -29,11 +29,13 @@
         </section>
         
         <section>
-            <form class="logeo">
+            <form id="logueo" class="logeo" >
                 <h1>Root Network</h1>
-                <input class="datos" type="text" placeholder="Usuario o correo" aria-label="Usuario o correo" id="usuario">
-                <input class="datos" type="password" placeholder="Contraseña" aria-label="Contraseña" id="contrasena">
-                <input  class="boton" value="Iniciar Sesión" id="btnIniciarSesion">
+                <input id="usuario" class="datos" type="text" placeholder="Usuario o correo" aria-label="Usuario o correo" >
+                <input id="contrasena" class="datos" type="password" placeholder="Contraseña" aria-label="Contraseña" >
+                <button class="boton" id="btnIniciarSesion">Iniciar Sesión</button>
+                <span id="error_label" style="display: none;"></span>
+
                 <p class="olvidar"><a href="./contrasena.html">¿Olvidaste tu contraseña?</a></p>
             </form>
         </section>
@@ -46,11 +48,12 @@
     <footer class="footerinicio">
         <p>© 2024 Root Network. Todos los derechos reservados.</p>
     </footer>
-<script src="./js/clearmode.js"></script>
-<script src="./js/alert.js"></script>
     
-<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
-
+    <script src="/js/loginRepository.js"></script>
+    <script src="/js/login.js"></script>
+    <script src="./js/clearmode.js"></script>
+    <script src="./js/alert.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
 </body>
 </html>
