@@ -1,4 +1,4 @@
-let loginForm = document.getElementById("logueo");
+let loginForm = document.getElementById('logueo');
 
 loginForm.addEventListener("submit", (evt) => {
     evt.preventDefault();
