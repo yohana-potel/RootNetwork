@@ -1,7 +1,7 @@
-//Todas las llamadas al login controller.
-function getLogin(peticion, success) {
+
+function getRegister(peticion, success) {
     console.log(peticion);
-    fetch('http://localhost:5156/login', {
+    fetch('http://localhost:5156/registro', {
         method: 'POST',
         body: JSON.stringify(peticion),
         headers: {
@@ -17,7 +17,7 @@ function getLogin(peticion, success) {
     })
     .then((json) => success(json))
     .catch((e) => {
-        console.error('Error during login request:', e);
+        console.error('Error during regitrar request:', e);
         
     });
 }

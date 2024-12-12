@@ -20,20 +20,20 @@
        </div>
 
        <section class="caja">
-            <form class="formulario" >
+            <form id="formularioRegistro" class="formulario" >
                 <h2 class="titulo" >Formulario de Registro </h2>
             
-                <input class="controls" type="text" name="nombre" placeholder="Nombres "> 
-                <input class="controls" type="text" name="apellido"  placeholder="Apellidos "> 
+                <input id="nombre" class="controls" type="text" name="nombre" placeholder="Nombres "> 
+                <input id="apellido" class="controls" type="text" name="apellido"  placeholder="Apellidos "> 
                 
-                <input class="controls" type="date" name="fecha" id="">
+                <input id="fechaNaciemiento" class="controls" type="date" name="fecha">
 
-                <input class="controls" type="email" name="correo"  placeholder="Email"> 
-                <input class="controls" type="password" name="correo"  placeholder="Contraseña">
+                <input id="correo" class="controls" type="email" name="correo"  placeholder="Email"> 
+                <input id="contrasena" class="controls" type="password" name="correo"  placeholder="Contraseña">
                 
                 <p class="terms"> Acepto los <a href="#">Terminos y Condiciones </a></p>
                 <br>
-                <input class="botonregistrarse" type="submit" value="Registrarse">
+                <button id="botonregistrarse" class="botonregistrarse" type="submit" value="Registrarse" >Registrarse</button>
 
                 <p class="termino">Ya tengo cuenta <a href="index.html"> Log in </a> </p>
             </form>
@@ -42,5 +42,8 @@
 
        
     </article>
+
+    <script src="./js/registroRepository.js"></script>
+    <script src="./js/registro.js"></script>
 </body>
 </html>
