@@ -1001,6 +1001,12 @@ body.dark .boton:hover {
         font-size: 18px;
     }
 
+    .articleBox{
+        border: solid red 3px;
+        color: #e01c12;
+    }
+
+
     /*ESTILOS INDEX.HTML*/
     .logo_inicio{
         border-radius: 50px;

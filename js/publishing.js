@@ -5,6 +5,7 @@ document.getElementById('share').addEventListener("click", (evt) => {
     // Capturar datos del formulario
     let textPublishing = document.getElementById('text').value.trim(); // Texto de la publicación
     let imagePublishing = document.getElementById('imageUrl').value.trim(); // URL de la imagen
+    //let UserName = document.getElementById('UserName').value.trim();
     let userId = 1 //localStorage.getItem("userId"); // Obtener ID del usuario desde localStorage
 
     // Etiqueta para mostrar errores
@@ -33,7 +34,8 @@ document.getElementById('share').addEventListener("click", (evt) => {
     let peticion = {
         Text: textPublishing,
         ImageUrl: imagePublishing,
-        UserId: userId
+        UserId: userId,
+    
     };
 
     console.log("Datos enviados al backend:", peticion); // Log para depurar
