@@ -1,3 +1,5 @@
+//usuarios crear una nueva publicación.
+
 // Escuchar el clic en el botón "Compartir"
 document.getElementById('share').addEventListener("click", (evt) => {
     evt.preventDefault(); // Prevenir comportamiento por defecto del formulario

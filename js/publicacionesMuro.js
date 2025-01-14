@@ -1,4 +1,4 @@
-// Archivo: muro.js
+// Archivo: muro.js  Carga las publicaciones existentes para que el usuario las vea.
 
 document.addEventListener("DOMContentLoaded", () => {
     cargarPublicaciones();
@@ -25,14 +25,14 @@ function renderPosts(posts) {
 
     posts.forEach(post => {
         const postHTML = `
-            <article class="articleBox" id="articleBox">
+            <article class="articleBox" id="articleBox" style="max-width: 540px>
                 <div class="content">
                     <div class="imageBox">
-                        <img src="${post.ImageUrl}" alt="Imagen de la publicación" id="text">
+                        <img src="${post.imageUrl}" alt="Imagen de la publicación" id="imageUrl">
                     </div>
                     <div class="cardBody" id="cardPublicacion">
-                        <h5 class="card-title" id="userName">${post.userName}</h5>
-                        <p class="card-text" id="imageUrl">${post.text}</p>
+                        
+                        <p class="card-text" id="text">${post.text}</p>
                         <p class="card-text"><small class="text-body-secondary">${new Date(post.PublishDate).toLocaleString()}</small></p>
                     </div>
                 </div>`;
