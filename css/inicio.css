@@ -540,21 +540,17 @@ body.dark .boton:hover {
     }
 
     .contenedor{
-        width: 80px;
+        width: auto;
         height: auto;
-        display: grid;
-        border-radius:10px ;
         margin-left: 10px;
-        place-self: center;
-        justify-items: center;
-
+        border-radius:10px ;
     }
 
     .contenedor > h3{
         text-align: center;
         color: #D97D54;
-        font-size: 20px;
-        margin-top: 2%;
+        font-size: 5vw;
+        margin-top: 1%;
     }
 
     .logeo{
@@ -564,11 +560,15 @@ body.dark .boton:hover {
         height: auto;
         padding: 20px;
         display: flex;
-        font-size: 15px;
+        font-size: 3vw;
         flex-direction: column;
         justify-content: space-around;
         margin-left: 20%;
         border-radius: 20px;
+    }
+
+    .logeo >p{
+        font-size: 2vw;
     }
 
     .datos{
@@ -577,7 +577,7 @@ body.dark .boton:hover {
         border-radius: 10px;
         border: 2px solid #9c4251;
         font-family: "Roboto", sans-serif;
-        font-size: 14px;
+        font-size: 3vw;
         margin-left: 10px;
         margin-bottom: 10px;
     }
@@ -590,7 +590,7 @@ body.dark .boton:hover {
         margin-left: 20px;
         margin-top: 10px;
         margin-bottom: 10px;
-        font-size: 16px;
+        font-size: 3vw;
         border-radius: 15px;
         cursor: pointer;
     }
@@ -605,8 +605,6 @@ body.dark .boton:hover {
 
     .registrar{
         color: #D97D54;
-        margin-top: 0%;
-        font-size: 14px;
     }
 
     .crear{
@@ -622,14 +620,20 @@ body.dark .boton:hover {
         margin-top: 15px;
         background-color: #F2C7C5;    
     }
+    
+    .crear >p{
+        font-size: 2vw;
+        
+    }
 
     .footerinicio >p{
         color: #D97D54;
         text-align: center;
+        font-size: 2vw;
     }
 
         /*ESTILO REGISTRO*/
-        .Form{
+    .Form{
         border: 4px solid #9c4251;
         width: 70%; 
         height: auto; 
@@ -1013,6 +1017,7 @@ body.dark .boton:hover {
         width: 80px;
         height: 80px;
     }
+
     .boton-luna {
         background: none;     
         margin-left: 30px; 
@@ -1033,6 +1038,7 @@ body.dark .boton:hover {
         transition: 0.5s;  
             
     }
+    
     .boton-luna path {
         fill: none; 
         stroke: #000000;  
@@ -1040,19 +1046,16 @@ body.dark .boton:hover {
     }
 
     .contenedor{
-        width: 100px;
-        height: 10px;
-        display: grid;
+        width: auto;
+        height: auto;
         border-radius:10px ;
         margin-left: 20px;
-        place-self: center;
-
     }
 
     .contenedor > h3{
-        text-align: justify;
+        text-align: center;
         color: #D97D54;
-        font-size: 30px;
+        font-size: 5vw;
         margin-top: 5%;
     }
 
@@ -1063,10 +1066,16 @@ body.dark .boton:hover {
         height: auto;
         padding: 20px;
         display: flex;
+        font-size: 3vw;
         flex-direction: column;
-        justify-content: space-around;
-        margin-left: 35%;
+        justify-content:center;
+        margin-left: 23%;
         border-radius: 20px;
+    }
+
+    .logeo >p{
+        font-size:2vw;
+        
     }
 
     .datos{
@@ -1075,7 +1084,7 @@ body.dark .boton:hover {
         border-radius: 10px;
         border: 2px solid #9c4251;
         font-family: "Roboto", sans-serif;
-        font-size: 16px;
+        font-size: 2vw;
         margin-left: 10%;
         margin-bottom: 10px;
     }
@@ -1088,7 +1097,7 @@ body.dark .boton:hover {
         margin-bottom: 10px ;
         margin-top: 10px;
         margin-left: 10%;
-        font-size: 18px;
+        font-size: 3vw;
         border-radius: 15px;
         cursor: pointer;
     }
@@ -1103,6 +1112,7 @@ body.dark .boton:hover {
     .registrar{
         color: #D97D54;
         margin-top: 0%;
+        font-size: 4vw;
 
     }
 
@@ -1114,17 +1124,23 @@ body.dark .boton:hover {
         padding: 20px;
         display: flex;
         flex-direction: column;
-        margin-left: 35%;
+        margin-left: 23%;
         border-radius: 20px;
         margin-top: 15px;
         background-color: #F2C7C5;    
     }
 
+    .crear >p{
+        font-size: 2vw;
+        margin-top: 10px;
+        
+    }
+
     .footerinicio >p{
         color: #D97D54;
         text-align: center;
-        margin-left:170px;
-
+        margin-left: 10px;
+        font-size: 2vw;
     }
 
      /*ESTILO REGISTRO*/
