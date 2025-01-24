@@ -22,22 +22,37 @@
         </svg>
     </button>    
     <article>
-        <div class="card">
+        <div class="card" id="card">
             <section class="infoPerfil">
-                <img class="fotopubli" src="./img/leyla.jpg" alt="foto de Perfil de la publicación.">
-                <h1>Nombre del usuario</h1>                       
+                <!-- Imagen de perfil del usuario -->
+                <img class="fotopubli" src="./img/leyla.jpg" alt="Foto de perfil de la publicación">
+                <h1 id="userName">Nombre del usuario</h1>
             </section>
             <section class="caja-texto">
+                <!-- Formulario de publicación -->
                 <form id="publi" onsubmit="return false;">
-                    <input type="text" id="PubliText" placeholder="¿Listo para compartir tus secretos de jardinería? Cuéntanos qué estás cultivando " onkeydown="submitOnEnter(event)">
-                </form>                
-            </section>
-            <section class="botones">
-                <button>Añadir Imagen</button>
-                <button>Compartir </button>
+                    <label for="text"></label>
+                    <textarea id="text" name="text" placeholder="¿Qué estás pensando?" required></textarea>
+        
+                    <label for="imageUrl"></label>
+                    <input type="url" id="imageUrl" name="imageUrl" placeholder="Pega aquí la URL de la imagen" required />
+        
+                    <!-- Mensajes de error -->
+                    <span id="error_label" style="display: none; color: red;"></span>
+        
+                    <!-- Botones -->
+                    <button type="submit" id="share">Compartir</button>
+                </form>
             </section>
         </div>
-    </article>
+        
+
+    <script src="/js/publishingRepository.js"></script>
+    <script src="./js/publicacionesMuro.js"></script>
+    <script src="/js/publishing.js"></script>
+    <script src="./js/clearmode.js"></script>
+    
+
 </body>
 
 </html>
