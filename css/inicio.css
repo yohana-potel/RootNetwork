@@ -343,7 +343,7 @@ body.dark .boton:hover {
     /*ESTILOS PARA Contrasena.HTML*/
     .recuperar{
         width: 90%; 
-        padding: 15px;
+        padding: 10px;
         margin: 0 auto;
         border-radius: 10px;  
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
@@ -351,8 +351,16 @@ body.dark .boton:hover {
 
     .recuperar h1{
         margin: 5px 0;
-        font-size: 18px; 
+        font-size: 4vw;
         text-align: left; 
+    }
+    .recuperar >p{
+        font-size: 3vw;
+        text-align: center; 
+        color: rgb(255, 255, 255);
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        margin: 10px 0; 
     }
 
     .logo-header{
@@ -369,8 +377,8 @@ body.dark .boton:hover {
     .introducir{
         width: 80%; 
         margin: 10px auto; 
-        height: 40px; 
-        font-size: 12px; 
+        height: 50%; 
+        font-size: 3vw; 
         padding: 5px;
         font-family: "Roboto", sans-serif;
         background-color: white; 
@@ -383,7 +391,7 @@ body.dark .boton:hover {
         height: 40px; 
         margin: 10px ;
         margin-left: 15px;
-        font-size: 14px;
+        font-size: 3vw;
         background:  #9c4251;
         border-color: transparent;
         border-radius: 20px;
@@ -398,16 +406,10 @@ body.dark .boton:hover {
         color: #000; 
     }
 
-    p{
-        color: rgb(255, 255, 255);
-        font-family: "Roboto", sans-serif;
-        font-size: 12px;
-        text-align: center;
-        margin: 10px 0; 
-    }
     .footercontrasena >p{
         color: #D97D54;
         text-align: center;
+        font-size: 2vw; 
     }
 
     /*ESTILOS PUBLICACIÓN.HTML*/
@@ -837,7 +839,7 @@ body.dark .boton:hover {
     
      /*ESTILOS PARA CONTRASENA.HTML*/
      .recuperar {
-        width: 80%; 
+        width: 90%; 
         padding: 20px;
         margin-top: 20px ; 
         margin-left: 20px;
@@ -845,9 +847,16 @@ body.dark .boton:hover {
     }
 
     .recuperar h1{
-        font-size: 24px; 
+        font-size: 5vw; 
         text-align: left; 
         margin-bottom: 10px;
+    }
+
+    .recuperar >p{
+        font-size: 2.5vw;
+        text-align: left; 
+        color: rgb(255, 255, 255);
+        font-family: "Roboto", sans-serif;
     }
 
     .logo-header{
@@ -867,8 +876,8 @@ body.dark .boton:hover {
     .introducir{
         width: 100%; 
         margin: 15px auto; 
-        height: 45px; 
-        font-size: 14px; 
+        height: auto; 
+        font-size: 2.5vw; 
         padding: 10px;
         font-family: "Roboto", sans-serif;
         background-color: white; 
@@ -878,9 +887,9 @@ body.dark .boton:hover {
 
     .siguiente{
         width: 60%; 
-        height: 45px; 
-        margin: 15px 30px; 
-        font-size: 16px; 
+        height: auto;
+        margin: 10px 20px; 
+        font-size: 3vw; 
         background:  #9c4251;
         border-color: transparent;
         border-radius: 20px;
@@ -895,17 +904,10 @@ body.dark .boton:hover {
         color: #000; 
     }
 
-    p{
-        color: rgb(255, 255, 255);
-        font-family: "Roboto", sans-serif;
-        font-size: 14px; 
-        text-align: center; 
-        margin: 15px 0;
-    }
-
     .footercontrasena >p{
         color: #D97D54;
         text-align: center;
+        font-size: 2vw; 
     }
 
     /*ESTILOS PUBLICACIÓN.HTML*/
@@ -1344,11 +1346,17 @@ body.dark .boton:hover {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
     
+    .recuperar >p{
+        font-size: 18px;
+        text-align: left;
+        color: rgb(255, 255, 255);
+        font-family: "Roboto", sans-serif;
+    }
+    
     .recuperar h1{
         margin: 10px 0 0 10px; 
         text-align: left;
-        font-size: 30px;
-        margin-left: 40px;
+        font-size: 40px;
     }
     
     .logo-header{
@@ -1387,16 +1395,11 @@ body.dark .boton:hover {
         border-color: #9c4251;
         color: #000; 
     }
-    
-    p{
-        color: rgb(255, 255, 255);
-        font-family: "Roboto", sans-serif;
-        margin-left: 40px;    
-    }
 
     .footercontrasena >p{
         color: #D97D54;
         text-align: center;
+        font-size: 1vw; 
     }
 
     /*ESTILOS PUBLICACIÓN.HTML*/
