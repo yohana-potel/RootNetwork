@@ -435,54 +435,29 @@ body.dark .recuperar/*contraseña*/
 
     /*ESTILOS PUBLICACIÓN.HTML*/
     .card{
-        width: 90%;
+        width: 80%;
+        margin-left: 40px;
         height: auto;
-        margin-left: 15px;
         background-color: #F2C7C5;  
         border: 4px solid #9c4251; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
+        place-items: center;
         margin-top: 10px;
     }
-    .boton-volver {
-        background: none;     
-        margin-left: 20px;
-        border: none;         
+    
+    .boton-volver svg {
+        width: 50px; /* Ancho del ícono */
+        height: 50px; /* Alto del ícono */
+        border-radius: 50%;     
+        background: none;       
+        margin-left: 30px;
         padding: 0;           
-        cursor: pointer;      
+        cursor: pointer;     
     }
 
     .boton-volver:hover .flecha {
-        fill: grey;      
-    }
-
-    .botones{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 10%;
-        margin: 40px 0 0;    
-    }
-
-    .botones{
-        display: flex;
-        flex-direction: column; 
-        justify-content: center; 
-        width: 100%;
-        height: auto; 
-        margin: 20px 0 0 0 0;    
-        
-    }
-    
-
-    .botones button {
-        width: 80%;
-        height: 40px;
-        font-size: 15px;
-        background: #9c4251;
-        border-radius: 30px;
-        cursor: pointer;
-        margin: 10px auto;
-        color: white;
+        fill: grey;       
     }
 
     .botones button:hover{
@@ -492,42 +467,83 @@ body.dark .recuperar/*contraseña*/
         color: #000; 
     }
 
-    .infoPerfil{
-        width: 100%;
-        height: auto;
-        align-items: center; 
+    .infoPerfil {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
     }
     
     .infoPerfil h1{
         text-align: center;
-        font-size: 15px;
+        font-size: 4vw;
         font-family: "Roboto", sans-serif;
-        font-weight: 700;
         font-style: normal;  
-        margin-top: 50px;
     }
     
     .fotopubli {
-        display: block;
-        margin: 30px auto;
-        width: 80px; 
-        height: 80px;
+        width: 60px;
+        height: 60px;
         border-radius: 50%;
+        object-fit: cover;
     }
 
-    .caja-texto {
-        height: auto; 
-        flex-direction: column; 
-        align-items: center; 
-        padding: 10px;
+    #publi{
+        width: 80%;
+        height: auto;
+        gap: 10px
+        
     }
 
-    #PubliText {
-        width: 90%; 
-        height: 60px; 
-        margin-left: 15px;
-        margin-bottom: 10px;
-        font-size: 12px;
+    textarea, input[type="url"] {
+        width: 80%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 2vw;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    textarea, input[type="url"], #share {
+        width: 80%;
+        font-size: 2.5vw; /* Ajusta el tamaño de la fuente */
+        margin-left: 20%;
+    }
+
+    textarea:focus, input[type="url"]:focus {
+        border-color: #9c4251;
+        outline: none;
+
+        box-shadow: 0 0 5px #9c4251;
+    }
+        
+    textarea {
+        min-height: 80px;
+        
+    }
+        
+    input::placeholder, textarea::placeholder {
+        color: #aaa;
+        font-style: italic;
+        
+    }
+
+    #share {
+        background-color: #9c4251;
+        color: white;
+        width: 30%;
+        border: none;
+        font-size: 3vw;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        margin-top: 20px;
+
+        transition: background-color 0.3s ease;
+    }
+    #share:hover {
+        background-color: gray;
     }
     
 /*ESTILOS PARA INDEX.HTML*/
@@ -933,54 +949,30 @@ body.dark .recuperar/*contraseña*/
 
     /*ESTILOS PUBLICACIÓN.HTML*/
     .card{
-        width: 90%;
+        width: 80%;
+        margin-left: 80px;
+        margin-right: 10px;
         height: auto;
-        margin-left: 30px;
         background-color: #F2C7C5;  
         border: 4px solid #9c4251; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
+        place-items: center;
         margin-top: 10px;
     }
-
-    .boton-volver {
-        background: none;     
-        margin-left: 20px;
-        border: none;         
+    
+    .boton-volver svg {
+        width: 50px; /* Ancho del ícono */
+        height: 50px; /* Alto del ícono */
+        border-radius: 50%;     
+        background: none;       
+        margin-left: 30px;
         padding: 0;           
-        cursor: pointer;      /* Cambia el cursor al pasar sobre el botón */
+        cursor: pointer;     
     }
 
     .boton-volver:hover .flecha {
         fill: grey;       
-    }
-
-    .botones{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 10%;
-        margin: 40px 0 0;    
-    }
-
-    .botones{
-        display: flex;
-        flex-direction: row; 
-        justify-content: end;
-        width: 90%;
-        height: auto; 
-        margin: 20px 0 0 0 0;    
-        
-    }
-
-    .botones button {
-        width: 100%;
-        height: 40px;
-        font-size: 18px;
-        background: #9c4251;
-        border-radius: 30px;
-        cursor: pointer;
-        margin-left: 50px;
-        color: white;
     }
 
     .botones button:hover{
@@ -990,47 +982,82 @@ body.dark .recuperar/*contraseña*/
         color: #000; 
     }
 
-    .infoPerfil{
-        width: 100%;
-        height: auto;
-        align-items: center; 
+    .infoPerfil {
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+        gap: 10px;
+        margin-bottom: 20px;
     }
     
     .infoPerfil h1{
         text-align: center;
-        font-size: 20px;
+        font-size: 4vw;
         font-family: "Roboto", sans-serif;
-        font-weight: 700;
         font-style: normal;  
-        margin-top: 50px;
     }
     
     .fotopubli {
-        display: block;
-        margin: 30px auto;
-        width: 100px; 
-        height: 100px;
+        width: 80px;
+        height: 80px;
         border-radius: 50%;
+        object-fit: cover;
     }
 
-    .caja-texto {
-        height: auto; 
-        flex-direction: column; 
-        align-items: center; 
-        padding: 10px;
+    #publi{
+        width: 80%;
+        height: auto;
+        gap: 10px
+        
     }
 
-    #PubliText {
-        width: 90%; 
-        height: 60px; 
-        margin-left: 30px;
-        margin-bottom: 10px;
-        font-size: 18px;
+    textarea, input[type="url"] {
+        width: 80%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 2vw;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
     }
 
-    .articleBox{
-        border: solid red 3px;
-        color: #e01c12;
+    textarea, input[type="url"], #share {
+        width: 90%;
+        margin-left: 15%;
+        font-size: 2.5vw; /* Ajusta el tamaño de la fuente */
+    }
+
+    textarea:focus, input[type="url"]:focus {
+        border-color: #9c4251;
+        outline: none;
+
+        box-shadow: 0 0 5px #9c4251;
+    }
+      
+    textarea {
+        min-height: 80px;
+        
+    }
+      
+    input::placeholder, textarea::placeholder {
+        color: #aaa;
+        font-style: italic;
+        
+    }
+
+    #share {
+        background-color: #9c4251;
+        color: white;
+        width: 30%;
+        border: none;
+        font-size: 3vw;
+        border-radius: 8px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        transition: background-color 0.3s ease;
+    }
+    #share:hover {
+        background-color: gray;
     }
 
 
@@ -1169,6 +1196,7 @@ body.dark .recuperar/*contraseña*/
      /*ESTILO REGISTRO*/
     .Form{
         border: 4px solid #9c4251;
+        box-shadow: 0 0 5px #9c4251;
         width: 50%; 
         height: auto; 
         gap: 10px;
@@ -1220,6 +1248,7 @@ body.dark .recuperar/*contraseña*/
         border-radius: 20px;
         margin: 10px 0px;
         border: 2px solid #9c4251;
+        box-shadow: 0 0 5px #9c4251;
         font-size: 14px;
         justify-content: space-between;    
     }
@@ -1394,6 +1423,7 @@ body.dark .recuperar/*contraseña*/
         font-size: 13px;
         background-color: white; 
         border-radius: 20px;
+        box-shadow: 0 0 5px #9c4251;
         border: 2px solid #9c4251;
     }
     
@@ -1425,42 +1455,29 @@ body.dark .recuperar/*contraseña*/
 
     /*ESTILOS PUBLICACIÓN.HTML*/
     .card{
-        width: 700px;
+        max-width: 500px;
+        width: 100%;
         height: 400px;
         margin-left: 280px;
         background-color: #F2C7C5;  
         border: 4px solid #9c4251; 
-        border-radius: 10px;
-        padding: 5px;
-    }
-    .boton-volver {
-        background: none;    
-        margin-left: 20px;
-        border-radius: 50%;         
-        padding: 0;           
-        cursor: pointer;      
-    }
-    .boton-volver:hover .flecha {
-        fill: grey;       
-    }
-    .botones{
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        height: 10%;
-        margin: 40px 0 0;    
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
     }
     
-    .botones button {
-        width: 150px;
-        height: 50px;
-        font-size: 15px;
-        background: #9c4251;
-        border-radius: 30px;
-        cursor: pointer;
-        margin-right: 50px;
-        margin-left: 50px;
-        color: white;
+    .boton-volver svg {
+        width: 50px; /* Ancho del ícono */
+        height: 50px; /* Alto del ícono */
+        border-radius: 50%;     
+        background: none;       
+        margin-left: 30px;
+        padding: 0;           
+        cursor: pointer;     
+    }
+
+    .boton-volver:hover .flecha {
+        fill: grey;       
     }
 
     .botones button:hover{
@@ -1470,11 +1487,12 @@ body.dark .recuperar/*contraseña*/
         color: #000; 
     }
 
-    .infoPerfil{
-        width: 500px;
-        height: 200px;
-        display: flex; 
-    }
+    .infoPerfil {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 20px;
+      }
     
     .infoPerfil h1{
         text-align: center;
@@ -1485,25 +1503,58 @@ body.dark .recuperar/*contraseña*/
         margin-top: 65px;
     }
     
-    .fotopubli{
+    .fotopubli {
         width: 100px;
-        height: 150px;
-        padding: 10px;
-        border-radius: 100px; 
-    }
-    .caja-texto{
         height: 100px;
-        display: flex;
-        justify-content: center;
-        font-family: "Roboto", sans-serif;  
-    }
-    #PubliText{
-        width: 600px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+    #publi{
+        width: 500px;
         height: 80px;
         margin-right: 100px;
         margin-left: 100px;
         
     }
+    textarea, input[type="url"] {
+        width: 50%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        font-size: 14px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+      }
+      textarea:focus, input[type="url"]:focus {
+        border-color: #9c4251;
+        outline: none;
+        box-shadow: 0 0 5px #9c4251
+      }
+      
+      textarea {
+        min-height: 100px;
+      }
+      
+      input::placeholder, textarea::placeholder {
+        color: #aaa;
+        font-style: italic;
+      }
+
+      #share {
+        background-color: #9c4251;
+        color: white;
+        border: none;
+        padding: 12px;
+        font-size: 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      #share:hover {
+        background-color: gray;
+      }
+
+
      /*ESTILOS INDEX.HTML*/
     .logo_inicio{
         border-radius: 50px;
@@ -1572,7 +1623,7 @@ body.dark .recuperar/*contraseña*/
         border-radius: 10px;
         padding: 10px;
         border: 2px solid #9c4251;
-        font-family: "Roboto", sans-serif;
+        box-shadow: 0 0 5px #9c4251;
         font-size: 15px;
     }
     .olvidar{
@@ -1738,6 +1789,7 @@ body.dark .recuperar/*contraseña*/
         width: 600px;
         height: 200px;
         border: 2px solid #9c4251;
+        box-shadow: 0 0 5px #9c4251;
         border-radius: 20px;
         font-size: 16px;
         font-family: "Roboto", sans-serif;
@@ -1747,7 +1799,7 @@ body.dark .recuperar/*contraseña*/
     }
 
     /*Botones */
-    /*Botones Muro.html*/
+    /*Botones Muro.html
 
     button{
         text-align: center;
@@ -1760,7 +1812,7 @@ body.dark .recuperar/*contraseña*/
         border-radius: 30%;
         width: 85%;
 
-    }
+    }*/
 
     .boton-emoticon:hover{
         background-color: grey;
