@@ -32,15 +32,12 @@ body{
     box-shadow: 0 0 0 0.2rem rgba(255, 111, 111, 0.25); 
     outline: none; /* Elimina el contorno predeterminado del navegador */
 }
-
 header {
     display: flex;
     justify-content: space-between; /* Espacio entre logo y botón */
     align-items: center; /* Alinea verticalmente los elementos */
     padding: 10px; /* Espaciado dentro del header */
 }
-
-
 
 h1{
     color: #D97D54;
@@ -70,8 +67,11 @@ body.dark{
     background-color: gray /* Cambia de color al pasar el mouse */
 }
 
-body.dark .logeo,
-body.dark .crear{
+body.dark .logeo,/*index */
+body.dark .crear, /*index*/
+body.dark .daTos,
+body.dark .editarperfil
+{
     background-color: #9c4251;
     border: 2px solid black;
 }
@@ -81,24 +81,41 @@ body.dark footer p ,/*index */
 body.dark .contenedor h3,/*index */
 body.dark .crear p,/*index */
 body.dark .recuperar h1, /*contraseña*/
-body.dark .recuperar p /*contraseña*/
+body.dark .recuperar p,/*contraseña*/
+body.dark .perfil-info h4,
+body.dark .cardBody p,/*Muro*/
+body.dark .cardBody h5,/*Muro*/
+body.dark .daTos h3,/*Perfil*/
+body.dark .daTos p,/*Perfil*/
+body.dark .editarperfil h3/*Perfil*/
 {
     color: black
 }
 
 body.dark .boton,/*index */
-body.dark .siguiente/*contraseña*/
+body.dark .siguiente,/*contraseña*/
+body.dark .comentario .botonComentario, /*Muro*/
+body.dark .botonPortada,/*Perfil*/
+body.dark .daTos .botondatos,/*Perfil*/
+body.dark .editarperfil .botondatos/*Perfil*/
 
 {
     background-color: #333; 
     color: #f0f0f0; 
 }
+
 body.dark .boton:hover,/*index */
-body.dark .siguiente:hover/*contraseña*/
+body.dark .siguiente:hover,/*contraseña*/
+body.dark .comentario .botonComentario:hover, /*Muro*/
+body.dark .botonPortada:hover,/*Perfil*/
+body.dark .editarperfil .botondatos:hover,/*Perfil*/
+body.dark .daTos .botondatos:hover/*Perfil*/
+
  {
     background-color: gray
 }
-body.dark .recuperar
+
+body.dark .recuperar/*contraseña*/
 {
     box-shadow: #000000
 }
@@ -1559,7 +1576,8 @@ body.dark .recuperar
         font-size: 15px;
     }
     .olvidar{
-        margin-right: 50px;
+        margin-right: 20px;
+        
     }
     .boton{
         width: 190px;
