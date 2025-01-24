@@ -125,7 +125,7 @@ body.dark .boton:hover {
         width: 80px;
         height: auto;
     }
-
+/*Estilo muro*/
     .miperfil img {
         width: 50px;
         height: auto;
@@ -219,8 +219,8 @@ body.dark .boton:hover {
     }
     
     .boton-emoticon{
-        width: 5vw;
-        height: 5vw;
+        width: 4vw;
+        
         background-color: #9c4251;
         
     }
@@ -1001,11 +1001,88 @@ body.dark .boton:hover {
         font-size: 18px;
     }
 
-    .articleBox{
-        border: solid red 3px;
-        color: #e01c12;
+
+
+    .logoBarraNavegacion{
+        width: 15%;
     }
 
+    .miperfil {
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        justify-content: space-between;
+        gap: 15px;
+    }
+
+
+    .articleBox{
+        display: grid;
+        border: solid rgb(0, 0, 0) 1px;
+        color: #e01c12;
+        gap: 15px;
+    }
+    
+    .text {
+        color:  rgb(0, 0, 0);
+        border: solid 1px #F2C7C5;
+        width: 80%;
+        height: 50px;
+        margin: 50px;
+        padding: 10px;
+    }
+    .barraComentario{
+        display: flex;
+        width: 90%;
+        padding: 10px;
+        justify-content: space-around;
+        gap: 150px;
+        margin: 10px;
+        align-items: center;
+
+    }
+
+    .ComentariosRealizados{
+        border: solid 1px #000;
+        margin: 10px;
+    }
+
+    .boton-publicacion{
+        background-color:#F2C7C5; 
+        transition: 0.5s;
+        border-color: #9c4251;
+        color: #9c4251;
+        border-radius: 20px;
+        color: #000; 
+        border: 10px;
+        padding: 5px;
+        width: 80px;
+        
+    }
+    .ComentariosRealizados p {
+        color:  black;
+        padding: 15px;
+    }
+
+    #textoPublicacion{
+        border: #000 3px solid;    
+        width: 150px;    
+    }
+
+    .fotodelUsuario{
+        border: #000 3px solid;
+        width: 30%;
+        height: 150px;
+    }
+    /*.imageBox{
+        border: #000 1px solid;
+    }*/
+
+    #imageUrl{
+        width: 50%;
+        padding: 5%;
+        
+    }
 
     /*ESTILOS INDEX.HTML*/
     .logo_inicio{
@@ -1729,11 +1806,16 @@ body.dark .boton:hover {
     }
 
     svg{
-        width: 35%;
+        width: 15%;
     }
 
     .boton-publicacion{
         background-color: #F2C7C5;
+        width: 200px;
+    }
+
+    .text {
+        color:  black;
     }
 
     /*---------------*/
@@ -1750,7 +1832,7 @@ body.dark .boton:hover {
         border-radius: 300px;
     }
 
-    #TextoPubli {
+    #TextoPublicacion {
         width: 100%;
         padding: 10px;
         font-size: 1rem;
@@ -1760,7 +1842,20 @@ body.dark .boton:hover {
         display: flex;
         align-items: center;
         gap: 10px; 
-        width: 50%;
+        width: 80%;
+        height: 200px;
+        border: #070707 solid 3px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .ComentariosRealizados{
+        border: #070707 solid 3px;
+        width: 80%;
+        
+    }
+    .ComentariosRealizados p{
+        color: #000;
     }
 
 
@@ -1769,16 +1864,18 @@ body.dark .boton:hover {
     }
 
     .barraComentario{
-        width: 100%;
+        width: 80%;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
         padding: 30PX;
+        border: #070707 solid 3px;
     }
-
 
     article{
         padding: 20px;
+        width: 100%;
+        margin: 40px;
     }
 
     .logoBarraNavegacion{
