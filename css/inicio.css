@@ -6,26 +6,29 @@ body{
     background-color: #3D2C2E;
     font-family: "Roboto", sans-serif;
 }
-
+.custom-navbar {
+    background-color: #F2C7C5; 
+    border-radius: 25px;
+    color: #9c4251;
+}
 .custom-btn {
-    background-color: #9c4251; /* Color de fondo del botón */
-    border: 1px solid #F2C7C5; /* Borde del botón, opcional */
-    color: white; 
-}
-.custom-btn:hover {
-    background-color: grey; 
-    transition: 0.5s;
-    border-color: #9c4251;
-    color: #000; 
-}
-.custom-link {
-    color: grey; 
-}
+    width: 50px;
+    height: 50px;
+    background-color: #F2C7C5;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .custom-btn:hover {
+    background-color: gray;
+  }
+  
+  .icon-lupa {
+    fill: #9c4251; /* Color del ícono */
+  }
 
-.custom-link:hover {
-    color: #9c4251; 
-    transition: 0.5s;
-}
+
 
 .form-control:focus {
     border-color: #FF6F6F; 
@@ -46,7 +49,7 @@ h1{
 }
 
 
-/*MODO OSCURO*/
+/*✩✩✩✩✩ MODO OSCURO ✩✩✩✩✩*/
 body.dark{
     background-color:white;
     color: #c45663;
@@ -72,10 +75,23 @@ body.dark .crear, /*index*/
 body.dark .daTos,/*Perfil*/
 body.dark .editarperfil,/*Perfil*/
 body.dark .Form,/*Registro*/
-body.dark .card/*Publicacion*/
+body.dark .card,/*Publicacion*/
+body.dark .articleBox, /*Muro*/
+body.dark .seccion-perfil #TextoPubli
 {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Sombra oscura para realzar */
+    border-radius: 10px; /* Bordes redondeados */
+    transition: all 0.3s ease; /* Transición suave al alternar entre modos */
     background-color: #9c4251;
-    border: 2px solid black;
+    border: 1px solid black;
+}
+
+body.dark .barraComentario /*Muro*/{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+    border-radius: 10px; 
+    transition: all 0.3s ease; 
+    background-color: #9c4251;
+    border: none;
 }
 
 body.dark .logeo h1, /*index */
@@ -95,7 +111,9 @@ body.dark .caja h2, /*Registro*/
 body.dark .formulario p,/*Registro*/    
 body.dark .card h1 /*Publicacion*/              
 {
-    color: black
+    color: black;
+    transition: all 0.3s ease;
+    
 }
 
 body.dark .boton,/*index */
@@ -105,10 +123,14 @@ body.dark .botonPortada,/*Perfil*/
 body.dark .daTos .botondatos,/*Perfil*/
 body.dark .editarperfil .botondatos,/*Perfil*/
 body.dark .botonregistrarse, /*Registro*/
-body.dark .caja-texto #share/*Publicacion*/
+body.dark .caja-texto #share,/*Publicacion*/
+body.dark .boton-publicacion /*Muro*/
 {
     background-color: #333; 
+    border: 1px solid #000;
+    transition: all 0.3s ease;
     color: #f0f0f0; 
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 body.dark .boton:hover,/*index */
@@ -118,17 +140,22 @@ body.dark .botonPortada:hover,/*Perfil*/
 body.dark .editarperfil .botondatos:hover,/*Perfil*/
 body.dark .daTos .botondatos:hover,/*Perfil*/
 body.dark .botonregistrarse:hover, /*Registro*/
-body.dark .caja-texto #share:hover /*Publicacion*/
-
+body.dark .caja-texto #share:hover,/*Publicacion*/
+body.dark .boton-publicacion:hover /*Muro*/
  {
-    background-color: gray
+    background-color: gray;
+    transition: all 0.3s ease;
 }
 
-body.dark .recuperar/*contraseña*/
-{
-    box-shadow: #000000
+body.dark #TextoComentario {
+    background-color: #333; /* Fondo oscuro */
+    color: #f0f0f0; /* Texto claro */
+    border: 1px solid #555; /* Borde oscuro */
+    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra interior */
 }
 
+
+/*✩✩✩✩✩ MEDIA Telefono PARA MURO.html ✩✩✩✩✩*/ 
 @media  (min-width:300px) and (max-width:600px) {
     .pantalla{
         width: 100%;
@@ -275,14 +302,7 @@ body.dark .recuperar/*contraseña*/
         margin: 15px;
     }
 
-    /*ESTILOS PARA PERFIL.HTML*/
-    /* MEDIA Telefono PARA PERFIL*/ 
-    .custom-navbar {
-        background-color: #F2C7C5; 
-        border-radius: 25px;
-        color: white;
-    }
-
+    /*✩✩✩✩✩ ESTILOS PARA PERFIL.HTML ✩✩✩✩✩*/
     .cajaperfil {
         display: grid;
         grid-template-rows: 50vh auto; /* Ajusta el alto de la portada en pantallas pequeñas */
@@ -370,7 +390,7 @@ body.dark .recuperar/*contraseña*/
         font-size: 18px;
     }
 
-    /*ESTILOS PARA Contrasena.HTML*/
+    /*✩✩✩✩✩ ESTILOS PARA Contrasena.HTML ✩✩✩✩✩*/
     .recuperar{
         width: 90%; 
         padding: 10px;
@@ -384,6 +404,7 @@ body.dark .recuperar/*contraseña*/
         font-size: 4vw;
         text-align: left; 
     }
+
     .recuperar >p{
         font-size: 3vw;
         text-align: center; 
@@ -398,12 +419,13 @@ body.dark .recuperar/*contraseña*/
         width: 60px; 
         margin: 10px 10px; 
     }
+
     .form-recuperar {
         display: grid;
         align-items: center;
         place-items: center;
-
     }
+
     .introducir{
         width: 80%; 
         margin: 10px auto; 
@@ -442,7 +464,7 @@ body.dark .recuperar/*contraseña*/
         font-size: 2vw; 
     }
 
-    /*ESTILOS PUBLICACIÓN.HTML*/
+    /*✩✩✩✩✩ ESTILOS PUBLICACIÓN.HTML ✩✩✩✩✩*/
     .card{
         width: 80%;
         margin-left: 40px;
@@ -467,13 +489,6 @@ body.dark .recuperar/*contraseña*/
 
     .boton-volver:hover .flecha {
         fill: grey;       
-    }
-
-    .botones button:hover{
-        background-color: grey; 
-        transition: 0.5s;
-        border-color: #9c4251;
-        color: #000; 
     }
 
     .infoPerfil {
@@ -548,19 +563,20 @@ body.dark .recuperar/*contraseña*/
         cursor: pointer;
         margin-bottom: 20px;
         margin-top: 20px;
-
         transition: background-color 0.3s ease;
     }
+
     #share:hover {
         background-color: gray;
     }
     
-/*ESTILOS PARA INDEX.HTML*/
+    /* ✩✩✩✩✩ ESTILOS PARA INDEX.HTML ✩✩✩✩✩ */
     .logo_inicio{
         border-radius: 50px;
         width: 60px;
         height: 60px;
     }
+
     .boton-luna {
         background: none;     
         margin-left: 10px; 
@@ -581,6 +597,7 @@ body.dark .recuperar/*contraseña*/
         transition: 0.5s;  
             
     }
+
     .boton-luna path {
         fill: none; 
         stroke: #000000;  
@@ -650,7 +667,6 @@ body.dark .recuperar/*contraseña*/
         color: #000;
     }
     
-
     .registrar{
         color: #D97D54;
     }
@@ -670,8 +686,7 @@ body.dark .recuperar/*contraseña*/
     }
     
     .crear >p{
-        font-size: 2vw;
-        
+        font-size: 2vw;       
     }
 
     .footerinicio >p{
@@ -680,7 +695,7 @@ body.dark .recuperar/*contraseña*/
         font-size: 2vw;
     }
 
-        /*ESTILO REGISTRO*/
+    /* ✩✩✩✩✩ ESTILO REGISTRO ✩✩✩✩✩ */
     .Form{
         border: 4px solid #9c4251;
         width: 70%; 
@@ -694,7 +709,6 @@ body.dark .recuperar/*contraseña*/
         border-radius:10px ;
     }
 
-    
     .caja1{
         align-items: center;
         width: 100%;
@@ -781,7 +795,7 @@ body.dark .recuperar/*contraseña*/
 }
 
 
-/* MEDIDA PARA TABLET PERFIL*/
+/* ✩✩✩✩✩ MEDIDA PARA TABLET PERFIL ✩✩✩✩✩ */
 @media (min-width: 601px) and (max-width: 1023px) {
     /*ESTILOS PARA PERFIL.HTML*/
     .custom-navbar {
@@ -833,9 +847,11 @@ body.dark .recuperar/*contraseña*/
         height: 200px; /* Ajusta la altura */
         margin-top: 10px;
     }
+
     .titulodatos,.daTosperfil{
         color: #D97D54;
     }
+
     .editarportada {
         position: relative;
         width: 100%;
@@ -860,6 +876,7 @@ body.dark .recuperar/*contraseña*/
         width: 120px; 
         height: 30px;
         font-size: 18px;
+        margin-top: 10px;
         color: #ffffff;
         background-color: #9c4251;
         border: 2px solid #9c4251;
@@ -883,8 +900,8 @@ body.dark .recuperar/*contraseña*/
         font-size: 24px; 
     }
     
-     /*ESTILOS PARA CONTRASENA.HTML*/
-     .recuperar {
+    /* ✩✩✩✩✩ ESTILOS PARA CONTRASENA.HTML ✩✩✩✩✩ */
+    .recuperar {
         width: 90%; 
         padding: 20px;
         margin-top: 20px ; 
@@ -956,7 +973,7 @@ body.dark .recuperar/*contraseña*/
         font-size: 2vw; 
     }
 
-    /*ESTILOS PUBLICACIÓN.HTML*/
+    /* ✩✩✩✩✩ ESTILOS PUBLICACIÓN.HTML ✩✩✩✩✩ */
     .card{
         width: 80%;
         margin-left: 80px;
@@ -982,13 +999,6 @@ body.dark .recuperar/*contraseña*/
 
     .boton-volver:hover .flecha {
         fill: grey;       
-    }
-
-    .botones button:hover{
-        background-color: grey; 
-        transition: 0.5s;
-        border-color: #9c4251;
-        color: #000; 
     }
 
     .infoPerfil {
@@ -1017,7 +1027,6 @@ body.dark .recuperar/*contraseña*/
         width: 80%;
         height: auto;
         gap: 10px
-        
     }
 
     textarea, input[type="url"] {
@@ -1038,19 +1047,16 @@ body.dark .recuperar/*contraseña*/
     textarea:focus, input[type="url"]:focus {
         border-color: #9c4251;
         outline: none;
-
         box-shadow: 0 0 5px #9c4251;
     }
       
     textarea {
         min-height: 80px;
-        
     }
       
     input::placeholder, textarea::placeholder {
         color: #aaa;
         font-style: italic;
-        
     }
 
     #share {
@@ -1065,12 +1071,12 @@ body.dark .recuperar/*contraseña*/
         margin-top: 20px;
         transition: background-color 0.3s ease;
     }
+
     #share:hover {
         background-color: gray;
     }
 
-
-    /*ESTILOS INDEX.HTML*/
+    /* ✩✩✩✩✩ ESTILOS INDEX.HTML ✩✩✩✩✩ */
     .logo_inicio{
         border-radius: 50px;
         width: 80px;
@@ -1094,8 +1100,7 @@ body.dark .recuperar/*contraseña*/
     .boton-luna:hover{
         fill: grey; 
         color: #9c4251;
-        transition: 0.5s;  
-            
+        transition: 0.5s;              
     }
     
     .boton-luna path {
@@ -1133,8 +1138,7 @@ body.dark .recuperar/*contraseña*/
     }
 
     .logeo >p{
-        font-size:2vw;
-        
+        font-size:2vw;    
     }
 
     .datos{
@@ -1172,7 +1176,6 @@ body.dark .recuperar/*contraseña*/
         color: #D97D54;
         margin-top: 0%;
         font-size: 4vw;
-
     }
 
     .crear{
@@ -1191,8 +1194,7 @@ body.dark .recuperar/*contraseña*/
 
     .crear >p{
         font-size: 2vw;
-        margin-top: 10px;
-        
+        margin-top: 10px;        
     }
 
     .footerinicio >p{
@@ -1202,7 +1204,7 @@ body.dark .recuperar/*contraseña*/
         font-size: 2vw;
     }
 
-     /*ESTILO REGISTRO*/
+    /* ✩✩✩✩✩ ESTILO REGISTRO ✩✩✩✩✩ */
     .Form{
         border: 4px solid #9c4251;
         box-shadow: 0 0 5px #9c4251;
@@ -1302,10 +1304,8 @@ body.dark .recuperar/*contraseña*/
         font-style: normal;
     }
 }
-
+/* ✩✩✩✩✩ MEDIA PARA ESCRITORIO ✩✩✩✩✩ */
 /*ESTILOS PARA PERFIL.HTML*/
-/* MEDIA PARA ESCRITORIO*/
-
 @media (min-width: 1023px) {
     .custom-navbar {
         background-color: #F2C7C5; 
@@ -1327,10 +1327,10 @@ body.dark .recuperar/*contraseña*/
     }
 
     .editarportada{
-    position: relative;
-    width: 100%;
-    height: 200px;
-    margin-bottom: 50px;
+        position: relative;
+        width: 100%;
+        height: 200px;
+        margin-bottom: 50px;
     }
    
     .img-p{
@@ -1377,6 +1377,7 @@ body.dark .recuperar/*contraseña*/
     .botondatos, .botonPortada {
         width: 150px; 
         height: 30px; 
+        margin-top: 10px;
         font-size: 20px; 
         color: #ffffff;
         background-color: #9c4251;
@@ -1398,7 +1399,7 @@ body.dark .recuperar/*contraseña*/
         
     }
 
-    /*ESTILOS PARA CONTRASENA.HTML*/
+    /* ✩✩✩✩✩ ESTILOS PARA CONTRASENA.HTML ✩✩✩✩✩ */
     .recuperar{
         border-radius: 10px;  
         padding: 20px;
@@ -1462,7 +1463,7 @@ body.dark .recuperar/*contraseña*/
         font-size: 1vw; 
     }
 
-    /*ESTILOS PUBLICACIÓN.HTML*/
+    /* ✩✩✩✩✩ ESTILOS PUBLICACIÓN.HTML ✩✩✩✩✩ */
     .card{
         max-width: 500px;
         width: 100%;
@@ -1489,19 +1490,12 @@ body.dark .recuperar/*contraseña*/
         fill: grey;       
     }
 
-    .botones button:hover{
-        background-color: grey; 
-        transition: 0.5s;
-        border-color: #9c4251;
-        color: #000; 
-    }
-
     .infoPerfil {
         display: flex;
         align-items: center;
         gap: 10px;
         margin-bottom: 20px;
-      }
+    }
     
     .infoPerfil h1{
         text-align: center;
@@ -1517,15 +1511,15 @@ body.dark .recuperar/*contraseña*/
         height: 100px;
         border-radius: 50%;
         object-fit: cover;
-      }
+    }
 
     #publi{
         width: 500px;
         height: 80px;
         margin-right: 100px;
-        margin-left: 100px;
-        
+        margin-left: 100px;        
     }
+
     textarea, input[type="url"] {
         width: 50%;
         padding: 12px;
@@ -1533,23 +1527,24 @@ body.dark .recuperar/*contraseña*/
         border-radius: 8px;
         font-size: 14px;
         box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-      }
-      textarea:focus, input[type="url"]:focus {
+    }
+
+    textarea:focus, input[type="url"]:focus {
         border-color: #9c4251;
         outline: none;
         box-shadow: 0 0 5px #9c4251
-      }
+    }
       
-      textarea {
+    textarea {
         min-height: 100px;
-      }
+    }
       
-      input::placeholder, textarea::placeholder {
+    input::placeholder, textarea::placeholder {
         color: #aaa;
         font-style: italic;
-      }
+    }
 
-      #share {
+    #share {
         background-color: #9c4251;
         color: white;
         border: none;
@@ -1558,13 +1553,13 @@ body.dark .recuperar/*contraseña*/
         border-radius: 8px;
         cursor: pointer;
         transition: background-color 0.3s ease;
-      }
-      #share:hover {
+    }
+
+    #share:hover {
         background-color: gray;
-      }
+    }
 
-
-     /*ESTILOS INDEX.HTML*/
+    /* ✩✩✩✩✩ ESTILOS INDEX.HTML ✩✩✩✩✩ */
     .logo_inicio{
         border-radius: 50px;
         width: 100px;
@@ -1588,9 +1583,9 @@ body.dark .recuperar/*contraseña*/
     .boton-luna:hover{
         fill: grey; 
         color: #9c4251;
-        transition: 0.5s;  
-            
+        transition: 0.5s;              
     }
+
     .boton-luna path {
         fill: none; 
         stroke: #000000;  
@@ -1606,6 +1601,7 @@ body.dark .recuperar/*contraseña*/
         border-radius:10px ;
         margin-left: 50px;
     }
+
     .contenedor > h3{
         text-align: justify;
         color: #D97D54;
@@ -1635,10 +1631,11 @@ body.dark .recuperar/*contraseña*/
         box-shadow: 0 0 5px #9c4251;
         font-size: 15px;
     }
+
     .olvidar{
-        margin-right: 20px;
-        
+        margin-right: 20px;        
     }
+
     .boton{
         width: 190px;
         background-color: #9c4251;
@@ -1646,8 +1643,7 @@ body.dark .recuperar/*contraseña*/
         font-size: 20px;
         padding: 10px;
         border-radius: 15px;
-        cursor: pointer;
-        
+        cursor: pointer;        
     }
     
     .boton:hover{
@@ -1661,9 +1657,9 @@ body.dark .recuperar/*contraseña*/
         color: #D97D54;
         margin-top: 20px;
         margin-right: 35px;
-        justify-self: center;
-    
+        justify-self: center;    
     }
+
     .crear{
         text-align: center;
         border: 2px solid #9c4251;
@@ -1678,13 +1674,14 @@ body.dark .recuperar/*contraseña*/
         margin-top: 20px;
         background-color: #F2C7C5;
     }
+
     .footerinicio >p{
         color: #D97D54;
         text-align: center;
         margin-left: 200px;
     }
     
-    /*ESTILO REGISTRO*/
+    /*✩✩✩✩✩ ESTILO REGISTRO ✩✩✩✩✩*/
     .Form{
         border: 4px solid #9c4251;
         width: 400px;
@@ -1702,8 +1699,7 @@ body.dark .recuperar/*contraseña*/
         align-items: center;
         width: 100%;
         display: flex;
-        flex-direction: column;
-        
+        flex-direction: column;        
     }
 
     .tituloForm, .titulo{
@@ -1711,15 +1707,13 @@ body.dark .recuperar/*contraseña*/
         text-align: center;
         font-weight: 700;
         font-style: normal;
-        color: #D97D54;
-        
+        color: #D97D54;        
     }
 
     .logo-registro{
         width: 100px;
         height: 100px;
         border-radius: 600px;
-
     }
 
     .caja{
@@ -1727,8 +1721,7 @@ body.dark .recuperar/*contraseña*/
         height: 490px;
     }
 
-    .formulario{
-        
+    .formulario{        
         width: 80%;
         height: 460px;
         margin: auto;
@@ -1787,63 +1780,39 @@ body.dark .recuperar/*contraseña*/
         font-style: normal;
     }
 
-        /*ESTILOS PARA MURO.HTML*/
-
+    /*✩✩✩✩✩ ESTILOS PARA MURO.HTML ✩✩✩✩✩*/
     .pantalla {
         display: grid;
         grid-template-columns: 1fr ;
         gap: 10px;
     }
-    #PubliText{
-        width: 600px;
-        height: 200px;
-        border: 2px solid #9c4251;
-        box-shadow: 0 0 5px #9c4251;
-        border-radius: 20px;
-        font-size: 16px;
-        font-family: "Roboto", sans-serif;
-        background-color: white; 
-        margin-top: 10px; 
-        margin-left: 40px;
+
+    .logoBarraNavegacion{
+        width: 10%;
+        height: 20%;
     }
 
-    /*Botones */
-    /*Botones Muro.html
+    
 
-    button{
-        text-align: center;
-        text-decoration: none;
-        cursor: pointer;
-        margin: 4px;
-        font-family: "Roboto", sans-serif;
-        color: white;
-        background-color: #9c4251;
-        border-radius: 30%;
-        width: 85%;
-
-    }*/
-
-    .boton-emoticon:hover{
-        background-color: grey;
-        transition: 0.5s;
-        border-color: #9c4251;
-        color: #000;
+   /* Estilo para el contenedor principal del artículo */
+    .articleBox {
+        display: flex;
+        flex-direction: column; /* Organización vertical */
+        width: 80%;
+        margin: 20px auto; /* Centramos el artículo */
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #f2c7c5;
+        overflow: hidden;
     }
 
-    svg{
-        width: 35%;
-    }
-
-    .boton-publicacion{
-        background-color: #F2C7C5;
-    }
-
-    /*---------------*/
     .seccion-perfil {
         display: flex;
-        flex-direction: column;
-        gap: 10px;
+        flex-direction: row;
+        gap: 20px;
         padding: 20px;
+        align-items: center;
     }
     
     .perfil-info{
@@ -1870,45 +1839,123 @@ body.dark .recuperar/*contraseña*/
         height: 80px;
         margin-left: 2%;
         border-radius: 20px;
+        border: 1px solid black;
+        background-color: #f2c7c5;
         margin-top: 0px;
         flex-grow: 1; 
         font-size: 1rem;
         text-align: center; 
         align-self: center;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
-    .comentario {
+    /* Contenido principal: imagen y texto */
+    .content {
         display: flex;
-        align-items: center;
-        gap: 10px; 
-        width: 50%;
-    }
-
-    .barraComentario{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        padding: 30PX;
-    }
-
-
-    article{
+        flex-direction: row; /* Organización horizontal: imagen y texto */
+        gap: 20px;
         padding: 20px;
     }
 
-    .logoBarraNavegacion{
-        width: 10%;
-        height: 20%;
+    /* Caja de imagen */
+    .imageBox img {
+        width: 150px; /* Tamaño fijo para la imagen */
+        height: 150px;
+        object-fit: cover; /* Ajustar imagen sin deformarla */
+        border-radius: 10px;
     }
 
-    #Textocomnetario{
-        border: 2px solid #e01c12;
+    /* Cuerpo de la publicación */
+    .cardBody {
+        flex-grow: 1; /* Ocupa todo el espacio disponible */
     }
 
-    .row g-0{
+    .card-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    /* Barra de interacción */
+    .barraComentario {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Separar botones y área de comentario */
+        padding: 15px 20px;
+        border-top: 1px solid #ddd;
+        background-color: #f2c7c5;
+    }
+
+    /* Botones (me gusta, compartir) */
+    .boton-publicacion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px;
+        background-color: #f2c7c5;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .boton-publicacion:hover {
+        background-color: gray;
+    }
+
+    /* Iconos dentro de los botones */
+    .boton-publicacion svg {
+        width: 24px;
+        height: 24px;
+        fill: #9c4251;
+    }
+
+    /* Campo de texto para comentarios */
+    .comentario {
+        display: flex;
+        align-items: center;
         gap: 10px;
-        padding: 50%;
+        flex-grow: 1; /* Ocupa el espacio restante */
     }
+
+    #TextoComentario {
+        flex-grow: 1; /* El campo de texto se ajusta al espacio disponible */
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 20px;
+        font-size: 1rem;
+        outline: none;
+        transition: border 0.3s ease;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+
+
+    }
+
+    #TextoComentario:focus {
+        border: 1px solid #9c4251;
+    }
+
+    /* Botón de comentar */
+    .botonComentario {
+        padding: 10px 15px;
+        background-color: #9c4251;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .botonComentario:hover {
+        background-color: #7a3240;
+    }
+
 }
 
