@@ -6,35 +6,64 @@ body{
     background-color: #3D2C2E;
     font-family: "Roboto", sans-serif;
 }
+/*✩✩✩✩✩ Estilo para Navbar✩✩✩✩✩ */
+
 .custom-navbar {
     background-color: #F2C7C5; 
     border-radius: 25px;
     color: #9c4251;
 }
-.custom-btn {
-    width: 50px;
-    height: 50px;
+.custom-link {
+    color: #9c4251; /* Cambia este color al que prefieras */
+    transition: color 0.3s ease-in-out; /* Efecto de transición */
+    border: none; 
+}
+
+.custom-link:hover {
+    color: gray; /* Color diferente al pasar el mouse */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+    font-weight: bold; /* Hace el texto más grueso */
+    border-radius: 50%;
+}
+
+.form-control-nav {
+    flex-grow: 1; /* Ancho del input */
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    outline: none; /* Elimina el borde al hacer clic */
+    font-size: 1rem; /* Tamaño del texto */
+    transition: all 0.3s ease-in-out; /* Transición suave */
+}
+
+.form-control-nav:focus {
+    border: 1px solid #9c4251;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+}
+  
+.d-flex svg:hover {
+    background-color:gray;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.6); 
+}
+  
+.d-flex svg{
+    color:  #9c4251; /* Color del ícono */
     background-color: #F2C7C5;
     border-radius: 50%;
+    border-color: #F2C7C5 ;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .custom-btn:hover {
-    background-color: gray;
-  }
-  
-  .icon-lupa {
-    fill: #9c4251; /* Color del ícono */
-  }
-
-
+    outline: none;
+    width: 24px;
+    height: 24px;
+}
 
 .form-control:focus {
     border-color: #FF6F6F; 
     box-shadow: 0 0 0 0.2rem rgba(255, 111, 111, 0.25); 
     outline: none; /* Elimina el contorno predeterminado del navegador */
 }
+
 header {
     display: flex;
     justify-content: space-between; /* Espacio entre logo y botón */
@@ -77,7 +106,8 @@ body.dark .editarperfil,/*Perfil*/
 body.dark .Form,/*Registro*/
 body.dark .card,/*Publicacion*/
 body.dark .articleBox, /*Muro*/
-body.dark .seccion-perfil #TextoPubli
+body.dark .seccion-perfil #TextoPubli,/*Muro*/
+body.dark .custom-navbar
 {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Sombra oscura para realzar */
     border-radius: 10px; /* Bordes redondeados */
@@ -109,7 +139,8 @@ body.dark .editarperfil h3,/*Perfil*/
 body.dark .caja1 h1,/*Registro*/
 body.dark .caja h2, /*Registro*/
 body.dark .formulario p,/*Registro*/    
-body.dark .card h1 /*Publicacion*/              
+body.dark .card h1, /*Publicacion*/   
+body.dark .custom-link            
 {
     color: black;
     transition: all 0.3s ease;
@@ -124,12 +155,26 @@ body.dark .daTos .botondatos,/*Perfil*/
 body.dark .editarperfil .botondatos,/*Perfil*/
 body.dark .botonregistrarse, /*Registro*/
 body.dark .caja-texto #share,/*Publicacion*/
-body.dark .boton-publicacion /*Muro*/
+body.dark #TextoComentario,
+body.dark .boton-publicacion, /*Muro*/
+body.dark .custom-link  
 {
     background-color: #333; 
     border: 1px solid #000;
     transition: all 0.3s ease;
     color: #f0f0f0; 
+}
+
+body.dark .d-flex svg{
+    background-color: #333; 
+    border: 1px solid #000;
+    transition: all 0.3s ease;
+    color: #9c4251; 
+}
+
+body.dark #TextoComentario:focus{
+    background-color: gray;
+    transition: all 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }
 
@@ -141,18 +186,15 @@ body.dark .editarperfil .botondatos:hover,/*Perfil*/
 body.dark .daTos .botondatos:hover,/*Perfil*/
 body.dark .botonregistrarse:hover, /*Registro*/
 body.dark .caja-texto #share:hover,/*Publicacion*/
-body.dark .boton-publicacion:hover /*Muro*/
- {
+body.dark .boton-publicacion:hover,/*Muro*/
+body.dark .d-flex svg:hover /*Muro*/
+{
     background-color: gray;
     transition: all 0.3s ease;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }
 
-body.dark #TextoComentario {
-    background-color: #333; /* Fondo oscuro */
-    color: #f0f0f0; /* Texto claro */
-    border: 1px solid #555; /* Borde oscuro */
-    box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra interior */
-}
+
 
 
 /*✩✩✩✩✩ MEDIA Telefono PARA MURO.html ✩✩✩✩✩*/ 
@@ -1792,8 +1834,6 @@ body.dark #TextoComentario {
         height: 20%;
     }
 
-    
-
    /* Estilo para el contenedor principal del artículo */
     .articleBox {
         display: flex;
@@ -1835,17 +1875,19 @@ body.dark #TextoComentario {
     }
 
     #TextoPubli {
-        width: 60%;
+        width: 80%;
         height: 80px;
-        margin-left: 2%;
         border-radius: 20px;
         border: 1px solid black;
         background-color: #f2c7c5;
         margin-top: 0px;
-        flex-grow: 1; 
         font-size: 1rem;
         text-align: center; 
-        align-self: center;
+        align-self: left;
+    }
+
+    #TextoPubli:focus {
+        border: 1px solid #9c4251;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
@@ -1899,15 +1941,18 @@ body.dark #TextoComentario {
         justify-content: center;
         width: 50px;
         height: 50px;
+        margin-left: 8px;
         background-color: #f2c7c5;
         border: none;
         border-radius: 50%;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: border 0.3s ease;
     }
 
     .boton-publicacion:hover {
         background-color: gray;
+        color: #fff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
     /* Iconos dentro de los botones */
@@ -1933,13 +1978,11 @@ body.dark #TextoComentario {
         font-size: 1rem;
         outline: none;
         transition: border 0.3s ease;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
-
-
     }
 
     #TextoComentario:focus {
         border: 1px solid #9c4251;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
     /* Botón de comentar */
@@ -1950,12 +1993,12 @@ body.dark #TextoComentario {
         border: none;
         border-radius: 20px;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: 0.3s ease;
     }
 
     .botonComentario:hover {
-        background-color: #7a3240;
+        background-color: gray;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
-
 }
 
