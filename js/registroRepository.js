@@ -17,7 +17,7 @@ function getRegister(peticion, success) {
     })
     .then((json) => success(json))
     .catch((e) => {
-        console.error('Error during regitrar request:', e);
+        console.error('Error during registrar request:', e);
         
     });
 }
