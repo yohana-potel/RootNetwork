@@ -11,8 +11,10 @@ body{
 .custom-navbar {
     background-color: #F2C7C5; 
     border-radius: 25px;
+    width: 90%;
     color: #9c4251;
 }
+
 .custom-link {
     color: #9c4251; /* Cambia este color al que prefieras */
     transition: color 0.3s ease-in-out; /* Efecto de transición */
@@ -20,7 +22,7 @@ body{
 }
 
 .custom-link:hover {
-    color: gray; /* Color diferente al pasar el mouse */
+    color: white; /* Color diferente al pasar el mouse */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     font-weight: bold; /* Hace el texto más grueso */
     border-radius: 50%;
@@ -80,7 +82,7 @@ h1{
 
 /*✩✩✩✩✩ MODO OSCURO ✩✩✩✩✩*/
 body.dark{
-    background-color:white;
+    background-color:rgb(255, 255, 255);
     color: #c45663;
 }
 
@@ -95,10 +97,6 @@ body.dark{
     border-radius: 5px; /* Bordes redondeados */
 }
 
-#dark_mode:hover {
-    background-color: gray /* Cambia de color al pasar el mouse */
-}
-
 body.dark .logeo,/*index */
 body.dark .crear, /*index*/
 body.dark .daTos,/*Perfil*/
@@ -107,10 +105,9 @@ body.dark .Form,/*Registro*/
 body.dark .card,/*Publicacion*/
 body.dark .articleBox, /*Muro*/
 body.dark .seccion-perfil #TextoPubli,/*Muro*/
-body.dark .custom-navbar
-{
+body.dark .custom-navbar/*navbar*/{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Sombra oscura para realzar */
-    border-radius: 10px; /* Bordes redondeados */
+    border-radius: 25px; /* Bordes redondeados */
     transition: all 0.3s ease; /* Transición suave al alternar entre modos */
     background-color: #9c4251;
     border: 1px solid black;
@@ -140,11 +137,9 @@ body.dark .caja1 h1,/*Registro*/
 body.dark .caja h2, /*Registro*/
 body.dark .formulario p,/*Registro*/    
 body.dark .card h1, /*Publicacion*/   
-body.dark .custom-link            
-{
+body.dark .custom-link/*navbar*/{
     color: black;
     transition: all 0.3s ease;
-    
 }
 
 body.dark .boton,/*index */
@@ -155,24 +150,28 @@ body.dark .daTos .botondatos,/*Perfil*/
 body.dark .editarperfil .botondatos,/*Perfil*/
 body.dark .botonregistrarse, /*Registro*/
 body.dark .caja-texto #share,/*Publicacion*/
-body.dark #TextoComentario,
-body.dark .boton-publicacion, /*Muro*/
-body.dark .custom-link  
-{
+body.dark #TextoComentario,/*Muro*/
+body.dark .boton-publicacion,/*Muro*/
+body.dark .form-control-nav/*navbar*/ {
     background-color: #333; 
     border: 1px solid #000;
     transition: all 0.3s ease;
     color: #f0f0f0; 
 }
-
-body.dark .d-flex svg{
+body.dark .custom-link/*navbar*/{
+    background-color: #9c4251; 
+    transition: all 0.3s ease;
+    color: #f0f0f0; 
+}  
+body.dark .d-flex svg/*navbar*/{
     background-color: #333; 
     border: 1px solid #000;
     transition: all 0.3s ease;
     color: #9c4251; 
 }
 
-body.dark #TextoComentario:focus{
+body.dark #TextoComentario:focus,/*muro*/
+body.dark .form-control-nav:focus/*navbar*/{
     background-color: gray;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
@@ -187,8 +186,8 @@ body.dark .daTos .botondatos:hover,/*Perfil*/
 body.dark .botonregistrarse:hover, /*Registro*/
 body.dark .caja-texto #share:hover,/*Publicacion*/
 body.dark .boton-publicacion:hover,/*Muro*/
-body.dark .d-flex svg:hover /*Muro*/
-{
+body.dark .d-flex svg:hover,/*navbar*/
+body.dark .custom-link:hover  /*navbar*/{
     background-color: gray;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
@@ -840,13 +839,6 @@ body.dark .d-flex svg:hover /*Muro*/
 /* ✩✩✩✩✩ MEDIDA PARA TABLET PERFIL ✩✩✩✩✩ */
 @media (min-width: 601px) and (max-width: 1023px) {
     /*ESTILOS PARA PERFIL.HTML*/
-    .custom-navbar {
-        background-color: #F2C7C5; 
-        border-radius: 25px;
-        color: white;
-        position:relative;
-    }
-
     .cajaperfil {
         display: grid;
         grid-template-rows: 60vh auto; /* Ajusta el alto en pantallas más pequeñas */
@@ -1349,13 +1341,6 @@ body.dark .d-flex svg:hover /*Muro*/
 /* ✩✩✩✩✩ MEDIA PARA ESCRITORIO ✩✩✩✩✩ */
 /*ESTILOS PARA PERFIL.HTML*/
 @media (min-width: 1023px) {
-    .custom-navbar {
-        background-color: #F2C7C5; 
-        border-radius: 25px;
-        width: 90%;
-        color: white;
-    }
-
     .cajaperfil{
         display: grid;
         grid-template-rows: 80vh auto;
@@ -1400,7 +1385,7 @@ body.dark .d-flex svg:hover /*Muro*/
         place-items: center; /* Centra el contenido vertical y horizontalmente */
         border: 2px solid #9c4251;
         background-color: #F2C7C5;
-        border-radius: 10px;
+        border-radius: 25px;
         width: 400px;
         height: 250px;
         margin: 0; 
