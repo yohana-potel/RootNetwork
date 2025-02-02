@@ -9,68 +9,73 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Función para manejar el clic en "Me Gusta"
     loveButton.addEventListener("click", () => {
-        console.log("Me gusta!");
+        const requestPayload = {
+            action: "love",  // Tipo de acción
+            content: "Lo Amo",  // Detalles de la acción
+        };
+
+        console.log("Lo Amo!", requestPayload);
         alert("¡Te ha gustado la publicación!");
+
+        // Aquí podrías enviar el objeto requestPayload a un servidor
+        // Por ejemplo, usando fetch:
+         fetch('http://localhost:5156/User', {
+            method: 'POST',
+             headers: {
+                 'Content-Type': 'application/json',
+             },
+             body: JSON.stringify(requestPayload)
+         });
     });
 
     // Función para manejar el clic en "Compartir"
     shareButton.addEventListener("click", () => {
-        console.log("Compartir!");
+        const requestPayload = {
+            action: "share",  // Tipo de acción
+            content: "Compartir publicación",  // Detalles de la acción
+        };
+
+        console.log("Compartir!", requestPayload);
         alert("¡Publicación compartida!");
+
+        // Enviar al servidor si es necesario
+        // fetch('/api/acciones', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(requestPayload)
+        // });
     });
 
     // Función para manejar el clic en "Comentar"
     commentButton.addEventListener("click", () => {
-        // Obtener el valor del campo de comentario
         const commentText = TextComment.value.trim();
 
         if (commentText !== "") {
-            console.log("Comentario: ", commentText);
+            // Crear el objeto de petición con los datos
+            const requestPayload = {
+                action: "comment",  // Tipo de acción
+                content: commentText,  // El contenido del comentario
+            };
+
+            console.log("Comentario: ", requestPayload);
             alert(`Comentario enviado: ${commentText}`);
+
+            // Aquí podrías enviar el objeto requestPayload a un servidor
+            // Por ejemplo, usando fetch:
+            // fetch('/api/comentarios', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //     },
+            //     body: JSON.stringify(requestPayload)
+            // });
+
+            // Limpiar el campo de comentario después de enviar
             TextComment.value = "";
         } else {
             alert("Por favor, escribe un comentario antes de enviar.");
         }
     });
-
 });
-
-
-
-
-/*// Selección de elementos
-const likeButton = document.querySelector('button[name="meGusta"]');
-const shareButton = document.querySelector('button[name="compartir"]');
-const commentButton = document.querySelector('.botonComentario');
-const commentInput = document.getElementById('TextoComentario');
-
-// Función para manejar el clic en "Me Gusta"
-likeButton.addEventListener("click", () => {
-    // Mostrar un mensaje o realizar alguna acción al hacer clic en "Me Gusta"
-    console.log("Me gusta!");
-    alert("¡Te ha gustado la publicación!");
-});
-
-// Función para manejar el clic en "Compartir"
-shareButton.addEventListener("click", () => {
-    // Mostrar un mensaje o realizar alguna acción al hacer clic en "Compartir"
-    console.log("Compartir!");
-    alert("¡Publicación compartida!");
-});
-
-// Función para manejar el clic en "Comentar"
-commentButton.addEventListener("click", () => {
-    // Obtener el valor del campo de comentario
-    const commentText = commentInput.value.trim();
-    
-    if (commentText !== "") {
-        // Mostrar el comentario (esto se puede guardar en una base de datos, o procesar de alguna forma)
-        console.log("Comentario: ", commentText);
-        alert(`Comentario enviado: ${commentText}`);
-        
-        // Limpiar el campo de comentario después de enviar
-        commentInput.value = "";
-    } else {
-        alert("Por favor, escribe un comentario antes de enviar.");
-    }
-});*/ 
