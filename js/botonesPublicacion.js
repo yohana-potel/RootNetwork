@@ -1,81 +1,50 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Selección de elementos
+    const loveButton = document.getElementById("love");
+    const shareButton = document.getElementById("compartir");
+    const commentButton = document.getElementById("botonComentar");
+    const textComment = document.getElementById("inputComentario");
+    const reactionCount = document.getElementById("reactions-count"); // Contador de reacciones
+    const commentList = document.getElementsByClassName("ComentariosRealizados"); // Lista de comentarios
 
-    // Referencias a los elementos HTML
-    const loveButton = document.getElementById('love');
-    const shareButton = document.getElementById('compartir');
-    const commentButton = document.getElementById('botonComentar');
-    const TextComment = document.getElementById('TextoComentario');
-
-    // Función para manejar el clic en "Me Gusta"
+    // Registrar "Me Gusta" en la base de datos y actualizar el contador
     loveButton.addEventListener("click", () => {
-        const requestPayload = {
-            action: "love",  // Tipo de acción
-            content: "Lo Amo",  // Detalles de la acción
-        };
-
-        console.log("Lo Amo!", requestPayload);
-        alert("¡Te ha gustado la publicación!");
-
-        // Aquí podrías enviar el objeto requestPayload a un servidor
-        // Por ejemplo, usando fetch:
-         fetch('http://localhost:5156/User', {
-            method: 'POST',
-             headers: {
-                 'Content-Type': 'application/json',
-             },
-             body: JSON.stringify(requestPayload)
-         });
+        fetch("http://localhost:5156/Reaction", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ action: "love" })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Reacción registrada:", data);
+            reactionCount.textContent = data.totalReactions; // Actualizar contador
+        })
+        .catch(error => console.error("Error al enviar reacción:", error));
     });
 
-    // Función para manejar el clic en "Compartir"
-    shareButton.addEventListener("click", () => {
-        const requestPayload = {
-            action: "share",  // Tipo de acción
-            content: "Compartir publicación",  // Detalles de la acción
-        };
-
-        console.log("Compartir!", requestPayload);
-        alert("¡Publicación compartida!");
-
-        // Enviar al servidor si es necesario
-        // fetch('/api/acciones', {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(requestPayload)
-        // });
-    });
-
-    // Función para manejar el clic en "Comentar"
+    // Agregar comentario y mostrarlo en la lista
     commentButton.addEventListener("click", () => {
-        const commentText = TextComment.value.trim();
+        const commentText = textComment.value.trim();
 
         if (commentText !== "") {
-            // Crear el objeto de petición con los datos
-            const requestPayload = {
-                action: "comment",  // Tipo de acción
-                content: commentText,  // El contenido del comentario
-            };
-
-            console.log("Comentario: ", requestPayload);
-            alert(`Comentario enviado: ${commentText}`);
-
-            // Aquí podrías enviar el objeto requestPayload a un servidor
-            // Por ejemplo, usando fetch:
-            // fetch('/api/comentarios', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify(requestPayload)
-            // });
-
-            // Limpiar el campo de comentario después de enviar
-            TextComment.value = "";
+            fetch("http://localhost:5156/api/Comment", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ content: commentText })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Comentario registrado:", data);
+                const newComment = document.createElement("li");
+                newComment.textContent = data.content; // Mostrar el comentario
+                commentList.appendChild(newComment);
+                textComment.value = ""; // Limpiar el campo
+            })
+            .catch(error => console.error("Error al enviar comentario:", error));
         } else {
             alert("Por favor, escribe un comentario antes de enviar.");
         }
     });
+
+    
+    
 });
