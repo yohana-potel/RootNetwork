@@ -6,12 +6,83 @@ body{
     background-color: #3D2C2E;
     font-family: "Roboto", sans-serif;
 }
+
+.theme-switch {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    background-color: #f6a612; /* Color en modo claro */
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px;
+    transition: 0.3s ease-in-out;
+    margin: 10px auto; /* Posición debajo del logo */
+}
+
+.slider {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    transition:  0.3s ease-in-out;
+    left: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sun-icon,
+.moon-icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    transition: 0.3s ease-in-out;
+    place-self: center;
+}
+
+.sun-icon {
+    opacity: 1;
+    color: #070707;
+
+}
+
+.moon-icon {
+    opacity: 0;
+    color: #070707;
+    margin-bottom: 8px;     
+}
+body.dark .theme-switch {
+    background-color: #333; /* Modo oscuro */
+}
+
+body.dark .slider {
+    transform: translateX(25px);
+}
+
+body.dark .sun-icon {
+    opacity: 0;
+    color: white;
+}
+
+body.dark .moon-icon {
+    opacity: 1;
+    color: white;
+}
+
+
+
+
+
 /*✩✩✩✩✩ Estilo para Navbar✩✩✩✩✩ */
 
 .custom-navbar {
     background-color: #F2C7C5; 
     border-radius: 25px;
-    width: 90%;
+    width: 70%;
     color: #9c4251;
 }
 
@@ -838,6 +909,193 @@ body.dark .custom-link:hover  /*navbar*/{
 
 /* ✩✩✩✩✩ MEDIDA PARA TABLET PERFIL ✩✩✩✩✩ */
 @media (min-width: 601px) and (max-width: 1023px) {
+    /*✩✩✩✩✩ ESTILOS PARA MURO.HTML ✩✩✩✩✩*/
+    .pantalla {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .logoBarraNavegacion{
+        width: 15%; 
+        height: auto;
+    }
+
+    /* Estilo para el contenedor principal del artículo */
+    .articleBox {
+        display: flex;
+        flex-direction: column; /* Organización vertical */
+        margin: 15px auto;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #f2c7c5;
+        overflow: hidden;
+        width: 90%;        
+        padding: 10px;
+    }
+
+    .seccion-perfil {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        padding: 15px;
+        align-items: center;
+    }
+    
+    .perfil-info{
+        align-self: left;
+        margin-bottom: 0%;
+    }
+
+    .fotodelUsuario {
+        width: 80px;
+        height: auto;
+        justify-content: space-around;
+        margin-left: auto;
+        border-radius: 300px;
+        margin-left: 20px;
+    }
+
+    .nombre{
+        color: #D97D54;
+        margin-left: 20px;
+        align-self: left;
+        font-size: 1rem;
+    }
+
+    #TextoPubli {
+        width: 90%;
+        height: 60px;
+        border-radius: 20px;
+        border: 1px solid black;
+        background-color: #f2c7c5;
+        margin-top: 0px;
+        font-size: 0.9rem;
+        text-align: center; 
+        align-self: left;        
+    }
+
+    #TextoPubli:focus {
+        border: 1px solid #9c4251;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+    }
+
+    /* Contenido principal: imagen y texto */
+    .content {
+        display: flex;
+        flex-direction: column; /* Cambio a disposición vertical */
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        padding: 15px;
+    }
+
+    /* Caja de imagen */
+    .imageBox img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Ajustar imagen sin deformarla */
+        border-radius: 10px;        
+    }
+
+    /* Cuerpo de la publicación */
+    .cardBody {
+        flex-grow: 1; /* Ocupa todo el espacio disponible */
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 10px;        
+    }
+
+    /* Barra de interacción */
+    .barraComentario {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Separar botones y área de comentario */
+        border-top: 1px solid #ddd;
+        background-color: #f2c7c5;
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    /* Botones (me gusta, compartir) */
+    .boton-publicacion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        margin-left: 8px;
+        margin-right: 8px;
+        background-color: #f2c7c5;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: border 0.3s ease;
+    }
+
+    .boton-publicacion:hover {
+        background-color: gray;
+        color: #fff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+    }
+
+    /* Iconos dentro de los botones */
+    .boton-publicacion svg {
+        width: 20px;
+        height: 20px;
+        fill: #9c4251;
+    }
+
+    /* Campo de texto para comentarios */
+    .comentario {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-grow: 1; /* Ocupa el espacio restante */
+    }
+
+    #TextoComentario {
+        flex-grow: 1; /* El campo de texto se ajusta al espacio disponible */
+        padding: 8px;
+        border: 1px solid black;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        outline: none;
+        transition: border 0.3s ease;        
+    }
+
+    #TextoComentario:focus {
+        border: 1px solid #9c4251;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+    }
+
+    /* Botón de comentar */
+    .botonComentario {
+        padding: 8px 12px;
+        background-color: #9c4251;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s ease;        
+        font-size: 0.9rem;
+    }
+
+    .botonComentario:hover {
+        background-color: gray;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+    }   
+   
     /*ESTILOS PARA PERFIL.HTML*/
     .cajaperfil {
         display: grid;
@@ -845,10 +1103,10 @@ body.dark .custom-link:hover  /*navbar*/{
         height: 100vh;
     }
 
-    .logoperfil {
+    .logoBarraNavegacion{
+        width: 10%; /* Reduce el tamaño del logo */
         border-radius: 100%;
         margin: 10px 0 0 10px; 
-        width: 70px; /* Reduce el tamaño del logo */
     }
     
     .img-p {
@@ -856,6 +1114,22 @@ body.dark .custom-link:hover  /*navbar*/{
         height: 100%;
         object-fit: cover;
         border-radius: 3px;
+    }
+
+    .custom-navbar{
+        width: 20%;
+        height: 5%;
+        place-content: right;
+    }
+
+    .form-control-nav {
+        width: 50%; /* Ancho del input */
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 20px;
+        outline: none; /* Elimina el borde al hacer clic */
+        font-size: 1rem; /* Tamaño del texto */
+        transition: all 0.3s ease-in-out; /* Transición suave */
     }
     
     .datos_y_perfil {
@@ -918,10 +1192,9 @@ body.dark .custom-link:hover  /*navbar*/{
     }
 
     .botonPortada:hover, .botondatos:hover {
-        background-color: grey;
         transition: 0.5s;
-        border-color: #9c4251;
-        color: #000;
+        background-color: gray;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
     .descripciondatos {
@@ -960,14 +1233,12 @@ body.dark .custom-link:hover  /*navbar*/{
         border-radius: 100%;
         width: 70px; 
         margin-top: 10px; 
-        margin-left: 10px;
-        
+        margin-left: 10px;        
     }
 
     .form-recuperar {
         display: flex;
         align-items: center;
-
     }
 
     .introducir{
@@ -1405,25 +1676,32 @@ body.dark .custom-link:hover  /*navbar*/{
         width: 150px; 
         height: 30px; 
         margin-top: 10px;
+        margin-left: 10px;
         font-size: 20px; 
         color: #ffffff;
         background-color: #9c4251;
-        border: 2px solid #9c4251;
         border-radius: 10px;
     }
 
     .botonPortada:hover, .botondatos:hover {
-        background-color: grey;
         transition: 0.5s;
-        border-color: #9c4251;
-        color: #000;
+        background-color: gray;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
     .descripciondatos{
-        width: 90%;
-        height: 30px;
+        width: 80%; /* El campo de texto se ajusta al espacio disponible */
+        padding: 10px;
+        border: 1px solid black;
         border-radius: 20px;
-        
+        font-size: 1rem;
+        outline: none;
+        transition: border 0.3s ease;
+    }
+    
+    .descripciondatos:focus {
+        border: 1px solid #9c4251;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
     /* ✩✩✩✩✩ ESTILOS PARA CONTRASENA.HTML ✩✩✩✩✩ */
@@ -1927,6 +2205,7 @@ body.dark .custom-link:hover  /*navbar*/{
         width: 50px;
         height: 50px;
         margin-left: 8px;
+        margin-right: 8px;
         background-color: #f2c7c5;
         border: none;
         border-radius: 50%;

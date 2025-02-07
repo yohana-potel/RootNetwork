@@ -1,22 +1,20 @@
 const body = document.body;
 const btnDarkMode = document.getElementById("dark_mode");
-const moonPath = btnDarkMode ? btnDarkMode.querySelector("path") : null;
+const slider = btnDarkMode.querySelector(".slider");
 
 // Cambia al modo oscuro
 function switchToDarkMode() {
     body.classList.add("dark");
-    if (moonPath) moonPath.setAttribute("fill", "#f1c40f"); // Cambia el color de la luna (si existe)
-    localStorage.setItem("mode", "dark"); // Guarda el modo en localStorage
+    localStorage.setItem("mode", "dark");
 }
 
 // Cambia al modo claro
 function switchToLightMode() {
     body.classList.remove("dark");
-    if (moonPath) moonPath.setAttribute("fill", "#16765a"); // Cambia el color de la luna (si existe)
-    localStorage.setItem("mode", "clear"); // Guarda el modo en localStorage
+    localStorage.setItem("mode", "clear");
 }
 
-// Aplica el modo actual al cargar la página
+// Aplica el modo guardado
 function applyStoredMode() {
     const mode = localStorage.getItem("mode");
     if (mode === "dark") {
@@ -26,25 +24,14 @@ function applyStoredMode() {
     }
 }
 
-// Escucha el clic en el botón (solo si existe)
-if (btnDarkMode) {
-    btnDarkMode.addEventListener("click", () => {
-        const mode = localStorage.getItem("mode");
-        if (mode === "dark") {
-            switchToLightMode();
-        } else {
-            switchToDarkMode();
-        }
-    });
-}
-
-// Sincroniza las pestañas escuchando cambios en localStorage
-window.addEventListener("storage", (event) => {
-    if (event.key === "mode") {
-        applyStoredMode();
+// Evento de clic en el switch
+btnDarkMode.addEventListener("click", () => {
+    if (body.classList.contains("dark")) {
+        switchToLightMode();
+    } else {
+        switchToDarkMode();
     }
 });
 
 // Aplica el modo al cargar la página
 applyStoredMode();
-
