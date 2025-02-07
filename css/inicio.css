@@ -294,7 +294,7 @@ body.dark .custom-link:hover  /*navbar*/{
         width: 80px;
         height: auto;
     }
-
+/*Estilo muro*/
     .miperfil img {
         width: 50px;
         height: auto;
@@ -388,8 +388,8 @@ body.dark .custom-link:hover  /*navbar*/{
     }
     
     .boton-emoticon{
-        width: 5vw;
-        height: 5vw;
+        width: 4vw;
+        
         background-color: #9c4251;
         
     }

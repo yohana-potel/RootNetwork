@@ -1,36 +1,50 @@
-// Selección de elementos
-const likeButton = document.querySelector('button[name="meGusta"]');
-const shareButton = document.querySelector('button[name="compartir"]');
-const commentButton = document.querySelector('.botonComentario');
-const commentInput = document.getElementById('TextoComentario');
+document.addEventListener("DOMContentLoaded", () => {
+    const loveButton = document.getElementById("love");
+    const shareButton = document.getElementById("compartir");
+    const commentButton = document.getElementById("botonComentar");
+    const textComment = document.getElementById("inputComentario");
+    const reactionCount = document.getElementById("reactions-count"); // Contador de reacciones
+    const commentList = document.getElementsByClassName("ComentariosRealizados"); // Lista de comentarios
 
-// Función para manejar el clic en "Me Gusta"
-likeButton.addEventListener("click", () => {
-    // Mostrar un mensaje o realizar alguna acción al hacer clic en "Me Gusta"
-    console.log("Me gusta!");
-    alert("¡Te ha gustado la publicación!");
-});
+    // Registrar "Me Gusta" en la base de datos y actualizar el contador
+    loveButton.addEventListener("click", () => {
+        fetch("http://localhost:5156/Reaction", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ action: "love" })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Reacción registrada:", data);
+            reactionCount.textContent = data.totalReactions; // Actualizar contador
+        })
+        .catch(error => console.error("Error al enviar reacción:", error));
+    });
 
-// Función para manejar el clic en "Compartir"
-shareButton.addEventListener("click", () => {
-    // Mostrar un mensaje o realizar alguna acción al hacer clic en "Compartir"
-    console.log("Compartir!");
-    alert("¡Publicación compartida!");
-});
+    // Agregar comentario y mostrarlo en la lista
+    commentButton.addEventListener("click", () => {
+        const commentText = textComment.value.trim();
 
-// Función para manejar el clic en "Comentar"
-commentButton.addEventListener("click", () => {
-    // Obtener el valor del campo de comentario
-    const commentText = commentInput.value.trim();
+        if (commentText !== "") {
+            fetch("http://localhost:5156/api/Comment", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ content: commentText })
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Comentario registrado:", data);
+                const newComment = document.createElement("li");
+                newComment.textContent = data.content; // Mostrar el comentario
+                commentList.appendChild(newComment);
+                textComment.value = ""; // Limpiar el campo
+            })
+            .catch(error => console.error("Error al enviar comentario:", error));
+        } else {
+            alert("Por favor, escribe un comentario antes de enviar.");
+        }
+    });
+
     
-    if (commentText !== "") {
-        // Mostrar el comentario (esto se puede guardar en una base de datos, o procesar de alguna forma)
-        console.log("Comentario: ", commentText);
-        alert(`Comentario enviado: ${commentText}`);
-        
-        // Limpiar el campo de comentario después de enviar
-        commentInput.value = "";
-    } else {
-        alert("Por favor, escribe un comentario antes de enviar.");
-    }
+    
 });
