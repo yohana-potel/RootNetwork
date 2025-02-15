@@ -1303,6 +1303,13 @@ body.dark #TextoComentario {
         font-family: "Roboto", sans-serif;
         font-style: normal;
     }
+    /** Estilos para muro */
+    
+    .boton-publicacion{
+        margin: 10px;
+        
+        
+    }
 }
 /* ✩✩✩✩✩ MEDIA PARA ESCRITORIO ✩✩✩✩✩ */
 /*ESTILOS PARA PERFIL.HTML*/
@@ -1923,6 +1930,8 @@ body.dark #TextoComentario {
         align-items: center;
         gap: 10px;
         flex-grow: 1; /* Ocupa el espacio restante */
+        
+        
     }
 
     #TextoComentario {
