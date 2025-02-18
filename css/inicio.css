@@ -1608,6 +1608,13 @@ body.dark .custom-link:hover  /*navbar*/{
         font-family: "Roboto", sans-serif;
         font-style: normal;
     }
+    /** Estilos para muro */
+    
+    .boton-publicacion{
+        margin: 10px;
+        
+        
+    }
 }
 /* ✩✩✩✩✩ MEDIA PARA ESCRITORIO ✩✩✩✩✩ */
 /*ESTILOS PARA PERFIL.HTML*/
@@ -2232,6 +2239,8 @@ body.dark .custom-link:hover  /*navbar*/{
         align-items: center;
         gap: 10px;
         flex-grow: 1; /* Ocupa el espacio restante */
+        
+        
     }
 
     #TextoComentario {
