@@ -7,71 +7,59 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
-.theme-switch {
-    position: relative;
-    width: 50px;
-    height: 25px;
-    background-color: #f6a612; /* Color en modo claro */
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3px;
-    transition: 0.3s ease-in-out;
-    margin: 10px auto; /* Posición debajo del logo */
-}
+/* Contenedor del switch */
 
-.slider {
-    position: absolute;
-    width: 25px;
-    height: 25px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 50%;
-    transition:  0.3s ease-in-out;
-    left: 3px;
+/* Botón general */
+.dark-mode-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.sun-icon,
-.moon-icon {
-    position: absolute;
-    width: 30px;
+    width: 60px;
     height: 30px;
-    transition: 0.3s ease-in-out;
-    place-self: center;
+    background-color: #f6a612;
+    color: #555;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    position: relative;
+
 }
 
+/* Íconos */
+.icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Ícono del sol (modo claro) */
 .sun-icon {
     opacity: 1;
-    color: #070707;
-
+    stroke: yellow;
 }
 
+/* Ícono de la luna (modo oscuro) */
 .moon-icon {
     opacity: 0;
-    color: #070707;
-    margin-bottom: 8px;     
-}
-body.dark .theme-switch {
-    background-color: #333; /* Modo oscuro */
+    stroke: white;
 }
 
-body.dark .slider {
-    transform: translateX(25px);
+/* Cambios en modo oscuro */
+body.dark .dark-mode-btn {
+    background-color: #6b4f54;
 }
 
 body.dark .sun-icon {
     opacity: 0;
-    color: white;
 }
 
 body.dark .moon-icon {
     opacity: 1;
-    color: white;
 }
+
+
 
 
 
@@ -269,149 +257,187 @@ body.dark .custom-link:hover  /*navbar*/{
 
 /*✩✩✩✩✩ MEDIA Telefono PARA MURO.html ✩✩✩✩✩*/ 
 @media  (min-width:300px) and (max-width:600px) {
-    .pantalla{
-        width: 100%;
+    .pantalla {
         display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas: 
-            "perfil"
-            "muro";
-        padding: 10px;
-        box-sizing: border-box; 
-    }
-
-    .perfil {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 2px; 
-        width: 50%;
-        box-sizing: border-box;
-    }
-
-    .logotipo {
-        width: 80px;
-        height: auto;
-    }
-/*Estilo muro*/
-    .miperfil img {
-        width: 50px;
-        height: auto;
-        border-radius: 50%;
-        padding: 2px;
-    }
-
-    .miperfil {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 2px; 
-        width: 100%;
-        margin-left: 100px;
-    }
-
-    .editarPer a, .cerrarSec a {
-        text-decoration: none;
-        color: #070707; 
-        font-size: 12px;
-        padding: auto;
-        margin: 2px;
-    }
-
-    #myForm {
-        width: 90%;
-        border: 2px solid #9c4251;
-        padding: 0 ;
-    }
-
-    .controles {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;   
-    }
-
-    #TextoPubli{
-        text-align: center;
-        width: 90%;
-        box-sizing: border-box; 
-        font-size: 12px;
-        white-space: normal;
-        overflow-wrap: break-word; 
-    }
-
-    .publicaciones{
-        width: 100%;
-        margin: 10px;
-    }
-
-    .publicacion, .publicon_foto {
-        width: 90%;
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        margin: 10px 0;
-    }
-    
-    .foto-autor {
-        width: 60px;
-        height: auto;
-        border-radius: 50%;
-    }
-
-    .fotoPublicacion {
-        width: 100%;
-        height: auto;
-    }
-
-    .comentarioP {
-        display: flex;
-        align-items: center;
+        grid-template-columns: 1fr ;
         gap: 10px;
-        font-size: 10px;
-        margin-left: 30px;
     }
 
-    .barraComentario {
-        width: 90%;
+    .logoBarraNavegacion{
+        width: 10%;
+        height: 20%;
+    }
+
+   /* Estilo para el contenedor principal del artículo */
+    .articleBox {
+        display: flex;
+        flex-direction: column; /* Organización vertical */
+        width: 80%;
+        height: 10%;
+        margin: 20px auto; /* Centramos el artículo */
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #f2c7c5;
+        overflow: hidden;
+    }
+
+    .seccion-perfil {
         display: flex;
         flex-direction: row;
+        gap: 20px;
+        padding: 20px;
         align-items: center;
-        background-color: transparent;
-        
-    }
-
-    .botonComentario{
-        width: 50vw;
-        background-color: #9c4251;  /* estoy aqui*/
     }
     
-    .boton-emoticon{
-        width: 4vw;
-        
-        background-color: #9c4251;
-        
+    .perfil-info{
+        align-self: left;
+        margin-bottom: 0%;
     }
 
-    .publicidad{
-        display: none;
+    .fotodelUsuario {
+        width: 30px;
+        height: auto;
+        justify-content: space-around;
+        margin-left: auto;
+        border-radius: 300px;
+        margin-left: 20px;
+    }
+    .nombre{
+        color: #D97D54;
+        margin-left: 5px;
+        font-size: 1rem;
+        align-self: center;
+    }
+
+    #TextoPubli {
+        width: 40%;
+        height: 40px;
+        border-radius: 20px;
+        border: 1px solid black;
+        background-color: #f2c7c5;
+        margin-top: 0px;
+        font-size: 0.5rem;
+        text-align: center; 
+        align-self: left;
+    }
+
+    #TextoPubli:focus {
+        border: 1px solid #9c4251;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+    }
+
+    /* Contenido principal: imagen y texto */
+    .content {
+        display: flex;
+        flex-direction: row; /* Organización horizontal: imagen y texto */
+        gap: 20px;
+        padding: 20px;
+    }
+
+    /* Caja de imagen */
+    .imageBox img {
+        width: 80px; /* Tamaño fijo para la imagen */
+        height: 80px;
+        object-fit: cover; /* Ajustar imagen sin deformarla */
+        border-radius: 10px;
+    }
+
+    /* Cuerpo de la publicación */
+    .cardBody {
+        flex-grow: 1; /* Ocupa todo el espacio disponible */
+    }
+
+    .card-title {
+        font-size: 0.9rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    /* Barra de interacción */
+    .barraComentario {
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Separar botones y área de comentario */
+        padding: 15px 20px;
+        border-top: 1px solid #ddd;
+        background-color: #f2c7c5;
+    }
+
+    /* Botones (me gusta, compartir) */
+    .boton-publicacion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30px;
+        height: 30px;
+        margin-left: 8px;
+        margin-right: 8px;
+        background-color: #f2c7c5;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: border 0.3s ease;
+    }
+
+    .boton-publicacion:hover {
+        background-color: gray;
+        color: #fff;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+    }
+
+    /* Iconos dentro de los botones */
+    .boton-publicacion svg {
+        width: 16px;
+        height: 16px;
+        fill: #9c4251;
+    }
+
+    /* Campo de texto para comentarios */
+    .comentario {
+        display: flex;
+        align-items: center;
+        width: 16px;
+        height: 16px;
+        gap: 5px;
+        flex-grow: 1; /* Ocupa el espacio restante */
     }
 
     #TextoComentario {
-        width: 30vw; 
-        padding: 5px;
+        flex-grow: 1; /* El campo de texto se ajusta al espacio disponible */
+        padding: 10px;
+        border: 1px solid black;
         border-radius: 20px;
-        border: 2px solid #9c4251;
-        font-family: "Roboto", sans-serif;
-    }
-    .articleBox{
-        border: 3px solid white;
-        background-color: yellow;
+        font-size: 0.5rem;
+        outline: none;
+        transition: border 0.3s ease;
     }
 
-    #busqueda{
-        margin: 15px;
+    #TextoComentario:focus {
+        border: 1px solid #9c4251;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+    }
+
+    /* Botón de comentar */
+    .botonComentario {
+        padding: 5px 9px;
+        background-color: #9c4251;
+        color: #fff;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .botonComentario:hover {
+        background-color: gray;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
     /*✩✩✩✩✩ ESTILOS PARA PERFIL.HTML ✩✩✩✩✩*/
@@ -993,7 +1019,7 @@ body.dark .custom-link:hover  /*navbar*/{
 
     /* Caja de imagen */
     .imageBox img {
-        width: 100%;
+        width: 50%;
         height: auto;
         object-fit: cover; /* Ajustar imagen sin deformarla */
         border-radius: 10px;        
@@ -1023,7 +1049,7 @@ body.dark .custom-link:hover  /*navbar*/{
         justify-content: space-between; /* Separar botones y área de comentario */
         border-top: 1px solid #ddd;
         background-color: #f2c7c5;
-        flex-direction: column;
+        flex-direction: row;
         padding: 10px;
     }
 
@@ -2108,7 +2134,7 @@ body.dark .custom-link:hover  /*navbar*/{
     .articleBox {
         display: flex;
         flex-direction: column; /* Organización vertical */
-        width: 80%;
+        width:80%;
         margin: 20px auto; /* Centramos el artículo */
         border: 1px solid #ddd;
         border-radius: 10px;
@@ -2146,7 +2172,7 @@ body.dark .custom-link:hover  /*navbar*/{
 
     #TextoPubli {
         width: 80%;
-        height: 80px;
+        height: 100px;
         border-radius: 20px;
         border: 1px solid black;
         background-color: #f2c7c5;
@@ -2164,7 +2190,7 @@ body.dark .custom-link:hover  /*navbar*/{
     /* Contenido principal: imagen y texto */
     .content {
         display: flex;
-        flex-direction: row; /* Organización horizontal: imagen y texto */
+        flex-direction: column; /* Organización horizontal: imagen y texto */
         gap: 20px;
         padding: 20px;
     }
@@ -2197,8 +2223,9 @@ body.dark .custom-link:hover  /*navbar*/{
     /* Barra de interacción */
     .barraComentario {
         display: flex;
+        width: 150px;
+        height: 50px;
         align-items: center;
-        justify-content: space-between; /* Separar botones y área de comentario */
         padding: 15px 20px;
         border-top: 1px solid #ddd;
         background-color: #f2c7c5;
@@ -2241,6 +2268,15 @@ body.dark .custom-link:hover  /*navbar*/{
         flex-grow: 1; /* Ocupa el espacio restante */
         
         
+    }
+    .inputComentario{
+        flex-grow: 1; /* Ancho del input */
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 20px;
+        outline: none; /* Elimina el borde al hacer clic */
+        font-size: 1rem; /* Tamaño del texto */
+        transition: all 0.3s ease-in-out; /* Transición suave */
     }
 
     #TextoComentario {

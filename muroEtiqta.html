@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"integrity="sha384-5e2ESR8Ycmos6g3gAKr1Jvwye8sW4U1u/cAKulfVJnkakCcMqhOudbtPnvJ+nbv7"crossorigin="anonymous">
     <link rel="stylesheet" href="./css/inicio.css">
     <link rel="shortcut icon " href="./img/logosinFondo.png">
-    <link rel="shortcut  " href="/img/arbolpotada.jpg">
+    <link rel="shortcut  " href="./img/arbolpotada.jpg">
     <title>Muro</title>
 
 </head>
@@ -16,26 +16,23 @@
 
     <header>
       <img src="./img/logosinFondo.png" class="logoBarraNavegacion" alt="Logotipo de RootNetwork">
-      <div class="theme-switch" id="dark_mode">
-        <div class="slider">
-            <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg"  stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="5"></circle>
-                <line x1="12" y1="1" x2="12" y2="3"></line>
-                <line x1="12" y1="21" x2="12" y2="23"></line>
-                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                <line x1="1" y1="12" x2="3" y2="12"></line>
-                <line x1="21" y1="12" x2="23" y2="12"></line>
-                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-    
-            <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
-            </svg>
-        </div>
-    </div>
-    
+      <button id="dark_mode" class="dark-mode-btn">
+        <svg class="icon sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        
+        <svg class="icon moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+        </svg>
+    </button>
     
       <nav class="navbar navbar-expand-lg custom-navbar">
         <div class="container-fluid">
@@ -64,7 +61,7 @@
     
     <section class="seccion-perfil">
       <div class="perfil-info">
-          <img src="./img/foto.jpg" alt="Foto del rostro" class="fotodelUsuario">
+          <img src="./img/fotoperfil.jpg" alt="Foto del rostro" class="fotodelUsuario">
           <h4 class="nombre">Loan Yomi</h4>
       </div>
       <input type="text" id="TextoPubli" placeholder="¿Listo para compartir tus secretos de jardinería? Cuéntanos qué estás cultivando" onkeydown="submitOnEnter(event)">
@@ -74,7 +71,7 @@
     <article class="articleBox" id="articleBox">
       <div class="content">
         <div class="imageBox">
-          <img src="/img/arbolpotada.jpg" alt="Imagen de la publicación" id="imageUrl">
+          <img src="./img/arbolpotada.jpg" alt="Imagen de la publicación" id="imageUrl">
         </div>
         <div class="cardBody" id="cardPublicacion">
           <h5 class="card-title" id="userName">Card title</h5>
