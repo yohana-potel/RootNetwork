@@ -54,3 +54,24 @@ export async function manejarReaccion(postId) {
         console.error("Error al enviar reacción:", error);
     }
 }
+
+export async function getPublishing(peticion, callback) {
+    try {
+        const response = await fetch("http://localhost:5156/Publishing", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(peticion),
+        });
+
+        const data = await response.json();
+
+        if (data.success) {
+            callback({ success: true, data: data.data });
+        } else {
+            callback({ success: false, message: data.message });
+        }
+    } catch (error) {
+        console.error("Error al enviar publicación:", error);
+        callback({ success: false, message: "Error en la conexión con el servidor." });
+    }
+}

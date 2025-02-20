@@ -1,3 +1,4 @@
+import{getPublishing}from './publishingRepository.js';
 //usuarios crear una nueva publicación.
 
 // Escuchar el clic en el botón "Compartir"
@@ -7,7 +8,7 @@ document.getElementById('share').addEventListener("click", (evt) => {
     // Capturar datos del formulario
     let textPublishing = document.getElementById('text').value.trim(); // Texto de la publicación
     let imagePublishing = document.getElementById('imageUrl').value.trim(); // URL de la imagen
-    let userName = document.getElementById('userName');
+    let userName = document.getElementById('userName').textContent.vale.trim();
     let userId = 1 //localStorage.getItem("userId"); // Obtener ID del usuario desde localStorage
 
     // Etiqueta para mostrar errores

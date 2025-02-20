@@ -64,7 +64,7 @@ function crearPostHTML(post) {
         <div class="content">
             <div class="imageBox"><img src="${post.imageUrl}" alt="Imagen de la publicación"></div>
             <div class="cardBody">
-                <h5 class="card-title">${post.userName}</h5>
+                <h5 class="card-title"id="userName">${post.userName}</h5>
                 <p class="text">${post.text}</p>
                 <p class="card-text"><small>${new Date(post.PublishDate).toLocaleString()}</small></p>
             </div>
