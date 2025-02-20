@@ -363,8 +363,9 @@ body.dark .custom-link:hover  /*navbar*/{
     /* Barra de interacción */
     .barraComentario {
         display: flex;
+        flex: row;
         align-items: center;
-        justify-content: space-between; /* Separar botones y área de comentario */
+        
         padding: 15px 20px;
         border-top: 1px solid #ddd;
         background-color: #f2c7c5;
@@ -407,6 +408,16 @@ body.dark .custom-link:hover  /*navbar*/{
         height: 16px;
         gap: 5px;
         flex-grow: 1; /* Ocupa el espacio restante */
+    }
+
+    .inputComentario{
+        flex-grow: 1; /* Ancho del input */
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 20px;
+        outline: none; /* Elimina el borde al hacer clic */
+        font-size: 1rem; /* Tamaño del texto */
+        transition: all 0.3s ease-in-out; /* Transición suave */
     }
 
     #TextoComentario {
@@ -1088,6 +1099,15 @@ body.dark .custom-link:hover  /*navbar*/{
         align-items: center;
         gap: 10px;
         flex-grow: 1; /* Ocupa el espacio restante */
+    }
+    .inputComentario{
+        flex-grow: 1; /* Ancho del input */
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 20px;
+        outline: none; /* Elimina el borde al hacer clic */
+        font-size: 1rem; /* Tamaño del texto */
+        transition: all 0.3s ease-in-out; /* Transición suave */
     }
 
     #TextoComentario {
@@ -2121,33 +2141,34 @@ body.dark .custom-link:hover  /*navbar*/{
     /*✩✩✩✩✩ ESTILOS PARA MURO.HTML ✩✩✩✩✩*/
     .pantalla {
         display: grid;
-        grid-template-columns: 1fr ;
-        gap: 10px;
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .logoBarraNavegacion{
-        width: 10%;
-        height: 20%;
+        width: 15%; 
+        height: auto;
     }
 
-   /* Estilo para el contenedor principal del artículo */
+    /* Estilo para el contenedor principal del artículo */
     .articleBox {
         display: flex;
         flex-direction: column; /* Organización vertical */
-        width:80%;
-        margin: 20px auto; /* Centramos el artículo */
+        margin: 15px auto;
         border: 1px solid #ddd;
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         background-color: #f2c7c5;
         overflow: hidden;
+        width: 90%;        
+        padding: 10px;
     }
 
     .seccion-perfil {
         display: flex;
         flex-direction: row;
-        gap: 20px;
-        padding: 20px;
+        gap: 10px;
+        padding: 15px;
         align-items: center;
     }
     
@@ -2157,29 +2178,31 @@ body.dark .custom-link:hover  /*navbar*/{
     }
 
     .fotodelUsuario {
-        width: 100px;
+        width: 80px;
         height: auto;
         justify-content: space-around;
         margin-left: auto;
         border-radius: 300px;
         margin-left: 20px;
     }
+
     .nombre{
         color: #D97D54;
         margin-left: 20px;
-        align-self: center;
+        align-self: left;
+        font-size: 1rem;
     }
 
     #TextoPubli {
-        width: 80%;
-        height: 100px;
+        width: 90%;
+        height: 60px;
         border-radius: 20px;
         border: 1px solid black;
         background-color: #f2c7c5;
         margin-top: 0px;
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-align: center; 
-        align-self: left;
+        align-self: left;        
     }
 
     #TextoPubli:focus {
@@ -2190,17 +2213,19 @@ body.dark .custom-link:hover  /*navbar*/{
     /* Contenido principal: imagen y texto */
     .content {
         display: flex;
-        flex-direction: column; /* Organización horizontal: imagen y texto */
+        flex-direction: column; /* Cambio a disposición vertical */
+        align-items: center;
+        text-align: center;
         gap: 20px;
-        padding: 20px;
+        padding: 15px;
     }
 
     /* Caja de imagen */
     .imageBox img {
-        width: 150px; /* Tamaño fijo para la imagen */
-        height: 150px;
+        width: 50%;
+        height: auto;
         object-fit: cover; /* Ajustar imagen sin deformarla */
-        border-radius: 10px;
+        border-radius: 10px;        
     }
 
     /* Cuerpo de la publicación */
@@ -2209,26 +2234,25 @@ body.dark .custom-link:hover  /*navbar*/{
     }
 
     .card-title {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         color: #333;
         margin-bottom: 10px;
     }
 
     .card-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
         color: #555;
-        margin-bottom: 10px;
+        margin-bottom: 10px;        
     }
 
     /* Barra de interacción */
     .barraComentario {
         display: flex;
-        width: 150px;
-        height: 50px;
-        align-items: center;
-        padding: 15px 20px;
-        border-top: 1px solid #ddd;
+        align-items: left;
+        justify-content: space-between; /* Separar botones y área de comentario */
         background-color: #f2c7c5;
+        flex-direction: row;
+        padding: 10px;
     }
 
     /* Botones (me gusta, compartir) */
@@ -2236,8 +2260,8 @@ body.dark .custom-link:hover  /*navbar*/{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 50px;
-        height: 50px;
+        width: 40px;
+        height: 40px;
         margin-left: 8px;
         margin-right: 8px;
         background-color: #f2c7c5;
@@ -2255,8 +2279,8 @@ body.dark .custom-link:hover  /*navbar*/{
 
     /* Iconos dentro de los botones */
     .boton-publicacion svg {
-        width: 24px;
-        height: 24px;
+        width: 20px;
+        height: 20px;
         fill: #9c4251;
     }
 
@@ -2266,8 +2290,6 @@ body.dark .custom-link:hover  /*navbar*/{
         align-items: center;
         gap: 10px;
         flex-grow: 1; /* Ocupa el espacio restante */
-        
-        
     }
     .inputComentario{
         flex-grow: 1; /* Ancho del input */
@@ -2281,12 +2303,12 @@ body.dark .custom-link:hover  /*navbar*/{
 
     #TextoComentario {
         flex-grow: 1; /* El campo de texto se ajusta al espacio disponible */
-        padding: 10px;
+        padding: 8px;
         border: 1px solid black;
         border-radius: 20px;
-        font-size: 1rem;
+        font-size: 0.9rem;
         outline: none;
-        transition: border 0.3s ease;
+        transition: border 0.3s ease;        
     }
 
     #TextoComentario:focus {
@@ -2296,18 +2318,19 @@ body.dark .custom-link:hover  /*navbar*/{
 
     /* Botón de comentar */
     .botonComentario {
-        padding: 10px 15px;
+        padding: 8px 12px;
         background-color: #9c4251;
         color: #fff;
         border: none;
         border-radius: 20px;
         cursor: pointer;
-        transition: 0.3s ease;
+        transition: 0.3s ease;        
+        font-size: 0.9rem;
     }
 
     .botonComentario:hover {
         background-color: gray;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
-    }
+    } 
 }
 

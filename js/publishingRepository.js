@@ -2,6 +2,13 @@ export async function obtenerPublicaciones() {
     const response = await fetch("http://localhost:5156/Publishing/all");
     const data = await response.json();
     if (!data.success) throw new Error(data.message);
+
+    // Convertir PublishDate a un objeto Date (si es necesario)
+    data.data.forEach(post => {
+        // Convertimos el string en formato ISO a un objeto Date
+        post.PublishDate = new Date(post.PublishDate); 
+    });
+
     return data.data;
 }
 
