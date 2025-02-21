@@ -7,24 +7,24 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
-/* Contenedor del switch */
 
 /* Botón general */
 .dark-mode-btn {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
+    width: 5%;
     height: 30px;
-    background-color: #f6a612;
-    color: #555;
+    background-color: #fffffe;
+    color: #441124;
     border: none;
-    border-radius: 30px;
+    border-radius: 50%;   
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
     position: relative;
 
 }
+
 
 /* Íconos */
 .icon {
@@ -726,33 +726,6 @@ body.dark .custom-link:hover  /*navbar*/{
         height: 60px;
     }
 
-    .boton-luna {
-        background: none;     
-        margin-left: 10px; 
-        margin-right: 10px;
-        width: 50px; 
-        height: 30px;  
-        border-radius: 50%;    
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-        box-shadow: none;  
-        cursor: pointer;    
-    }
-
-    .boton-luna:hover{
-        fill: grey; 
-        color: #9c4251;
-        transition: 0.5s;  
-            
-    }
-
-    .boton-luna path {
-        fill: none; 
-        stroke: #000000;  
-        stroke-width: 1.5;
-    }
-
     .contenedor{
         width: auto;
         height: auto;
@@ -957,6 +930,19 @@ body.dark .custom-link:hover  /*navbar*/{
         width: 15%; 
         height: auto;
     }
+    .dark-mode-btn {
+        background: none;     
+        margin-left: 30px; 
+        margin-right: 10px;
+        width: 12%; 
+        height: 40px;  
+        border-radius: 50%;    
+        display: flex;
+        align-items: center;
+        justify-content: center; 
+        box-shadow: none;  
+        cursor: pointer;    
+    }
 
     /* Estilo para el contenedor principal del artículo */
     .articleBox {
@@ -1110,19 +1096,11 @@ body.dark .custom-link:hover  /*navbar*/{
         transition: all 0.3s ease-in-out; /* Transición suave */
     }
 
-    #TextoComentario {
-        flex-grow: 1; /* El campo de texto se ajusta al espacio disponible */
-        padding: 8px;
-        border: 1px solid black;
+    .ComentariosRealizados {
+        font-size: 0.8rem;
+        width: 100%;
         border-radius: 20px;
-        font-size: 0.9rem;
-        outline: none;
-        transition: border 0.3s ease;        
-    }
-
-    #TextoComentario:focus {
-        border: 1px solid #9c4251;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);         
     }
 
     /* Botón de comentar */
@@ -1434,31 +1412,6 @@ body.dark .custom-link:hover  /*navbar*/{
         height: 80px;
     }
 
-    .boton-luna {
-        background: none;     
-        margin-left: 30px; 
-        margin-right: 10px;
-        width: 12%; 
-        height: 40px;  
-        border-radius: 50%;    
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-        box-shadow: none;  
-        cursor: pointer;    
-    }
-
-    .boton-luna:hover{
-        fill: grey; 
-        color: #9c4251;
-        transition: 0.5s;              
-    }
-    
-    .boton-luna path {
-        fill: none; 
-        stroke: #000000;  
-        stroke-width: 1.9;
-    }
 
     .contenedor{
         width: auto;
@@ -1833,20 +1786,6 @@ body.dark .custom-link:hover  /*navbar*/{
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 20px;
     }
-    
-    .boton-volver svg {
-        width: 50px; /* Ancho del ícono */
-        height: 50px; /* Alto del ícono */
-        border-radius: 50%;     
-        background: none;       
-        margin-left: 30px;
-        padding: 0;           
-        cursor: pointer;     
-    }
-
-    .boton-volver:hover .flecha {
-        fill: grey;       
-    }
 
     .infoPerfil {
         display: flex;
@@ -1924,32 +1863,6 @@ body.dark .custom-link:hover  /*navbar*/{
         height: 100px;
     }
 
-    .boton-luna {
-        background: none;     
-        margin-left: 20px; 
-        margin-right: 10px;
-        width: 100px; 
-        height: 50px;  
-        border-radius: 50%;    
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-        box-shadow: none;  
-        cursor: pointer;    
-    }
-
-    .boton-luna:hover{
-        fill: grey; 
-        color: #9c4251;
-        transition: 0.5s;              
-    }
-
-    .boton-luna path {
-        fill: none; 
-        stroke: #000000;  
-        stroke-width: 1.9;
-    }
-    
     .contenedor{
         width: 80px;
         height: 10px;
@@ -2301,19 +2214,13 @@ body.dark .custom-link:hover  /*navbar*/{
         transition: all 0.3s ease-in-out; /* Transición suave */
     }
 
-    #TextoComentario {
-        flex-grow: 1; /* El campo de texto se ajusta al espacio disponible */
-        padding: 8px;
-        border: 1px solid black;
+    .ComentariosRealizados {
+        font-size: 0.8rem;
+        width: 100%;
         border-radius: 20px;
-        font-size: 0.9rem;
-        outline: none;
-        transition: border 0.3s ease;        
-    }
-
-    #TextoComentario:focus {
-        border: 1px solid #9c4251;
+        
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+        
     }
 
     /* Botón de comentar */
