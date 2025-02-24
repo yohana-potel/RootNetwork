@@ -7,8 +7,6 @@ body{
     font-family: "Roboto", sans-serif;
 }
 
-
-/* Botón general */
 .dark-mode-btn {
     display: flex;
     align-items: center;
@@ -25,8 +23,6 @@ body{
 
 }
 
-
-/* Íconos */
 .icon {
     position: absolute;
     width: 20px;
@@ -34,19 +30,17 @@ body{
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Ícono del sol (modo claro) */
 .sun-icon {
     opacity: 1;
     stroke: yellow;
 }
 
-/* Ícono de la luna (modo oscuro) */
+
 .moon-icon {
     opacity: 0;
     stroke: white;
 }
 
-/* Cambios en modo oscuro */
 body.dark .dark-mode-btn {
     background-color: #6b4f54;
 }
@@ -59,12 +53,6 @@ body.dark .moon-icon {
     opacity: 1;
 }
 
-
-
-
-
-
-
 /*✩✩✩✩✩ Estilo para Navbar✩✩✩✩✩ */
 
 .custom-navbar {
@@ -75,26 +63,26 @@ body.dark .moon-icon {
 }
 
 .custom-link {
-    color: #9c4251; /* Cambia este color al que prefieras */
-    transition: color 0.3s ease-in-out; /* Efecto de transición */
+    color: #9c4251; 
+    transition: color 0.3s ease-in-out;
     border: none; 
 }
 
 .custom-link:hover {
-    color: white; /* Color diferente al pasar el mouse */
+    color: white; 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
-    font-weight: bold; /* Hace el texto más grueso */
+    font-weight: bold; 
     border-radius: 50%;
 }
 
 .form-control-nav {
-    flex-grow: 1; /* Ancho del input */
+    flex-grow: 1;
     padding: 10px;
     border: 1px solid black;
     border-radius: 20px;
-    outline: none; /* Elimina el borde al hacer clic */
-    font-size: 1rem; /* Tamaño del texto */
-    transition: all 0.3s ease-in-out; /* Transición suave */
+    outline: none; 
+    font-size: 1rem; 
+    transition: all 0.3s ease-in-out; 
 }
 
 .form-control-nav:focus {
@@ -108,7 +96,7 @@ body.dark .moon-icon {
 }
   
 .d-flex svg{
-    color:  #9c4251; /* Color del ícono */
+    color:  #9c4251; 
     background-color: #F2C7C5;
     border-radius: 50%;
     border-color: #F2C7C5 ;
@@ -122,14 +110,14 @@ body.dark .moon-icon {
 .form-control:focus {
     border-color: #FF6F6F; 
     box-shadow: 0 0 0 0.2rem rgba(255, 111, 111, 0.25); 
-    outline: none; /* Elimina el contorno predeterminado del navegador */
+    outline: none; 
 }
 
 header {
     display: flex;
-    justify-content: space-between; /* Espacio entre logo y botón */
-    align-items: center; /* Alinea verticalmente los elementos */
-    padding: 10px; /* Espaciado dentro del header */
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
 }
 
 h1{
@@ -146,32 +134,32 @@ body.dark{
 }
 
 #dark_mode {
-    background-color: #ad6571; /* Color del botón */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    padding: 10px 20px; /* Espaciado interno */
-    text-align: center; /* Centrado del texto */
-    font-size: 16px; /* Tamaño del texto */
-    cursor: pointer; /* Cambia el cursor cuando se pasa sobre el botón */
-    border-radius: 5px; /* Bordes redondeados */
+    background-color: #ad6571; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    text-align: center; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 5px;
 }
 
-body.dark .logeo,/*index */
-body.dark .crear, /*index*/
-body.dark .daTos,/*Perfil*/
-body.dark .editarperfil,/*Perfil*/
-body.dark .Form,/*Registro*/
-body.dark .card,/*Publicacion*/
-body.dark .articleBox, /*Muro*/
-body.dark .custom-navbar/*navbar*/{
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Sombra oscura para realzar */
-    border-radius: 25px; /* Bordes redondeados */
-    transition: all 0.3s ease; /* Transición suave al alternar entre modos */
+body.dark .logeo,
+body.dark .crear, 
+body.dark .daTos,
+body.dark .editarperfil,
+body.dark .Form,
+body.dark .card,
+body.dark .articleBox, 
+body.dark .custom-navbar{
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+    border-radius: 25px; 
+    transition: all 0.3s ease; 
     background-color: #9c4251;
     border: 1px solid black;
 }
 
-body.dark .barraComentario /*Muro*/{
+body.dark .barraComentario{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     border-radius: 10px; 
     transition: all 0.3s ease; 
@@ -179,67 +167,67 @@ body.dark .barraComentario /*Muro*/{
     border: none;
 }
 
-body.dark .logeo h1, /*index */
-body.dark footer p ,/*index */
-body.dark .contenedor h3,/*index */
-body.dark .crear p,/*index */
-body.dark .recuperar h1, /*contraseña*/
-body.dark .recuperar p,/*contraseña*/
+body.dark .logeo h1,
+body.dark footer p ,
+body.dark .contenedor h3,
+body.dark .crear p,
+body.dark .recuperar h1,
+body.dark .recuperar p,
 body.dark .perfil-info h4,
-body.dark .cardBody p,/*Muro*/
-body.dark .cardBody h5,/*Muro*/
-body.dark .daTos h3,/*Perfil*/
-body.dark .daTos p,/*Perfil*/
-body.dark .editarperfil h3,/*Perfil*/
-body.dark .caja1 h1,/*Registro*/
-body.dark .caja h2, /*Registro*/
-body.dark .formulario p,/*Registro*/    
-body.dark .card h1, /*Publicacion*/   
-body.dark .custom-link/*navbar*/{
+body.dark .cardBody p,
+body.dark .cardBody h5,
+body.dark .daTos h3,
+body.dark .daTos p,
+body.dark .editarperfil h3,
+body.dark .caja1 h1,
+body.dark .caja h2, 
+body.dark .formulario p,  
+body.dark .card h1,  
+body.dark .custom-link{
     color: black;
     transition: all 0.3s ease;
 }
 
-body.dark .boton,/*index */
-body.dark .siguiente,/*contraseña*/
-body.dark .comentario .botonComentario, /*Muro*/
-body.dark .botonregistrarse, /*Registro*/
-body.dark .caja-texto #share,/*Publicacion*/
-body.dark #TextoComentario,/*Muro*/
-body.dark .boton-publicacion,/*Muro*/
-body.dark .form-control-nav/*navbar*/ {
+body.dark .boton,
+body.dark .siguiente,
+body.dark .comentario .botonComentario, 
+body.dark .botonregistrarse, 
+body.dark .caja-texto #share,
+body.dark #TextoComentario,
+body.dark .boton-publicacion,
+body.dark .form-control-nav {
     background-color: #333; 
     border: 1px solid #000;
     transition: all 0.3s ease;
     color: #f0f0f0; 
 }
-body.dark .custom-link/*navbar*/{
+body.dark .custom-link{
     background-color: #9c4251; 
     transition: all 0.3s ease;
     color: #f0f0f0; 
 }  
-body.dark .d-flex svg/*navbar*/{
+body.dark .d-flex svg{
     background-color: #333; 
     border: 1px solid #000;
     transition: all 0.3s ease;
     color: #9c4251; 
 }
 
-body.dark #TextoComentario:focus,/*muro*/
-body.dark .form-control-nav:focus/*navbar*/{
+body.dark #TextoComentario:focus,
+body.dark .form-control-nav:focus{
     background-color: gray;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
 }
 
-body.dark .boton:hover,/*index */
-body.dark .siguiente:hover,/*contraseña*/
-body.dark .comentario .botonComentario:hover, /*Muro*/
-body.dark .botonregistrarse:hover, /*Registro*/
-body.dark .caja-texto #share:hover,/*Publicacion*/
-body.dark .boton-publicacion:hover,/*Muro*/
-body.dark .d-flex svg:hover,/*navbar*/
-body.dark .custom-link:hover  /*navbar*/{
+body.dark .boton:hover,
+body.dark .siguiente:hover,
+body.dark .comentario .botonComentario:hover, 
+body.dark .botonregistrarse:hover, 
+body.dark .caja-texto #share:hover,
+body.dark .boton-publicacion:hover,
+body.dark .d-flex svg:hover,
+body.dark .custom-link:hover{
     background-color: gray;
     transition: all 0.3s ease;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.4);
@@ -260,14 +248,13 @@ body.dark .custom-link:hover  /*navbar*/{
         width: 10%;
         height: 20%;
     }
-
-   /* Estilo para el contenedor principal del artículo */
+   
     .articleBox {
         display: flex;
-        flex-direction: column; /* Organización vertical */
+        flex-direction: column; 
         width: 80%;
         height: 10%;
-        margin: 20px auto; /* Centramos el artículo */
+        margin: 20px auto; 
         border: 1px solid #ddd;
         border-radius: 10px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -295,25 +282,25 @@ body.dark .custom-link:hover  /*navbar*/{
         align-self: center;
     }
    
-    /* Contenido principal: imagen y texto */
+    
     .content {
         display: flex;
-        flex-direction: row; /* Organización horizontal: imagen y texto */
+        flex-direction: row; 
         gap: 20px;
         padding: 20px;
     }
 
-    /* Caja de imagen */
+   
     .imageBox img {
-        width: 80px; /* Tamaño fijo para la imagen */
+        width: 80px; 
         height: 80px;
-        object-fit: cover; /* Ajustar imagen sin deformarla */
+        object-fit: cover; 
         border-radius: 10px;
     }
 
-    /* Cuerpo de la publicación */
+   
     .cardBody {
-        flex-grow: 1; /* Ocupa todo el espacio disponible */
+        flex-grow: 1; 
     }
 
     .card-title {
@@ -328,7 +315,6 @@ body.dark .custom-link:hover  /*navbar*/{
         margin-bottom: 10px;
     }
 
-    /* Barra de interacción */
     .barraComentario {
         display: flex;
         flex: row;
@@ -339,7 +325,6 @@ body.dark .custom-link:hover  /*navbar*/{
         background-color: #f2c7c5;
     }
 
-    /* Botones (me gusta, compartir) */
     .boton-publicacion {
         display: flex;
         align-items: center;
@@ -361,35 +346,33 @@ body.dark .custom-link:hover  /*navbar*/{
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
-    /* Iconos dentro de los botones */
     .boton-publicacion svg {
         width: 16px;
         height: 16px;
         fill: #9c4251;
     }
 
-    /* Campo de texto para comentarios */
     .comentario {
         display: flex;
         align-items: center;
         width: 16px;
         height: 16px;
         gap: 5px;
-        flex-grow: 1; /* Ocupa el espacio restante */
+        flex-grow: 1; 
     }
 
     .inputComentario{
-        flex-grow: 1; /* Ancho del input */
+        flex-grow: 1; 
         padding: 10px;
         border: 1px solid black;
         border-radius: 20px;
-        outline: none; /* Elimina el borde al hacer clic */
-        font-size: 1rem; /* Tamaño del texto */
-        transition: all 0.3s ease-in-out; /* Transición suave */
+        outline: none; /
+        font-size: 1rem; 
+        transition: all 0.3s ease-in-out; 
     }
 
     #TextoComentario {
-        flex-grow: 1; /* El campo de texto se ajusta al espacio disponible */
+        flex-grow: 1; 
         padding: 10px;
         border: 1px solid black;
         border-radius: 20px;
@@ -403,7 +386,6 @@ body.dark .custom-link:hover  /*navbar*/{
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
-    /* Botón de comentar */
     .botonComentario {
         padding: 5px 9px;
         background-color: #9c4251;
@@ -422,7 +404,7 @@ body.dark .custom-link:hover  /*navbar*/{
     /*✩✩✩✩✩ ESTILOS PARA PERFIL.HTML ✩✩✩✩✩*/
     .cajaperfil {
         display: grid;
-        grid-template-rows: 50vh auto; /* Ajusta el alto de la portada en pantallas pequeñas */
+        grid-template-rows: 50vh auto; 
         height: 100vh;
     }
 
@@ -435,11 +417,11 @@ body.dark .custom-link:hover  /*navbar*/{
     
     .datos_y_perfil {
         display: grid; 
-        grid-template-columns: 1fr; /* Mantén las secciones una debajo de la otra */
-        gap: 10px; /* Ajusta el espacio entre las columnas */
+        grid-template-columns: 1fr; 
+        gap: 10px; 
         border-radius: 10px;
-        font-size: 12px; /* Reduce el tamaño de fuente */
-        padding: 5px; /* Reduce el padding para ahorrar espacio */
+        font-size: 12px; 
+        padding: 5px; 
         align-items: center;
         width: 100%;
         height: auto;
@@ -452,20 +434,20 @@ body.dark .custom-link:hover  /*navbar*/{
         border: 2px solid #9c4251;
         background-color: #F2C7C5;
         border-radius: 10px;
-        width: 90%; /* Ajusta el ancho para pantallas pequeñas */
-        height: 180px; /* Reduce la altura */
+        width: 90%; 
+        height: 180px; 
         margin-top: 25px;
     }
 
     .editarportada {
         position: relative;
         width: 100%;
-        height: 120px; /* Reduce aún más la altura de la portada */
-        margin-bottom: 20px; /* Ajusta el margen inferior */
+        height: 120px; 
+        margin-bottom: 20px; 
     }
 
     .imagen_perfil {
-        width: 70px; /* Reduce el tamaño de la imagen de perfil */
+        width: 70px; 
         height: 70px;
         padding: 5px;
         border-radius: 50%;
@@ -477,12 +459,12 @@ body.dark .custom-link:hover  /*navbar*/{
     .cajaportada {
         display: grid;
         width: 100%;
-        height: 120px; /* Reduce la altura de la portada */
+        height: 120px; 
     }
     
     
     .descripciondatos {
-        width: 80%; /* Ajusta el ancho de la caja de texto */
+        width: 80%; 
         height: 30px;
         border-radius: 20px;
     } 
@@ -579,8 +561,8 @@ body.dark .custom-link:hover  /*navbar*/{
     }
     
     .boton-volver svg {
-        width: 50px; /* Ancho del ícono */
-        height: 50px; /* Alto del ícono */
+        width: 50px; 
+        height: 50px; 
         border-radius: 50%;     
         background: none;       
         margin-left: 30px;
@@ -625,7 +607,7 @@ body.dark .custom-link:hover  /*navbar*/{
 
     textarea, input[type="url"], #share {
         width: 80%;
-        font-size: 2.5vw; /* Ajusta el tamaño de la fuente */
+        font-size: 2.5vw; 
         margin-left: 20%;
     }
 
@@ -888,11 +870,10 @@ body.dark .custom-link:hover  /*navbar*/{
         box-shadow: none;  
         cursor: pointer;    
     }
-
-    /* Estilo para el contenedor principal del artículo */
+    
     .articleBox {
         display: flex;
-        flex-direction: column; /* Organización vertical */
+        flex-direction: column; 
         margin: 15px auto;
         border: 1px solid #ddd;
         border-radius: 10px;
@@ -923,27 +904,24 @@ body.dark .custom-link:hover  /*navbar*/{
         font-size: 1rem;
     }
 
-    /* Contenido principal: imagen y texto */
     .content {
         display: flex;
-        flex-direction: column; /* Cambio a disposición vertical */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
         gap: 20px;
         padding: 15px;
     }
 
-    /* Caja de imagen */
     .imageBox img {
         width: 50%;
         height: auto;
-        object-fit: cover; /* Ajustar imagen sin deformarla */
+        object-fit: cover; 
         border-radius: 10px;        
     }
 
-    /* Cuerpo de la publicación */
     .cardBody {
-        flex-grow: 1; /* Ocupa todo el espacio disponible */
+        flex-grow: 1; 
     }
 
     .card-title {
@@ -958,18 +936,16 @@ body.dark .custom-link:hover  /*navbar*/{
         margin-bottom: 10px;        
     }
 
-    /* Barra de interacción */
     .barraComentario {
         display: flex;
         align-items: center;
-        justify-content: space-between; /* Separar botones y área de comentario */
+        justify-content: space-between; 
         border-top: 1px solid #ddd;
         background-color: #f2c7c5;
         flex-direction: row;
         padding: 10px;
     }
 
-    /* Botones (me gusta, compartir) */
     .boton-publicacion {
         display: flex;
         align-items: center;
@@ -991,28 +967,26 @@ body.dark .custom-link:hover  /*navbar*/{
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
-    /* Iconos dentro de los botones */
     .boton-publicacion svg {
         width: 20px;
         height: 20px;
         fill: #9c4251;
     }
 
-    /* Campo de texto para comentarios */
     .comentario {
         display: flex;
         align-items: center;
         gap: 10px;
-        flex-grow: 1; /* Ocupa el espacio restante */
+        flex-grow: 1; 
     }
     .inputComentario{
-        flex-grow: 1; /* Ancho del input */
+        flex-grow: 1; 
         padding: 10px;
         border: 1px solid black;
         border-radius: 20px;
-        outline: none; /* Elimina el borde al hacer clic */
-        font-size: 1rem; /* Tamaño del texto */
-        transition: all 0.3s ease-in-out; /* Transición suave */
+        outline: none; 
+        font-size: 1rem; 
+        transition: all 0.3s ease-in-out; 
     }
 
     .ComentariosRealizados {
@@ -1022,7 +996,6 @@ body.dark .custom-link:hover  /*navbar*/{
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);         
     }
 
-    /* Botón de comentar */
     .botonComentario {
         padding: 8px 12px;
         background-color: #9c4251;
@@ -1042,7 +1015,7 @@ body.dark .custom-link:hover  /*navbar*/{
     /*ESTILOS PARA PERFIL.HTML*/
     .cajaperfil{
         display: flex;
-        flex-direction: column; /* Organización vertical */
+        flex-direction: column; 
         margin: 15px auto;
         border: 1px solid #ddd;
         border-radius: 10px;
@@ -1058,7 +1031,7 @@ body.dark .custom-link:hover  /*navbar*/{
     }
 
     .logoBarraNavegacion{
-        width: 10%; /* Reduce el tamaño del logo */
+        width: 10%; 
         border-radius: 100%;
         margin: 10px 0 0 10px; 
     }
@@ -1070,17 +1043,15 @@ body.dark .custom-link:hover  /*navbar*/{
     }
 
     .form-control-nav {
-        width: 50%; /* Ancho del input */
+        width: 50%; 
         padding: 10px;
         border: 1px solid black;
         border-radius: 20px;
-        outline: none; /* Elimina el borde al hacer clic */
-        font-size: 1rem; /* Tamaño del texto */
-        transition: all 0.3s ease-in-out; /* Transición suave */
+        outline: none; 
+        font-size: 1rem; 
+        transition: all 0.3s ease-in-out; 
     }
-    
-
-    
+       
     /* ✩✩✩✩✩ ESTILOS PARA CONTRASENA.HTML ✩✩✩✩✩ */
     .recuperar {
         width: 90%; 
@@ -1167,8 +1138,8 @@ body.dark .custom-link:hover  /*navbar*/{
     }
     
     .boton-volver svg {
-        width: 50px; /* Ancho del ícono */
-        height: 50px; /* Alto del ícono */
+        width: 50px; 
+        height: 50px; 
         border-radius: 50%;     
         background: none;       
         margin-left: 30px;
@@ -1213,7 +1184,7 @@ body.dark .custom-link:hover  /*navbar*/{
     textarea, input[type="url"], #share {
         width: 90%;
         margin-left: 15%;
-        font-size: 2.5vw; /* Ajusta el tamaño de la fuente */
+        font-size: 2.5vw; 
     }
 
     textarea:focus, input[type="url"]:focus {
@@ -1450,20 +1421,19 @@ body.dark .custom-link:hover  /*navbar*/{
         font-family: "Roboto", sans-serif;
         font-style: normal;
     }
-    /** Estilos para muro */
-    
+        
     .boton-publicacion{
         margin: 10px;
         
         
     }
 }
-/* ✩✩✩✩✩ MEDIA PARA ESCRITORIO ✩✩✩✩✩ */
+
 /*ESTILOS PARA PERFIL.HTML*/
 @media (min-width: 1023px) {
     .cajaperfil{
         display: flex;
-        flex-direction: column; /* Organización vertical */
+        flex-direction: column; 
         margin: 15px auto;
         border: 1px solid #ddd;
         border-radius: 10px;
@@ -1588,10 +1558,9 @@ body.dark .custom-link:hover  /*navbar*/{
         padding: 20px;
         text-align: center;
     }
-
-    /* Botón de volver */
+    
     .boton-volver svg {
-        width: 50px; /* Tamaño más compacto */
+        width: 50px; 
         height: 50px;
         border-radius: 50%;
         background: none;
@@ -1604,7 +1573,6 @@ body.dark .custom-link:hover  /*navbar*/{
         fill: grey;
     }
 
-    /* Estilos del nombre de usuario */
     .infoPerfil h1 {
         text-align: center;
         font-size: 30px;
@@ -1613,25 +1581,24 @@ body.dark .custom-link:hover  /*navbar*/{
         margin: 20px 0;
     }
 
-    /* Centrar el formulario dentro de la tarjeta */
     .caja-texto {
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center; /* Centra horizontalmente */
-        justify-content: center; /* Centra verticalmente */
+        align-items: center; 
+        justify-content: center; 
     }
 
-    /* Estilos del formulario */
+    
     #publi {
-        width: 100%; /* Ocupa todo el ancho disponible */
+        width: 100%; 
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 10px; /* Espacio entre elementos */
+        gap: 10px;
     }
 
-    /* Estilos para los inputs y textarea */
+   
     textarea, input[type="url"] {
         width: 90%;
         padding: 12px;
@@ -1639,30 +1606,26 @@ body.dark .custom-link:hover  /*navbar*/{
         border-radius: 20px;
         font-size: 14px;
         box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
-        text-align: center; /* Centra el texto dentro */
+        text-align: center; 
     }
 
-    /* Cambiar el borde al enfocar */
     textarea:focus, input[type="url"]:focus {
         border-color: #000000;
         outline: none;
         box-shadow: 0 0 5px #9c4251;
     }
 
-    /* Ajustar tamaño del textarea */
     textarea {
         min-height: 100px;
-        resize: none; /* Evita que el usuario cambie el tamaño */
+        resize: none; 
     }
 
-    /* Estilos para el placeholder */
     input::placeholder, textarea::placeholder {
         color: #aaa;
         font-style: italic;
         text-align: center;
     }
 
-    /* Botón de compartir */
     #share {
         background-color: #9c4251;
         color: white;
@@ -1676,11 +1639,9 @@ body.dark .custom-link:hover  /*navbar*/{
         text-align: center;
     }
 
-    /* Efecto hover en el botón */
     #share:hover {
         background-color: gray;
     }
-
 
     /* ✩✩✩✩✩ ESTILOS INDEX.HTML ✩✩✩✩✩ */
     .logo_inicio{
@@ -1889,10 +1850,9 @@ body.dark .custom-link:hover  /*navbar*/{
         height: auto;
     }
 
-    /* Estilo para el contenedor principal del artículo */
     .articleBox {
         display: flex;
-        flex-direction: column; /* Organización vertical */
+        flex-direction: column; 
         margin: 15px auto;
         border: 1px solid #ddd;
         border-radius: 10px;
@@ -1924,27 +1884,24 @@ body.dark .custom-link:hover  /*navbar*/{
         font-size: 1rem;
     }
 
-    /* Contenido principal: imagen y texto */
     .content {
         display: flex;
-        flex-direction: column; /* Cambio a disposición vertical */
+        flex-direction: column; 
         align-items: center;
         text-align: center;
         gap: 20px;
         padding: 15px;
     }
 
-    /* Caja de imagen */
     .imageBox img {
         width: 50%;
         height: auto;
-        object-fit: cover; /* Ajustar imagen sin deformarla */
+        object-fit: cover; 
         border-radius: 10px;        
     }
 
-    /* Cuerpo de la publicación */
     .cardBody {
-        flex-grow: 1; /* Ocupa todo el espacio disponible */
+        flex-grow: 1; 
     }
 
     .card-title {
@@ -1959,17 +1916,15 @@ body.dark .custom-link:hover  /*navbar*/{
         margin-bottom: 10px;        
     }
 
-    /* Barra de interacción */
     .barraComentario {
         display: flex;
         align-items: left;
-        justify-content: space-between; /* Separar botones y área de comentario */
+        justify-content: space-between; 
         background-color: #f2c7c5;
         flex-direction: row;
         padding: 10px;
     }
 
-    /* Botones (me gusta, compartir) */
     .boton-publicacion {
         display: flex;
         align-items: center;
@@ -1991,28 +1946,26 @@ body.dark .custom-link:hover  /*navbar*/{
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
-    /* Iconos dentro de los botones */
     .boton-publicacion svg {
         width: 20px;
         height: 20px;
         fill: #9c4251;
     }
 
-    /* Campo de texto para comentarios */
     .comentario {
         display: flex;
         align-items: center;
         gap: 10px;
-        flex-grow: 1; /* Ocupa el espacio restante */
+        flex-grow: 1; 
     }
     .inputComentario{
-        flex-grow: 1; /* Ancho del input */
+        flex-grow: 1; 
         padding: 10px;
         border: 1px solid black;
         border-radius: 20px;
-        outline: none; /* Elimina el borde al hacer clic */
-        font-size: 1rem; /* Tamaño del texto */
-        transition: all 0.3s ease-in-out; /* Transición suave */
+        outline: none; 
+        font-size: 1rem; 
+        transition: all 0.3s ease-in-out;
     }
 
     .ComentariosRealizados {
@@ -2022,7 +1975,6 @@ body.dark .custom-link:hover  /*navbar*/{
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);         
     }
 
-    /* Botón de comentar */
     .botonComentario {
         padding: 8px 12px;
         background-color: #9c4251;
