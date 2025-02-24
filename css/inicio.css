@@ -163,7 +163,6 @@ body.dark .editarperfil,/*Perfil*/
 body.dark .Form,/*Registro*/
 body.dark .card,/*Publicacion*/
 body.dark .articleBox, /*Muro*/
-body.dark .seccion-perfil #TextoPubli,/*Muro*/
 body.dark .custom-navbar/*navbar*/{
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); /* Sombra oscura para realzar */
     border-radius: 25px; /* Bordes redondeados */
@@ -204,9 +203,6 @@ body.dark .custom-link/*navbar*/{
 body.dark .boton,/*index */
 body.dark .siguiente,/*contraseña*/
 body.dark .comentario .botonComentario, /*Muro*/
-body.dark .botonPortada,/*Perfil*/
-body.dark .daTos .botondatos,/*Perfil*/
-body.dark .editarperfil .botondatos,/*Perfil*/
 body.dark .botonregistrarse, /*Registro*/
 body.dark .caja-texto #share,/*Publicacion*/
 body.dark #TextoComentario,/*Muro*/
@@ -239,9 +235,6 @@ body.dark .form-control-nav:focus/*navbar*/{
 body.dark .boton:hover,/*index */
 body.dark .siguiente:hover,/*contraseña*/
 body.dark .comentario .botonComentario:hover, /*Muro*/
-body.dark .botonPortada:hover,/*Perfil*/
-body.dark .editarperfil .botondatos:hover,/*Perfil*/
-body.dark .daTos .botondatos:hover,/*Perfil*/
 body.dark .botonregistrarse:hover, /*Registro*/
 body.dark .caja-texto #share:hover,/*Publicacion*/
 body.dark .boton-publicacion:hover,/*Muro*/
@@ -295,38 +288,13 @@ body.dark .custom-link:hover  /*navbar*/{
         margin-bottom: 0%;
     }
 
-    .fotodelUsuario {
-        width: 30px;
-        height: auto;
-        justify-content: space-around;
-        margin-left: auto;
-        border-radius: 300px;
-        margin-left: 20px;
-    }
     .nombre{
         color: #D97D54;
         margin-left: 5px;
         font-size: 1rem;
         align-self: center;
     }
-
-    #TextoPubli {
-        width: 40%;
-        height: 40px;
-        border-radius: 20px;
-        border: 1px solid black;
-        background-color: #f2c7c5;
-        margin-top: 0px;
-        font-size: 0.5rem;
-        text-align: center; 
-        align-self: left;
-    }
-
-    #TextoPubli:focus {
-        border: 1px solid #9c4251;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
-    }
-
+   
     /* Contenido principal: imagen y texto */
     .content {
         display: flex;
@@ -512,22 +480,6 @@ body.dark .custom-link:hover  /*navbar*/{
         height: 120px; /* Reduce la altura de la portada */
     }
     
-    .botonPortada, .botondatos {
-        width: 100px; /* Ajusta el ancho de los botones */
-        height: 28px; /* Ajusta la altura de los botones */
-        font-size: 16px; /* Reduce el tamaño de fuente de los botones */
-        color: #ffffff;
-        background-color: #9c4251;
-        border: 2px solid #9c4251;
-        border-radius: 10px;
-    }
-
-    .botonPortada:hover, .botondatos:hover {
-        background-color: grey;
-        transition: 0.5s;
-        border-color: #9c4251;
-        color: #000;
-    }
     
     .descripciondatos {
         width: 80%; /* Ajusta el ancho de la caja de texto */
@@ -636,7 +588,7 @@ body.dark .custom-link:hover  /*navbar*/{
         cursor: pointer;     
     }
 
-    .boton-volver:hover .flecha {
+    .boton-volver:hover .flecha:hover {
         fill: grey;       
     }
 
@@ -653,13 +605,6 @@ body.dark .custom-link:hover  /*navbar*/{
         font-size: 4vw;
         font-family: "Roboto", sans-serif;
         font-style: normal;  
-    }
-    
-    .fotopubli {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        object-fit: cover;
     }
 
     #publi{
@@ -971,37 +916,11 @@ body.dark .custom-link:hover  /*navbar*/{
         margin-bottom: 0%;
     }
 
-    .fotodelUsuario {
-        width: 80px;
-        height: auto;
-        justify-content: space-around;
-        margin-left: auto;
-        border-radius: 300px;
-        margin-left: 20px;
-    }
-
     .nombre{
         color: #D97D54;
         margin-left: 20px;
         align-self: left;
         font-size: 1rem;
-    }
-
-    #TextoPubli {
-        width: 90%;
-        height: 60px;
-        border-radius: 20px;
-        border: 1px solid black;
-        background-color: #f2c7c5;
-        margin-top: 0px;
-        font-size: 0.9rem;
-        text-align: center; 
-        align-self: left;        
-    }
-
-    #TextoPubli:focus {
-        border: 1px solid #9c4251;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
     /* Contenido principal: imagen y texto */
@@ -1121,23 +1040,27 @@ body.dark .custom-link:hover  /*navbar*/{
     }   
    
     /*ESTILOS PARA PERFIL.HTML*/
-    .cajaperfil {
-        display: grid;
-        grid-template-rows: 60vh auto; /* Ajusta el alto en pantallas más pequeñas */
-        height: 100vh;
+    .cajaperfil{
+        display: flex;
+        flex-direction: column; /* Organización vertical */
+        margin: 15px auto;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #f2c7c5;
+        overflow: hidden;
+        width: 90%;        
+        height: auto;
+        padding: 10px;
+    }
+    .daTosperfil{
+        color: #D97D54;
     }
 
     .logoBarraNavegacion{
         width: 10%; /* Reduce el tamaño del logo */
         border-radius: 100%;
         margin: 10px 0 0 10px; 
-    }
-    
-    .img-p {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 3px;
     }
 
     .custom-navbar{
@@ -1156,80 +1079,7 @@ body.dark .custom-link:hover  /*navbar*/{
         transition: all 0.3s ease-in-out; /* Transición suave */
     }
     
-    .datos_y_perfil {
-        display: grid; 
-        grid-template-columns: 1fr; /* Coloca las secciones una debajo de la otra */
-        gap: 15px; /* Ajusta el espacio entre las columnas */
-        border-radius: 10px;
-        font-size: 14px; 
-        padding: 10px;
-        align-items: center;
-        width: 100%;
-        height: auto; /* Permite que la altura sea adaptable */
-    }
 
-    .daTos, .editarperfil {
-        display: grid;
-        place-self: center;
-        place-items: center;
-        border: 2px solid #9c4251;
-        background-color: #F2C7C5;
-        border-radius: 10px;
-        width: 80%; /* Ajusta el ancho en pantallas medianas */
-        height: 200px; /* Ajusta la altura */
-        margin-top: 10px;
-    }
-
-    .titulodatos,.daTosperfil{
-        color: #D97D54;
-    }
-
-    .editarportada {
-        position: relative;
-        width: 100%;
-        height: 150px; /* Reduce la altura de la portada */
-        margin-bottom: 30px; /* Ajusta el margen inferior */
-    }
-
-    .imagen_perfil {
-        width: 80px;
-        height: 80px;
-        padding: 5px;
-        border-radius: 50%;
-    }
-
-    .cajaportada {
-        display: grid;
-        width: 100%;
-        height: 150px; /* Ajusta la altura de la portada */
-    }
-    
-    .botonPortada, .botondatos {
-        width: 120px; 
-        height: 30px;
-        font-size: 18px;
-        margin-top: 10px;
-        color: #ffffff;
-        background-color: #9c4251;
-        border: 2px solid #9c4251;
-        border-radius: 10px;
-    }
-
-    .botonPortada:hover, .botondatos:hover {
-        transition: 0.5s;
-        background-color: gray;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
-    }
-
-    .descripciondatos {
-        width: 50%;
-        height: 30px;
-        border-radius: 20px;
-    }
-
-    .titulodatos,.daTosperfil{
-        font-size: 24px; 
-    }
     
     /* ✩✩✩✩✩ ESTILOS PARA CONTRASENA.HTML ✩✩✩✩✩ */
     .recuperar {
@@ -1326,7 +1176,7 @@ body.dark .custom-link:hover  /*navbar*/{
         cursor: pointer;     
     }
 
-    .boton-volver:hover .flecha {
+    .boton-volver:hover .flecha:hover {
         fill: grey;       
     }
 
@@ -1343,13 +1193,6 @@ body.dark .custom-link:hover  /*navbar*/{
         font-size: 4vw;
         font-family: "Roboto", sans-serif;
         font-style: normal;  
-    }
-    
-    .fotopubli {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        object-fit: cover;
     }
 
     #publi{
@@ -1619,95 +1462,21 @@ body.dark .custom-link:hover  /*navbar*/{
 /*ESTILOS PARA PERFIL.HTML*/
 @media (min-width: 1023px) {
     .cajaperfil{
-        display: grid;
-        grid-template-rows: 80vh auto;
-        height: 100vh;
-    }
-
-    .cajaportada{
-        display: grid;
-        width: 100%;
-        height: 100px;
-    }
-
-    .editarportada{
-        position: relative;
-        width: 100%;
-        height: 200px;
-        margin-bottom: 50px;
-    }
-   
-    .img-p{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 3px;
-    }
-    
-    .datos_y_perfil{
-        display: grid; 
-        grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-        gap: 20px; /* Ajusta el espacio entre las columnas */
-        border-radius: 10px; 
-        padding: 10px;
-        align-items: center;
-        width: 100%;
-        height: 50%; /* Ajusta la altura según el contenido */
-        margin: 0;
-    }
-    
-    .daTos, .editarperfil {
-        display: grid;
-        place-self: center;
-        place-items: center; /* Centra el contenido vertical y horizontalmente */
-        border: 2px solid #9c4251;
-        background-color: #F2C7C5;
-        border-radius: 25px;
-        width: 400px;
-        height: 250px;
-        margin: 0; 
-    }
-    .titulodatos,.daTosperfil{
-        color: #D97D54;
-    }
-    
-    .imagen_perfil{
-        width: 100px;
-        height: 100px;
-        padding: 5px;
-        border-radius: 50%;
-    }
-
-    .botondatos, .botonPortada {
-        width: 150px; 
-        height: 30px; 
-        margin-top: 10px;
-        margin-left: 10px;
-        font-size: 20px; 
-        color: #ffffff;
-        background-color: #9c4251;
+        display: flex;
+        flex-direction: column; /* Organización vertical */
+        margin: 15px auto;
+        border: 1px solid #ddd;
         border-radius: 10px;
-    }
-
-    .botonPortada:hover, .botondatos:hover {
-        transition: 0.5s;
-        background-color: gray;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
-    }
-
-    .descripciondatos{
-        width: 80%; /* El campo de texto se ajusta al espacio disponible */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #f2c7c5;
+        overflow: hidden;
+        width: 90%;        
+        height: auto;
         padding: 10px;
-        border: 1px solid black;
-        border-radius: 20px;
-        font-size: 1rem;
-        outline: none;
-        transition: border 0.3s ease;
     }
-    
-    .descripciondatos:focus {
-        border: 1px solid #9c4251;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+    .daTosperfil{
+        color: #D97D54;
+        text-align: center;
     }
 
     /* ✩✩✩✩✩ ESTILOS PARA CONTRASENA.HTML ✩✩✩✩✩ */
@@ -1774,73 +1543,126 @@ body.dark .custom-link:hover  /*navbar*/{
         font-size: 1vw; 
     }
 
-    /* ✩✩✩✩✩ ESTILOS PUBLICACIÓN.HTML ✩✩✩✩✩ */
-    .card{
-        max-width: 500px;
-        width: 100%;
-        height: 400px;
-        margin-left: 280px;
-        background-color: #F2C7C5;  
-        border: 4px solid #9c4251; 
+/* ✩✩✩✩✩ ESTILOS PUBLICACIÓN.HTML ✩✩✩✩✩ */
+
+/* 
+    .articlepubli {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+        width: 100vw; 
+    }
+
+    
+    .card {
+        width: 500px; 
+        background-color: #F2C7C5;
+        border: 4px solid #9c4251;
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 20px;
-    }
-
-    .infoPerfil {
         display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 20px;
+        flex-direction: column;
+        align-items: center; 
+    }*/
+
+    .articlepubli {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        height: 100vh; 
+        width: 100vw; 
+        padding: 0; 
+        position: fixed; 
     }
     
-    .infoPerfil h1{
+    .card {
+        width: 90%;
+        max-width: 500px; 
+        background-color: #F2C7C5;  
+        border: 4px solid #9c4251; 
+        margin-left: 32%;        
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Botón de volver */
+    .boton-volver svg {
+        width: 50px; /* Tamaño más compacto */
+        height: 50px;
+        border-radius: 50%;
+        background: none;
+        margin-left: 20px;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    .flecha:hover {
+        fill: grey;
+    }
+
+    /* Estilos del nombre de usuario */
+    .infoPerfil h1 {
         text-align: center;
         font-size: 30px;
         font-family: "Roboto", sans-serif;
-        font-weight: 700;
-        font-style: normal;  
-        margin-top: 65px;
-    }
-    
-    .fotopubli {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
+        font-weight: bold;
+        margin: 20px 0;
     }
 
-    #publi{
-        width: 500px;
-        height: 80px;
-        margin-right: 100px;
-        margin-left: 100px;        
+    /* Centrar el formulario dentro de la tarjeta */
+    .caja-texto {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centra horizontalmente */
+        justify-content: center; /* Centra verticalmente */
     }
 
+    /* Estilos del formulario */
+    #publi {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Espacio entre elementos */
+    }
+
+    /* Estilos para los inputs y textarea */
     textarea, input[type="url"] {
-        width: 50%;
+        width: 90%;
         padding: 12px;
         border: 1px solid #ccc;
-        border-radius: 8px;
+        border-radius: 20px;
         font-size: 14px;
         box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        text-align: center; /* Centra el texto dentro */
     }
 
+    /* Cambiar el borde al enfocar */
     textarea:focus, input[type="url"]:focus {
-        border-color: #9c4251;
+        border-color: #000000;
         outline: none;
-        box-shadow: 0 0 5px #9c4251
+        box-shadow: 0 0 5px #9c4251;
     }
-      
+
+    /* Ajustar tamaño del textarea */
     textarea {
         min-height: 100px;
+        resize: none; /* Evita que el usuario cambie el tamaño */
     }
-      
+
+    /* Estilos para el placeholder */
     input::placeholder, textarea::placeholder {
         color: #aaa;
         font-style: italic;
+        text-align: center;
     }
 
+    /* Botón de compartir */
     #share {
         background-color: #9c4251;
         color: white;
@@ -1850,11 +1672,15 @@ body.dark .custom-link:hover  /*navbar*/{
         border-radius: 8px;
         cursor: pointer;
         transition: background-color 0.3s ease;
+        width: 90%;
+        text-align: center;
     }
 
+    /* Efecto hover en el botón */
     #share:hover {
         background-color: gray;
     }
+
 
     /* ✩✩✩✩✩ ESTILOS INDEX.HTML ✩✩✩✩✩ */
     .logo_inicio{
@@ -2074,6 +1900,7 @@ body.dark .custom-link:hover  /*navbar*/{
         background-color: #f2c7c5;
         overflow: hidden;
         width: 90%;        
+        height: auto;
         padding: 10px;
     }
 
@@ -2090,37 +1917,11 @@ body.dark .custom-link:hover  /*navbar*/{
         margin-bottom: 0%;
     }
 
-    .fotodelUsuario {
-        width: 80px;
-        height: auto;
-        justify-content: space-around;
-        margin-left: auto;
-        border-radius: 300px;
-        margin-left: 20px;
-    }
-
     .nombre{
         color: #D97D54;
         margin-left: 20px;
         align-self: left;
         font-size: 1rem;
-    }
-
-    #TextoPubli {
-        width: 90%;
-        height: 60px;
-        border-radius: 20px;
-        border: 1px solid black;
-        background-color: #f2c7c5;
-        margin-top: 0px;
-        font-size: 0.9rem;
-        text-align: center; 
-        align-self: left;        
-    }
-
-    #TextoPubli:focus {
-        border: 1px solid #9c4251;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     }
 
     /* Contenido principal: imagen y texto */
@@ -2217,10 +2018,8 @@ body.dark .custom-link:hover  /*navbar*/{
     .ComentariosRealizados {
         font-size: 0.8rem;
         width: 100%;
-        border-radius: 20px;
-        
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
-        
+        border-radius: 20px;        
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);         
     }
 
     /* Botón de comentar */
