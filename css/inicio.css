@@ -1408,7 +1408,7 @@ body.dark .custom-link:hover{
 }
 
 /*ESTILOS PARA PERFIL.HTML*/
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
     .cajaperfil{
         display: flex;
         flex-direction: column; 

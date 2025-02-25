@@ -8,8 +8,9 @@ document.getElementById('share').addEventListener("click", (evt) => {
     // Capturar datos del formulario
     let textPublishing = document.getElementById('text').value.trim(); // Texto de la publicación
     let imagePublishing = document.getElementById('imageUrl').value.trim(); // URL de la imagen
-    let userName = document.getElementById('userName').textContent.vale.trim();
-    let userId = 1 //localStorage.getItem("userId"); // Obtener ID del usuario desde localStorage
+    let userId = localStorage.getItem("userId"); // Obtener ID del usuario desde localStorage
+    console.log("userName: ", userName); // Asegúrate de que 'userName' esté correctamente capturado
+    console.log("lastName: ", lastName); 
 
     // Etiqueta para mostrar errores
     let errorLabel = document.getElementById('error_label');
@@ -33,12 +34,16 @@ document.getElementById('share').addEventListener("click", (evt) => {
     // Ocultar mensajes de error si pasa todas las validaciones
     errorLabel.style.display = "none";
 
+    let userName = localStorage.getItem("userName"); 
+    let lastName = localStorage.getItem("lastName");
+
     // Crear objeto de la solicitud
     let peticion = {
         Text: textPublishing,
         ImageUrl: imagePublishing,
         UserId: userId,
         UserName:userName, 
+        LastName:lastName, 
     
     };
 

@@ -6,7 +6,8 @@ export async function obtenerPublicaciones() {
     // Convertir PublishDate a un objeto Date (si es necesario)
     data.data.forEach(post => {
         // Convertimos el string en formato ISO a un objeto Date
-        post.PublishDate = new Date(post.PublishDate); 
+        post.PublishDate = new Date(post.PublishDate);
+        post.fullName = `${post.userName} ${post.lastName}`
     });
 
     return data.data;
@@ -56,7 +57,7 @@ export async function manejarReaccion(postId) {
 
         const data = await response.json();
         console.log("Reacción añadida:", data);
-        alert("¡Reaccionaste con ❤️!");
+        alert("¡Reaccionaste con 🌱!");
     } catch (error) {
         console.error("Error al enviar reacción:", error);
     }
