@@ -19,7 +19,6 @@ body{
     border-radius: 50%;   
     cursor: pointer;
     transition: background-color 0.3s ease-in-out;
-    position: relative;
 
 }
 
@@ -58,7 +57,8 @@ body.dark .moon-icon {
 .custom-navbar {
     background-color: #F2C7C5; 
     border-radius: 25px;
-    width: 70%;
+    width: 85%;
+    margin-left: 10px;
     color: #9c4251;
 }
 
@@ -238,14 +238,49 @@ body.dark .custom-link:hover{
 
 /*✩✩✩✩✩ MEDIA Telefono PARA MURO.html ✩✩✩✩✩*/ 
 @media  (min-width:300px) and (max-width:600px) {
-    .pantalla {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 10px;
+    .custom-navbar {
+        width: 80%; /* Navbar ocupa todo el ancho */
+        border-radius: 20px; /* Se eliminan los bordes redondeados para mejor adaptación */
+        padding: 10px;
     }
 
+    .navbar-toggler {
+        width: 50px; 
+        height: 50px; 
+        font-size: 1.2rem;        
+        border-radius: 10px;
+        place-content: left;
+    }
+
+
+    .navbar-collapse {
+        text-align: left;
+    }
+
+    .navbar-nav {
+        gap: 2px; 
+    }
+
+    .custom-link {
+        font-size: 0.9rem; /* Tamaño de letra más grande */
+        border-radius: 8px;
+    }
+
+    .form-control-nav {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .d-flex {
+        justify-content: center; /* Centrar el botón de búsqueda */
+    }
+
+    .d-flex svg {
+        width: 30px;
+        height: 30px;
+    }
     .logoBarraNavegacion {
-        width: 25%;
+        width: 10%; 
         height: auto;
     }
 
@@ -254,7 +289,7 @@ body.dark .custom-link:hover{
         margin-left: 20px;
         margin-right: 5px;
         width: 15%;
-        height: 35px;
+        height: 30px;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -272,16 +307,21 @@ body.dark .custom-link:hover{
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         background-color: #f2c7c5;
         overflow: hidden;
-        width: 95%;
-        padding: 8px;
+        width: 90%;
+        padding: 10px;
     }
 
+    .miNombre {
+        display: flex;
+        justify-content: center;   
+        align-items: center;       
+        height: 8vh; /* Ajuste de altura */
+        text-align: center;        
+    }
 
     .nombre {
         color: #D97D54;
-        margin-left: 15px;
-        align-self: center;
-        font-size: 0.9rem;
+        font-size: 1rem; /* Ajusta el tamaño del nombre */
     }
 
     .content {
@@ -294,7 +334,7 @@ body.dark .custom-link:hover{
     }
 
     .imageBox img {
-        width: 80%;
+        width: 90%; /* Ajusta el tamaño de la imagen */
         height: auto;
         object-fit: cover;
         border-radius: 10px;
@@ -305,13 +345,13 @@ body.dark .custom-link:hover{
     }
 
     .card-title {
-        font-size: 1rem;
+        font-size: 1.2rem; /* Ajusta el tamaño del título */
         color: #333;
         margin-bottom: 8px;
     }
 
     .card-text {
-        font-size: 0.8rem;
+        font-size: 0.9rem; /* Ajusta el tamaño del texto */
         color: #555;
         margin-bottom: 8px;
     }
@@ -319,32 +359,31 @@ body.dark .custom-link:hover{
     .barraComentario {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        border-top: 1px solid #ddd;
-        background-color: #f2c7c5;
+        justify-content: center;
         flex-direction: row;
-        padding: 8px;
+        background-color: #f2c7c5;
+        padding: 10px;
     }
 
     .boton-publicacion {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 35px;
-        height: 35px;
-        margin-left: 5px;
-        margin-right: 5px;
+        width: 40px;
+        height: 40px;
+        margin: 5px;
         background-color: #f2c7c5;
         border: none;
         border-radius: 50%;
         cursor: pointer;
-        transition: border 0.3s ease;
+        transition: 0.3s ease;
     }
 
     .boton-publicacion:hover {
         background-color: gray;
         color: #fff;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+        transition: 0.3s ease;
     }
 
     .boton-publicacion svg {
@@ -353,44 +392,67 @@ body.dark .custom-link:hover{
         fill: #9c4251;
     }
 
-    .comentario {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        flex-grow: 1;
-    }
-
     .inputComentario {
         flex-grow: 1;
         padding: 8px;
+        
         border: 1px solid black;
         border-radius: 15px;
         outline: none;
-        font-size: 0.9rem;
+        font-size: 1rem;
         transition: all 0.3s ease-in-out;
     }
-
+    .inputComentario:focus{
+        border: 1px solid black;
+        outline: none;
+        box-shadow: 0 0 5px #9c4251;
+    }
+    
     .ComentariosRealizados {
-        font-size: 0.7rem;
-        width: 100%;
-        border-radius: 15px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+        padding: 5px 15px;
+        display: inline-block;
+        width: fit-content; /* Ajusta el ancho al contenido */
+        max-width: 100%;  
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;       
     }
 
+    .ComentariosRealizados p {
+        border-radius: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05); 
+        background-color: #ffe4e1;
+        color: #d94f70;
+        cursor: pointer;
+    }
+
+    .ComentariosRealizados p:hover {
+        transform: translateY(-3px) scale(1.03); 
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); 
+        border: 2px solid #000000; 
+        background-color: #fff5f5;
+        opacity: 0.95;
+        transition: 0.3s ease;
+    }
+
+
     .botonComentario {
-        padding: 6px 10px;
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        margin-bottom: 5px;
         background-color: #9c4251;
         color: #fff;
         border: none;
         border-radius: 15px;
         cursor: pointer;
         transition: 0.3s ease;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .botonComentario:hover {
         background-color: gray;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+        transition: 0.3s ease;
     }
     
     
@@ -835,56 +897,96 @@ body.dark .custom-link:hover{
 
 
 
-@media (min-width: 601px) and (max-width: 1023px) {
+@media (min-width: 601px) and (max-width: 1024px) {
     /*✩✩✩✩✩ ESTILOS PARA MURO.HTML ✩✩✩✩✩*/
-    .pantalla {
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 15px;
-    }
-
-    .logoBarraNavegacion{
-        width: 15%; 
-        height: auto;
-    }
-    .dark-mode-btn {
-        background: none;     
-        margin-left: 30px; 
-        margin-right: 10px;
-        width: 12%; 
-        height: 40px;  
-        border-radius: 50%;    
-        display: flex;
-        align-items: center;
-        justify-content: center; 
-        box-shadow: none;  
-        cursor: pointer;    
-    }
-    
-    .articleBox {
-        display: flex;
-        flex-direction: column; 
-        margin: 15px auto;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        background-color: #f2c7c5;
-        overflow: hidden;
-        width: 90%;        
+    .custom-navbar {
+        width: 80%; /* Navbar ocupa todo el ancho */
+        border-radius: 20px; /* Se eliminan los bordes redondeados para mejor adaptación */
         padding: 10px;
     }
-    
 
-    .nombre{
-        color: #D97D54;
+    .navbar-toggler {
+        width: 50px; 
+        height: 50px; 
+        font-size: 1.2rem;        
+        border-radius: 10px;
+    }
+
+
+    .navbar-collapse {
+        text-align: left;
+    }
+
+    .navbar-nav {
+        gap: 2px; 
+    }
+
+    .custom-link {
+        font-size: 0.9rem; /* Tamaño de letra más grande */
+        border-radius: 8px;
+    }
+
+    .form-control-nav {
+        width: 100%;
+        font-size: 0.9rem;
+    }
+
+    .d-flex {
+        justify-content: center; /* Centrar el botón de búsqueda */
+    }
+
+    .d-flex svg {
+        width: 30px;
+        height: 30px;
+    }
+    .logoBarraNavegacion {
+        width: 10%; 
+        height: auto;
+    }
+
+    .dark-mode-btn {
+        background: none;
         margin-left: 20px;
-        align-self: left;
-        font-size: 1rem;
+        margin-right: 5px;
+        width: 5%;
+        height: 30px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: none;
+        cursor: pointer;
+    }
+
+    .articleBox {
+        display: flex;
+        flex-direction: column;
+        margin: 15px auto;
+        border: 1px solid #ddd;
+        border-radius: 15px;
+        box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+        background-color: #f2c7c5;
+        overflow: hidden;
+        width: 85%;
+        padding: 15px;
+    }
+
+    .miNombre {
+        display: flex;
+        justify-content: center;   
+        align-items: center;       
+        height: 10vh; /* Ajuste de altura */
+        text-align: center;        
+    }
+
+    .nombre {
+        color: #D97D54;
+        font-size: 1.2rem; /* Ajusta el tamaño del nombre */
     }
 
     .content {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         align-items: center;
         text-align: center;
         gap: 20px;
@@ -892,57 +994,56 @@ body.dark .custom-link:hover{
     }
 
     .imageBox img {
-        width: 50%;
+        width: 85%; /* Ajusta el tamaño de la imagen */
         height: auto;
-        object-fit: cover; 
-        border-radius: 10px;        
+        object-fit: cover;
+        border-radius: 12px;
     }
 
     .cardBody {
-        flex-grow: 1; 
+        flex-grow: 1;
     }
 
     .card-title {
-        font-size: 1.2rem;
+        font-size: 1.3rem; /* Ajusta el tamaño del título */
         color: #333;
         margin-bottom: 10px;
     }
 
     .card-text {
-        font-size: 0.9rem;
+        font-size: 1rem; /* Ajusta el tamaño del texto */
         color: #555;
-        margin-bottom: 10px;        
+        margin-bottom: 10px;
     }
 
     .barraComentario {
         display: flex;
         align-items: center;
-        justify-content: space-between; 
-        border-top: 1px solid #ddd;
-        background-color: #f2c7c5;
+        justify-content: center;
         flex-direction: row;
-        padding: 10px;
+        background-color: #f2c7c5;
+        padding: 15px;
     }
 
     .boton-publicacion {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 40px;
-        height: 40px;
-        margin-left: 8px;
-        margin-right: 8px;
+        width: 45px;
+        height: 45px;
+        margin: 8px;
         background-color: #f2c7c5;
         border: none;
         border-radius: 50%;
         cursor: pointer;
-        transition: border 0.3s ease;
+        transition: 0.3s ease;
     }
 
     .boton-publicacion:hover {
         background-color: gray;
         color: #fff;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+        box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.6);
+        transition: 0.3s ease;
     }
 
     .boton-publicacion svg {
@@ -951,44 +1052,68 @@ body.dark .custom-link:hover{
         fill: #9c4251;
     }
 
-    .comentario {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        flex-grow: 1; 
-    }
-    .inputComentario{
-        flex-grow: 1; 
+    .inputComentario {
+        flex-grow: 1;
         padding: 10px;
         border: 1px solid black;
-        border-radius: 20px;
-        outline: none; 
-        font-size: 1rem; 
-        transition: all 0.3s ease-in-out; 
+        border-radius: 15px;
+        outline: none;
+        font-size: 1rem;
+        transition: all 0.3s ease-in-out;
     }
 
+    .inputComentario:focus{
+        border: 1px solid black;
+        outline: none;
+        box-shadow: 0 0 5px #9c4251;
+    }
+    
     .ComentariosRealizados {
-        font-size: 0.8rem;
-        width: 100%;
-        border-radius: 20px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);         
+        padding: 8px 18px;
+        display: inline-block;
+        width: fit-content; /* Ajusta el ancho al contenido */
+        max-width: 100%;  
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;       
+    }
+
+    .ComentariosRealizados p {
+        border-radius: 12px;
+        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05); 
+        background-color: #ffe4e1;
+        color: #d94f70;
+        cursor: pointer;
+    }
+
+    .ComentariosRealizados p:hover {
+        transform: translateY(-3px) scale(1.03); 
+        box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.2); 
+        border: 2px solid #000000; 
+        background-color: #fff5f5;
+        opacity: 0.95;
+        transition: 0.3s ease;
     }
 
     .botonComentario {
-        padding: 8px 12px;
+        width: 100%;
+        padding: 10px;
+        margin-top: 8px;
+        margin-bottom: 8px;
         background-color: #9c4251;
         color: #fff;
         border: none;
-        border-radius: 20px;
+        border-radius: 15px;
         cursor: pointer;
-        transition: 0.3s ease;        
-        font-size: 0.9rem;
+        transition: 0.3s ease;
+        font-size: 1rem;
     }
 
     .botonComentario:hover {
         background-color: gray;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
-    }   
+        box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.6);
+        transition: 0.3s ease;
+    }
+  
    
     /*ESTILOS PARA PERFIL.HTML*/
     .cajaperfil{
@@ -1012,22 +1137,6 @@ body.dark .custom-link:hover{
         width: 10%; 
         border-radius: 100%;
         margin: 10px 0 0 10px; 
-    }
-
-    .custom-navbar{
-        width: 20%;
-        height: 5%;
-        place-content: right;
-    }
-
-    .form-control-nav {
-        width: 50%; 
-        padding: 10px;
-        border: 1px solid black;
-        border-radius: 20px;
-        outline: none; 
-        font-size: 1rem; 
-        transition: all 0.3s ease-in-out; 
     }
        
     /* ✩✩✩✩✩ ESTILOS PARA CONTRASENA.HTML ✩✩✩✩✩ */
@@ -1816,12 +1925,17 @@ body.dark .custom-link:hover{
         padding: 10px;
     }
     
-
-    .nombre{
+    .miNombre {
+        display: flex;
+        justify-content: center;   
+        align-items: center;       
+        height: 10vh;             
+        text-align: center;        
+    }
+    
+    .nombre {
         color: #D97D54;
-        margin-left: 20px;
-        align-self: left;
-        font-size: 1rem;
+        font-size: 3rem;   
     }
 
     .content {
@@ -1884,6 +1998,7 @@ body.dark .custom-link:hover{
         background-color: gray;
         color: #fff;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
+        transition: 0.3s ease;
     }
 
     .boton-publicacion svg {
@@ -1901,18 +2016,35 @@ body.dark .custom-link:hover{
     .inputComentario{
         flex-grow: 1; 
         padding: 10px;
-        border: 1px solid black;
         border-radius: 20px;
         outline: none; 
         font-size: 1rem; 
         transition: all 0.3s ease-in-out;
     }
 
+    .inputComentario:focus{
+        border: 1px solid black;
+        outline: none;
+        box-shadow: 0 0 5px #9c4251;
+    }
     .ComentariosRealizados {
-        font-size: 0.8rem;
-        width: 100%;
-        border-radius: 20px;        
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);         
+        transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    }
+    .ComentariosRealizados p {
+        border-radius: 10px;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        transform: scale(1.05); 
+        background-color: #ffe4e1;
+        color: #d94f70;
+        cursor: pointer;
+    }
+    .ComentariosRealizados p:hover {
+        transform: translateY(-3px) scale(1.03); /* Leve elevación y crecimiento */
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+        border: 2px solid #000000; /* Resalta con borde rosa */
+        background-color: #fff5f5; /* Un blanco con tono rosa */
+        opacity: 0.95;
+        transition: 0.3s ease;
     }
 
     .botonComentario {
@@ -1931,4 +2063,3 @@ body.dark .custom-link:hover{
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     } 
 }
-

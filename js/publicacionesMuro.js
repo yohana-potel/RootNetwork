@@ -116,7 +116,7 @@ function mostrarComentarios(container, comentarios) {
         container.innerHTML = "<p>No hay comentarios aún.</p>";
     } else {
         comentarios.forEach(comment => {
-            container.innerHTML += `<div class="ComentariosRealizados"><strong>${comment.userName}</strong>: ${comment.text}</div>`;
+            container.innerHTML += `<div class="ComentariosRealizados"><p> <strong>${comment.userName}</strong>: ${comment.text}</p></div>`;
         });
     }
 }
