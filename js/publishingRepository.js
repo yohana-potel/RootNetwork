@@ -21,8 +21,18 @@ export async function obtenerComentarios(postId) {
 }
 
 export async function enviarComentarioAPI(postId, texto) {
-    const userId = 6; // Ajusta esto según tu lógica
-    const comentario = { userId, publishingId: postId, text: texto };
+    const userId = localStorage.getItem("userId"); // Obtener el ID del usuario logueado
+
+    if (!userId) {
+        console.error("No hay un usuario logueado.");
+        return;
+    }
+
+    const comentario = { 
+        userId: parseInt(userId), // Convertir a número
+        publishingId: postId, 
+        text: texto 
+    };
 
     const response = await fetch("http://localhost:5156/api/Comment/", {
         method: "POST",
