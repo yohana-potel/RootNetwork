@@ -1,8 +1,20 @@
 import { obtenerPublicaciones, obtenerComentarios, enviarComentarioAPI, manejarReaccion } from './publishingRepository.js';
 
 document.addEventListener("DOMContentLoaded", iniciarApp);
-
+ 
 async function iniciarApp() {
+    const userName = localStorage.getItem("userName");
+    const lastName = localStorage.getItem("lastName");
+
+    // Verifica si userName y lastName existen en localStorage
+    if (userName && lastName) {
+        const fullName = `${userName} ${lastName}`;  
+        console.log("Nombre completo desde localStorage:", fullName); // Verifica los valores
+        document.getElementById("nombreUsuario").textContent = fullName; // Asigna el nombre completo al DOM
+    } else {
+        console.error("El nombre o el apellido no están disponibles en localStorage.");
+    }
+    
     try {
         const posts = await obtenerPublicaciones();
         const container = document.getElementById("articleBox");
@@ -59,12 +71,12 @@ function crearPostHTML(post) {
     const postHTML = document.createElement("article");
     postHTML.classList.add("articleBox");
     postHTML.style.maxWidth = "540px";
-
+    
     postHTML.innerHTML = `
         <div class="content">
             <div class="imageBox"><img src="${post.imageUrl}" alt="Imagen de la publicación"></div>
             <div class="cardBody">
-                <h5 class="card-title"id="userName">${post.userName}</h5>
+                <h5 class="card-title">${post.fullName}</h5>
                 <p class="text">${post.text}</p>
                 <p class="card-text"><small>${new Date(post.PublishDate).toLocaleString()}</small></p>
             </div>
@@ -104,7 +116,7 @@ function mostrarComentarios(container, comentarios) {
         container.innerHTML = "<p>No hay comentarios aún.</p>";
     } else {
         comentarios.forEach(comment => {
-            container.innerHTML += `<div class="ComentariosRealizados"><strong>${comment.userName}</strong>: ${comment.text}</div>`;
+            container.innerHTML += `<div class="ComentariosRealizados"><p> <strong>${comment.userName}</strong>: ${comment.text}</p></div>`;
         });
     }
 }
