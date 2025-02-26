@@ -21,25 +21,29 @@
        </div>
 
        <section class="caja">
-            <form id="formularioRegistro" class="formulario" >
-                <h2 class="titulo" >Formulario de Registro </h2>
+        <form id="formularioRegistro" class="formulario">
+            <h2 class="titulo">Formulario de Registro </h2>
+        
+            <input id="nombre" class="controls" type="text" name="nombre" placeholder="Nombres "> 
+            <input id="apellido" class="controls" type="text" name="apellido" placeholder="Apellidos "> 
             
-                <input id="nombre" class="controls" type="text" name="nombre" placeholder="Nombres "> 
-                <input id="apellido" class="controls" type="text" name="apellido"  placeholder="Apellidos "> 
-                
-                <input id="fechaNaciemiento" class="controls" type="date" name="fecha">
-
-                <input id="correo" class="controls" type="email" name="correo"  placeholder="Email"> 
-                <input id="contrasena" class="controls" type="password" name="correo"  placeholder="Contraseña">
-                
-                <label>
-                    <input type="checkbox" id="terminos"> Acepto los <a href="./terminos.html">Términos y Condiciones</a>
-                </label>
-                <br>
-                <button id="botonregistrarse" class="botonregistrarse" type="submit" value="Registrarse" >Registrarse</button>
-
-                <p class="termino">Ya tengo cuenta <a href="index.html"> Log in </a> </p>
-            </form>
+            <input id="fechaNacimiento" class="controls" type="date" name="fecha">
+        
+            <input id="correo" class="controls" type="email" name="correo" placeholder="Email"> 
+            <input id="contrasena" class="controls" type="password" name="correo" placeholder="Contraseña">
+        
+            <label>
+                <input type="checkbox" id="terminos"> Acepto los <a href="./terminos.html">Términos y Condiciones</a>
+            </label>
+            
+            <!-- Agrega el mensaje de error aquí -->
+            <p id="error_label" style="display: none; color: red;"></p>
+        
+            <button id="botonregistrarse" class="botonregistrarse" type="submit">Registrarse</button>
+        
+            <p class="termino">Ya tengo cuenta <a href="index.html"> Log in </a> </p>
+        </form>
+        
             
         </section>
 
