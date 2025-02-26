@@ -30,18 +30,23 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         getRegister(peticion, (json) => {
-            console.log("📥 Respuesta del servidor:", json);
+            console.log(" Respuesta del servidor:", json);
         
-            // En lugar de json.success, verifica si json.id existe y es mayor a 0
             if (json.id && json.id > 0) {  
-                alert("✅ Registro exitoso. Redirigiendo al login...");
-                window.location.href = "/muroEtiqta.html"; // O "" si quieres enviarlo al muro directamente
+                // Guardar datos del usuario en localStorage
+                localStorage.setItem("userId", json.id);
+                localStorage.setItem("userName", json.name);
+                localStorage.setItem("lastName", json.lastName);
+                
+                alert(" Registro exitoso. Redirigiendo al muro...");
+                window.location.href = "/muroEtiqta.html"; 
             } else {
                 let errorLabel = document.getElementById("error_label");
                 errorLabel.style.display = "block";
                 errorLabel.innerText = ` ${json.message || "Error en el registro"}`;
             }
         });
+        
         
     });
 });

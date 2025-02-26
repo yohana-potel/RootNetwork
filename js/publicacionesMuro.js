@@ -1,22 +1,24 @@
 import { obtenerPublicaciones, obtenerComentarios, enviarComentarioAPI, manejarReaccion } from './publishingRepository.js';
 
 document.addEventListener("DOMContentLoaded", iniciarApp);
- 
+
 async function iniciarApp() {
     const userName = localStorage.getItem("userName");
     const lastName = localStorage.getItem("lastName");
+    const userId = localStorage.getItem("userId");
 
-    // Verifica si userName y lastName existen en localStorage
     if (userName && lastName) {
         const fullName = `${userName} ${lastName}`;  
-        console.log("Nombre completo desde localStorage:", fullName); // Verifica los valores
-        document.getElementById("nombreUsuario").textContent = fullName; // Asigna el nombre completo al DOM
+        document.getElementById("nombreUsuario").textContent = fullName;
     } else {
         console.error("El nombre o el apellido no están disponibles en localStorage.");
     }
     
     try {
-        const posts = await obtenerPublicaciones();
+        // Asegúrate de que 'posts' obtenga las publicaciones correctamente
+        const posts = await obtenerPublicaciones(); 
+        console.log("Posts:", posts);  // Verifica en consola si se obtienen las publicaciones correctamente
+
         const container = document.getElementById("articleBox");
         container.innerHTML = "";
 
@@ -24,11 +26,13 @@ async function iniciarApp() {
             const { postHTML, comentarioContainer } = crearPostHTML(post);
             container.appendChild(postHTML);
 
+            // Botón de "me gusta"
             const botonLove = postHTML.querySelector(`button[name="meGusta"]`);
             botonLove.addEventListener("click", () => {
                 manejarReaccion(post.id);
             });
 
+            // Cargar comentarios
             try {
                 const comentarios = await obtenerComentarios(post.id);
                 mostrarComentarios(comentarioContainer, comentarios);
@@ -36,17 +40,45 @@ async function iniciarApp() {
                 console.error(`Error al cargar comentarios del post ${post.id}:`, error);
             }
 
+            // Manejo de comentarios
             const botonComentar = postHTML.querySelector(".botonComentario");
             const inputComentario = postHTML.querySelector(".inputComentario");
 
             botonComentar.addEventListener("click", async () => {
                 await manejarComentario(post.id, inputComentario, comentarioContainer);
             });
+
+            // Manejo del botón de compartir
+            const botonCompartir = postHTML.querySelector(".boton-publicacion[name='compartir']");
+            botonCompartir.addEventListener("click", async () => {
+                // Crear la nueva publicación con los datos del post actual
+                const nuevaPublicacion = {
+                    Text: post.text,
+                    ImageUrl: post.imageUrl,
+                    UserId: userId,
+                    UserName: userName,
+                    LastName: lastName
+                };
+
+                // Enviar la nueva publicación al backend
+                try {
+                    const response = await getPublishing(nuevaPublicacion);
+                    if (response.success) {
+                        alert("¡Publicación compartida con éxito!");
+                        window.location.reload();  // Recargar para ver la nueva publicación en el muro
+                    } else {
+                        alert("Hubo un error al compartir la publicación.");
+                    }
+                } catch (error) {
+                    console.error("Error al compartir la publicación:", error);
+                }
+            });
         });
     } catch (error) {
         console.error("Error al cargar publicaciones:", error);
     }
 }
+
 
 async function manejarComentario(postId, inputComentario, comentarioContainer) {
     const texto = inputComentario.value.trim();

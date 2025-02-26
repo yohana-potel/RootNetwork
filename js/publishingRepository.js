@@ -1,6 +1,10 @@
 export async function obtenerPublicaciones() {
     const response = await fetch("http://localhost:5156/Publishing/all");
     const data = await response.json();
+    
+    // Mostrar los datos de la respuesta, usando 'data' en lugar de 'post'
+    console.log("Datos de las publicaciones:", data);
+
     if (!data.success) throw new Error(data.message);
 
     // Convertir PublishDate a un objeto Date (si es necesario)
@@ -12,6 +16,8 @@ export async function obtenerPublicaciones() {
 
     return data.data;
 }
+
+
 
 export async function obtenerComentarios(postId) {
     const response = await fetch(`http://localhost:5156/api/Comment/post/${postId}`);
@@ -80,7 +86,7 @@ export async function manejarReaccion(postId) {
     }
 }
 
-export async function getPublishing(peticion, callback) {
+export async function getPublishing(peticion) {
     try {
         const response = await fetch("http://localhost:5156/Publishing", {
             method: "POST",
@@ -89,14 +95,15 @@ export async function getPublishing(peticion, callback) {
         });
 
         const data = await response.json();
-
         if (data.success) {
-            callback({ success: true, data: data.data });
+            return { success: true, data: data.data };
         } else {
-            callback({ success: false, message: data.message });
+            return { success: false, message: data.message };
         }
     } catch (error) {
         console.error("Error al enviar publicación:", error);
-        callback({ success: false, message: "Error en la conexión con el servidor." });
+        return { success: false, message: "Error en la conexión con el servidor." };
     }
+
+
 }
