@@ -116,9 +116,18 @@ function mostrarComentarios(container, comentarios) {
         container.innerHTML = "<p>No hay comentarios aún.</p>";
     } else {
         comentarios.forEach(comment => {
-            container.innerHTML += `<div class="ComentariosRealizados"><p> <strong>${comment.userName}</strong>: ${comment.text}</p></div>`;
+            // Crear el enlace con el username que lleva al perfil del usuario
+            const userProfileLink = `/perfil/${comment.userName}`;
+            container.innerHTML += `
+                <div class="ComentariosRealizados">
+                    <p>
+                        <strong><a href="${userProfileLink}">${comment.userName}</a></strong>: ${comment.text}
+                    </p>
+                </div>
+            `;
         });
     }
 }
+
 
 

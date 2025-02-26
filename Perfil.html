@@ -33,7 +33,7 @@
         </button>
         <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><img class="logoBarraNavegacion" src="/img/logo-sin-fondo.png-Photoroom.png" alt=""></a>
+                <a class="navbar-brand" href="#"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -60,13 +60,13 @@
         </nav>  
     </header>
     <section class="miNombre">
-      <h4 class="nombre" id="nombreUsuario">Loan Yomi</h4>
+      <h4 class="nombre" id="nombreUsuario"></h4>
     </section>
 
     <article class="cajaperfil">  
-        <h3 class="daTosperfil">Mis Publicaciones </h3>
-        <div class="content">
-            <div class="imageBox">
+      <h3 class="daTosperfil">Mis Publicaciones</h3>
+        <div id="publicacionesContainer" class="content">
+            <div class="publicacion">
               <img src="./img/arbolpotada.jpg" alt="Imagen de la publicación" id="imageUrl">
             </div>
             <div class="cardBody" id="cardPublicacion">
@@ -74,7 +74,7 @@
               <p class="text" id="text">Este es un texto de ejemplo de la publicación, que puede ser más largo.</p>
               <p class="card-text"><small class="text-body-secondary">Última actualización hace 3 minutos</small></p>
             </div>
-          </div>
+        </div>
         
           <div class="barraComentario">
             <button class="boton-publicacion" name="meGusta" id="love">
@@ -99,6 +99,10 @@
             </div>
           </div>
     </article>
-<script src="./js/clearmode.js"></script>
+    <script type="module" src="./js/publishingRepository.js"></script>
+    <script type="module" src="./js/publicacionesMuro.js"></script>
+    <script src="./js/perfil.js"></script>
+    <script src="./js/botonesPublicacion.js"></script>
+    <script src="./js/clearmode.js"></script>
 </body>
 </html>

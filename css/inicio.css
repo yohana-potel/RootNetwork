@@ -1535,6 +1535,10 @@ body.dark .custom-link:hover{
         color: #D97D54;
         text-align: center;
     }
+    .imageBox{
+        width: 50%;
+        border-radius: 20px;
+    }
 
     /* ✩✩✩✩✩ ESTILOS PARA CONTRASENA.HTML ✩✩✩✩✩ */
     .recuperar{
