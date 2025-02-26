@@ -45,8 +45,15 @@ export async function enviarComentarioAPI(postId, texto) {
 }
 
 export async function manejarReaccion(postId) {
-    const userId = 1; // Cambiar por el ID del usuario autenticado
-    const type = "love";
+    const userId = localStorage.getItem("userId"); // Obtener el ID del usuario autenticado
+
+    if (!userId) {
+        console.error(" No hay un usuario logueado.");
+        alert("Debes iniciar sesión para reaccionar.");
+        return;
+    }
+
+    const type = "love"; // Tipo de reacción
 
     try {
         const response = await fetch("http://localhost:5156/Reaction", {
@@ -55,7 +62,7 @@ export async function manejarReaccion(postId) {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                userId,
+                userId: parseInt(userId), // Convertimos a número
                 postId,
                 type
             })
