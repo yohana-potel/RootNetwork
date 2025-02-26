@@ -1,4 +1,4 @@
-import { obtenerPublicaciones, obtenerComentarios, enviarComentarioAPI, manejarReaccion } from './publishingRepository.js';
+import { obtenerPublicaciones, obtenerComentarios, enviarComentarioAPI, manejarReaccion, getPublishing } from './publishingRepository.js';
 
 document.addEventListener("DOMContentLoaded", iniciarApp);
 
@@ -25,13 +25,13 @@ async function iniciarApp() {
         posts.forEach(async post => {
             const { postHTML, comentarioContainer } = crearPostHTML(post);
             container.appendChild(postHTML);
-
+        
             // Botón de "me gusta"
             const botonLove = postHTML.querySelector(`button[name="meGusta"]`);
             botonLove.addEventListener("click", () => {
                 manejarReaccion(post.id);
             });
-
+        
             // Cargar comentarios
             try {
                 const comentarios = await obtenerComentarios(post.id);
@@ -39,15 +39,15 @@ async function iniciarApp() {
             } catch (error) {
                 console.error(`Error al cargar comentarios del post ${post.id}:`, error);
             }
-
+        
             // Manejo de comentarios
             const botonComentar = postHTML.querySelector(".botonComentario");
             const inputComentario = postHTML.querySelector(".inputComentario");
-
+        
             botonComentar.addEventListener("click", async () => {
                 await manejarComentario(post.id, inputComentario, comentarioContainer);
             });
-
+        
             // Manejo del botón de compartir
             const botonCompartir = postHTML.querySelector(".boton-publicacion[name='compartir']");
             botonCompartir.addEventListener("click", async () => {
@@ -59,7 +59,7 @@ async function iniciarApp() {
                     UserName: userName,
                     LastName: lastName
                 };
-
+        
                 // Enviar la nueva publicación al backend
                 try {
                     const response = await getPublishing(nuevaPublicacion);
