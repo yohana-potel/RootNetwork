@@ -15,6 +15,7 @@ loginForm.addEventListener("submit", (evt) => {
         console.log("Respuesta completa del servidor:", json); // 🔍 Ver qué datos devuelve el backend
     
         if (json.id) { // Si la respuesta tiene un ID, el usuario inició sesión correctamente
+            localStorage.setItem("userId", json.id);
             localStorage.setItem("userName", json.name);
             localStorage.setItem("lastName", json.lastName);
             window.location.href = "/muroEtiqta.html";
