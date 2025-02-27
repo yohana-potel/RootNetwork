@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     let registrationForm = document.getElementById('formularioRegistro');
+    let termsCheckbox = document.getElementById('terminos'); // Agregar referencia al checkbox
 
     if (!registrationForm) {
         console.error("El formulario de registro no se encontró en el DOM.");
@@ -9,9 +10,14 @@ document.addEventListener("DOMContentLoaded", function () {
     registrationForm.addEventListener("submit", (evt) => {
         evt.preventDefault();
 
+        if (!termsCheckbox.checked) { 
+            alert("Debes aceptar los Términos y Condiciones para registrarte.");
+            return; // Detiene el proceso si no están aceptados
+        }
+
         let nombre = document.getElementById('nombre');
         let apellido = document.getElementById('apellido');
-        let fechaNacimiento = document.getElementById('fechaNacimiento'); // Corregido
+        let fechaNacimiento = document.getElementById('fechaNacimiento');
         let correo = document.getElementById('correo');
         let contrasena = document.getElementById('contrasena');
 
@@ -30,23 +36,22 @@ document.addEventListener("DOMContentLoaded", function () {
         };
 
         getRegister(peticion, (json) => {
-            console.log(" Respuesta del servidor:", json);
+            console.log("Respuesta del servidor:", json);
         
             if (json.id && json.id > 0) {  
-                // Guardar datos del usuario en localStorage
                 localStorage.setItem("userId", json.id);
                 localStorage.setItem("userName", json.name);
                 localStorage.setItem("lastName", json.lastName);
                 
-                alert(" Registro exitoso. Redirigiendo al muro...");
+                alert("Registro exitoso. Redirigiendo al muro...");
                 window.location.href = "/muroEtiqta.html"; 
             } else {
                 let errorLabel = document.getElementById("error_label");
-                errorLabel.style.display = "block";
-                errorLabel.innerText = ` ${json.message || "Error en el registro"}`;
+                if (errorLabel) {
+                    errorLabel.style.display = "block";
+                    errorLabel.innerText = ` ${json.message || "Error en el registro"}`;
+                }
             }
         });
-        
-        
     });
 });
