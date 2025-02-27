@@ -1,53 +1,40 @@
-import { crearPublicacionAPI } from './publishingRepository.js'; // Asumimos que esta función existe y maneja el backend
+import { crearPublicacionAPI } from './publishingRepository.js';
 
-document.addEventListener("DOMContentLoaded", iniciarApp);
+document.getElementById('share').addEventListener('click', async function() {
+    const text = document.getElementById('text').value;
+    const imageUrl = document.getElementById('imageUrl').value();
 
-async function iniciarApp() {
-    const userName = localStorage.getItem("userName");
-    const lastName = localStorage.getItem("lastName");
-    const userId = localStorage.getItem("userId");
+    // Obtener el userId desde el localStorage
+    const userId = localStorage.getItem('userId'); 
 
-    if (userName && lastName) {
-        const fullName = `${userName} ${lastName}`;
-        document.getElementById("userName").textContent = fullName;
-    } else {
-        console.error("El nombre o el apellido no están disponibles en localStorage.");
+    // Verificar si el userId existe en el localStorage
+    if (!userId) {
+        alert("Usuario no encontrado. Por favor, inicia sesión.");
+        return;
     }
 
-    // Formulario de creación de publicación
-    const formulario = document.getElementById("publi");
+    // Crear el objeto de la nueva publicación
+    const nuevaPublicacion = {
+        Text: text,
+        ImageUrl: imageUrl,
+        UserId: userId
+    };
 
-    formulario.addEventListener("submit", async (event) => {
-        event.preventDefault(); // Evitar que se recargue la página
+    console.log("Enviando publicación:", nuevaPublicacion);
 
-        const texto = document.getElementById("text").value.trim();
-        const imageUrl = document.getElementById("imageUrl").value.trim();
+    try {
+        // Aquí estamos usando la función 'crearPublicacionAPI' que envía la publicación
+        const response = await crearPublicacionAPI(nuevaPublicacion);
+        console.log("Respuesta del servidor:", response);
 
-        if (!texto || !imageUrl) {
-            document.getElementById("error_label").textContent = "El texto y la URL de la imagen son obligatorios.";
-            document.getElementById("error_label").style.display = "block";
-            return;
+        if (response.success) {
+            alert("¡Publicación creada con éxito!");
+            window.location.href = "muroEtiqueta.html"; // Redirige al muro
+        } else {
+            alert("Error al publicar: " + response.message);
         }
-
-        const nuevaPublicacion = {
-            text: texto,
-            imageUrl: imageUrl,
-            userId: userId,
-            userName: userName,
-            lastName: lastName
-        };
-
-        try {
-            const response = await crearPublicacionAPI(nuevaPublicacion); // Llamamos a la función para crear la publicación
-            if (response.success) {
-                alert("¡Publicación creada con éxito!");
-                window.location.href = "muroEtiqta.html"; // Redirige al muro después de crear la publicación
-            } else {
-                alert("Hubo un error al crear la publicación.");
-            }
-        } catch (error) {
-            console.error("Error al crear la publicación:", error);
-            alert("Hubo un error al crear la publicación.");
-        }
-    });
-}
+    } catch (error) {
+        console.error("Error al crear la publicación:", error);
+        alert("Hubo un error al crear la publicación.");
+    }
+});

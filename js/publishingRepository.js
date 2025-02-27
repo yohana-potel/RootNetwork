@@ -107,20 +107,21 @@ export async function getPublishing(peticion) {
 
 
 }
+
 export async function crearPublicacionAPI(publicacion) {
     try {
-        const response = await fetch('/api/publications', { // Asegúrate de que esta URL sea la correcta para tu API
+        const response = await fetch("http://127.0.0.1:5000/Publishing", { // Asegúrate de cambiar esta URL
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json',
+                'Content-Type': 'application/json'
             },
-            body: JSON.stringify(publicacion),
+            body: JSON.stringify(publicacion)
         });
 
-        const data = await response.json();
-        return data; // Deberías devolver la respuesta del backend
+        const result = await response.json();
+        return result;
     } catch (error) {
-        console.error("Error al crear la publicación:", error);
+        console.error("Error en la API:", error);
         throw error;
     }
 }
