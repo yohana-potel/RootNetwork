@@ -3,6 +3,7 @@ import { obtenerPublicaciones, obtenerComentarios, enviarComentarioAPI, manejarR
 // Variables de control de la paginación
 let paginaActual = 1;
 let totalPaginas = 1;
+let cargando = false;  // Flag para evitar solicitudes múltiples
 
 document.addEventListener("DOMContentLoaded", iniciarApp);
 window.addEventListener("scroll", cargarPublicacionesSiNecesario);  // Escuchar el evento de scroll
@@ -33,12 +34,22 @@ async function cargarPublicaciones() {
 
         const posts = response.posts;
         const container = document.getElementById("articleBox");
-        container.innerHTML = "";  // Limpiar el contenedor antes de agregar nuevas publicaciones
+
+        // Si estamos cargando las publicaciones más antiguas, no limpiamos el contenedor
+        if (paginaActual === 1) {
+            container.innerHTML = "";  // Limpiar el contenedor solo cuando cargamos nuevas publicaciones
+        }
 
         // Recorrer los posts y crear los elementos HTML
         posts.forEach(async (post) => {
             const { postHTML, comentarioContainer } = crearPostHTML(post);
-            container.appendChild(postHTML);
+            if (paginaActual === 1) {
+                // Insertar al principio cuando cargamos nuevas publicaciones (más recientes)
+                container.insertBefore(postHTML, container.firstChild);  
+            } else {
+                // Insertar al final cuando cargamos publicaciones antiguas
+                container.appendChild(postHTML);  
+            }
 
             // Llamar funciones para manejar los eventos
             agregarEventosPost(post, postHTML, comentarioContainer);
@@ -57,9 +68,19 @@ async function cargarPublicacionesSiNecesario() {
     const scrollThreshold = document.documentElement.scrollHeight;
 
     // Si estamos cerca del final y hay más páginas, carga la siguiente página
-    if (scrollPosition >= scrollThreshold - 200 && paginaActual < totalPaginas) {
+    if (scrollPosition >= scrollThreshold - 200 && !cargando && paginaActual < totalPaginas) {
+        cargando = true;
         paginaActual++;
-        await cargarPublicaciones();
+        await cargarPublicaciones(); // Cargar publicaciones nuevas al bajar
+        cargando = false;
+    }
+
+    // Si estamos cerca de la parte superior y hay más páginas, carga las publicaciones anteriores
+    if (window.scrollY <= 10 && !cargando && paginaActual > 1) {
+        cargando = true;
+        paginaActual--; // Decrementar la página para cargar las publicaciones más antiguas
+        await cargarPublicaciones(); // Cargar publicaciones anteriores al subir
+        cargando = false;
     }
 }
 
@@ -148,7 +169,7 @@ function crearPostHTML(post) {
             <div class="cardBody">
                 <h5 class="card-title">${post.fullName}</h5>
                 <p class="text">${post.text}</p>
-                <p class="card-text"><small>${new Date(post.PublishDate).toLocaleString()}</small></p>
+                <p class="card-text"><small>Publicado el ${new Date(post.PublishDate).toLocaleString()}</small></p>
             </div>
 
             <div class="barraComentario">
