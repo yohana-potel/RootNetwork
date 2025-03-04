@@ -1925,7 +1925,7 @@ body.dark .custom-link:hover{
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         background-color: #f2c7c5;
         overflow: hidden;
-        width: 90%;        
+        width: 80%;        
         height: auto;
         padding: 10px;
     }
