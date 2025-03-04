@@ -1,20 +1,23 @@
-export async function obtenerPublicaciones() {
-    const response = await fetch("http://localhost:5156/Publishing/all");
-    const data = await response.json();
-    
-    // Mostrar los datos de la respuesta, usando 'data' en lugar de 'post'
-    console.log("Datos de las publicaciones:", data);
+export async function obtenerPublicaciones(page = 1, pageSize = 10) {
+    try {
+        const response = await fetch(`http://localhost:5156/Publishing/all?page=${page}&pageSize=${pageSize}`);
+        const data = await response.json();
 
-    if (!data.success) throw new Error(data.message);
+        console.log("Datos de las publicaciones:", data); // Debugging
 
-    // Convertir PublishDate a un objeto Date (si es necesario)
-    data.data.forEach(post => {
-        // Convertimos el string en formato ISO a un objeto Date
-        post.PublishDate = new Date(post.PublishDate);
-        post.fullName = `${post.userName} ${post.lastName}`
-    });
+        if (!data.success) throw new Error(data.message);
 
-    return data.data;
+        // Convertir PublishDate a un objeto Date y agregar fullName
+        data.data.forEach(post => {
+            post.PublishDate = new Date(post.PublishDate);
+            post.fullName = `${post.userName} ${post.lastName}`;
+        });
+
+        return { posts: data.data, totalRecords: data.totalRecords };
+    } catch (error) {
+        console.error("Error al obtener publicaciones:", error);
+        return { posts: [], totalRecords: 0 };
+    }
 }
 
 

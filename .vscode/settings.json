@@ -7,5 +7,6 @@
         "peticion",
         "Todas",
         "usuario"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
