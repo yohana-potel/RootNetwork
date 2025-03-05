@@ -157,6 +157,21 @@ async function compartirPublicacion(post) {
         console.error("Error al compartir la publicación:", error);
     }
 }
+function formatearFecha(fecha) {
+    if (!fecha) return "Fecha desconocida";
+
+    const fechaValida = new Date(fecha);
+
+    // Verificar si la fecha es válida
+    if (isNaN(fechaValida.getTime())) {
+        return "Fecha inválida";
+    }
+
+    const fechaFormateada = fechaValida.toLocaleDateString(); // Muestra solo la fecha
+    const horaFormateada = fechaValida.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); // Muestra solo horas y minutos
+
+    return `${fechaFormateada}, ${horaFormateada}`;
+}
 
 function crearPostHTML(post) {
     const postHTML = document.createElement("article");
@@ -169,7 +184,7 @@ function crearPostHTML(post) {
             <div class="cardBody">
                 <h5 class="card-title">${post.fullName}</h5>
                 <p class="text">${post.text}</p>
-                <p class="card-text"><small>Publicado el ${new Date(post.PublishDate).toLocaleString()}</small></p>
+                <p class="card-text"><small>Publicado el ${formatearFecha(post.publishDate)}</small></p>
             </div>
 
             <div class="barraComentario">

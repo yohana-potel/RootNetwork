@@ -7,11 +7,18 @@ export async function obtenerPublicaciones(page = 1, pageSize = 10) {
 
         if (!data.success) throw new Error(data.message);
 
-        // Convertir PublishDate a un objeto Date y agregar fullName
+        // Convertir PublishDate correctamente
         data.data.forEach(post => {
-            post.PublishDate = new Date(post.PublishDate);
+            if (post.PublishDate) {
+                post.PublishDate = new Date(post.PublishDate);
+            } else {
+                console.warn("Fecha inválida para post:", post);
+            }
             post.fullName = `${post.userName} ${post.lastName}`;
         });
+
+        // Ordenar publicaciones de más reciente a más antigua
+        data.data.sort((a, b) => b.PublishDate - a.PublishDate);
 
         return { posts: data.data, totalRecords: data.totalRecords };
     } catch (error) {
@@ -19,6 +26,8 @@ export async function obtenerPublicaciones(page = 1, pageSize = 10) {
         return { posts: [], totalRecords: 0 };
     }
 }
+
+
 
 
 
