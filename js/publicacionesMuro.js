@@ -26,36 +26,28 @@ async function cargarPublicaciones() {
     try {
         const response = await obtenerPublicaciones(paginaActual);
 
-        // Asegúrate de que la respuesta contenga 'posts'
         if (!response || !response.posts) {
             console.error("La respuesta de la API no contiene los datos esperados:", response);
             return;
         }
 
-        const posts = response.posts;
+        let posts = response.posts;
+
+        // Ordenar publicaciones por fecha descendente (más recientes primero)
+        posts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+
         const container = document.getElementById("articleBox");
 
-        // Si estamos cargando las publicaciones más antiguas, no limpiamos el contenedor
         if (paginaActual === 1) {
-            container.innerHTML = "";  // Limpiar el contenedor solo cuando cargamos nuevas publicaciones
+            container.innerHTML = "";  // Limpiar solo en la primera carga
         }
 
-        // Recorrer los posts y crear los elementos HTML
-        posts.forEach(async (post) => {
+        posts.forEach((post) => {
             const { postHTML, comentarioContainer } = crearPostHTML(post);
-            if (paginaActual === 1) {
-                // Insertar al principio cuando cargamos nuevas publicaciones (más recientes)
-                container.insertBefore(postHTML, container.firstChild);  
-            } else {
-                // Insertar al final cuando cargamos publicaciones antiguas
-                container.appendChild(postHTML);  
-            }
-
-            // Llamar funciones para manejar los eventos
+            container.insertBefore(postHTML, container.firstChild);  // Agregar al inicio
             agregarEventosPost(post, postHTML, comentarioContainer);
         });
 
-        // Actualizar total de páginas
         totalPaginas = Math.ceil(response.totalRecords / 10);
     } catch (error) {
         console.error("Error al cargar publicaciones:", error);

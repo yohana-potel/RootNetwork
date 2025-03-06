@@ -57,9 +57,7 @@ function mostrarPublicaciones(publicaciones, user) {
                 <h5>${user.name}</h5>
                 <p>${publicacion.text || "Sin contenido"}</p>
                 ${publicacion.imageUrl ? `<img src="${publicacion.imageUrl}" alt="Imagen de la publicación">` : ""}
-                <p><small>Publicado el: ${publicacion.dateTime ? new Date(publicacion.dateTime).toLocaleDateString() : "Fecha desconocida"}</small></p>
-
-                <!-- Sección de Comentarios -->
+                <p><small>Publicado el ${publicacion.dateTime ? new Date(publicacion.dateTime).toLocaleString("es-ES", { day: 'numeric', month: 'numeric', year: 'numeric', hour: '2-digit', minute: '2-digit' }) : "Fecha desconocida"}</small></p>                <!-- Sección de Comentarios -->
                 <div class="comentariosContainer">
                     <h6>Comentarios:</h6>
                     <div id="comentarios-${publicacion.id}">
