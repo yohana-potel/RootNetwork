@@ -22,32 +22,43 @@ async function iniciarApp() {
 
 async function cargarPublicaciones() {
     try {
-        cargando = true; // Evitar solicitudes simultáneas
+        cargando = true; 
+        let posts = [];  
+
         const response = await obtenerPublicaciones(paginaActual);
         if (!response || !response.posts) {
             console.error("La respuesta de la API no contiene los datos esperados:", response);
             return;
         }
-        
-        let posts = response.posts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+
+        // Ordenar por ID en lugar de la fecha
+        posts = response.posts.sort((a, b) => b.id - a.id); 
+
+
         const container = document.getElementById("articleBox");
-        
-        if (paginaActual === 1) container.innerHTML = ""; // Limpiar en la primera carga
-        
+
+        if (paginaActual === 1) container.innerHTML = ""; 
+
         posts.forEach((post) => {
+            if (!post.publishDate || isNaN(new Date(post.publishDate))) {
+                console.error("Fecha no válida en el post", post);
+                return; // Saltar este post si la fecha no es válida
+            }
+
             const { postHTML, comentarioContainer } = crearPostHTML(post);
             container.appendChild(postHTML);
             agregarEventosPost(post, postHTML, comentarioContainer);
         });
 
         totalPaginas = Math.ceil(response.totalRecords / 10);
-        paginaActual++; // Avanzar página después de cargar
+        paginaActual++; 
     } catch (error) {
         console.error("Error al cargar publicaciones:", error);
     } finally {
         cargando = false;
     }
 }
+
 async function cargarMasPublicaciones() {
     if (cargando || paginaActual > totalPaginas) return;
     await cargarPublicaciones();
@@ -215,9 +226,3 @@ function mostrarComentarios(container, comentarios) {
         });
     }
 }
-posts.forEach((post) => {
-    if (!post.publishDate || isNaN(new Date(post.publishDate))) {
-        console.error("Fecha no válida en el post", post);
-        return; // Saltar este post si la fecha no es válida
-    }
-});

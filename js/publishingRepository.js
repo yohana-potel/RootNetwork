@@ -3,40 +3,13 @@ export async function obtenerPublicaciones(page = 1, pageSize = 10) {
         const response = await fetch(`http://localhost:5156/Publishing/all?page=${page}&pageSize=${pageSize}`);
         const data = await response.json();
 
-        console.log("Datos de las publicaciones:", data);  // Ver para depuración
-
         if (!data.success) throw new Error(data.message);
 
-        // Convertir PublishDate a Date y agregar fullName
         data.data.forEach(post => {
-            let publishDateString = post.PublishDate;
-
-            // Verificar si PublishDate es una cadena válida
-            if (typeof publishDateString === 'string' && publishDateString) {
-                // Eliminar los microsegundos de la fecha (si están presentes)
-                const formattedDateString = publishDateString.split(".")[0]; // Solo dejamos hasta los segundos
-
-                // Crear un objeto Date
-                const publishDate = new Date(formattedDateString);
-                console.log("Fecha convertida:", publishDate);  // Verificar si la conversión de fecha funciona correctamente
-
-                if (!isNaN(publishDate)) {
-                    post.PublishDate = publishDate;  // Solo asignamos si la fecha es válida
-                } else {
-                    console.error("Fecha inválida para el post", post);
-                    post.PublishDate = new Date();  // Asignamos la fecha actual si es inválida
-                }
-            } else {
-                console.error("Fecha no válida en el post", post);
-                post.PublishDate = new Date();  // Asignamos la fecha actual si no existe PublishDate
-            }
-
-            post.fullName = `${post.userName} ${post.lastName}`;  // Concatenar el nombre completo
+            post.fullName = `${post.userName} ${post.lastName}`;  
         });
-
-        // 🟢 ORDENAR las publicaciones de más reciente a más antigua
-        data.data.sort((a, b) => b.PublishDate - a.PublishDate);  // Ordenar las publicaciones
-        console.log("Publicaciones ordenadas:", data.data);  // Verificación
+        
+        data.data.sort((a, b) => b.id - a.id);
 
         return { posts: data.data, totalRecords: data.totalRecords };
     } catch (error) {
@@ -44,11 +17,6 @@ export async function obtenerPublicaciones(page = 1, pageSize = 10) {
         return { posts: [], totalRecords: 0 };
     }
 }
-
-
-
-
-
 
 
 export async function obtenerComentarios(postId) {
