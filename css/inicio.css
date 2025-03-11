@@ -454,80 +454,6 @@ body.dark .custom-link:hover{
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
         transition: 0.3s ease;
     }
-    
-    
-
-    /*✩✩✩✩✩ ESTILOS PARA PERFIL.HTML ✩✩✩✩✩*/
-    .cajaperfil {
-        display: grid;
-        grid-template-rows: 50vh auto; 
-        height: 100vh;
-    }
-
-    .img-p {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 3px;
-    }
-    
-    .datos_y_perfil {
-        display: grid; 
-        grid-template-columns: 1fr; 
-        gap: 10px; 
-        border-radius: 10px;
-        font-size: 12px; 
-        padding: 5px; 
-        align-items: center;
-        width: 100%;
-        height: auto;
-    }
-    
-    .daTos, .editarperfil {
-        display: grid;
-        place-self: center;
-        place-items: center;
-        border: 2px solid #9c4251;
-        background-color: #F2C7C5;
-        border-radius: 10px;
-        width: 90%; 
-        height: 180px; 
-        margin-top: 25px;
-    }
-
-    .editarportada {
-        position: relative;
-        width: 100%;
-        height: 120px; 
-        margin-bottom: 20px; 
-    }
-
-    .imagen_perfil {
-        width: 70px; 
-        height: 70px;
-        padding: 5px;
-        border-radius: 50%;
-    }
-    
-    .titulodatos,.daTosperfil{
-        color: #D97D54;
-    }
-    .cajaportada {
-        display: grid;
-        width: 100%;
-        height: 120px; 
-    }
-    
-    
-    .descripciondatos {
-        width: 80%; 
-        height: 30px;
-        border-radius: 20px;
-    } 
-
-    .titulodatos, .daTosperfil {
-        font-size: 18px;
-    }
 
     /*✩✩✩✩✩ ESTILOS PARA Contrasena.HTML ✩✩✩✩✩*/
     .recuperar{
@@ -1114,24 +1040,6 @@ body.dark .custom-link:hover{
         transition: 0.3s ease;
     }
   
-   
-    /*ESTILOS PARA PERFIL.HTML*/
-    .cajaperfil{
-        display: flex;
-        flex-direction: column; 
-        margin: 15px auto;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        background-color: #f2c7c5;
-        overflow: hidden;
-        width: 90%;        
-        height: auto;
-        padding: 10px;
-    }
-    .daTosperfil{
-        color: #D97D54;
-    }
 
     .logoBarraNavegacion{
         width: 10%; 
@@ -1518,27 +1426,12 @@ body.dark .custom-link:hover{
 
 /*ESTILOS PARA PERFIL.HTML*/
 @media (min-width: 1024px) {
-    .cajaperfil{
-        display: flex;
-        flex-direction: column; 
-        margin: 15px auto;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        background-color: #f2c7c5;
-        overflow: hidden;
-        width: 90%;        
-        height: auto;
-        padding: 10px;
-    }
+
     .daTosperfil{
         color: #D97D54;
         text-align: center;
     }
-    .imageBox{
-        width: 50%;
-        border-radius: 20px;
-    }
+    
 
     /* ✩✩✩✩✩ ESTILOS PARA CONTRASENA.HTML ✩✩✩✩✩ */
     .recuperar{
@@ -1916,7 +1809,7 @@ body.dark .custom-link:hover{
         height: auto;
     }
 
-    .articleBox {
+    .articleBox{
         display: flex;
         flex-direction: column; 
         margin: 15px auto;

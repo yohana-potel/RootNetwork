@@ -6,7 +6,6 @@ let totalPaginas = 1;
 let cargando = false;  // Flag para evitar solicitudes múltiples
 
 document.addEventListener("DOMContentLoaded", iniciarApp);
-window.addEventListener("scroll", cargarPublicacionesSiNecesario);  // Escuchar el evento de scroll
 
 async function iniciarApp() {
     const userName = localStorage.getItem("userName");
@@ -14,8 +13,7 @@ async function iniciarApp() {
     const userId = localStorage.getItem("userId");
 
     if (userName && lastName && userId) {
-        const fullName = `${userName} ${lastName}`;
-        document.getElementById("nombreUsuario").textContent = fullName;
+        document.getElementById("nombreUsuario").textContent = `${userName} ${lastName}`;
         await cargarPublicaciones(); // Cargar las publicaciones al iniciar
     } else {
         console.error("El nombre, apellido o userId no están disponibles en localStorage.");
@@ -24,57 +22,50 @@ async function iniciarApp() {
 
 async function cargarPublicaciones() {
     try {
+        cargando = true; // Evitar solicitudes simultáneas
         const response = await obtenerPublicaciones(paginaActual);
-
         if (!response || !response.posts) {
             console.error("La respuesta de la API no contiene los datos esperados:", response);
             return;
         }
-
-        let posts = response.posts;
-
-        // Ordenar publicaciones por fecha descendente (más recientes primero)
-        posts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
-
+        
+        let posts = response.posts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
         const container = document.getElementById("articleBox");
-
-        if (paginaActual === 1) {
-            container.innerHTML = "";  // Limpiar solo en la primera carga
-        }
-
+        
+        if (paginaActual === 1) container.innerHTML = ""; // Limpiar en la primera carga
+        
         posts.forEach((post) => {
             const { postHTML, comentarioContainer } = crearPostHTML(post);
-            container.insertBefore(postHTML, container.firstChild);  // Agregar al inicio
+            container.appendChild(postHTML);
             agregarEventosPost(post, postHTML, comentarioContainer);
         });
 
         totalPaginas = Math.ceil(response.totalRecords / 10);
+        paginaActual++; // Avanzar página después de cargar
     } catch (error) {
         console.error("Error al cargar publicaciones:", error);
-    }
-}
-
-async function cargarPublicacionesSiNecesario() {
-    // Verifica la posición del scroll y si hay más páginas para cargar
-    const scrollPosition = window.scrollY + window.innerHeight;
-    const scrollThreshold = document.documentElement.scrollHeight;
-
-    // Si estamos cerca del final y hay más páginas, carga la siguiente página
-    if (scrollPosition >= scrollThreshold - 200 && !cargando && paginaActual < totalPaginas) {
-        cargando = true;
-        paginaActual++;
-        await cargarPublicaciones(); // Cargar publicaciones nuevas al bajar
-        cargando = false;
-    }
-
-    // Si estamos cerca de la parte superior y hay más páginas, carga las publicaciones anteriores
-    if (window.scrollY <= 10 && !cargando && paginaActual > 1) {
-        cargando = true;
-        paginaActual--; // Decrementar la página para cargar las publicaciones más antiguas
-        await cargarPublicaciones(); // Cargar publicaciones anteriores al subir
+    } finally {
         cargando = false;
     }
 }
+async function cargarMasPublicaciones() {
+    if (cargando || paginaActual > totalPaginas) return;
+    await cargarPublicaciones();
+}
+
+// Agregar un indicador de carga dinámico
+const loader = document.createElement("div");
+loader.id = "loader";
+document.getElementById("articleBox").after(loader);
+
+// Configurar IntersectionObserver para carga automática
+const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting && !cargando && paginaActual <= totalPaginas) {
+        cargarMasPublicaciones();
+    }
+}, { threshold: 1.0 });
+observer.observe(loader);
+
 
 function agregarEventosPost(post, postHTML, comentarioContainer) {
     // Botón "me gusta"
@@ -149,6 +140,7 @@ async function compartirPublicacion(post) {
         console.error("Error al compartir la publicación:", error);
     }
 }
+
 function formatearFecha(fecha) {
     if (!fecha) return "Fecha desconocida";
 
@@ -223,3 +215,9 @@ function mostrarComentarios(container, comentarios) {
         });
     }
 }
+posts.forEach((post) => {
+    if (!post.publishDate || isNaN(new Date(post.publishDate))) {
+        console.error("Fecha no válida en el post", post);
+        return; // Saltar este post si la fecha no es válida
+    }
+});
