@@ -20,10 +20,25 @@ export async function obtenerPublicaciones(page = 1, pageSize = 10) {
 
 
 export async function obtenerComentarios(postId) {
-    const response = await fetch(`http://localhost:5156/api/Comment/post/${postId}`);
-    const data = await response.json();
-    if (!data.success) throw new Error(data.message);
-    return data.data;
+    try {
+        const response = await fetch(`http://localhost:5156/api/Comment/post/${postId}`);
+        const data = await response.json();
+        
+        if (!response.ok) {
+            console.error("Error en la respuesta de comentarios:", data.message);
+            throw new Error(data.message);
+        }
+        
+        if (!data.success) {
+            console.error("Error: No se pudieron obtener los comentarios:", data.message);
+            throw new Error(data.message);
+        }
+
+        return data.data;  // Devuelve los comentarios si todo fue correcto
+    } catch (error) {
+        console.error("Error al obtener los comentarios:", error);
+        return [];  // Retorna un array vacío en caso de error
+    }
 }
 
 export async function enviarComentarioAPI(postId, texto) {
