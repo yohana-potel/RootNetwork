@@ -1,3 +1,5 @@
+import { obtenerComentarios, enviarComentarioAPI, manejarReaccion, getPublishing } from './publishingRepository.js';
+
 document.addEventListener("DOMContentLoaded", function () {
     const userId = localStorage.getItem("userId");
     console.log("userId desde localStorage:", userId);
@@ -32,6 +34,82 @@ function obtenerPublicacionesUsuario(userId) {
             console.error("Error al obtener las publicaciones del usuario:", error);
         });
 }
+
+function agregarEventosPost(post, postHTML) {
+    // Botón "Me gusta"
+    const botonLove = postHTML.querySelector('.meGusta');
+    botonLove.addEventListener("click", () => manejarReaccion(post.id));
+
+    // Botón "Compartir"
+    const botonCompartir = postHTML.querySelector('.compartir');
+    botonCompartir.addEventListener("click", async () => {
+        await compartirPublicacion(post);
+    });
+
+    // Botón "Comentar"
+    const botonComentar = postHTML.querySelector('.botonComentario');
+    const inputComentario = postHTML.querySelector('.inputComentario');
+    const comentarioContainer = postHTML.querySelector(`#comentarios-${post.id}`);
+
+    botonComentar.addEventListener("click", async () => {
+        await manejarComentario(post.id, inputComentario, comentarioContainer);
+    });
+
+    // Cargar comentarios existentes
+    cargarComentarios(post.id, comentarioContainer);
+}
+
+async function cargarComentarios(postId, comentarioContainer) {
+    try {
+        const comentarios = await obtenerComentarios(postId);
+        mostrarComentarios(comentarioContainer, comentarios);
+    } catch (error) {
+        console.error(`Error al cargar comentarios del post ${postId}:`, error);
+    }
+}
+async function manejarComentario(postId, inputComentario, comentarioContainer) {
+    const texto = inputComentario.value.trim();
+    if (!texto) {
+        alert("El comentario no puede estar vacío.");
+        return;
+    }
+
+    try {
+        await enviarComentarioAPI(postId, texto);
+        inputComentario.value = "";
+        const comentariosActualizados = await obtenerComentarios(postId);
+        mostrarComentarios(comentarioContainer, comentariosActualizados);
+    } catch (error) {
+        console.error("Error al enviar comentario:", error);
+    }
+}
+
+async function compartirPublicacion(post) {
+    const userName = localStorage.getItem("userName");
+    const lastName = localStorage.getItem("lastName");
+    const userId = localStorage.getItem("userId");
+
+    const nuevaPublicacion = {
+        Text: post.text,
+        ImageUrl: post.imageUrl,
+        UserId: userId,
+        UserName: userName,
+        LastName: lastName,
+    };
+
+    try {
+        const response = await getPublishing(nuevaPublicacion);
+        if (response.success) {
+            alert("¡Publicación compartida con éxito!");
+            window.location.reload();
+        } else {
+            alert("Hubo un error al compartir la publicación.");
+        }
+    } catch (error) {
+        console.error("Error al compartir la publicación:", error);
+    }
+}
+
 
 // Función para mostrar publicaciones en el DOM
 function mostrarPublicaciones(publicaciones, user) {
@@ -95,28 +173,19 @@ function mostrarPublicaciones(publicaciones, user) {
         articleBox.appendChild(publicacionElement);
     });
 }
-
-// Función para agregar un comentario dinámicamente
-function agregarComentario(publicacionId) {
-    const inputComentario = document.getElementById(`inputComentario-${publicacionId}`);
-    const comentarioTexto = inputComentario.value.trim();
-
-    if (comentarioTexto === "") return;
-
-    const usuarioActual = { name: "Usuario Logueado" }; // Simulación del usuario autenticado
-    const nuevoComentario = {
-        user: usuarioActual,
-        text: comentarioTexto,
-        dateTime: new Date().toISOString(),
-    };
-
-    // Agregar el comentario en la UI
-    const comentariosContainer = document.getElementById(`comentarios-${publicacionId}`);
-    const comentarioHTML = `
-        <p><strong>${nuevoComentario.user.name}:</strong> ${nuevoComentario.text}
-        <span class="text-muted" style="font-size: 0.8rem;"> - ${new Date(nuevoComentario.dateTime).toLocaleDateString()}</span></p>
-    `;
-    comentariosContainer.innerHTML += comentarioHTML;
-
-    inputComentario.value = ""; // Limpiar el input
+function mostrarComentarios(container, comentarios) {
+    container.innerHTML = ""; // Limpiar antes de agregar nuevos comentarios
+    if (comentarios.length === 0) {
+        container.innerHTML = "<p>No hay comentarios aún.</p>";
+    } else {
+        comentarios.forEach(comment => {
+            container.innerHTML += ` 
+                <div class="ComentariosRealizados">
+                    <p><strong>${comment.userName}</strong>: ${comment.text}</p>
+                </div>
+            `;
+        });
+    }
 }
+
+

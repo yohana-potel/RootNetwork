@@ -1960,4 +1960,26 @@ body.dark .custom-link:hover{
         background-color: gray;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6); 
     } 
+
+
+    /*Estilo para busqueda*/
+    .user-post{
+        display: flex;
+        flex-direction: column; 
+        margin: 15px auto;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #f2c7c5;
+        overflow: hidden;
+        width: 80%;        
+        height: auto;
+        padding: 10px;
+
+    }
+    .username{
+        color: #D97D54;
+        font-size: 3rem; 
+
+    }
 }

@@ -52,12 +52,16 @@
                   <a class="nav-link custom-link" href="index.html">Cerrar sesión</a>
                 </li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control-nav" type="search" placeholder="Búsqueda" aria-label="Search">
+            <form id="searchForm" class="d-flex">
+              <input id="searchInput" class="form-control-nav" type="search" placeholder="Búsqueda" aria-label="Search">
               <button class="btn custom-btn" type="submit">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search">
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                  </svg>
               </button>
-            </form>
+          </form>
+          
           </div>
         </div>
       </nav>
@@ -108,9 +112,9 @@
 
     <script type="module" src="./js/publishingRepository.js"></script>
     <script type="module" src="./js/publicacionesMuro.js"></script>
-    <script src="./js/botonesPublicacion.js"></script>
     <script src="./js/logout.js"></script>
     <script src="./js/clearmode.js"></script>
+    <script src="./js/busqueda.js"></script>
 
   </body>
 </html>
