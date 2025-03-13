@@ -9,34 +9,60 @@
 </head>
 <body>
     <header>
-        <img src="./img/logosinFondo.png" class="logoBarraNavegacion" alt="Logotipo de RootNetwork">
+        <img src="./img/logosinFondo.png" class="logoBarraNavegacion"alt="Logotipo de RootNetwork">
+        <button id="dark_mode" class="dark-mode-btn">
+            <svg class="icon sun-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            
+            <svg class="icon moon-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"></path>
+            </svg>
+        </button>
         <nav class="navbar navbar-expand-lg custom-navbar">
             <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02">
+                <a class="navbar-brand" href="#"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link" href="Perfil.html">Mi perfil</a></li>
-                        <li class="nav-item"><a class="nav-link" href="publicacion.html">Publicar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="index.html">Cerrar sesión</a></li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control-nav" type="search" placeholder="Búsqueda" aria-label="Search">
-                        <button class="btn custom-btn" type="submit">Buscar</button>
-                    </form>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="muroEtiqta.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" aria-current="page" href="publicacion.html">Publicar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link custom-link" href="index.html">Cerrar Sesión</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control-nav" type="search" placeholder="Búsqueda" aria-label="Search">
+                    <button class="btn custom-btn" type="submit">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                    </button>
+                  </form>
                 </div>
             </div>
-        </nav>
+        </nav>  
     </header>
+    <h1>Resultados de la Búsqueda</h1>
     <div class="user-post">
-        <h2 class="username">Juan Pérez</h2>
-        <div class="post">
-            <p class="post-text">Este es el texto de la publicación de Juan. Aquí comparte algo interesante.</p>
-            <img src="post-image.jpg" alt="Imagen de la publicación" class="post-image">
-        </div>
+        <h2 class="username" id="nombreUsuario"></h2>
+        <div id="articleBox"></div> <!-- Aquí se insertarán las publicaciones -->
     </div>
     
+    
     <script src="./js/resultadoBusqueda.js"></script>
+    <script src="./js/clearmode.js"></script>
 </body>
 </html>

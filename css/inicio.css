@@ -819,6 +819,27 @@ body.dark .custom-link:hover{
         font-family: "Roboto", sans-serif;
         font-style: normal;
     }
+
+    /* Estilo para busqueda*/
+    .user-post{
+        display: flex;
+        flex-direction: column; 
+        margin: 15px auto;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #f2c7c5;
+        overflow: hidden;
+        width: 80%;        
+        height: auto;
+        padding: 10px;
+
+    }
+    .username{
+        color: #D97D54;
+        font-size: 3rem; 
+
+    }
 }
 
 
@@ -1421,6 +1442,26 @@ body.dark .custom-link:hover{
         margin: 10px;
         
         
+    }
+    /* Estilo para Búsqueda */
+    .user-post{
+        display: flex;
+        flex-direction: column; 
+        margin: 15px auto;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        background-color: #f2c7c5;
+        overflow: hidden;
+        width: 80%;        
+        height: auto;
+        padding: 10px;
+
+    }
+    .username{
+        color: #D97D54;
+        font-size: 3rem; 
+
     }
 }
 
