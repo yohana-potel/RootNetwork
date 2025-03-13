@@ -157,7 +157,6 @@ async function mostrarPublicaciones(publicaciones) {
         agregarEventosPost(publicacion, publicacionElement);
     }
 }
-
 function agregarEventosPost(post, postHTML) {
     const botonLove = postHTML.querySelector(".meGusta");
     if (botonLove) {
@@ -169,6 +168,19 @@ function agregarEventosPost(post, postHTML) {
         botonCompartir.addEventListener("click", async () => {
             await compartirPublicacion(post);
         });
+    }
+
+    // Agregar evento al botón de comentar
+    const inputComentario = postHTML.querySelector(".inputComentario");
+    const botonComentar = postHTML.querySelector(".botonComentario");
+    const comentarioContainer = postHTML.querySelector(`#comentarios-${post.id}`);
+
+    if (botonComentar && inputComentario && comentarioContainer) {
+        botonComentar.addEventListener("click", async () => {
+            await manejarComentario(post.id, inputComentario, comentarioContainer);
+        });
+    } else {
+        console.error(`No se encontró el botón de comentar o el input de comentario para el post ${post.id}`);
     }
 }
 
