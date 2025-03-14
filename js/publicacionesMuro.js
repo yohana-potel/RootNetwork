@@ -31,9 +31,8 @@ async function cargarPublicaciones() {
             return;
         }
 
-        // Ordenar por ID en lugar de la fecha
-        posts = response.posts.sort((a, b) => b.id - a.id); 
-
+        // Las publicaciones ya vienen ordenadas desde la API, así que no es necesario ordenarlas aquí
+        posts = response.posts;
 
         const container = document.getElementById("articleBox");
 
@@ -67,6 +66,11 @@ async function cargarMasPublicaciones() {
 // Agregar un indicador de carga dinámico
 const loader = document.createElement("div");
 loader.id = "loader";
+loader.style.height = "50px"; // Agregar altura al loader
+loader.style.backgroundColor = "#f2c7c5"; // Color de fondo para el loader
+loader.style.textAlign = "center"; 
+loader.innerHTML = "Cargando más publicaciones...";
+
 document.getElementById("articleBox").after(loader);
 
 // Configurar IntersectionObserver para carga automática
@@ -74,9 +78,8 @@ const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting && !cargando && paginaActual <= totalPaginas) {
         cargarMasPublicaciones();
     }
-}, { threshold: 1.0 });
+}, { threshold: 0.5 }); // Cambiado el umbral a 0.5 para hacerlo más sensible
 observer.observe(loader);
-
 
 function agregarEventosPost(post, postHTML, comentarioContainer) {
     // Botón "me gusta"
@@ -207,6 +210,7 @@ function crearPostHTML(post) {
     const comentarioContainer = postHTML.querySelector(".ComentariosRealizados");
     return { postHTML, comentarioContainer };
 }
+
 function mostrarComentarios(container, comentarios) {
     container.innerHTML = "";
     if (comentarios.length === 0) {
