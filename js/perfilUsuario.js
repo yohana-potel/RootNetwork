@@ -1,3 +1,5 @@
+import { obtenerComentarios, enviarComentarioAPI, manejarReaccion, getPublishing } from './publishingRepository.js';
+
 document.addEventListener("DOMContentLoaded", async function() {
     const params = new URLSearchParams(window.location.search);
     const userId = params.get("userId");
@@ -26,22 +28,93 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 });
 
-// Función para obtener las publicaciones del usuario desde la API
+function agregarEventosPost(post, postHTML, comentarioContainer) {
+    // Botón "me gusta"
+    const botonLove = postHTML.querySelector('button[name="meGusta"]');
+    botonLove.addEventListener("click", () => manejarReaccion(post.id));
+
+    // Cargar comentarios
+    cargarComentarios(post, comentarioContainer);
+
+    // Manejo del botón de comentar
+    const botonComentar = postHTML.querySelector(".botonComentario");
+    const inputComentario = postHTML.querySelector(".inputComentario");
+    botonComentar.addEventListener("click", async () => {
+        await manejarComentario(post.id, inputComentario, comentarioContainer);
+    });
+
+    // Manejo del botón de compartir
+    const botonCompartir = postHTML.querySelector(".boton-publicacion[name='compartir']");
+    botonCompartir.addEventListener("click", async () => {
+        await compartirPublicacion(post);
+    });
+}
+async function manejarComentario(postId, inputComentario, comentarioContainer) {
+    const texto = inputComentario.value.trim();
+    if (!texto) {
+        alert("El comentario no puede estar vacío.");
+        return;
+    }
+
+    try {
+        await enviarComentarioAPI(postId, texto);
+        inputComentario.value = "";
+        const comentariosActualizados = await obtenerComentarios(postId);
+        mostrarComentarios(comentarioContainer, comentariosActualizados);
+    } catch (error) {
+        console.error("Error al enviar comentario:", error);
+    }
+}
+
+async function compartirPublicacion(post) {
+    const userName = localStorage.getItem("userName");
+    const lastName = localStorage.getItem("lastName");
+    const userId = localStorage.getItem("userId");
+
+    const nuevaPublicacion = {
+        Text: post.text,
+        ImageUrl: post.imageUrl,
+        UserId: userId,
+        UserName: userName,
+        LastName: lastName,
+    };
+
+    try {
+        const response = await getPublishing(nuevaPublicacion);
+        if (response.success) {
+            alert("¡Publicación compartida con éxito!");
+            window.location.reload();
+        } else {
+            alert("Hubo un error al compartir la publicación.");
+        }
+    } catch (error) {
+        console.error("Error al compartir la publicación:", error);
+    }
+}
+
+async function cargarComentarios(post, comentarioContainer) {
+    try {
+        const comentarios = await obtenerComentarios(post.id);
+        mostrarComentarios(comentarioContainer, comentarios);
+    } catch (error) {
+        console.error(`Error al cargar comentarios del post ${post.id}:`, error);
+    }
+}
+
+
 async function obtenerPublicacionesUsuario(userId) {
     const response = await fetch(`http://localhost:5156/Publishing/GetPostsByUser/${userId}`);  // Llamada a la API para obtener publicaciones
     if (!response.ok) {
         throw new Error("No se pudo obtener las publicaciones del usuario");
     }
     const data = await response.json();
-    return data.posts; // Solo devolver el array de publicaciones
+    return data.posts; 
 }
 
-// Función para mostrar el perfil del usuario (solo nombre)
 function mostrarPerfil(usuario) {
-    document.getElementById("nombreUsuario").textContent = usuario.name;  // Solo el nombre del usuario
+    document.getElementById("nombreUsuario").textContent = usuario.name; 
 }
 
-// Función para mostrar las publicaciones del usuario
 function mostrarPublicaciones(publicaciones) {
     const publicacionesContainer = document.getElementById("publicacionesContainer");
     publicacionesContainer.innerHTML = ""; // Limpiar contenido anterior
@@ -51,7 +124,7 @@ function mostrarPublicaciones(publicaciones) {
     } else {
         publicaciones.forEach(publicacion => {
             const postElement = document.createElement("div");
-            postElement.classList.add("articleBox");  // Aquí agregamos la clase articleBox
+            postElement.classList.add("articleBox");
 
             postElement.innerHTML = `
                 <div class="content">
@@ -88,13 +161,54 @@ function mostrarPublicaciones(publicaciones) {
                         <input type="text" class="inputComentario" placeholder="Escribe un comentario...">
                         <button class="botonComentario">Comentar</button>
                         <div class="ComentariosRealizados">
-                            <p>No hay comentarios aún.</p>
+                            <p>Cargando comentarios...</p> <!-- Mensaje mientras se cargan -->
                         </div>
                     </div>
                 </div>
             `;
 
+            // 🔹 Agregar eventos para los botones después de insertar el HTML
+            const botonLove = postElement.querySelector(`button#love-${publicacion.id}`);
+            botonLove.addEventListener("click", () => manejarReaccion(publicacion.id));
+
+            const botonCompartir = postElement.querySelector(`button#compartir-${publicacion.id}`);
+            botonCompartir.addEventListener("click", async () => {
+                await compartirPublicacion(publicacion);
+            });
+
+            const botonComentar = postElement.querySelector(".botonComentario");
+            const inputComentario = postElement.querySelector(".inputComentario");
+            const comentarioContainer = postElement.querySelector(".ComentariosRealizados");
+
+            botonComentar.addEventListener("click", async () => {
+                await manejarComentario(publicacion.id, inputComentario, comentarioContainer);
+            });
+
+           
+            cargarComentarios(publicacion, comentarioContainer);
+
             publicacionesContainer.appendChild(postElement);
+        });
+    }
+}
+
+function mostrarComentarios(container, comentarios) {
+    container.innerHTML = ""; 
+
+    if (comentarios.length === 0) {
+        container.innerHTML = "<p>No hay comentarios aún.</p>";
+    } else {
+        comentarios.forEach(comment => {
+            // Crear el enlace con el username que lleva al perfil del usuario
+            const userProfileLink = `/perfilUsuario.html?userId=${comment.userId}`;
+            console.log("userId del comentario:", comment.userId);
+            container.innerHTML += `
+                <div class="ComentariosRealizados">
+                    <p>
+                        <strong><a href="${userProfileLink}">${comment.userName}</a></strong>: ${comment.text}
+                    </p>
+                </div>
+            `;
         });
     }
 }
