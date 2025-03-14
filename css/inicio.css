@@ -238,6 +238,13 @@ body.dark .custom-link:hover{
 
 /*✩✩✩✩✩ MEDIA Telefono PARA MURO.html ✩✩✩✩✩*/ 
 @media  (min-width:300px) and (max-width:600px) {
+    .daTosperfil{
+        text-align: center;
+    }
+    h3 {
+        color: #D97D54;
+        font-size: 1rem; /* Ajusta el tamaño del nombre */
+    }
     .custom-navbar {
         width: 80%; /* Navbar ocupa todo el ancho */
         border-radius: 20px; /* Se eliminan los bordes redondeados para mejor adaptación */
@@ -846,6 +853,13 @@ body.dark .custom-link:hover{
 
 @media (min-width: 601px) and (max-width: 1024px) {
     /*✩✩✩✩✩ ESTILOS PARA MURO.HTML ✩✩✩✩✩*/
+    .daTosperfil{
+        text-align: center;
+    }
+    h3 {
+        color: #D97D54;
+        font-size: 1rem; /* Ajusta el tamaño del nombre */
+    }
     .custom-navbar {
         width: 80%; /* Navbar ocupa todo el ancho */
         border-radius: 20px; /* Se eliminan los bordes redondeados para mejor adaptación */
