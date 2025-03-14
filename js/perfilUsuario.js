@@ -28,27 +28,6 @@ document.addEventListener("DOMContentLoaded", async function() {
     }
 });
 
-function agregarEventosPost(post, postHTML, comentarioContainer) {
-    // Botón "me gusta"
-    const botonLove = postHTML.querySelector('button[name="meGusta"]');
-    botonLove.addEventListener("click", () => manejarReaccion(post.id));
-
-    // Cargar comentarios
-    cargarComentarios(post, comentarioContainer);
-
-    // Manejo del botón de comentar
-    const botonComentar = postHTML.querySelector(".botonComentario");
-    const inputComentario = postHTML.querySelector(".inputComentario");
-    botonComentar.addEventListener("click", async () => {
-        await manejarComentario(post.id, inputComentario, comentarioContainer);
-    });
-
-    // Manejo del botón de compartir
-    const botonCompartir = postHTML.querySelector(".boton-publicacion[name='compartir']");
-    botonCompartir.addEventListener("click", async () => {
-        await compartirPublicacion(post);
-    });
-}
 async function manejarComentario(postId, inputComentario, comentarioContainer) {
     const texto = inputComentario.value.trim();
     if (!texto) {

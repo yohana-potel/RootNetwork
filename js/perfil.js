@@ -40,15 +40,7 @@ function obtenerPublicacionesUsuario(userId) {
         });
 }
 
-async function cargarComentarios(postId, comentarioContainer) {
-    console.log(`Cargando comentarios para la publicación con id: ${postId}`);
-    try {
-        const comentarios = await obtenerComentarios(postId);
-        mostrarComentarios(comentarioContainer, comentarios);
-    } catch (error) {
-        console.error(`Error al cargar comentarios del post ${postId}:`, error);
-    }
-}
+
 
 async function manejarComentario(postId, inputComentario, comentarioContainer) {
     const texto = inputComentario.value.trim();
