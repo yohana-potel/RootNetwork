@@ -5,10 +5,12 @@ export async function obtenerPublicaciones(page = 1, pageSize = 10) {
 
         if (!data.success) throw new Error(data.message);
 
+        // Asegurarnos de que todos los posts tengan el nombre completo
         data.data.forEach(post => {
             post.fullName = `${post.userName} ${post.lastName}`;  
         });
         
+        // Ordenar publicaciones por ID en orden descendente
         data.data.sort((a, b) => b.id - a.id);
 
         return { posts: data.data, totalRecords: data.totalRecords };
@@ -22,24 +24,41 @@ export async function obtenerPublicaciones(page = 1, pageSize = 10) {
 export async function obtenerComentarios(postId) {
     try {
         const response = await fetch(`http://localhost:5156/api/Comment/post/${postId}`);
-        const data = await response.json();
         
         if (!response.ok) {
+            const data = await response.json();
+            if (response.status === 404) {
+                console.warn(`No hay comentarios para la publicación con ID: ${postId}`);
+                return [];
+            }
             console.error("Error en la respuesta de comentarios:", data.message);
             throw new Error(data.message);
         }
+
+        const data = await response.json();
         
         if (!data.success) {
             console.error("Error: No se pudieron obtener los comentarios:", data.message);
             throw new Error(data.message);
         }
 
-        return data.data;  // Devuelve los comentarios si todo fue correcto
+        // Verificar la estructura de los comentarios
+        console.log("Comentarios recibidos:", data.data);
+
+        // Verificar si los comentarios contienen el userId
+        data.data.forEach(comentario => {
+            console.log("Estructura de comentario:", comentario); // Muestra todo el comentario
+            console.log(`Comentario escrito por el usuario con ID: ${comentario.userId}`); // Verifica si existe userId
+        });
+
+        return data.data;  // Devuelve los comentarios
     } catch (error) {
         console.error("Error al obtener los comentarios:", error);
         return [];  // Retorna un array vacío en caso de error
     }
 }
+
+
 
 export async function enviarComentarioAPI(postId, texto) {
     const userId = localStorage.getItem("userId"); // Obtener el ID del usuario logueado

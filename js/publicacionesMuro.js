@@ -207,7 +207,6 @@ function crearPostHTML(post) {
     const comentarioContainer = postHTML.querySelector(".ComentariosRealizados");
     return { postHTML, comentarioContainer };
 }
-
 function mostrarComentarios(container, comentarios) {
     container.innerHTML = "";
     if (comentarios.length === 0) {
@@ -215,7 +214,8 @@ function mostrarComentarios(container, comentarios) {
     } else {
         comentarios.forEach(comment => {
             // Crear el enlace con el username que lleva al perfil del usuario
-            const userProfileLink = `/perfil/${comment.userName}`;
+            const userProfileLink = `/perfilUsuario.html?userId=${comment.userId}`;
+            console.log("userId del comentario:", comment.userId);
             container.innerHTML += ` 
                 <div class="ComentariosRealizados">
                     <p>
